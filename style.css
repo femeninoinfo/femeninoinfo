@@ -897,3 +897,10 @@ img { max-width: 100%; display: block; }
 @media (max-width: 860px) {
   .hero-tabla-inner { grid-template-columns: 1fr; gap: 28px; }
 }
+
+.escudo-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}

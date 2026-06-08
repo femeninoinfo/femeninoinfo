@@ -1,10 +1,10 @@
 // FEMENINOINFO — MAIN JS
 
-function showTab(tab) {
+function showTab(tab, el) {
   document.getElementById('tab-tabla').style.display = tab === 'tabla' ? 'block' : 'none';
   document.getElementById('tab-fixture').style.display = tab === 'fixture' ? 'block' : 'none';
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
+  el.classList.add('active');
 }
 
 
