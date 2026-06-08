@@ -95,4 +95,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderGrid("gridSeleccion", "seleccion");
   renderGrid("gridInternacional", "internacional");
   renderGrid("gridExterior", "exterior");
+  renderHeroUltima();
 });
