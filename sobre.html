@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre femeninoinfo</title>
+  <link rel="icon" href="img/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .sobre-hero { background: var(--dark); padding: 80px 24px; }
+    .sobre-hero-inner { max-width: 760px; margin: 0 auto; }
+    .sobre-hero h1 { font-family: var(--font-display); font-size: clamp(36px,5vw,60px); color: var(--white); letter-spacing: 1px; margin-bottom: 24px; }
+    .sobre-hero p { color: rgba(255,255,255,0.65); font-size: 17px; line-height: 1.7; font-weight: 300; margin-bottom: 16px; }
+    .sobre-body { max-width: 760px; margin: 0 auto; padding: 60px 24px; }
+    .sobre-body h2 { font-family: var(--font-display); font-size: 28px; color: var(--purple); letter-spacing: 1px; margin: 36px 0 12px; }
+    .sobre-body p { font-size: 16px; line-height: 1.7; color: var(--text-light); margin-bottom: 16px; }
+    .stats-row { display: flex; gap: 32px; margin: 36px 0; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-num { font-family: var(--font-display); font-size: 42px; color: var(--accent); letter-spacing: 1px; }
+    .stat-label { font-size: 13px; color: var(--gray); margin-top: 4px; }
+    .contact-btn { display: inline-block; background: var(--accent); color: var(--white); font-family: var(--font-display); font-size: 16px; letter-spacing: 1px; padding: 14px 32px; border-radius: var(--radius); margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="img/logo.png" alt="femeninoinfo" class="brand-logo" />
+        <span class="brand-name">femeninoinfo</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#apertura">Apertura</a>
+        <a href="index.html#seleccion">Selección</a>
+        <a href="index.html#internacional">Internacional</a>
+        <a href="index.html#exterior">Arg en el exterior</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <div class="sobre-hero">
+    <div class="sobre-hero-inner">
+      <h1>Un medio independiente para el fútbol femenino</h1>
+      <p>femeninoinfo nació con una idea simple: que el fútbol femenino argentino e internacional tenga la cobertura que merece, sin depender de los medios tradicionales ni quedar como nota de color.</p>
+    </div>
+  </div>
+
+  <div class="sobre-body">
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">22K</div><div class="stat-label">seguidores en TikTok</div></div>
+      <div class="stat"><div class="stat-num">17K</div><div class="stat-label">seguidores en Instagram</div></div>
+      <div class="stat"><div class="stat-num">3+</div><div class="stat-label">años cubriendo el fútbol femenino</div></div>
+    </div>
+
+    <h2>Quién está detrás</h2>
+    <p>femeninoinfo es un proyecto unipersonal. Atrás hay una sola persona: profesora de Educación Física con especialización en ciencias del deporte de alto rendimiento y experiencia de trabajo con equipos de fútbol femenino. Hoy, además de periodista y creadora de contenido, conduce un programa de streaming de martes a jueves.</p>
+
+    <h2>De qué se trata</h2>
+    <p>Noticias del Apertura Femenino, la Selección Argentina en su camino al Mundial, el fútbol internacional, las argentinas que juegan afuera. Sin comparaciones con el fútbol masculino. Sin condescendencia. El fútbol femenino como protagonista.</p>
+
+    <h2>Contacto y sponsors</h2>
+    <p>Si querés trabajar con femeninoinfo, sumarte como sponsor o proponernos una colaboración, escribinos.</p>
+    <a href="sponsors.html" class="contact-btn">Ver paquetes de sponsoreo</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="femeninoinfo" class="footer-logo" />
+        <p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Secciones</h4>
+        <a href="index.html#apertura">Apertura Femenino</a>
+        <a href="index.html#seleccion">Selección Argentina</a>
+        <a href="index.html#internacional">Internacional</a>
+        <a href="index.html#exterior">Arg en el exterior</a>
+      </div>
+      <div class="footer-links">
+        <h4>femeninoinfo</h4>
+        <a href="sobre.html">Sobre el medio</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="sponsors.html">Sponsors</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 femeninoinfo — Todos los derechos reservados</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
