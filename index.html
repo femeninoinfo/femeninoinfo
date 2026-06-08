@@ -236,6 +236,14 @@
       <div id="modalContenido" style="clear:both;"></div>
     </div>
   </div>
+  <script>
+  function showTab(tab, el) {
+    document.getElementById('tab-tabla').style.display = tab === 'tabla' ? 'block' : 'none';
+    document.getElementById('tab-fixture').style.display = tab === 'fixture' ? 'block' : 'none';
+    document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+    el.classList.add('active');
+  }
+  </script>
   <script src="noticias.js"></script>
   <script src="main.js"></script>
 </body>
