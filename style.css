@@ -904,3 +904,19 @@ img { max-width: 100%; display: block; }
   object-fit: contain;
   flex-shrink: 0;
 }
+
+/* Fix escudos en mobile */
+.tabla-pos tbody td:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.escudo-img {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
