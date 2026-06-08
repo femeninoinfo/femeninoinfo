@@ -687,3 +687,213 @@ img { max-width: 100%; display: block; }
   margin-top: 10px;
   text-align: right;
 }
+
+/* ============================
+   HERO + TABLA LADO A LADO
+   ============================ */
+
+.hero-tabla-section {
+  background: var(--dark);
+  border-bottom: 2px solid var(--purple-mid);
+}
+
+.hero-tabla-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.hero-left {
+  padding-top: 12px;
+}
+
+.hero-left .hero-tag {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.hero-left .hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 48px);
+  line-height: 1.05;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.hero-left .hero-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+.hero-left .hero-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+
+.hero-left .hero-btn:hover { background: var(--accent-soft); }
+
+.hero-right {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(200,0,255,0.15);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid rgba(200,0,255,0.15);
+}
+
+.tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.45);
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  background: rgba(200,0,255,0.05);
+}
+
+.tab-content {
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+.tabla-pos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tabla-pos thead tr { background: rgba(61,0,102,0.6); }
+
+.tabla-pos thead th {
+  color: rgba(255,255,255,0.5);
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.tabla-pos thead th:nth-child(2) { text-align: left; }
+
+.tabla-pos tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.15s;
+}
+
+.tabla-pos tbody tr:hover { background: rgba(200,0,255,0.06); }
+
+.tabla-pos tbody td {
+  padding: 7px 10px;
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+}
+
+.tabla-pos tbody td:nth-child(2) {
+  text-align: left;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tabla-pos tbody tr.top3 td { color: rgba(255,255,255,0.95); }
+.tabla-pos tbody tr.top3 { background: rgba(200,0,255,0.06); }
+.tabla-pos tbody tr.descenso td { color: rgba(255,255,255,0.35); }
+
+.tabla-pos tbody td strong {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--accent-soft);
+}
+
+.tabla-pos tbody tr.top3 td strong { color: var(--accent); }
+
+.escudo {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(200,0,255,0.3);
+  flex-shrink: 0;
+  font-size: 9px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.tabla-fecha {
+  font-size: 10px;
+  color: rgba(255,255,255,0.25);
+  padding: 6px 10px;
+  text-align: right;
+}
+
+/* FIXTURE */
+.fixture-list { padding: 4px 0; }
+
+.fixture-row {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fixture-row.destacado { background: rgba(200,0,255,0.06); }
+
+.fx-fecha {
+  font-size: 10px;
+  color: var(--accent-soft);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.fx-partido {
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+}
+
+.fx-estadio {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+}
+
+@media (max-width: 860px) {
+  .hero-tabla-inner { grid-template-columns: 1fr; gap: 28px; }
+}

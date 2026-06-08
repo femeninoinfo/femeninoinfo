@@ -1,6 +1,13 @@
 // FEMENINOINFO — MAIN JS
 
-function toggleMenu() {
+function showTab(tab) {
+  document.getElementById('tab-tabla').style.display = tab === 'tabla' ? 'block' : 'none';
+  document.getElementById('tab-fixture').style.display = tab === 'fixture' ? 'block' : 'none';
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+
   const nav = document.getElementById("navMobile");
   nav.classList.toggle("open");
 }
