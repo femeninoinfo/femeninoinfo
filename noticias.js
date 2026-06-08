@@ -4,9 +4,33 @@
 
 const NOTICIAS = [
   {
+    id: 2,
+    titulo: "Argentina está en el Mundial 2027",
+    excerpt: "La Albiceleste empató 1-1 con Perú en el estadio de Lanús y selló su clasificación al Mundial de Brasil 2027. Será la quinta participación en la historia y la tercera consecutiva.",
+    cuerpo: `
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:#e066ff;letter-spacing:1px;margin:0 0 12px;">El gol y el festejo</h2>
+      <p>Mercedes Diz abrió el marcador a los 75 minutos con un control y remate espectacular que desató el festejo en Lanús. Cherrie Cox igualó para Perú a cinco minutos del final, pero el empate alcanzó. La Albiceleste tenía el boleto en el bolsillo.</p>
+
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:#e066ff;letter-spacing:1px;margin:24px 0 12px;">Cómo fue el partido</h2>
+      <p>El encuentro ante Perú, por la octava fecha de la Liga de Naciones, fue duro desde el arranque. En el primer tiempo fueron expulsadas <strong>Catalina Roggerone</strong> en Argentina y <strong>Alesia García</strong> en Perú, y ambos equipos jugaron gran parte del partido con diez jugadoras. Dirigió la paraguaya Zulma Quiñónez.</p>
+
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:#e066ff;letter-spacing:1px;margin:24px 0 12px;">Qué significa esta clasificación</h2>
+      <p>Será la <strong>quinta participación</strong> de Argentina en un Mundial femenino, tras 2003, 2007, 2019 y 2023. Y la <strong>tercera consecutiva</strong>, algo que no había logrado antes. Con 15 puntos, la Albiceleste quedó segunda en la Liga de Naciones detrás de Colombia.</p>
+
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:#e066ff;letter-spacing:1px;margin:24px 0 12px;">Las tres categorías clasificadas</h2>
+      <p>A la mayor se le suma la Sub 20, que irá al Mundial de Polonia 2026, y la Sub 17, que por <strong>primera vez en la historia</strong> estará en un Mundial, en Marruecos 2026. Nunca antes las tres categorías femeninas argentinas habían clasificado al mismo tiempo.</p>
+
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:#e066ff;letter-spacing:1px;margin:24px 0 12px;">Lo que viene</h2>
+      <p>Argentina cierra la Liga de Naciones el martes 9 de junio ante Ecuador en Quito. El resultado ya no importa — el objetivo más importante del ciclo está cumplido.</p>
+    `,
+    categoria: "seleccion",
+    fecha: "2026-06-06",
+    imagen: "argentina-mundial.png"
+  },
+  {
     id: 1,
     titulo: "Belgrano juega en el Gigante de Alberdi ante Talleres este domingo",
-    excerpt: "El clásico cordobés del fútbol femenino se juega este domingo a las 15.30 hs. Belgrano recibe a Talleres en uno de los partidos más esperados de la fecha del Apertura Femenino.",
+    excerpt: "El clásico cordobés del fútbol femenino se juega este domingo a las 15.30 hs en el estadio Gigante de Alberdi. Belgrano recibe a Talleres en uno de los partidos más esperados de la fecha del Apertura Femenino.",
     cuerpo: `<p>Belgrano recibirá a Talleres este domingo a las 15.30 hs en el estadio Gigante de Alberdi, en lo que será uno de los clásicos cordobeses más esperados del Apertura Femenino.</p>
     <p>El partido es válido por la fecha del torneo y promete ser un duelo muy parejo entre dos de los equipos más fuertes de la provincia. La Celeste jugará de local ante su clásico rival en una tarde que ya genera mucha expectativa en la hinchada.</p>
     <p>El estadio Mario Alberto Kempes, conocido popularmente como el Gigante de Alberdi, volverá a recibir al fútbol femenino cordobés en un partido que puede tener mucho peso en la tabla de posiciones.</p>`,
@@ -87,6 +111,26 @@ function renderGrid(containerId, filtro) {
     return;
   }
   el.innerHTML = items.map(crearCard).join("");
+}
+
+function renderHeroUltima() {
+  const el = document.getElementById('heroUltima');
+  if (!el || !NOTICIAS || NOTICIAS.length === 0) return;
+  const n = NOTICIAS[0];
+  const cat = CATEGORIAS[n.categoria] || { label: n.categoria, clase: 'cat-arg' };
+  const imgHTML = n.imagen
+    ? `<img src="${n.imagen}" class="hero-ultima-img" alt="${n.titulo}" />`
+    : `<div class="hero-ultima-img"></div>`;
+  el.innerHTML = `
+    <div class="hero-ultima-card" onclick="abrirNoticia(${n.id})">
+      ${imgHTML}
+      <div class="hero-ultima-body">
+        <span class="hero-ultima-cat">${cat.label}</span>
+        <div class="hero-ultima-titulo">${n.titulo}</div>
+        <span class="hero-ultima-fecha">${formatFecha(n.fecha)}</span>
+      </div>
+    </div>
+  `;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
