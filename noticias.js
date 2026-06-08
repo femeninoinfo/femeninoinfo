@@ -7,51 +7,11 @@
 const NOTICIAS = [
   {
     id: 1,
-    titulo: "La AFA confirmó el calendario del Apertura Femenino 2025",
-    excerpt: "El torneo arranca el próximo fin de semana con diez equipos en competencia. River y Boca largan como candidatos.",
+    titulo: "Belgrano juega en el Gigante de Alberdi ante Talleres este domingo",
+    excerpt: "El clásico cordobés del fútbol femenino se juega este domingo a las 15.30 hs en el estadio Mario Alberto Kempes. Belgrano recibe a Talleres en uno de los partidos más esperados de la fecha.",
     categoria: "apertura",
-    fecha: "2026-06-01",
-    imagen: null
-  },
-  {
-    id: 2,
-    titulo: "La Selección Argentina viaja a la Copa América para definir su clasificación al Mundial",
-    excerpt: "El cuerpo técnico ya confirmó la lista de convocadas. Hay varias caras nuevas entre las citadas.",
-    categoria: "seleccion",
-    fecha: "2026-05-28",
-    imagen: null
-  },
-  {
-    id: 3,
-    titulo: "Alexia Putellas firmó con su nuevo club tras su salida del Barcelona",
-    excerpt: "La doble Balón de Oro cerró su ciclo en el Barça después de ocho temporadas y anunció su próximo destino.",
-    categoria: "internacional",
-    fecha: "2026-05-25",
-    imagen: null
-  },
-  {
-    id: 4,
-    titulo: "Yamila Rodríguez marcó un golazo en la Champions League",
-    excerpt: "La delantera argentina fue figura en la victoria de su equipo y sigue siendo una de las más destacadas de la competencia.",
-    categoria: "exterior",
-    fecha: "2026-05-22",
-    imagen: null
-  },
-  {
-    id: 5,
-    titulo: "San Lorenzo lidera el Apertura tras golear en el clásico",
-    excerpt: "El Ciclón se impuso con autoridad y mantiene el puntaje ideal en las primeras fechas del torneo.",
-    categoria: "apertura",
-    fecha: "2026-05-20",
-    imagen: null
-  },
-  {
-    id: 6,
-    titulo: "La FIFA definió las sedes del Mundial Femenino 2027",
-    excerpt: "Brasil organizará el torneo en seis ciudades. El fixture completo se conocerá en los próximos meses.",
-    categoria: "internacional",
-    fecha: "2026-05-18",
-    imagen: null
+    fecha: "2026-06-08",
+    imagen: "belgrano-talleres.png"
   }
 ];
 
@@ -76,11 +36,12 @@ function formatFecha(str) {
 
 function crearCard(noticia) {
   const cat = CATEGORIAS[noticia.categoria] || { label: noticia.categoria, clase: "cat-arg" };
+  const imgHTML = noticia.imagen
+    ? `<img src="${noticia.imagen}" alt="${noticia.titulo}" class="card-img" />`
+    : `<div class="card-img-placeholder"><img src="logo.png" alt="femeninoinfo" /></div>`;
   return `
     <article class="noticia-card">
-      <div class="card-img-placeholder">
-        <img src="img/logo.png" alt="femeninoinfo" />
-      </div>
+      ${imgHTML}
       <div class="card-body">
         <span class="card-cat ${cat.clase}">${cat.label}</span>
         <h3 class="card-title">${noticia.titulo}</h3>
