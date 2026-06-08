@@ -615,3 +615,75 @@ img { max-width: 100%; display: block; }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .grid-noticias { grid-template-columns: 1fr; }
 }
+
+/* ============================
+   TABLA DE POSICIONES
+   ============================ */
+
+.tabla-section { padding: 48px 24px; }
+
+.tabla-wrap {
+  overflow-x: auto;
+}
+
+.tabla-pos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.tabla-pos thead tr {
+  background: var(--purple);
+}
+
+.tabla-pos thead th {
+  color: rgba(255,255,255,0.7);
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 10px 12px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.tabla-pos thead th:nth-child(2) { text-align: left; }
+
+.tabla-pos tbody tr {
+  border-bottom: 1px solid rgba(61,0,102,0.1);
+  transition: background 0.15s;
+}
+
+.tabla-pos tbody tr:hover { background: rgba(200,0,255,0.05); }
+
+.tabla-pos tbody td {
+  padding: 10px 12px;
+  text-align: center;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.tabla-pos tbody td:nth-child(2) {
+  text-align: left;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+.tabla-pos tbody tr.top3 td:nth-child(2) { color: var(--accent); }
+.tabla-pos tbody tr.top3 { background: rgba(200,0,255,0.04); }
+.tabla-pos tbody tr.descenso { opacity: 0.6; }
+.tabla-pos tbody tr.descenso td:nth-child(2) { color: #cc3300; }
+
+.tabla-pos tbody td strong {
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--purple);
+}
+
+.tabla-pos tbody tr.top3 td strong { color: var(--accent); }
+
+.tabla-fecha {
+  font-size: 11px;
+  color: var(--gray);
+  margin-top: 10px;
+  text-align: right;
+}
