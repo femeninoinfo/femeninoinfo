@@ -1,14 +1,15 @@
 // ============================================
 // FEMENINOINFO — BASE DE NOTICIAS
-// Para agregar una noticia nueva, copiar el
-// bloque de ejemplo y completar los campos.
 // ============================================
 
 const NOTICIAS = [
   {
     id: 1,
     titulo: "Belgrano juega en el Gigante de Alberdi ante Talleres este domingo",
-    excerpt: "El clásico cordobés del fútbol femenino se juega este domingo a las 15.30 hs en el estadio Mario Alberto Kempes. Belgrano recibe a Talleres en uno de los partidos más esperados de la fecha.",
+    excerpt: "El clásico cordobés del fútbol femenino se juega este domingo a las 15.30 hs. Belgrano recibe a Talleres en uno de los partidos más esperados de la fecha del Apertura Femenino.",
+    cuerpo: `<p>Belgrano recibirá a Talleres este domingo a las 15.30 hs en el estadio Gigante de Alberdi, en lo que será uno de los clásicos cordobeses más esperados del Apertura Femenino.</p>
+    <p>El partido es válido por la fecha del torneo y promete ser un duelo muy parejo entre dos de los equipos más fuertes de la provincia. La Celeste jugará de local ante su clásico rival en una tarde que ya genera mucha expectativa en la hinchada.</p>
+    <p>El estadio Mario Alberto Kempes, conocido popularmente como el Gigante de Alberdi, volverá a recibir al fútbol femenino cordobés en un partido que puede tener mucho peso en la tabla de posiciones.</p>`,
     categoria: "apertura",
     fecha: "2026-06-08",
     imagen: "belgrano-talleres.png"
@@ -16,7 +17,7 @@ const NOTICIAS = [
 ];
 
 // ============================================
-// FUNCIONES DE RENDER — no modificar
+// FUNCIONES DE RENDER
 // ============================================
 
 const CATEGORIAS = {
@@ -40,7 +41,7 @@ function crearCard(noticia) {
     ? `<img src="${noticia.imagen}" alt="${noticia.titulo}" class="card-img" />`
     : `<div class="card-img-placeholder"><img src="logo.png" alt="femeninoinfo" /></div>`;
   return `
-    <article class="noticia-card">
+    <article class="noticia-card" onclick="abrirNoticia(${noticia.id})">
       ${imgHTML}
       <div class="card-body">
         <span class="card-cat ${cat.clase}">${cat.label}</span>
@@ -50,6 +51,29 @@ function crearCard(noticia) {
       </div>
     </article>
   `;
+}
+
+function abrirNoticia(id) {
+  const noticia = NOTICIAS.find(n => n.id === id);
+  if (!noticia) return;
+  const cat = CATEGORIAS[noticia.categoria] || { label: noticia.categoria, clase: "cat-arg" };
+  const imgHTML = noticia.imagen
+    ? `<img src="${noticia.imagen}" alt="${noticia.titulo}" style="width:100%;max-height:460px;object-fit:cover;border-radius:8px;margin-bottom:28px;" />`
+    : "";
+  document.getElementById("modalContenido").innerHTML = `
+    <span class="cat-badge ${cat.clase}" style="margin-bottom:12px;display:inline-block;">${cat.label}</span>
+    <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,48px);color:#fff;letter-spacing:1px;line-height:1.1;margin-bottom:12px;">${noticia.titulo}</h1>
+    <p style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:28px;">${formatFecha(noticia.fecha)}</p>
+    ${imgHTML}
+    <div style="font-size:17px;color:rgba(255,255,255,0.75);line-height:1.75;font-weight:300;">${noticia.cuerpo}</div>
+  `;
+  document.getElementById("modalNoticia").style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function cerrarModal() {
+  document.getElementById("modalNoticia").style.display = "none";
+  document.body.style.overflow = "";
 }
 
 function renderGrid(containerId, filtro) {
