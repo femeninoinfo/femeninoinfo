@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>femeninoinfo — fútbol femenino</title>
+  <meta name="description" content="Noticias de fútbol femenino argentino e internacional. Apertura Femenino, Selección Argentina, torneos internacionales." />
+  <link rel="icon" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="femeninoinfo" class="brand-logo" />
+        <span class="brand-name">femeninoinfo</span>
+      </a>
+      <nav class="nav">
+        <a href="#apertura">Apertura</a>
+        <a href="#seleccion">Selección</a>
+        <a href="#internacional">Internacional</a>
+        <a href="#exterior">Arg en el exterior</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <nav class="nav-mobile" id="navMobile">
+      <a href="#apertura" onclick="toggleMenu()">Apertura</a>
+      <a href="#seleccion" onclick="toggleMenu()">Selección</a>
+      <a href="#internacional" onclick="toggleMenu()">Internacional</a>
+      <a href="#exterior" onclick="toggleMenu()">Arg en el exterior</a>
+      <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
+      <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-tag">última hora</p>
+      <h1 class="hero-title" id="heroTitle">Cobertura independiente del fútbol femenino argentino e internacional</h1>
+      <p class="hero-sub" id="heroSub">Noticias del Apertura Femenino, la Selección Argentina y el fútbol femenino del mundo.</p>
+      <a href="#noticias" class="hero-btn">Ver todas las noticias</a>
+    </div>
+    <div class="hero-deco"></div>
+  </section>
+
+  <!-- ÚLTIMAS NOTICIAS -->
+  <section class="section" id="noticias">
+    <div class="section-header">
+      <h2 class="section-title">Últimas noticias</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="grid-noticias" id="gridUltimas">
+      <!-- Las noticias se cargan dinámicamente desde noticias.js -->
+    </div>
+  </section>
+
+  <!-- APERTURA FEMENINO -->
+  <section class="section section-dark" id="apertura">
+    <div class="section-header">
+      <span class="cat-badge cat-arg">Apertura Femenino</span>
+      <h2 class="section-title">Liga Argentina</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="grid-noticias" id="gridApertura"></div>
+  </section>
+
+  <!-- SELECCIÓN -->
+  <section class="section" id="seleccion">
+    <div class="section-header">
+      <span class="cat-badge cat-sel">Selección</span>
+      <h2 class="section-title">La Albiceleste</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="grid-noticias" id="gridSeleccion"></div>
+  </section>
+
+  <!-- INTERNACIONAL -->
+  <section class="section section-dark" id="internacional">
+    <div class="section-header">
+      <span class="cat-badge cat-int">Internacional</span>
+      <h2 class="section-title">El mundo</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="grid-noticias" id="gridInternacional"></div>
+  </section>
+
+  <!-- ARG EN EL EXTERIOR -->
+  <section class="section" id="exterior">
+    <div class="section-header">
+      <span class="cat-badge cat-ext">Arg en el exterior</span>
+      <h2 class="section-title">Argentinas afuera</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="grid-noticias" id="gridExterior"></div>
+  </section>
+
+  <!-- STREAMING -->
+  <section class="section section-dark streaming-section">
+    <div class="streaming-inner">
+      <div class="streaming-text">
+        <span class="cat-badge cat-live">● EN VIVO</span>
+        <h2 class="streaming-title">El programa de femeninoinfo</h2>
+        <p>De martes a jueves a las 18 hs por YouTube y Twitch. Análisis, debate y las noticias del día del fútbol femenino.</p>
+        <div class="streaming-links">
+          <a href="https://www.youtube.com/@femeninoinfo" target="_blank" class="stream-btn yt">YouTube</a>
+          <a href="https://www.twitch.tv/femeninoinfo" target="_blank" class="stream-btn tw">Twitch</a>
+        </div>
+      </div>
+      <div class="streaming-embed">
+        <div class="embed-placeholder">
+          <span>Últimas transmisiones</span>
+          <a href="https://www.youtube.com/@femeninoinfo" target="_blank" class="embed-link">Ver en YouTube →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REDES -->
+  <section class="section redes-section">
+    <h2 class="section-title centered">Seguinos en redes</h2>
+    <div class="redes-grid">
+      <a href="https://www.instagram.com/femeninoinfo" target="_blank" class="red-card ig">
+        <span class="red-icon">📸</span>
+        <span class="red-name">Instagram</span>
+        <span class="red-metric">17K seguidores</span>
+      </a>
+      <a href="https://www.tiktok.com/@femeninoinfo" target="_blank" class="red-card tk">
+        <span class="red-icon">🎵</span>
+        <span class="red-name">TikTok</span>
+        <span class="red-metric">22K seguidores</span>
+      </a>
+      <a href="https://twitter.com/femeninoinfo" target="_blank" class="red-card tw">
+        <span class="red-icon">✕</span>
+        <span class="red-name">X / Twitter</span>
+        <span class="red-metric">Noticias al instante</span>
+      </a>
+      <a href="https://www.youtube.com/@femeninoinfo" target="_blank" class="red-card yt">
+        <span class="red-icon">▶</span>
+        <span class="red-name">YouTube</span>
+        <span class="red-metric">500 suscriptores</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="femeninoinfo" class="footer-logo" />
+        <p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Secciones</h4>
+        <a href="#apertura">Apertura Femenino</a>
+        <a href="#seleccion">Selección Argentina</a>
+        <a href="#internacional">Internacional</a>
+        <a href="#exterior">Arg en el exterior</a>
+      </div>
+      <div class="footer-links">
+        <h4>femeninoinfo</h4>
+        <a href="sobre.html">Sobre el medio</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="sponsors.html">Sponsors</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 femeninoinfo — Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="noticias.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
