@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 12,
+    titulo: "Argentina vs Ecuador: hoy a las 20 por el título de la Liga de Naciones",
+    resumen: "La Selección ya está clasificada al Mundial 2027 pero puede salir campeona. Si gana y Colombia no gana, la Albiceleste se queda con el título. Partido en Quito a las 20:00, gratis por AFA Estudio.",
+    imagen: "argentina-ecuador.png",
+    categoria: "seleccion",
+    fecha: "9 jun 2026",
+    pagina: "argentina-ecuador.html"
+  },
+  {
     id: 1,
     titulo: "Argentina clasificó al Mundial Femenino Brasil 2027",
     resumen: "La Selección empató 1-1 ante Perú en Lanús. El gol que dio la clasificación fue de Mercedes Diz, de 17 años. Tercera participación mundialista consecutiva.",
