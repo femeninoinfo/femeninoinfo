@@ -1759,3 +1759,13 @@ img.escudo-img {
     height: 90px !important;
   }
 }
+
+/* FIX ANILLOS LOGO — no recortar */
+.hero-left {
+  overflow: visible !important;
+}
+
+.hero-logo-animado {
+  overflow: visible !important;
+  margin-left: 8px;
+}
