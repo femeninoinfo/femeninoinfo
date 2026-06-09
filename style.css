@@ -1614,3 +1614,61 @@ img.escudo-img {
 @media (max-width: 860px) {
   .hero-logo-animado { display: none; }
 }
+
+/* ============================
+   LOGO ANIMADO PRO
+   ============================ */
+
+.hero-logo-animado {
+  margin-top: 36px !important;
+  width: 180px !important;
+  height: 180px !important;
+  position: relative;
+  animation: none !important;
+}
+
+.hero-logo-animado img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  filter: none !important;
+  opacity: 1 !important;
+  animation: logoGlow 3s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+/* Anillo giratorio exterior */
+.hero-logo-animado::before {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(200,0,255,0.3);
+  border-top-color: rgba(200,0,255,0.9);
+  animation: ringRotate 3s linear infinite;
+  z-index: 1;
+}
+
+/* Anillo interior más lento */
+.hero-logo-animado::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(200,0,255,0.15);
+  border-bottom-color: rgba(200,0,255,0.6);
+  animation: ringRotate 5s linear infinite reverse;
+  z-index: 1;
+}
+
+@keyframes logoGlow {
+  0%   { filter: drop-shadow(0 0 8px rgba(200,0,255,0.4)) drop-shadow(0 0 20px rgba(200,0,255,0.15)); opacity: 0.75; }
+  50%  { filter: drop-shadow(0 0 16px rgba(200,0,255,0.7)) drop-shadow(0 0 40px rgba(200,0,255,0.3)); opacity: 1; }
+  100% { filter: drop-shadow(0 0 8px rgba(200,0,255,0.4)) drop-shadow(0 0 20px rgba(200,0,255,0.15)); opacity: 0.75; }
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
