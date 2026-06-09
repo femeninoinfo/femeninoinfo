@@ -3,9 +3,8 @@
 function scrollCarrusel(id, dir) {
   const track = document.getElementById(id);
   if (!track) return;
-  const card = track.querySelector('.noticia-card');
-  const cardWidth = card ? card.getBoundingClientRect().width : 280;
-  track.scrollBy({ left: dir * (cardWidth + 16), behavior: 'smooth' });
+  const scrollAmount = track.offsetWidth * 0.75;
+  track.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
 }
 
 function showTab(tab, el) {
