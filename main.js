@@ -1,5 +1,12 @@
 // FEMENINOINFO — MAIN JS
 
+function scrollCarrusel(id, dir) {
+  const track = document.getElementById(id);
+  if (!track) return;
+  const cardWidth = track.querySelector('.noticia-card')?.offsetWidth || 300;
+  track.scrollBy({ left: dir * (cardWidth + 20), behavior: 'smooth' });
+}
+
 function showTab(tab, el) {
   document.getElementById('tab-tabla').style.display = tab === 'tabla' ? 'block' : 'none';
   document.getElementById('tab-fixture').style.display = tab === 'fixture' ? 'block' : 'none';

@@ -1175,3 +1175,169 @@ img.escudo-img {
 .noticia-card[data-cat="seleccion"] { border-top: 3px solid #005cbf; }
 .noticia-card[data-cat="internacional"] { border-top: 3px solid #006644; }
 .noticia-card[data-cat="exterior"] { border-top: 3px solid #8b4000; }
+
+/* ============================
+   COLORES POR CATEGORÍA — CARDS
+   ============================ */
+
+/* Borde superior grueso por categoría */
+.noticia-card[data-cat="apertura"] {
+  border-top: 4px solid #3d0066;
+}
+.noticia-card[data-cat="seleccion"] {
+  border-top: 4px solid #005cbf;
+}
+.noticia-card[data-cat="internacional"] {
+  border-top: 4px solid #006644;
+}
+.noticia-card[data-cat="exterior"] {
+  border-top: 4px solid #8b4000;
+}
+
+/* Badge de categoría con color sólido de fondo */
+.card-cat.cat-arg {
+  background: rgba(61,0,102,0.12);
+  color: #3d0066;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+}
+.card-cat.cat-sel {
+  background: rgba(0,92,191,0.1);
+  color: #005cbf;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+}
+.card-cat.cat-int {
+  background: rgba(0,102,68,0.1);
+  color: #006644;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+}
+
+/* En secciones oscuras, versión clara */
+.section-dark .card-cat.cat-arg {
+  background: rgba(200,0,255,0.15);
+  color: #e066ff;
+}
+.section-dark .card-cat.cat-sel {
+  background: rgba(0,150,255,0.15);
+  color: #66b3ff;
+}
+.section-dark .card-cat.cat-int {
+  background: rgba(0,200,100,0.15);
+  color: #00cc88;
+}
+
+/* Separador de sección con color */
+#apertura { border-left: 5px solid #3d0066; padding-left: 20px; }
+#seleccion { border-left: 5px solid #005cbf; padding-left: 20px; }
+#internacional { border-left: 5px solid #006644; padding-left: 20px; }
+
+/* Header de sección con pill de color */
+.section-pill {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+.pill-apertura { background: #3d0066; color: #fff; }
+.pill-seleccion { background: #005cbf; color: #fff; }
+.pill-internacional { background: #006644; color: #fff; }
+.pill-ultimas { background: var(--accent); color: #fff; }
+
+/* ============================
+   CARRUSEL CON FLECHAS
+   ============================ */
+
+.carrusel-wrap {
+  position: relative;
+}
+
+.carrusel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  padding-bottom: 4px;
+}
+
+.carrusel-track::-webkit-scrollbar { display: none; }
+
+.carrusel-track .noticia-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+
+/* Cards más pequeñas en últimas noticias */
+#noticias .carrusel-track .noticia-card {
+  flex: 0 0 240px;
+}
+
+#noticias .carrusel-track .card-img {
+  height: 130px;
+}
+
+#noticias .carrusel-track .card-img-placeholder {
+  height: 130px;
+}
+
+#noticias .carrusel-track .card-title {
+  font-size: 16px;
+}
+
+#noticias .carrusel-track .card-excerpt {
+  font-size: 12px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Flechas */
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(200,0,255,0.4);
+  transition: background 0.2s, transform 0.2s;
+  line-height: 1;
+}
+
+.carrusel-btn:hover {
+  background: var(--accent-soft);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carrusel-btn.prev { left: -18px; }
+.carrusel-btn.next { right: -18px; }
+
+@media (max-width: 600px) {
+  .carrusel-btn { display: none; }
+  .carrusel-track .noticia-card { flex: 0 0 85vw; }
+  #noticias .carrusel-track .noticia-card { flex: 0 0 75vw; }
+}

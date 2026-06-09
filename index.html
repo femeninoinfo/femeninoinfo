@@ -177,40 +177,57 @@
   <!-- ÚLTIMAS NOTICIAS -->
   <section class="section" id="noticias">
     <div class="section-header">
+      <span class="section-pill pill-ultimas">Últimas noticias</span>
       <h2 class="section-title">Últimas noticias</h2>
       <span class="section-line"></span>
     </div>
-    <div class="grid-noticias" id="gridUltimas"></div>
+    <div class="carrusel-wrap">
+      <button class="carrusel-btn prev" onclick="scrollCarrusel('gridUltimas', -1)">&#8592;</button>
+      <div class="carrusel-track grid-noticias" id="gridUltimas"></div>
+      <button class="carrusel-btn next" onclick="scrollCarrusel('gridUltimas', 1)">&#8594;</button>
+    </div>
   </section>
 
   <!-- APERTURA FEMENINO -->
   <section class="section section-dark" id="apertura">
     <div class="section-header">
-      <span class="cat-badge cat-arg">Apertura Femenino</span>
+      <span class="section-pill pill-apertura">Apertura Femenino 2026</span>
       <h2 class="section-title">Apertura Femenino 2026</h2>
       <span class="section-line"></span>
     </div>
-    <div class="grid-noticias" id="gridApertura"></div>
+    <div class="carrusel-wrap">
+      <button class="carrusel-btn prev" onclick="scrollCarrusel('gridApertura', -1)">&#8592;</button>
+      <div class="carrusel-track grid-noticias" id="gridApertura"></div>
+      <button class="carrusel-btn next" onclick="scrollCarrusel('gridApertura', 1)">&#8594;</button>
+    </div>
   </section>
 
   <!-- SELECCIÓN -->
   <section class="section" id="seleccion">
     <div class="section-header">
-      <span class="cat-badge cat-sel">Selección</span>
+      <span class="section-pill pill-seleccion">Selección Argentina</span>
       <h2 class="section-title">Selección Argentina</h2>
       <span class="section-line"></span>
     </div>
-    <div class="grid-noticias" id="gridSeleccion"></div>
+    <div class="carrusel-wrap">
+      <button class="carrusel-btn prev" onclick="scrollCarrusel('gridSeleccion', -1)">&#8592;</button>
+      <div class="carrusel-track grid-noticias" id="gridSeleccion"></div>
+      <button class="carrusel-btn next" onclick="scrollCarrusel('gridSeleccion', 1)">&#8594;</button>
+    </div>
   </section>
 
   <!-- INTERNACIONAL -->
   <section class="section section-dark" id="internacional">
     <div class="section-header">
-      <span class="cat-badge cat-int">Internacional</span>
+      <span class="section-pill pill-internacional">Fútbol Internacional</span>
       <h2 class="section-title">Fútbol Internacional</h2>
       <span class="section-line"></span>
     </div>
-    <div class="grid-noticias" id="gridInternacional"></div>
+    <div class="carrusel-wrap">
+      <button class="carrusel-btn prev" onclick="scrollCarrusel('gridInternacional', -1)">&#8592;</button>
+      <div class="carrusel-track grid-noticias" id="gridInternacional"></div>
+      <button class="carrusel-btn next" onclick="scrollCarrusel('gridInternacional', 1)">&#8594;</button>
+    </div>
   </section>
 
   <!-- STREAMING -->
