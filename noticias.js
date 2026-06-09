@@ -6,7 +6,7 @@ const noticias = [
     imagen: "argentina-mundial.png",
     categoria: "seleccion",
     fecha: "6 jun 2026",
-    pagina: "noticias/argentina-mundial.html"
+    pagina: "argentina-mundial.html"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const noticias = [
     imagen: "argentina-peru.png",
     categoria: "seleccion",
     fecha: "2 jun 2026",
-    pagina: "noticias/argentina-peru.html"
+    pagina: "argentina-peru.html"
   },
   {
     id: 3,
@@ -24,16 +24,16 @@ const noticias = [
     imagen: "eva-espejo.png",
     categoria: "internacional",
     fecha: "2 jun 2026",
-    pagina: "noticias/eva-espejo.html"
+    pagina: "eva-espejo.html"
   },
   {
     id: 4,
     titulo: "Alexia Putellas deja el Barcelona tras 14 temporadas",
-    resumen: "Se va al London City Lionesses de Inglaterra. 10 ligas, 4 Champions League y 189 goles en el club. \"Ha sido una historia perfecta\", dijo en su despedida.",
+    resumen: "Se va al London City Lionesses de Inglaterra. 10 ligas, 4 Champions League y 189 goles en el club. Se despidió con un video emotivo.",
     imagen: "alexia-putellas.png",
     categoria: "internacional",
     fecha: "26 may 2026",
-    pagina: "noticias/alexia-putellas.html"
+    pagina: "alexia-putellas.html"
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const noticias = [
     imagen: "liga-mx.png",
     categoria: "internacional",
     fecha: "26 may 2026",
-    pagina: "noticias/liga-mx.html"
+    pagina: "liga-mx.html"
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const noticias = [
     imagen: "river-tabla.png",
     categoria: "apertura",
     fecha: "26 may 2026",
-    pagina: "noticias/river-tabla.html"
+    pagina: "river-tabla.html"
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ const noticias = [
     imagen: "river-boca-superclasico.png",
     categoria: "apertura",
     fecha: "May 2026",
-    pagina: "noticias/river-boca-superclasico.html"
+    pagina: "river-boca-superclasico.html"
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const noticias = [
     imagen: "belgrano-talleres.png",
     categoria: "internacional",
     fecha: "25 may 2026",
-    pagina: "noticias/belgrano-talleres.html"
+    pagina: "belgrano-talleres.html"
   },
   {
     id: 9,
@@ -78,16 +78,16 @@ const noticias = [
     imagen: "banini.png",
     categoria: "apertura",
     fecha: "22 may 2026",
-    pagina: "noticias/banini.html"
+    pagina: "banini.html"
   },
   {
     id: 10,
     titulo: "Messi impulsa la creación de un equipo femenino en la UE Cornellà",
-    resumen: "Primera decisión institucional de peso tras comprar el 85% del club. El equipo arrancará en Segunda Catalana en 2026/2027 y necesita seis ascensos para llegar a Liga F.",
+    resumen: "Primera decisión institucional de peso tras comprar el 85% del club. Arrancará en Segunda Catalana en 2026/2027 y necesita seis ascensos para llegar a Liga F.",
     imagen: "portanova-conferencia.png",
     categoria: "internacional",
     fecha: "22 may 2026",
-    pagina: "noticias/portanova-conferencia.html"
+    pagina: "portanova-conferencia.html"
   },
   {
     id: 11,
@@ -96,6 +96,6 @@ const noticias = [
     imagen: "mercedes-diz.png",
     categoria: "seleccion",
     fecha: "22 may 2026",
-    pagina: "noticias/mercedes-diz.html"
+    pagina: "mercedes-diz.html"
   }
 ];
