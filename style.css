@@ -1820,3 +1820,8 @@ img.escudo-img {
   border: 1px solid rgba(200,0,255,0.15) !important;
   border-radius: var(--radius-lg) !important;
 }
+
+/* Logo animado solo en desktop */
+@media (max-width: 860px) {
+  .hero-logo-animado { display: none !important; }
+}
