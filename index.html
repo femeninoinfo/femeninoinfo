@@ -384,8 +384,10 @@
     .ln-top2-badge { background: rgba(0,92,191,0.1); color: #005cbf; border: 1px solid rgba(0,92,191,0.2); }
     .ln-rep-badge { background: rgba(0,102,68,0.1); color: #006644; border: 1px solid rgba(0,102,68,0.2); }
     .ln-fixture-list .fixture-row { background: #fff; }
-    .bandera-ln { width: 20px; height: 14px; object-fit: cover; border-radius: 2px; vertical-align: middle; flex-shrink: 0; }
-    .tabla-ln tbody td:nth-child(2) { display: flex; align-items: center; gap: 8px; }
+    .bandera-ln { width: 20px; height: 14px; object-fit: cover; border-radius: 2px; vertical-align: middle; flex-shrink: 0; display: inline-block !important; }
+    .tabla-ln tbody td:nth-child(2) { display: flex; align-items: center; gap: 8px; min-width: 120px; }
+    /* Asegurar que el CSS de liga de naciones no pise el fixture del Apertura */
+    #tab-fixture .fixture-row { background: transparent !important; }
     #liganaciones { border-top: 3px solid #005cbf; }
     #liganaciones .section-title { color: #005cbf; }
     #liganaciones .section-line { background: #005cbf; }

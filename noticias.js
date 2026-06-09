@@ -3,7 +3,7 @@ const noticias = [
     id: 12,
     titulo: "Argentina vs Ecuador: hoy a las 20 por el título de la Liga de Naciones",
     resumen: "La Selección ya está clasificada al Mundial 2027 pero puede salir campeona. Si gana y Colombia no gana, la Albiceleste se queda con el título. Partido en Quito a las 20:00, gratis por AFA Estudio.",
-    imagen: "argentina-ecuador.png",
+    imagen: "argentina-peru.png",
     categoria: "seleccion",
     fecha: "9 jun 2026",
     pagina: "argentina-ecuador.html"
