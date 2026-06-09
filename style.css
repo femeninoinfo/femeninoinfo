@@ -1123,3 +1123,10 @@ img.escudo-img {
   color: #fff;
   font-weight: 600;
 }
+
+.fx-equipos {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
