@@ -1794,3 +1794,31 @@ img.escudo-img {
     display: block !important;
   }
 }
+
+/* ============================
+   FIX SEPARACIÓN VISUAL HERO
+   ============================ */
+
+/* Fondo uniforme en todo el hero */
+.hero-tabla-section {
+  background: #0a000f !important;
+}
+
+/* Quitar overflow hidden del hero-right para no cortar anillos */
+.hero-right {
+  overflow: visible !important;
+}
+
+/* El scroll de la tabla queda solo en el tab-content */
+.tab-content {
+  overflow-y: auto !important;
+  max-height: 440px !important;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+/* Borde del panel de tabla */
+.hero-right {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(200,0,255,0.15) !important;
+  border-radius: var(--radius-lg) !important;
+}
