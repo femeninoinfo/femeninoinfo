@@ -1341,3 +1341,100 @@ img.escudo-img {
   .carrusel-track .noticia-card { flex: 0 0 85vw; }
   #noticias .carrusel-track .noticia-card { flex: 0 0 75vw; }
 }
+
+/* ============================
+   FIX TIPOGRAFÍA Y CARRUSEL
+   ============================ */
+
+/* Títulos de cards — más legibles, sin Bebas Neue */
+.card-title {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+  color: var(--text);
+  text-transform: none !important;
+}
+
+.section-dark .card-title { color: var(--white) !important; }
+
+/* Carrusel — alineación correcta */
+.carrusel-wrap {
+  position: relative;
+  padding: 0 8px;
+}
+
+.carrusel-track {
+  display: flex !important;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  padding: 8px 4px 12px;
+  align-items: stretch;
+}
+
+.carrusel-track .noticia-card {
+  flex: 0 0 280px !important;
+  min-height: unset;
+  scroll-snap-align: start;
+}
+
+#noticias .carrusel-track .noticia-card {
+  flex: 0 0 220px !important;
+}
+
+/* Botones de flecha bien posicionados */
+.carrusel-btn {
+  top: 45% !important;
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 14px !important;
+}
+
+.carrusel-btn.prev { left: -16px !important; }
+.carrusel-btn.next { right: -16px !important; }
+
+/* Hero AFA block */
+.hero-afa-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(200,0,255,0.15);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.hero-afa-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(1.1);
+}
+
+.hero-afa-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-afa-tag {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.hero-afa-titulo {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.3;
+}
