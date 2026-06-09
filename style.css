@@ -1611,9 +1611,7 @@ img.escudo-img {
   100% { transform: scale(1);    opacity: 1; }
 }
 
-@media (max-width: 860px) {
-  .hero-logo-animado { display: none; }
-}
+/* logo visible en mobile */
 
 /* ============================
    LOGO ANIMADO PRO
