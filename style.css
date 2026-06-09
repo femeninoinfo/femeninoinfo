@@ -1746,3 +1746,6 @@ img.escudo-img {
     align-items: flex-start;
   }
 }
+
+/* Ocultar video definitivamente */
+.hero-video-bg, .hero-video-overlay { display: none !important; }
