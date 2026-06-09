@@ -1548,3 +1548,38 @@ img.escudo-img {
   max-height: 36px !important;
   object-fit: contain !important;
 }
+
+/* ============================
+   LOGO ANIMADO DE FONDO EN HERO
+   ============================ */
+
+.hero-logo-fondo {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 420px;
+  height: 420px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.06;
+  animation: logoRotate 20s linear infinite;
+}
+
+.hero-logo-fondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(2) saturate(0);
+}
+
+@keyframes logoRotate {
+  0%   { transform: translateY(-50%) rotate(0deg) scale(1); opacity: 0.06; }
+  50%  { transform: translateY(-50%) rotate(180deg) scale(1.05); opacity: 0.09; }
+  100% { transform: translateY(-50%) rotate(360deg) scale(1); opacity: 0.06; }
+}
+
+/* En mobile ocultar para no saturar */
+@media (max-width: 860px) {
+  .hero-logo-fondo { display: none; }
+}
