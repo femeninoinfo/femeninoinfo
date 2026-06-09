@@ -3,7 +3,7 @@ const noticias = [
     id: 12,
     titulo: "Argentina vs Ecuador: hoy a las 20 por el título de la Liga de Naciones",
     resumen: "La Selección ya está clasificada al Mundial 2027 pero puede salir campeona. Si gana y Colombia no gana, la Albiceleste se queda con el título. Partido en Quito a las 20:00, gratis por AFA Estudio.",
-    imagen: "argentina-mundial.png",
+    imagen: "argentina-ecuador.png",
     categoria: "seleccion",
     fecha: "9 jun 2026",
     pagina: "argentina-ecuador.html"
@@ -21,7 +21,7 @@ const noticias = [
     id: 2,
     titulo: "Argentina vs Perú: el partido tuvo tres estadios en menos de un mes",
     resumen: "El partido por la Fecha 8 de la Liga de Naciones llegó con tres sedes confirmadas. La definitiva fue el Estadio Ciudad de Lanús. Transmisión gratis por AFA Estudio.",
-    imagen: "argentina-mundial.png",
+    imagen: "argentina-peru.png",
     categoria: "seleccion",
     fecha: "2 jun 2026",
     pagina: "argentina-peru.html"
@@ -57,28 +57,28 @@ const noticias = [
     id: 6,
     titulo: "River lidera el Apertura 2026 con 20 puntos tras empatar ante Talleres",
     resumen: "Las Millonarias igualaron 1-1 con Talleres en La Boutique con gol de Mercedes Diz. 6 victorias, 2 empates y 0 derrotas en 8 fechas.",
-    imagen: "river-tabla.png",
+    imagen: "tabla-del-río.png",
     categoria: "apertura",
     fecha: "26 may 2026",
-    pagina: "river-tabla.html"
+    pagina: "tabla-del-río.html"
   },
   {
     id: 7,
     titulo: "River venció 1-0 a Boca en el Superclásico femenino",
     resumen: "Las Millonarias ganaron en Casa Amarilla en el partido reprogramado de la Fecha 6. El resultado consolidó el liderazgo de River en el Apertura 2026.",
-    imagen: "river-boca-superclasico.png",
+    imagen: "río-boca-superclásico.png",
     categoria: "apertura",
     fecha: "May 2026",
-    pagina: "river-boca-superclasico.html"
+    pagina: "río-boca-superclásico.html"
   },
   {
     id: 8,
     titulo: "Barcelona tetracampeón de la Champions League femenina: goleó 4-0 al Lyon",
     resumen: "La final fue en Oslo. Pajor y Paralluelo con doblete cada una. Seis finales consecutivas para el Barça, que suma su cuarto título europeo en seis temporadas.",
-    imagen: "belgrano-talleres.png",
+    imagen: "belgano-talleres.png",
     categoria: "internacional",
     fecha: "25 may 2026",
-    pagina: "belgrano-talleres.html"
+    pagina: "belgarano-talleres.html"
   },
   {
     id: 9,
