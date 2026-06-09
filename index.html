@@ -201,6 +201,91 @@
     </div>
   </section>
 
+  <!-- LIGA DE NACIONES -->
+  <section class="section" id="liganaciones">
+    <div class="section-header">
+      <span class="section-pill pill-seleccion">Liga de Naciones Femenina</span>
+      <h2 class="section-title">CONMEBOL Liga de Naciones Femenina 2026</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="ln-tabs-header">
+      <button class="tab-btn-ln active" onclick="showTabLN('ln-tabla', this)">Tabla</button>
+      <button class="tab-btn-ln" onclick="showTabLN('ln-fixture', this)">Fixture — Fecha 9</button>
+    </div>
+    <div class="ln-tab-content" id="ln-tabla">
+      <table class="tabla-ln">
+        <thead>
+          <tr><th>#</th><th>Selección</th><th>Pts</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DG</th></tr>
+        </thead>
+        <tbody>
+          <tr class="ln-top2"><td>1</td><td><img src="https://flagcdn.com/w20/co.png" class="bandera-ln" alt="Colombia"> Colombia</td><td><strong>17</strong></td><td>7</td><td>5</td><td>2</td><td>0</td><td>12</td><td>4</td><td>+8</td></tr>
+          <tr class="ln-top2"><td>2</td><td><img src="https://flagcdn.com/w20/ar.png" class="bandera-ln" alt="Argentina"> Argentina</td><td><strong>15</strong></td><td>7</td><td>4</td><td>3</td><td>0</td><td>17</td><td>5</td><td>+12</td></tr>
+          <tr class="ln-rep"><td>3</td><td><img src="https://flagcdn.com/w20/ve.png" class="bandera-ln" alt="Venezuela"> Venezuela</td><td><strong>11</strong></td><td>7</td><td>3</td><td>2</td><td>2</td><td>18</td><td>5</td><td>+13</td></tr>
+          <tr class="ln-rep"><td>4</td><td><img src="https://flagcdn.com/w20/ec.png" class="bandera-ln" alt="Ecuador"> Ecuador</td><td><strong>11</strong></td><td>7</td><td>3</td><td>2</td><td>2</td><td>8</td><td>5</td><td>+3</td></tr>
+          <tr><td>5</td><td><img src="https://flagcdn.com/w20/py.png" class="bandera-ln" alt="Paraguay"> Paraguay</td><td><strong>10</strong></td><td>7</td><td>3</td><td>1</td><td>3</td><td>14</td><td>7</td><td>+7</td></tr>
+          <tr><td>6</td><td><img src="https://flagcdn.com/w20/cl.png" class="bandera-ln" alt="Chile"> Chile</td><td><strong>10</strong></td><td>8</td><td>3</td><td>1</td><td>4</td><td>11</td><td>9</td><td>+2</td></tr>
+          <tr><td>7</td><td><img src="https://flagcdn.com/w20/pe.png" class="bandera-ln" alt="Perú"> Perú</td><td><strong>8</strong></td><td>7</td><td>2</td><td>2</td><td>3</td><td>8</td><td>15</td><td>-7</td></tr>
+          <tr><td>8</td><td><img src="https://flagcdn.com/w20/uy.png" class="bandera-ln" alt="Uruguay"> Uruguay</td><td><strong>5</strong></td><td>7</td><td>1</td><td>2</td><td>4</td><td>6</td><td>10</td><td>-4</td></tr>
+          <tr class="ln-elim"><td>9</td><td><img src="https://flagcdn.com/w20/bo.png" class="bandera-ln" alt="Bolivia"> Bolivia</td><td><strong>1</strong></td><td>7</td><td>0</td><td>1</td><td>6</td><td>2</td><td>36</td><td>-34</td></tr>
+        </tbody>
+      </table>
+      <div class="ln-leyenda">
+        <span class="ln-badge ln-top2-badge">Clasificadas al Mundial</span>
+        <span class="ln-badge ln-rep-badge">Zona repechaje</span>
+      </div>
+      <p class="tabla-fecha">Tras Fecha 8 — 5 jun 2026</p>
+    </div>
+    <div class="ln-tab-content" id="ln-fixture" style="display:none;">
+      <div class="fixture-list ln-fixture-list">
+        <div class="fixture-dia-header">Martes 9/6 — Fecha 9 (última) — todas a las 20:00 hs ARG</div>
+        <div class="fixture-row destacado">
+          <span class="fx-hora">20:00</span>
+          <span class="fx-equipos">
+            <img src="https://flagcdn.com/w20/ec.png" class="bandera-ln" alt="Ecuador">
+            <span class="fx-partido">Ecuador vs Argentina</span>
+            <img src="https://flagcdn.com/w20/ar.png" class="bandera-ln" alt="Argentina">
+          </span>
+          <span class="fx-estadio">Atahualpa, Quito</span>
+        </div>
+        <div class="fixture-row destacado">
+          <span class="fx-hora">20:00</span>
+          <span class="fx-equipos">
+            <img src="https://flagcdn.com/w20/py.png" class="bandera-ln" alt="Paraguay">
+            <span class="fx-partido">Paraguay vs Colombia</span>
+            <img src="https://flagcdn.com/w20/co.png" class="bandera-ln" alt="Colombia">
+          </span>
+          <span class="fx-estadio">Defensores del Chaco</span>
+        </div>
+        <div class="fixture-row">
+          <span class="fx-hora">20:00</span>
+          <span class="fx-equipos">
+            <img src="https://flagcdn.com/w20/uy.png" class="bandera-ln" alt="Uruguay">
+            <span class="fx-partido">Uruguay vs Venezuela</span>
+            <img src="https://flagcdn.com/w20/ve.png" class="bandera-ln" alt="Venezuela">
+          </span>
+          <span class="fx-estadio">Montevideo</span>
+        </div>
+        <div class="fixture-row">
+          <span class="fx-hora">18:00</span>
+          <span class="fx-equipos">
+            <img src="https://flagcdn.com/w20/pe.png" class="bandera-ln" alt="Perú">
+            <span class="fx-partido">Perú vs Bolivia</span>
+            <img src="https://flagcdn.com/w20/bo.png" class="bandera-ln" alt="Bolivia">
+          </span>
+          <span class="fx-estadio">Callao, Perú</span>
+        </div>
+        <div class="fixture-row">
+          <span class="fx-hora">—</span>
+          <span class="fx-equipos">
+            <img src="https://flagcdn.com/w20/cl.png" class="bandera-ln" alt="Chile">
+            <span class="fx-partido">Chile — fecha libre</span>
+          </span>
+          <span class="fx-estadio"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STREAMING -->
   <section class="section section-dark streaming-section">
     <div class="streaming-inner">
@@ -274,6 +359,45 @@
     </div>
   </footer>
 
+  <style>
+    .ln-tabs-header { display: flex; border-bottom: 2px solid #3d0066; margin-bottom: 0; }
+    .tab-btn-ln { background: none; border: none; color: #888; font-family: 'Bebas Neue', sans-serif; font-size: 14px; letter-spacing: 1px; padding: 10px 20px; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+    .tab-btn-ln.active { color: #3d0066; border-bottom-color: #c800ff; }
+    .ln-tab-content { padding-top: 16px; }
+    .tabla-ln { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 12px; }
+    .tabla-ln thead tr { background: #3d0066; }
+    .tabla-ln thead th { color: rgba(255,255,255,0.8); font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 8px 10px; text-align: center; font-weight: 400; }
+    .tabla-ln thead th:nth-child(2) { text-align: left; }
+    .tabla-ln tbody tr { border-bottom: 1px solid #eee; transition: background 0.15s; }
+    .tabla-ln tbody tr:hover { background: rgba(200,0,255,0.04); }
+    .tabla-ln tbody td { padding: 8px 10px; text-align: center; color: #333; font-size: 13px; }
+    .tabla-ln tbody td:nth-child(2) { text-align: left; font-weight: 600; color: #111; }
+    .tabla-ln tbody tr.ln-top2 { background: rgba(0,92,191,0.05); }
+    .tabla-ln tbody tr.ln-top2 td:nth-child(2) { color: #005cbf; }
+    .tabla-ln tbody tr.ln-rep { background: rgba(0,102,68,0.04); }
+    .tabla-ln tbody tr.ln-rep td:nth-child(2) { color: #006644; }
+    .tabla-ln tbody tr.ln-elim td { color: #aaa; }
+    .tabla-ln tbody td strong { font-family: 'Bebas Neue', sans-serif; font-size: 15px; color: #3d0066; }
+    .tabla-ln tbody tr.ln-top2 td strong { color: #005cbf; }
+    .ln-leyenda { display: flex; gap: 12px; flex-wrap: wrap; margin: 10px 0 4px; }
+    .ln-badge { font-size: 11px; padding: 2px 10px; border-radius: 3px; font-family: 'DM Sans', sans-serif; }
+    .ln-top2-badge { background: rgba(0,92,191,0.1); color: #005cbf; border: 1px solid rgba(0,92,191,0.2); }
+    .ln-rep-badge { background: rgba(0,102,68,0.1); color: #006644; border: 1px solid rgba(0,102,68,0.2); }
+    .ln-fixture-list .fixture-row { background: #fff; }
+    .bandera-ln { width: 20px; height: 14px; object-fit: cover; border-radius: 2px; vertical-align: middle; flex-shrink: 0; }
+    .tabla-ln tbody td:nth-child(2) { display: flex; align-items: center; gap: 8px; }
+    #liganaciones { border-top: 3px solid #005cbf; }
+    #liganaciones .section-title { color: #005cbf; }
+    #liganaciones .section-line { background: #005cbf; }
+  </style>
+  <script>
+  function showTabLN(tab, el) {
+    document.getElementById('ln-tabla').style.display   = tab === 'ln-tabla'   ? 'block' : 'none';
+    document.getElementById('ln-fixture').style.display = tab === 'ln-fixture' ? 'block' : 'none';
+    document.querySelectorAll('.tab-btn-ln').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+  }
+  </script>
   <script src="noticias.js"></script>
   <script src="main.js"></script>
 </body>
