@@ -1130,3 +1130,48 @@ img.escudo-img {
   gap: 6px;
   flex: 1;
 }
+
+/* ============================
+   SECCIONES CON IDENTIDAD VISUAL
+   ============================ */
+
+/* Apertura — borde izquierdo violeta */
+#apertura {
+  border-left: 4px solid var(--purple);
+  padding-left: 28px;
+}
+
+#apertura .section-title { color: var(--purple); }
+#apertura .section-line { background: var(--purple); }
+
+/* Selección — fondo azul muy sutil + borde azul */
+#seleccion {
+  background: linear-gradient(135deg, rgba(0,60,180,0.03) 0%, transparent 60%);
+  border-left: 4px solid #005cbf;
+  padding-left: 28px;
+}
+
+#seleccion .section-title { color: #005cbf; }
+#seleccion .section-line { background: #005cbf; }
+
+/* Internacional — borde verde */
+#internacional {
+  border-left: 4px solid #006644;
+  padding-left: 28px;
+}
+
+#internacional .section-title { color: #006644; }
+#internacional .section-line { background: #006644; }
+#internacional.section-dark .section-title { color: #00cc88; }
+
+/* Último noticias — línea acento */
+#noticias {
+  border-top: 3px solid var(--accent);
+  padding-top: 48px;
+}
+
+/* Cards por categoría — borde top de color */
+.noticia-card[data-cat="apertura"] { border-top: 3px solid var(--purple); }
+.noticia-card[data-cat="seleccion"] { border-top: 3px solid #005cbf; }
+.noticia-card[data-cat="internacional"] { border-top: 3px solid #006644; }
+.noticia-card[data-cat="exterior"] { border-top: 3px solid #8b4000; }

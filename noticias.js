@@ -160,7 +160,7 @@ function crearCard(noticia) {
     ? `<img src="${noticia.imagen}" alt="${noticia.titulo}" class="card-img" />`
     : `<div class="card-img-placeholder"><img src="logo.png" alt="femeninoinfo" /></div>`;
   return `
-    <article class="noticia-card" onclick="abrirNoticia(${noticia.id})">
+    <article class="noticia-card" data-cat="${noticia.categoria}" onclick="abrirNoticia(${noticia.id})">
       ${imgHTML}
       <div class="card-body">
         <span class="card-cat ${cat.clase}">${cat.label}</span>
