@@ -1769,3 +1769,28 @@ img.escudo-img {
   overflow: visible !important;
   margin-left: 8px;
 }
+
+/* FORZAR LOGO VISIBLE EN MOBILE — override definitivo */
+@media (max-width: 860px) {
+  .hero-logo-animado,
+  .hero-logo-animado img,
+  .hero-logo-animado::before,
+  .hero-logo-animado::after {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .hero-logo-animado {
+    width: 90px !important;
+    height: 90px !important;
+    margin-top: 24px !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+
+  .hero-logo-animado::before,
+  .hero-logo-animado::after {
+    display: block !important;
+  }
+}
