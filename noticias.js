@@ -11,7 +11,7 @@ const NOTICIAS = [
       <p>Por primera vez en la historia las tres categorías de la Selección Femenina argentina están clasificadas en simultáneo: la Mayor a Brasil 2027, la Sub 20 a Polonia 2026 y la Sub 17 a Marruecos 2026.</p>`,
     categoria: "seleccion",
     fecha: "2026-06-06",
-    imagen: "https://femeninoinfo.wordpress.com/wp-content/uploads/2026/06/image-8.png"
+    imagen: "mercedes-diz.png"
   },
   {
     id: 9,
@@ -39,7 +39,7 @@ const NOTICIAS = [
       <p>Portanova no podrá contar con <strong>Aldana Cometti</strong>. Se suman <strong>Dalila Ippolito</strong>, recuperada de una rotura de ligamentos, y la joven de 17 años <strong>Mercedes Diz</strong> de River Plate.</p>`,
     categoria: "seleccion",
     fecha: "2026-06-05",
-    imagen: "https://femeninoinfo.wordpress.com/wp-content/uploads/2026/06/image-4.png"
+    imagen: "argentina-peru.png"
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const NOTICIAS = [
       <p>«Estamos muy bien. El grupo cada vez que viene acá lo disfruta y eso se ve reflejado adentro de la cancha. Este año podemos hacer historia, clasificar a los Mundiales de las tres categorías.»</p>`,
     categoria: "seleccion",
     fecha: "2026-06-04",
-    imagen: "https://femeninoinfo.wordpress.com/wp-content/uploads/2026/06/image-3.png"
+    imagen: "portanova-conferencia.png"
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ const NOTICIAS = [
       <p>Su futuro todavía no está definido. Con 33 años y un nivel alto, hay interés de varios clubes. Su nombre también aparece en las convocatorias de Portanova para la Selección Mayor.</p>`,
     categoria: "exterior",
     fecha: "2026-06-02",
-    imagen: null
+    imagen: "banini.png"
   },
   {
     id: 5,
@@ -81,7 +81,7 @@ const NOTICIAS = [
       <p>El Clausura 2026 cerró con jugadoras de <strong>31 países</strong> y registró el mayor número de debuts de futbolistas formadas en México, con 61 debutantes y un crecimiento del 150% en minutos jugados.</p>`,
     categoria: "internacional",
     fecha: "2026-05-26",
-    imagen: "https://i0.wp.com/femeninoinfo.wordpress.com/wp-content/uploads/2026/05/image-16.png?fit=1200%2C800&ssl=1"
+    imagen: "liga-mx.png"
   },
   {
     id: 4,
@@ -95,7 +95,7 @@ const NOTICIAS = [
       <p>En 14 temporadas jugó más de 500 partidos, convirtió <strong>212 goles</strong> y es la máxima goleadora de la historia del Barça femenino. Ganó dos Balones de Oro (2021 y 2022) y el Mundial con España en 2023.</p>`,
     categoria: "internacional",
     fecha: "2026-05-26",
-    imagen: null
+    imagen: "alexia-putellas.png"
   },
   {
     id: 3,
@@ -109,7 +109,7 @@ const NOTICIAS = [
       <p>San Lorenzo y Racing siguen de cerca con 19 puntos. Banfield es cuarto con 15. El torneo para por fecha FIFA y vuelve con la fecha 9 el fin de semana del 13 al 15 de junio.</p>`,
     categoria: "apertura",
     fecha: "2026-05-26",
-    imagen: "https://i0.wp.com/femeninoinfo.wordpress.com/wp-content/uploads/2026/05/image-15.png?fit=1200%2C1200&ssl=1"
+    imagen: "river-tabla.png"
   },
   {
     id: 2,
@@ -123,7 +123,7 @@ const NOTICIAS = [
       <p>El encuentro se había postergado por la participación de jugadoras millonarias en el Sudamericano Sub-17. Con este resultado, River llegó a 19 puntos y quedó como único líder del Apertura.</p>`,
     categoria: "apertura",
     fecha: "2026-05-21",
-    imagen: null
+    imagen: "river-boca-superclasico.png"
   },
   {
     id: 1,
