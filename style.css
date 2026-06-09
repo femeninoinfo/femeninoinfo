@@ -1749,3 +1749,13 @@ img.escudo-img {
 
 /* Ocultar video definitivamente */
 .hero-video-bg, .hero-video-overlay { display: none !important; }
+
+/* LOGO ANIMADO VISIBLE EN MOBILE */
+@media (max-width: 860px) {
+  .hero-logo-animado {
+    display: block !important;
+    margin-top: 24px !important;
+    width: 90px !important;
+    height: 90px !important;
+  }
+}
