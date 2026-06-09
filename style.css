@@ -1672,3 +1672,77 @@ img.escudo-img {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
+
+/* ============================
+   VIDEO DE FONDO EN HERO
+   ============================ */
+
+.hero-tabla-section {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  opacity: 0.35;
+  filter: grayscale(40%) blur(1px);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(10,0,15,0.82) 0%,
+    rgba(61,0,102,0.65) 50%,
+    rgba(10,0,15,0.9) 100%
+  );
+  z-index: 1;
+}
+
+.hero-tabla-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-deco-grid {
+  z-index: 1 !important;
+}
+
+/* ============================
+   MOBILE — LOGO ANIMADO VISIBLE
+   ============================ */
+
+@media (max-width: 860px) {
+  /* Mostrar logo en mobile */
+  .hero-logo-animado {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 28px !important;
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  /* Ocultar video en mobile — consume datos */
+  .hero-video-bg,
+  .hero-video-overlay {
+    display: none !important;
+  }
+
+  /* Hero izquierda centrada en mobile */
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
