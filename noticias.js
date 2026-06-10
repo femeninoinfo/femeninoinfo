@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 15,
+    titulo: "España, Alemania, Francia y Dinamarca se clasificaron al Mundial Femenino Brasil 2027",
+    resumen: "Las cuatro selecciones europeas sellaron su boleto directo en la última jornada de los clasificatorios de la UEFA. España goleó a Islandia y defendió su título mundial. Ya son 12 los equipos confirmados.",
+    imagen: "mundial-clasificadas.png",
+    categoria: "internacional",
+    fecha: "9 jun 2026",
+    pagina: "mundial-clasificadas.html"
+  },
+  {
+    id: 16,
+    titulo: "8 rojas en el amistoso entre Brasil y EEUU: polémica arbitral y Marta furiosa",
+    resumen: "El partido amistoso entre Brasil y Estados Unidos terminó con escándalo. Ocho expulsiones, dos en el banco incluidas, y Marta encaró al árbitro al finalizar el partido. La CONMEBOL investiga los incidentes.",
+    imagen: "brasil-eeuu-rojas.png",
+    categoria: "internacional",
+    fecha: "9 jun 2026",
+    pagina: "brasil-eeuu-rojas.html"
+  },
+  {
     id: 14,
     titulo: "Argentina es subcampeona de la Liga de Naciones: venció 1-0 a Ecuador pero Colombia fue campeona",
     resumen: "Bonsegundo convirtió en el 90+5 en Quito pero Colombia goleó 4-3 a Paraguay y se quedó con el título. Argentina terminó segunda, invicta en las nueve fechas.",
