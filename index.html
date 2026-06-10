@@ -601,6 +601,25 @@
       document.getElementById('ultimaImg').src = n.imagen;
       document.getElementById('ultimaImg').alt = n.titulo;
       document.getElementById('ultimaTitulo').textContent = n.titulo;
+      if(document.getElementById('ultimaResumen')) document.getElementById('ultimaResumen').textContent = n.resumen || '';
+      // Cargar 3 noticias chicas (índices 1, 2, 3)
+      var grid = document.getElementById('noticiasChicas');
+      if(grid) {
+        grid.innerHTML = '';
+        var cats = {seleccion:'Selección', apertura:'Apertura', internacional:'Internacional'};
+        for(var i=1; i<=3 && i<noticias.length; i++) {
+          var m = noticias[i];
+          var cat = cats[m.categoria] || m.categoria;
+          var card = '<div class="nota-chica" onclick="window.open(''+m.pagina+'','_blank')">' +
+            '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/>' +
+            '<div class="nota-chica-body">' +
+            '<span class="nota-chica-cat">'+cat+'</span>' +
+            '<p class="nota-chica-titulo">'+m.titulo+'</p>' +
+            '<span class="nota-chica-fecha">'+m.fecha+'</span>' +
+            '</div></div>';
+          grid.innerHTML += card;
+        }
+      }
     }
     function abrirUltima() {
       if (!noticias || noticias.length === 0) return;
