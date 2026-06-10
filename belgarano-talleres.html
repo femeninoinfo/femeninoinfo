@@ -96,12 +96,30 @@
     }
   </style>
 <style>
-.nav{background:linear-gradient(135deg,#2a0050 0%,#3d0066 50%,#1a0035 100%)!important;border-bottom:1px solid rgba(200,0,255,0.4)!important;box-shadow:0 2px 20px rgba(200,0,255,0.2)!important;position:relative!important;}
-.nav-brand span{font-family:'Bebas Neue',sans-serif!important;font-size:22px!important;letter-spacing:3px!important;color:#fff!important;}
-.nav-brand img{width:32px!important;height:32px!important;object-fit:contain!important;}
-.nav-links a{color:rgba(255,255,255,0.8)!important;}
-.nav-links a:hover{color:#fff!important;}
+.nav {
+      background: #1a0035 !important;
+      border-bottom: 2px solid rgba(200,0,255,0.3) !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    .nav::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%);
+      background-size: 200% 100%;
+      animation: barreSweep 3s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+    .nav-inner { position: relative; z-index: 1; }
+    .nav-brand span { font-family:'Montserrat',sans-serif !important; font-size:16px !important; font-weight:800 !important; letter-spacing:2px !important; text-transform:uppercase !important; color:#fff !important; }
+    .nav-brand img { width:32px !important; height:32px !important; object-fit:contain !important; }
+    .nav-links a { color:rgba(255,255,255,0.75) !important; }
+    .nav-links a:hover { color:#fff !important; }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet"/>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner">
