@@ -42,8 +42,8 @@
 
       <div class="hero-left">
         <p class="hero-tag">última hora</p>
-        <h1 class="hero-title">Fútbol femenino,<br>todo en un lugar</h1>
-        <p class="hero-sub">Apertura Femenino, Selección Argentina y el mundo.</p>
+        <h1 class="hero-title">Todo el fútbol femenino,<br>en un mismo lugar</h1>
+        <p class="hero-sub">Fútbol femenino argentino, Selección femenina y fútbol internacional.</p>
         <a href="#noticias" class="hero-btn">Ver noticias</a>
 
         <div class="ultima-hero" id="ultimaHero" onclick="abrirUltima()" style="cursor:pointer;">
@@ -279,7 +279,7 @@
     .hero-logo-animado { display: none !important; }
     .ultima-hero { position:relative; margin-top:20px; border-radius:12px; overflow:hidden; flex:1; min-height:280px; transition:transform 0.2s; }
     .hero-tabla-section { position:relative !important; overflow:hidden !important; }
-    .hero-tabla-section::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, transparent 0%, rgba(200,0,255,0.06) 40%, rgba(230,102,255,0.1) 50%, rgba(200,0,255,0.06) 60%, transparent 100%); background-size:100% 200%; animation:barreSweepV 6s linear infinite; pointer-events:none; z-index:0; }
+    .hero-tabla-section::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, transparent 0%, rgba(200,0,255,0.03) 40%, rgba(230,102,255,0.05) 50%, rgba(200,0,255,0.03) 60%, transparent 100%); background-size:100% 200%; animation:barreSweepV 12s linear infinite; pointer-events:none; z-index:0; }
     @keyframes barreSweepV { 0%{background-position:0 200%} 100%{background-position:0 -200%} }
     .hero-tabla-inner { position:relative; z-index:1; }
     .hero-left { display:flex; flex-direction:column; }
@@ -289,7 +289,7 @@
     .ultima-hero-content { position:absolute; bottom:0; left:0; right:0; padding:16px; }
     .ultima-badge { display:inline-flex; align-items:center; gap:5px; font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#c800ff; text-transform:uppercase; margin-bottom:6px; }
     .ultima-dot { width:6px; height:6px; background:#c800ff; border-radius:50%; animation:pulseDot 1.5s infinite; flex-shrink:0; }
-    .ultima-titulo { font-family:'Bebas Neue',sans-serif; font-size:1.25rem; color:#fff; line-height:1.15; letter-spacing:0.5px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    .ultima-titulo { font-family:'DM Sans',sans-serif !important; font-size:1rem; font-weight:700; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; letter-spacing:0; text-transform:none; }
     @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.4)} }
     .streaming-videos { display:grid; grid-template-columns:1fr 1fr; gap:16px; width:100%; }
     .video-card { display:block; border-radius:8px; overflow:hidden; transition:transform 0.2s; }
