@@ -68,15 +68,19 @@
           <div class="liga-selector">
             <button class="liga-sel-btn active" onclick="cambiarLiga('afa', this)" title="Apertura Femenino">
               <img src="logo-afa.png" alt="AFA"/>
+              <span class="liga-sel-text">ARG</span>
             </button>
             <button class="liga-sel-btn" onclick="cambiarLiga('nwsl', this)" title="NWSL">
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/40px-NWSL_logo.svg.png" alt="NWSL" onerror="this.parentElement.innerHTML='NWSL'"/>
+              <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:1px;color:#fff;">NWSL</span>
+              <span class="liga-sel-text">USA</span>
             </button>
-            <button class="liga-sel-btn" onclick="cambiarLiga('ligaf', this)" title="Liga F">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liga_F_logo.svg/40px-Liga_F_logo.svg.png" alt="Liga F" onerror="this.parentElement.innerHTML='LF'"/>
+            <button class="liga-sel-btn" onclick="cambiarLiga('ligaf', this)" title="Liga F España">
+              <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:1px;color:#fff;">Liga F</span>
+              <span class="liga-sel-text">ESP</span>
             </button>
             <button class="liga-sel-btn" onclick="cambiarLiga('ligamx', this)" title="Liga MX Femenil">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Liga_MX_Femenil.png/40px-Liga_MX_Femenil.png" alt="LMX" onerror="this.parentElement.innerHTML='MX'"/>
+              <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.5px;color:#fff;">LMX</span>
+              <span class="liga-sel-text">MEX</span>
             </button>
           </div>
         </div>
@@ -533,12 +537,12 @@
     .tabla-liga tbody tr.descenso td { color:#aaa; }
     .tabla-liga tbody td strong { font-family:'Bebas Neue',sans-serif; font-size:14px; color:#3d0066; }
     .tabla-nota { font-size:11px; color:#888; margin-top:8px; padding:4px 0; }
-    .liga-selector { display:flex; gap:4px; margin-left:auto; align-items:center; }
-    .liga-sel-btn { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.1); border-radius:6px; width:32px; height:32px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; padding:4px; font-size:9px; color:#fff; font-weight:700; }
-    .liga-sel-btn:hover { background:rgba(200,0,255,0.2); border-color:rgba(200,0,255,0.4); }
-    .liga-sel-btn.active { background:rgba(200,0,255,0.3); border-color:#c800ff; box-shadow:0 0 8px rgba(200,0,255,0.3); }
-    .liga-sel-btn img { width:22px; height:22px; object-fit:contain; }
-    .tabla-header-afa { display:flex; align-items:center; gap:10px; }
+    .liga-selector { display:flex; gap:6px; margin-left:auto; align-items:center; flex-wrap:wrap; }
+    .liga-sel-btn { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:8px; width:52px; height:48px; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; padding:4px; font-size:8px; color:rgba(255,255,255,0.6); font-weight:700; letter-spacing:0.5px; gap:2px; }
+    .liga-sel-btn:hover { background:rgba(200,0,255,0.15); border-color:rgba(200,0,255,0.4); color:#fff; }
+    .liga-sel-btn.active { background:rgba(200,0,255,0.25); border-color:#c800ff; box-shadow:0 0 10px rgba(200,0,255,0.3); color:#fff; }
+    .liga-sel-btn img { width:28px; height:28px; object-fit:contain; }
+    .liga-sel-btn .liga-sel-text { font-size:8px; letter-spacing:0.5px; text-transform:uppercase; }
     #tab-fixture .fixture-row { background:transparent !important; }
     .fixture-nuevo { padding:8px 4px; }
     .fx-dia-bloque { margin-bottom:12px; }
