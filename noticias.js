@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 14,
+    titulo: "Argentina es subcampeona de la Liga de Naciones: venció 1-0 a Ecuador pero Colombia fue campeona",
+    resumen: "Bonsegundo convirtió en el 90+5 en Quito pero Colombia goleó 4-3 a Paraguay y se quedó con el título. Argentina terminó segunda, invicta en las nueve fechas.",
+    imagen: "argentina-subcampeon.png",
+    categoria: "seleccion",
+    fecha: "9 jun 2026",
+    pagina: "argentina-subcampeon.html"
+  },
+  {
     id: 12,
     titulo: "Argentina vs Ecuador: hoy a las 20 por el título de la Liga de Naciones",
     resumen: "La Selección ya está clasificada al Mundial 2027 pero puede salir campeona. Si gana y Colombia no gana, la Albiceleste se queda con el título. Partido en Quito a las 20:00, gratis por AFA Estudio.",
