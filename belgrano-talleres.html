@@ -79,8 +79,26 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 <p>Con este título, el Barcelona alcanza <u>seis finales consecutivas</u> y suma su cuarto trofeo europeo. El técnico <strong>Pere Romeu</strong> ganó la Champions en su primera temporada completa al frente del equipo.</p>
 <p class="art-fuente">Fuente: UEFA — FC Barcelona — femeninoinfo</p></div>
   <div class="seguir">
-    <h3>Seguir leyendo</h3>
-    <div class="seguir-grid"><a href="alexia-putellas.html" class="seguir-card"><img src="alexia-putellas.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Internacional</span><p class="seguir-card-titulo">Alexia Putellas deja el Barcelona</p></div></a><a href="liga-mx.html" class="seguir-card"><img src="liga-mx.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Internacional</span><p class="seguir-card-titulo">La Liga MX Femenil es la más vista del mundo</p></div></a><a href="portanova-conferencia.html" class="seguir-card"><img src="portanova-conferencia.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Internacional</span><p class="seguir-card-titulo">Messi impulsa un equipo femenino en la UE Cornellà</p></div></a></div>
+    <div class="seguir-header">
+      <h3>Seguir leyendo</h3>
+      <div class="seguir-flechas">
+        <button class="seguir-flecha" id="seguirPrev">&#8592;</button>
+        <button class="seguir-flecha" id="seguirNext">&#8594;</button>
+      </div>
+    </div>
+    <div class="seguir-track-wrap">
+      <div class="seguir-track" id="seguirTrack">
+        <a href="argentina-subcampeon.html" class="seguir-card"><img src="argentina-subcampeon.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Selección</span><p class="seguir-card-titulo">Argentina es subcampeona de la Liga de Naciones</p></div></a>
+<a href="argentina-mundial.html" class="seguir-card"><img src="argentina-mundial.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Selección</span><p class="seguir-card-titulo">Argentina clasificó al Mundial Femenino Brasil 2027</p></div></a>
+<a href="argentina-ecuador.html" class="seguir-card"><img src="argentina-ecuador.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Selección</span><p class="seguir-card-titulo">Argentina vs Ecuador: hoy a las 20 por el título</p></div></a>
+<a href="argentina-peru.html" class="seguir-card"><img src="argentina-peru.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Selección</span><p class="seguir-card-titulo">Argentina vs Perú: tres estadios en menos de un mes</p></div></a>
+<a href="eva-espejo.html" class="seguir-card"><img src="eva-espejo.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Internacional</span><p class="seguir-card-titulo">Eva Espejo es la nueva DT de Ecuador</p></div></a>
+<a href="alexia-putellas.html" class="seguir-card"><img src="alexia-putellas.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Internacional</span><p class="seguir-card-titulo">Alexia Putellas deja el Barcelona tras 14 temporadas</p></div></a>
+<a href="liga-mx.html" class="seguir-card"><img src="liga-mx.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Internacional</span><p class="seguir-card-titulo">La Liga MX Femenil es la más vista del mundo</p></div></a>
+<a href="river-tabla.html" class="seguir-card"><img src="river-tabla.png" alt=""/><div class="seguir-card-body"><span class="seguir-card-cat">Apertura</span><p class="seguir-card-titulo">River lidera el Apertura 2026 con 20 puntos</p></div></a>
+
+      </div>
+    </div>
   </div>
 </article>
 <footer class="footer"><div class="footer-inner">
@@ -88,4 +106,41 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
   <div class="footer-links"><h4>Secciones</h4><a href="index.html#apertura">Apertura Femenino</a><a href="index.html#seleccion">Selección Argentina</a><a href="index.html#internacional">Internacional</a></div>
   <div class="footer-links"><h4>femeninoinfo</h4><a href="sobre.html">Sobre el medio</a><a href="streaming.html">Streaming</a><a href="sponsors.html">Sponsors</a></div>
 </div><div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div></footer>
+
+  <style>
+  .seguir { margin-top:48px; padding-top:28px; border-top:2px solid #3d0066; }
+  .seguir-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
+  .seguir h3 { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; color:#3d0066; letter-spacing:1px; margin:0; }
+  .seguir-flechas { display:flex; gap:8px; }
+  .seguir-flecha { background:#3d0066; border:none; color:#fff; width:32px; height:32px; border-radius:50%; font-size:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s; }
+  .seguir-flecha:hover { background:#c800ff; }
+  .seguir-track-wrap { overflow:hidden; }
+  .seguir-track { display:flex; gap:14px; transition:transform 0.35s ease; }
+  .seguir-card { flex:0 0 calc(25% - 11px); border:1px solid #eee; border-radius:8px; overflow:hidden; display:block; text-decoration:none; transition:box-shadow 0.2s; }
+  .seguir-card:hover { box-shadow:0 4px 16px rgba(61,0,102,0.15); }
+  .seguir-card img { width:100%; height:100px; object-fit:cover; display:block; }
+  .seguir-card-body { padding:10px 12px; }
+  .seguir-card-cat { font-size:10px; font-family:'Bebas Neue',sans-serif; letter-spacing:1.5px; text-transform:uppercase; color:#c800ff; display:block; margin-bottom:3px; }
+  .seguir-card-titulo { font-size:0.82rem; font-weight:700; color:#111; line-height:1.3; }
+  @media(max-width:600px){ .seguir-card { flex:0 0 calc(50% - 7px); } }
+  </style>
+
+  <script>
+  (function(){
+    var track = document.getElementById('seguirTrack');
+    if(!track) return;
+    var cards = track.children;
+    var idx = 0;
+    var visible = window.innerWidth < 600 ? 2 : 4;
+    var max = Math.max(0, cards.length - visible);
+    function update(){
+      var w = track.parentElement.offsetWidth;
+      var cardW = (w - (visible-1)*14) / visible;
+      track.style.transform = 'translateX(-' + (idx * (cardW + 14)) + 'px)';
+    }
+    document.getElementById('seguirPrev').addEventListener('click', function(){ if(idx>0){idx--;update();} });
+    document.getElementById('seguirNext').addEventListener('click', function(){ if(idx<max){idx++;update();} });
+    window.addEventListener('resize', function(){ visible=window.innerWidth<600?2:4; max=Math.max(0,cards.length-visible); update(); });
+  })();
+  </script>
 </body></html>
