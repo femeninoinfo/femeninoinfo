@@ -210,3 +210,156 @@ img { max-width: 100%; display: block; }
   .carrusel-track .noticia-card { flex: 0 0 85vw; }
   #noticias .carrusel-track .noticia-card { flex: 0 0 75vw; }
 }
+
+/* ============================
+   PORTAL 3 COLUMNAS — HERO NUEVO
+   ============================ */
+
+.hero-tabla-inner.portal-3col {
+  display: grid !important;
+  grid-template-columns: 1fr 260px 340px !important;
+  gap: 16px !important;
+  padding: 20px 24px !important;
+  align-items: start !important;
+  max-width: 1280px !important;
+}
+
+.hero-left { display: none !important; }
+
+.nota-grande {
+  position: relative !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  height: 500px !important;
+  cursor: pointer !important;
+}
+
+.nota-grande-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.nota-grande-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(to top, rgba(0,0,0,0.93) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.05) 100%) !important;
+}
+
+.nota-grande-content {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 24px !important;
+  z-index: 2 !important;
+}
+
+.ultima-titulo {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.nota-grande-resumen {
+  font-size: 12px !important;
+  color: rgba(255,255,255,0.7) !important;
+  line-height: 1.5 !important;
+  margin-top: 6px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.nota-grilla {
+  display: grid !important;
+  grid-template-rows: 1fr 1fr 1fr !important;
+  gap: 10px !important;
+  height: 500px !important;
+}
+
+.nota-chica {
+  display: flex !important;
+  flex-direction: column !important;
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  min-height: 0 !important;
+  transition: all 0.2s !important;
+}
+
+.nota-chica:hover {
+  background: rgba(200,0,255,0.09) !important;
+  border-color: rgba(200,0,255,0.25) !important;
+}
+
+.nota-chica-img {
+  width: 100% !important;
+  flex: 1 !important;
+  object-fit: cover !important;
+  display: block !important;
+  min-height: 0 !important;
+}
+
+.nota-chica-body {
+  padding: 8px 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+  flex-shrink: 0 !important;
+}
+
+.nota-chica-cat {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 9px !important;
+  letter-spacing: 1.5px !important;
+  color: #c800ff !important;
+  text-transform: uppercase !important;
+}
+
+.nota-chica-titulo {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  line-height: 1.3 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.nota-chica-fecha {
+  font-size: 10px !important;
+  color: rgba(255,255,255,0.3) !important;
+}
+
+.hero-tabla-inner.portal-3col .hero-right {
+  height: 500px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.hero-tabla-inner.portal-3col .tab-content {
+  flex: 1 !important;
+  max-height: none !important;
+  overflow-y: auto !important;
+}
+
+@media(max-width: 900px) {
+  .hero-tabla-inner.portal-3col {
+    grid-template-columns: 1fr !important;
+  }
+  .nota-grande { height: 280px !important; }
+  .nota-grilla { height: auto !important; grid-template-rows: auto !important; }
+  .hero-tabla-inner.portal-3col .hero-right { height: auto !important; }
+}
