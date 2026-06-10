@@ -20,7 +20,7 @@ const noticias = [
   {
     id: 2,
     titulo: "Argentina vs Perú: el partido tuvo tres estadios en menos de un mes",
-    resumen: "El partido por la Fecha 8 de la Liga de Naciones llegó con tres sedes confirmadas. La definitiva fue el Estadio Ciudad de Lanús. Transmisión gratis por AFA Estudio.",
+    resumen: "El partido por la Fecha 8 de la Liga de Naciones llegó con tres sedes confirmadas. La definitiva fue el Estadio Ciudad de Lanús.",
     imagen: "argentina-peru.png",
     categoria: "seleccion",
     fecha: "2 jun 2026",
@@ -57,51 +57,60 @@ const noticias = [
     id: 6,
     titulo: "River lidera el Apertura 2026 con 20 puntos tras empatar ante Talleres",
     resumen: "Las Millonarias igualaron 1-1 con Talleres en La Boutique con gol de Mercedes Diz. 6 victorias, 2 empates y 0 derrotas en 8 fechas.",
-    imagen: "tabla-del-río.png",
+    imagen: "river-tabla.png",
     categoria: "apertura",
     fecha: "26 may 2026",
-    pagina: "tabla-del-río.html"
+    pagina: "river-tabla.html"
   },
   {
     id: 7,
     titulo: "River venció 1-0 a Boca en el Superclásico femenino",
     resumen: "Las Millonarias ganaron en Casa Amarilla en el partido reprogramado de la Fecha 6. El resultado consolidó el liderazgo de River en el Apertura 2026.",
-    imagen: "río-boca-superclásico.png",
+    imagen: "river-boca-superclasico.png",
     categoria: "apertura",
     fecha: "May 2026",
-    pagina: "río-boca-superclásico.html"
+    pagina: "river-boca-superclasico.html"
   },
   {
     id: 8,
     titulo: "Barcelona tetracampeón de la Champions League femenina: goleó 4-0 al Lyon",
-    resumen: "La final fue en Oslo. Pajor y Paralluelo con doblete cada una. Seis finales consecutivas para el Barça, que suma su cuarto título europeo en seis temporadas.",
-    imagen: "belgano-talleres.png",
+    resumen: "La final fue en Oslo. Pajor y Paralluelo con doblete cada una. Seis finales consecutivas para el Barça.",
+    imagen: "belgrano-talleres.png",
     categoria: "internacional",
     fecha: "25 may 2026",
-    pagina: "belgarano-talleres.html"
+    pagina: "belgrano-talleres.html"
   },
   {
     id: 9,
+    titulo: "Belgrano recibe a Talleres en el clásico cordobés",
+    resumen: "Las Piratas reciben a la T este domingo a las 15.30 en el Gigante de Alberdi por la Fecha 9 del Apertura 2026.",
+    imagen: "belgano-talleres.png",
+    categoria: "apertura",
+    fecha: "Jun 2026",
+    pagina: "belgarano-talleres.html"
+  },
+  {
+    id: 10,
     titulo: "San Lorenzo goleó a Banfield 3-0 y es líder del Apertura 2026",
-    resumen: "Las Santitas ganaron en la Fecha 7 con goles de Pafundi, Molina y Castillo. El liderazgo era provisorio a la espera del partido de River.",
+    resumen: "Las Santitas ganaron en la Fecha 7 con goles de Pafundi, Molina y Castillo.",
     imagen: "banini.png",
     categoria: "apertura",
     fecha: "22 may 2026",
     pagina: "banini.html"
   },
   {
-    id: 10,
+    id: 11,
     titulo: "Messi impulsa la creación de un equipo femenino en la UE Cornellà",
-    resumen: "Primera decisión institucional de peso tras comprar el 85% del club. Arrancará en Segunda Catalana en 2026/2027 y necesita seis ascensos para llegar a Liga F.",
+    resumen: "Primera decisión institucional de peso tras comprar el 85% del club. Arrancará en Segunda Catalana en 2026/2027.",
     imagen: "portanova-conferencia.png",
     categoria: "internacional",
     fecha: "22 may 2026",
     pagina: "portanova-conferencia.html"
   },
   {
-    id: 11,
+    id: 13,
     titulo: "Portanova convocó a 24 jugadoras para la doble fecha de Liga de Naciones",
-    resumen: "La Selección Argentina retomó los entrenamientos en Ezeiza de cara a los partidos ante Perú y Ecuador, que definen la clasificación directa al Mundial 2027.",
+    resumen: "La Selección Argentina retomó los entrenamientos en Ezeiza de cara a los partidos ante Perú y Ecuador.",
     imagen: "mercedes-diz.png",
     categoria: "seleccion",
     fecha: "22 may 2026",
