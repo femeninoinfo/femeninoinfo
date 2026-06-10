@@ -240,8 +240,12 @@
   </footer>
 
   <style>
+    .header { background: linear-gradient(135deg, #2a0050 0%, #3d0066 50%, #1a0035 100%) !important; border-bottom: 1px solid rgba(200,0,255,0.4) !important; box-shadow: 0 2px 20px rgba(200,0,255,0.2) !important; position: relative !important; }
+    .header::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, #c800ff, #e066ff, #c800ff, transparent); }
     .brand-name { font-family: 'Bebas Neue', sans-serif !important; font-size: 24px !important; font-weight: 400 !important; letter-spacing: 3px !important; color: #fff !important; }
     .brand-logo { width: 34px !important; height: 34px !important; object-fit: contain !important; }
+    .nav a { color: rgba(255,255,255,0.8) !important; }
+    .nav a:hover { color: #fff !important; }
     .hero-logo-animado { display: none !important; }
     .ultima-hero { position:relative; margin-top:28px; border-radius:12px; overflow:hidden; height:200px; transition:transform 0.2s; }
     .ultima-hero:hover { transform:scale(1.01); }
