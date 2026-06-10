@@ -9,6 +9,15 @@ const noticias = [
     pagina: "argentina-ecuador.html"
   },
   {
+    id: 9,
+    titulo: "Belgrano recibe a Talleres en el clásico cordobés",
+    resumen: "Las Piratas reciben a la T este domingo a las 15.30 en el Gigante de Alberdi por la Fecha 9 del Apertura 2026.",
+    imagen: "belgano-talleres.png",
+    categoria: "apertura",
+    fecha: "9 jun 2026",
+    pagina: "belgarano-talleres.html"
+  },
+  {
     id: 1,
     titulo: "Argentina clasificó al Mundial Femenino Brasil 2027",
     resumen: "La Selección empató 1-1 ante Perú en Lanús. El gol que dio la clasificación fue de Mercedes Diz, de 17 años. Tercera participación mundialista consecutiva.",
@@ -75,19 +84,10 @@ const noticias = [
     id: 8,
     titulo: "Barcelona tetracampeón de la Champions League femenina: goleó 4-0 al Lyon",
     resumen: "La final fue en Oslo. Pajor y Paralluelo con doblete cada una. Seis finales consecutivas para el Barça.",
-    imagen: "belgrano-talleres.png",
+    imagen: "barcelona-champions.png",
     categoria: "internacional",
     fecha: "25 may 2026",
     pagina: "belgrano-talleres.html"
-  },
-  {
-    id: 9,
-    titulo: "Belgrano recibe a Talleres en el clásico cordobés",
-    resumen: "Las Piratas reciben a la T este domingo a las 15.30 en el Gigante de Alberdi por la Fecha 9 del Apertura 2026.",
-    imagen: "belgano-talleres.png",
-    categoria: "apertura",
-    fecha: "Jun 2026",
-    pagina: "belgarano-talleres.html"
   },
   {
     id: 10,
