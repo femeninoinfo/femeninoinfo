@@ -112,33 +112,34 @@
       height: 500px;
     }
     .nota-chica {
-      display: flex;
-      flex-direction: column;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
+      position: relative;
       border-radius: 10px;
       overflow: hidden;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: transform 0.2s;
       min-height: 0;
     }
-    .nota-chica:hover {
-      background: rgba(200,0,255,0.09);
-      border-color: rgba(200,0,255,0.25);
-    }
+    .nota-chica:hover { transform: scale(1.02); }
     .nota-chica-img {
+      position: absolute;
+      inset: 0;
       width: 100%;
-      flex: 1;
+      height: 100%;
       object-fit: cover;
       display: block;
-      min-height: 0;
+    }
+    .nota-chica-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.05) 100%);
     }
     .nota-chica-body {
-      padding: 8px 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      flex-shrink: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 12px;
+      z-index: 2;
     }
     .nota-chica-cat {
       font-family: 'Bebas Neue', sans-serif;
@@ -146,6 +147,8 @@
       letter-spacing: 1.5px;
       color: #c800ff;
       text-transform: uppercase;
+      display: block;
+      margin-bottom: 2px;
     }
     .nota-chica-titulo {
       font-size: 12px;
@@ -159,7 +162,9 @@
     }
     .nota-chica-fecha {
       font-size: 10px;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.4);
+      margin-top: 2px;
+      display: block;
     }
     /* PANEL TABLA */
     .tabla-panel {
@@ -794,7 +799,7 @@ function cargarUltimaNoticia() {
     var card = document.createElement('div');
     card.className = 'nota-chica';
     card.onclick = (function(p){ return function(){ window.open(p,'_blank'); }; })(m.pagina);
-    card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/><div class="nota-chica-body"><span class="nota-chica-cat">'+cat+'</span><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
+    card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/><div class="nota-chica-overlay"></div><div class="nota-chica-body"><span class="nota-chica-cat">'+cat+'</span><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
     grid.appendChild(card);
   }
 }
