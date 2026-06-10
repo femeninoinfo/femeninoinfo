@@ -623,8 +623,13 @@
       if (!noticias || noticias.length === 0) return;
       window.open(noticias[0].pagina, '_blank');
     }
-    cargarUltimaNoticia();
-  </script>
+    </script>
   <script src="main.js"></script>
+  <script>
+  // Ejecutar después de que todo cargó
+  window.addEventListener('load', function() {
+    cargarUltimaNoticia();
+  });
+  </script>
 </body>
 </html>
