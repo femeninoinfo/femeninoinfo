@@ -235,23 +235,19 @@
     <p class="redes-titulo">Seguinos en redes</p>
     <div class="redes-row">
       <a href="https://www.instagram.com/femeninoinfo" target="_blank" class="red-item">
-        <div class="red-icono ig-bg">📸</div>
-        <span class="red-num">17K</span>
+        <img src="https://cdn.simpleicons.org/instagram/ffffff" class="red-logo" alt="Instagram"/>
         <span class="red-label">Instagram</span>
       </a>
       <a href="https://www.tiktok.com/@femeninoinfo" target="_blank" class="red-item">
-        <div class="red-icono tk-bg">🎵</div>
-        <span class="red-num">22K</span>
+        <img src="https://cdn.simpleicons.org/tiktok/ffffff" class="red-logo" alt="TikTok"/>
         <span class="red-label">TikTok</span>
       </a>
       <a href="https://twitter.com/femeninoinfo" target="_blank" class="red-item">
-        <div class="red-icono tw-bg">✕</div>
-        <span class="red-num">X</span>
-        <span class="red-label">Twitter</span>
+        <img src="https://cdn.simpleicons.org/x/ffffff" class="red-logo" alt="X / Twitter"/>
+        <span class="red-label">X / Twitter</span>
       </a>
       <a href="https://www.youtube.com/@femeninoinfoarg" target="_blank" class="red-item">
-        <div class="red-icono yt-bg">▶</div>
-        <span class="red-num">500</span>
+        <img src="https://cdn.simpleicons.org/youtube/ffffff" class="red-logo" alt="YouTube"/>
         <span class="red-label">YouTube</span>
       </a>
     </div>
@@ -319,17 +315,12 @@
     .video-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(200,0,255,0.85); color: #fff; font-size: 20px; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3px; }
     .redes-section-nueva { background: #0a000f; padding: 36px 24px; border-top: 1px solid #1a003a; }
     .redes-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); text-align: center; margin-bottom: 20px; }
-    .redes-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; max-width: 600px; margin: 0 auto; }
-    .red-item { display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; padding: 14px 20px; border-radius: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); min-width: 100px; transition: background 0.2s; }
+    .redes-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; max-width: 500px; margin: 0 auto; }
+    .red-item { display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; padding: 16px 24px; border-radius: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); transition: background 0.2s; }
     .red-item:hover { background: rgba(200,0,255,0.1); border-color: rgba(200,0,255,0.3); }
-    .red-icono { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
-    .ig-bg { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
-    .tk-bg { background: #010101; border: 1px solid #333; }
-    .tw-bg { background: #000; }
-    .yt-bg { background: #ff0000; }
-    .red-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #fff; line-height: 1; }
+    .red-logo { width: 28px; height: 28px; object-fit: contain; }
     .red-label { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.5px; }
-    @media(max-width:600px){ .streaming-videos { grid-template-columns: 1fr; } .redes-row { gap: 8px; } .red-item { min-width: 80px; padding: 12px 14px; } }
+    @media(max-width:600px){ .redes-row { gap: 10px; } .red-item { padding: 12px 16px; } }
     #liganaciones { border-top: 3px solid #005cbf; }
     #liganaciones .section-title { color: #005cbf; }
     #liganaciones .section-line { background: #005cbf; }
