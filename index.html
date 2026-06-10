@@ -1,18 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>femeninoinfo — fútbol femenino</title>
-  <meta name="description" content="Noticias de fútbol femenino argentino e internacional. Apertura Femenino, Selección Argentina, torneos internacionales." />
-  <link rel="icon" href="logo-nuevo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet"/>
+  <meta name="description" content="Noticias de fútbol femenino argentino e internacional."/>
+  <link rel="icon" href="logo-nuevo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ===== HERO PORTAL 3 COLUMNAS — STANDALONE ===== */
+    .portal-hero {
+      background: #0a000f;
+      border-bottom: 2px solid #3d0066;
+      position: relative;
+      overflow: hidden;
+    }
+    .portal-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(200,0,255,0.03) 50%, transparent 100%);
+      background-size: 100% 200%;
+      animation: sweepV 12s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes sweepV { 0%{background-position:0 200%} 100%{background-position:0 -200%} }
+    .portal-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: 1fr 260px 340px;
+      gap: 16px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+    /* NOTA GRANDE */
+    .nota-grande {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 500px;
+      cursor: pointer;
+    }
+    .nota-grande:hover .nota-grande-img { transform: scale(1.03); }
+    .nota-grande-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .nota-grande-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.93) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.05) 100%);
+    }
+    .nota-grande-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+      z-index: 2;
+    }
+    .nota-grande-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #c800ff;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .nota-grande-dot {
+      width: 6px;
+      height: 6px;
+      background: #c800ff;
+      border-radius: 50%;
+      animation: pulseDot 1.5s infinite;
+    }
+    @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.4)} }
+    .nota-grande-titulo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .nota-grande-resumen {
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    /* NOTICIAS CHICAS */
+    .nota-grilla {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 10px;
+      height: 500px;
+    }
+    .nota-chica {
+      display: flex;
+      flex-direction: column;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s;
+      min-height: 0;
+    }
+    .nota-chica:hover {
+      background: rgba(200,0,255,0.09);
+      border-color: rgba(200,0,255,0.25);
+    }
+    .nota-chica-img {
+      width: 100%;
+      flex: 1;
+      object-fit: cover;
+      display: block;
+      min-height: 0;
+    }
+    .nota-chica-body {
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      flex-shrink: 0;
+    }
+    .nota-chica-cat {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      color: #c800ff;
+      text-transform: uppercase;
+    }
+    .nota-chica-titulo {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .nota-chica-fecha {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+    }
+    /* PANEL TABLA */
+    .tabla-panel {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .tabla-panel .tab-content {
+      flex: 1;
+      max-height: none !important;
+      overflow-y: auto;
+    }
+    .ver-mas-liga {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #c800ff;
+      font-weight: 600;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    /* RESPONSIVE */
+    @media(max-width:900px) {
+      .portal-inner {
+        grid-template-columns: 1fr;
+        padding: 14px;
+      }
+      .nota-grande { height: 280px; }
+      .nota-grilla { height: auto; grid-template-rows: auto; }
+      .tabla-panel { height: auto; }
+    }
+  </style>
 </head>
 <body>
 
-  <header class="header">
+<header class="header">
     <div class="header-inner">
       <a href="index.html" class="brand">
         <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo" />
@@ -38,17 +227,17 @@
     </nav>
   </header>
 
-  <section class="hero-tabla-section">
-    <div class="hero-deco-grid"></div>
-    <div id="portalGrid" style="display:grid;grid-template-columns:1fr 260px 340px;gap:16px;padding:20px 24px;align-items:start;max-width:1280px;margin:0 auto;width:100%;">
+  <!-- HERO PORTAL -->
+  <section class="portal-hero">
+    <div class="portal-inner">
 
       <!-- NOTA GRANDE -->
       <div class="nota-grande" id="ultimaHero" onclick="abrirUltima()" style="cursor:pointer;">
         <img id="ultimaImg" src="" alt="" class="nota-grande-img"/>
         <div class="nota-grande-overlay"></div>
         <div class="nota-grande-content">
-          <span class="ultima-badge"><span class="ultima-dot"></span> Reciente</span>
-          <p class="ultima-titulo" id="ultimaTitulo"></p>
+          <div class="nota-grande-badge"><span class="nota-grande-dot"></span> Reciente</div>
+          <p class="nota-grande-titulo" id="ultimaTitulo">Cargando...</p>
           <p class="nota-grande-resumen" id="ultimaResumen"></p>
         </div>
       </div>
@@ -56,38 +245,34 @@
       <!-- NOTICIAS CHICAS -->
       <div class="nota-grilla" id="noticiasChicas"></div>
 
-      <div class="hero-right">
+      <!-- TABLA -->
+      <div class="tabla-panel">
         <div class="tabla-header-afa">
-          <img src="logo-afa.png" alt="AFA" class="tabla-afa-logo" id="liga-logo-actual" />
+          <img src="logo-afa.png" alt="AFA" class="tabla-afa-logo" id="liga-logo-actual"/>
           <div class="tabla-afa-text">
             <span class="tabla-afa-tag" id="liga-tag-actual">Apertura 2026</span>
             <p class="tabla-afa-titulo" id="liga-titulo-actual">Campeonato Primera División<br>del Fútbol Femenino Argentino</p>
           </div>
           <div class="liga-selector">
-            <button class="liga-sel-btn active" onclick="cambiarLiga('afa', this)" title="Apertura Femenino">
-              <img src="logo-afa.png" alt="AFA"/>
-              <span class="liga-sel-text">ARG</span>
+            <button class="liga-sel-btn active" onclick="cambiarLiga('afa',this)" title="Apertura Femenino">
+              <img src="logo-afa.png" alt="AFA"/><span class="liga-sel-text">ARG</span>
             </button>
-            <button class="liga-sel-btn" onclick="cambiarLiga('nwsl', this)" title="NWSL">
-              <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:1px;color:#fff;">NWSL</span>
-              <span class="liga-sel-text">USA</span>
+            <button class="liga-sel-btn" onclick="cambiarLiga('nwsl',this)" title="NWSL">
+              <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;color:#fff;">NWSL</span><span class="liga-sel-text">USA</span>
             </button>
-            <button class="liga-sel-btn" onclick="cambiarLiga('ligaf', this)" title="Liga F España">
-              <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:1px;color:#fff;">Liga F</span>
-              <span class="liga-sel-text">ESP</span>
+            <button class="liga-sel-btn" onclick="cambiarLiga('ligaf',this)" title="Liga F España">
+              <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;color:#fff;">Liga F</span><span class="liga-sel-text">ESP</span>
             </button>
-            <button class="liga-sel-btn" onclick="cambiarLiga('ligamx', this)" title="Liga MX Femenil">
-              <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.5px;color:#fff;">LMX</span>
-              <span class="liga-sel-text">MEX</span>
+            <button class="liga-sel-btn" onclick="cambiarLiga('ligamx',this)" title="Liga MX Femenil">
+              <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;color:#fff;">LMX</span><span class="liga-sel-text">MEX</span>
             </button>
           </div>
         </div>
         <div class="tabs-header">
-          <button class="tab-btn active" onclick="showTab('tabla', this)">Tabla</button>
-          <button class="tab-btn" id="tab-fixture-btn" onclick="showTab('fixture', this)">Fixture — Fecha 9</button>
+          <button class="tab-btn active" onclick="showTab('tabla',this)">Tabla</button>
+          <button class="tab-btn" id="tab-fixture-btn" onclick="showTab('fixture',this)">Fixture — Fecha 9</button>
         </div>
-
-        <div class="tab-content" id="tab-tabla">
+<div class="tab-content" id="tab-tabla">
           <table class="tabla-pos">
             <thead>
               <tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr>
@@ -561,75 +746,65 @@
   </style>
 
 
-  <script>
-  function showLiga(liga, el) {
-    document.querySelectorAll('.liga-content').forEach(c => c.style.display = 'none');
-    document.querySelectorAll('.liga-tab').forEach(b => b.classList.remove('active'));
-    document.getElementById('liga-' + liga).style.display = 'block';
-    el.classList.add('active');
-  }
-  </script>
   <script src="noticias.js"></script>
-  <script>
-  var LIGAS = {
-    afa: { logo:'logo-afa.png', tag:'Apertura 2026', titulo:'Campeonato Primera División<br>del Fútbol Femenino Argentino', tabla:'tab-tabla', fixture:true },
-    nwsl: { logo:'https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/40px-NWSL_logo.svg.png', tag:'NWSL 2026', titulo:'National Women\'s Soccer League', tabla:'tab-tabla-nwsl', fixture:false },
-    ligaf: { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liga_F_logo.svg/40px-Liga_F_logo.svg.png', tag:'Liga F 2025-26', titulo:'Primera División Femenina de España', tabla:'tab-tabla-ligaf', fixture:false },
-    ligamx: { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Liga_MX_Femenil.png/40px-Liga_MX_Femenil.png', tag:'Liga MX Femenil', titulo:'Clausura 2026 — México', tabla:'tab-tabla-ligamx', fixture:false }
-  };
-  function cambiarLiga(liga, btn) {
-    var l = LIGAS[liga];
-    document.getElementById('liga-logo-actual').src = l.logo;
-    document.getElementById('liga-tag-actual').textContent = l.tag;
-    document.getElementById('liga-titulo-actual').innerHTML = l.titulo;
-    document.getElementById('tab-tabla').style.display = 'none';
-    document.querySelectorAll('.tabla-liga-ext').forEach(function(t){ t.style.display='none'; });
-    document.getElementById('tab-fixture').style.display = 'none';
-    document.getElementById(l.tabla).style.display = 'block';
-    var fb = document.getElementById('tab-fixture-btn');
-    if(fb) fb.style.display = l.fixture ? '' : 'none';
-    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
-    document.querySelectorAll('.tab-btn')[0].classList.add('active');
-    document.querySelectorAll('.liga-sel-btn').forEach(function(b){ b.classList.remove('active'); });
-    btn.classList.add('active');
+<script>
+function showLiga(liga, el) {
+  document.querySelectorAll('.liga-content').forEach(function(c){ c.style.display='none'; });
+  document.querySelectorAll('.liga-tab').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('liga-' + liga).style.display = 'block';
+  el.classList.add('active');
+}
+var LIGAS = {
+  afa:    { logo:'logo-afa.png', tag:'Apertura 2026', titulo:'Campeonato Primera División<br>del Fútbol Femenino Argentino', tabla:'tab-tabla', fixture:true },
+  nwsl:   { logo:'https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/40px-NWSL_logo.svg.png', tag:'NWSL 2026', titulo:'National Women Soccer League', tabla:'tab-tabla-nwsl', fixture:false },
+  ligaf:  { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liga_F_logo.svg/40px-Liga_F_logo.svg.png', tag:'Liga F 2025-26', titulo:'Primera División Femenina de España', tabla:'tab-tabla-ligaf', fixture:false },
+  ligamx: { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Liga_MX_Femenil.png/40px-Liga_MX_Femenil.png', tag:'Liga MX Femenil', titulo:'Clausura 2026 Mexico', tabla:'tab-tabla-ligamx', fixture:false }
+};
+function cambiarLiga(liga, btn) {
+  var l = LIGAS[liga];
+  document.getElementById('liga-logo-actual').src = l.logo;
+  document.getElementById('liga-tag-actual').textContent = l.tag;
+  document.getElementById('liga-titulo-actual').innerHTML = l.titulo;
+  document.getElementById('tab-tabla').style.display = 'none';
+  document.querySelectorAll('.tabla-liga-ext').forEach(function(t){ t.style.display='none'; });
+  document.getElementById('tab-fixture').style.display = 'none';
+  document.getElementById(l.tabla).style.display = 'block';
+  var fb = document.getElementById('tab-fixture-btn');
+  if(fb) fb.style.display = l.fixture ? '' : 'none';
+  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn')[0].classList.add('active');
+  document.querySelectorAll('.liga-sel-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+}
+function cargarUltimaNoticia() {
+  if (!noticias || noticias.length === 0) return;
+  var n = noticias[0];
+  document.getElementById('ultimaImg').src = n.imagen;
+  document.getElementById('ultimaImg').alt = n.titulo;
+  document.getElementById('ultimaTitulo').textContent = n.titulo;
+  var res = document.getElementById('ultimaResumen');
+  if(res) res.textContent = n.resumen || '';
+  var grid = document.getElementById('noticiasChicas');
+  if(!grid) return;
+  grid.innerHTML = '';
+  var cats = {seleccion:'Selección', apertura:'Apertura', internacional:'Internacional'};
+  for(var i=1; i<=3 && i<noticias.length; i++) {
+    var m = noticias[i];
+    var cat = cats[m.categoria] || m.categoria;
+    var card = document.createElement('div');
+    card.className = 'nota-chica';
+    card.onclick = (function(p){ return function(){ window.open(p,'_blank'); }; })(m.pagina);
+    card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/><div class="nota-chica-body"><span class="nota-chica-cat">'+cat+'</span><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
+    grid.appendChild(card);
   }
-    function cargarUltimaNoticia() {
-      if (!noticias || noticias.length === 0) return;
-      const n = noticias[0];
-      document.getElementById('ultimaImg').src = n.imagen;
-      document.getElementById('ultimaImg').alt = n.titulo;
-      document.getElementById('ultimaTitulo').textContent = n.titulo;
-      if(document.getElementById('ultimaResumen')) document.getElementById('ultimaResumen').textContent = n.resumen || '';
-      // Cargar 3 noticias chicas (índices 1, 2, 3)
-      var grid = document.getElementById('noticiasChicas');
-      if(grid) {
-        grid.innerHTML = '';
-        var cats = {seleccion:'Selección', apertura:'Apertura', internacional:'Internacional'};
-        for(var i=1; i<=3 && i<noticias.length; i++) {
-          var m = noticias[i];
-          var cat = cats[m.categoria] || m.categoria;
-          var card = '<div class="nota-chica" onclick="window.open(''+m.pagina+'','_blank')">' +
-            '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/>' +
-            '<div class="nota-chica-body">' +
-            '<span class="nota-chica-cat">'+cat+'</span>' +
-            '<p class="nota-chica-titulo">'+m.titulo+'</p>' +
-            '<span class="nota-chica-fecha">'+m.fecha+'</span>' +
-            '</div></div>';
-          grid.innerHTML += card;
-        }
-      }
-    }
-    function abrirUltima() {
-      if (!noticias || noticias.length === 0) return;
-      window.open(noticias[0].pagina, '_blank');
-    }
-    </script>
-  <script src="main.js"></script>
-  <script>
-  // Ejecutar después de que todo cargó
-  window.addEventListener('load', function() {
-    cargarUltimaNoticia();
-  });
-  </script>
+}
+function abrirUltima() {
+  if (!noticias || noticias.length === 0) return;
+  window.open(noticias[0].pagina, '_blank');
+}
+
+</script>
+<script src="main.js"></script>
+
 </body>
 </html>

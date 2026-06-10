@@ -126,3 +126,9 @@ const noticias = [
     pagina: "mercedes-diz.html"
   }
 ];
+
+
+// Cargar hero al terminar de parsear este archivo
+document.addEventListener("DOMContentLoaded", function() {
+  if(typeof cargarUltimaNoticia === "function") cargarUltimaNoticia();
+});
