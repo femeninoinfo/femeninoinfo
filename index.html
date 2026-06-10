@@ -6,12 +6,11 @@
   <title>femeninoinfo — fútbol femenino</title>
   <meta name="description" content="Noticias de fútbol femenino argentino e internacional. Apertura Femenino, Selección Argentina, torneos internacionales." />
   <link rel="icon" href="logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="header-inner">
       <a href="index.html" class="brand">
@@ -36,32 +35,26 @@
     </nav>
   </header>
 
-  <!-- HERO + TABLA + FIXTURE -->
   <section class="hero-tabla-section">
     <div class="hero-deco-grid"></div>
     <div class="hero-tabla-inner">
 
-      <!-- IZQUIERDA: hero -->
       <div class="hero-left">
         <p class="hero-tag">última hora</p>
         <h1 class="hero-title">Fútbol femenino,<br>todo en un lugar</h1>
         <p class="hero-sub">Apertura Femenino, Selección Argentina y el mundo.</p>
         <a href="#noticias" class="hero-btn">Ver noticias</a>
 
-        <!-- CARD ÚLTIMA NOTICIA -->
-        <div class="ultima-card" id="ultimaCard" onclick="abrirUltima()" style="cursor:pointer;">
-          <div class="ultima-card-img-wrap">
-            <img id="ultimaImg" src="" alt="" />
-          </div>
-          <div class="ultima-card-body">
+        <div class="ultima-hero" id="ultimaHero" onclick="abrirUltima()" style="cursor:pointer;">
+          <img id="ultimaImg" src="" alt="" class="ultima-hero-img"/>
+          <div class="ultima-hero-overlay"></div>
+          <div class="ultima-hero-content">
             <span class="ultima-badge"><span class="ultima-dot"></span> Reciente</span>
             <p class="ultima-titulo" id="ultimaTitulo"></p>
-            <span class="ultima-fecha" id="ultimaFecha"></span>
           </div>
         </div>
       </div>
 
-      <!-- DERECHA: tabla + fixture -->
       <div class="hero-right">
         <div class="tabla-header-afa">
           <img src="logo-afa.png" alt="AFA" class="tabla-afa-logo" />
@@ -75,7 +68,6 @@
           <button class="tab-btn" onclick="showTab('fixture', this)">Fixture — Fecha 9</button>
         </div>
 
-        <!-- TABLA -->
         <div class="tab-content" id="tab-tabla">
           <table class="tabla-pos">
             <thead>
@@ -103,60 +95,24 @@
           <p class="tabla-fecha">Fecha 8 — 8 jun 2026</p>
         </div>
 
-        <!-- FIXTURE -->
         <div class="tab-content" id="tab-fixture" style="display:none;">
           <div class="fixture-list">
             <div class="fixture-dia-header">Sáb 13/6</div>
-            <div class="fixture-row">
-              <span class="fx-hora">11hs</span>
-              <span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Unión"><span class="fx-partido">Unión vs Lanús</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Lanús"></span>
-              <span class="fx-estadio">Est. 15 de Abril</span>
-            </div>
-            <div class="fixture-row">
-              <span class="fx-hora">14hs</span>
-              <span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="SAT"><span class="fx-partido">SAT vs San Luis FC</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="San Luis FC"></span>
-              <span class="fx-estadio">Est. 12 de Agosto</span>
-            </div>
+            <div class="fixture-row"><span class="fx-hora">11hs</span><span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Unión"><span class="fx-partido">Unión vs Lanús</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Lanús"></span><span class="fx-estadio">Est. 15 de Abril</span></div>
+            <div class="fixture-row"><span class="fx-hora">14hs</span><span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="SAT"><span class="fx-partido">SAT vs San Luis FC</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="San Luis FC"></span><span class="fx-estadio">Est. 12 de Agosto</span></div>
             <div class="fixture-dia-header">Dom 14/6</div>
-            <div class="fixture-row">
-              <span class="fx-hora">12.30hs</span>
-              <span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="River"><span class="fx-partido">River vs San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="San Lorenzo"></span>
-              <span class="fx-estadio">River Camp</span>
-            </div>
-            <div class="fixture-row">
-              <span class="fx-hora">13hs</span>
-              <span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Gimnasia"><span class="fx-partido">Gimnasia vs Newell's</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Newell's"></span>
-              <span class="fx-estadio">Predio Estancia Chica</span>
-            </div>
-            <div class="fixture-row destacado">
-              <span class="fx-hora">15.30hs</span>
-              <span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Belgrano"><span class="fx-partido">Belgrano vs Talleres</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Talleres"></span>
-              <span class="fx-estadio">Gigante de Alberdi</span>
-            </div>
+            <div class="fixture-row"><span class="fx-hora">12.30hs</span><span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="River"><span class="fx-partido">River vs San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="San Lorenzo"></span><span class="fx-estadio">River Camp</span></div>
+            <div class="fixture-row destacado"><span class="fx-hora">15.30hs</span><span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Belgrano"><span class="fx-partido">Belgrano vs Talleres</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Talleres"></span><span class="fx-estadio">Gigante de Alberdi</span></div>
             <div class="fixture-dia-header">Lun 15/6</div>
-            <div class="fixture-row">
-              <span class="fx-hora">15hs</span>
-              <span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Independiente"><span class="fx-partido">Independiente vs Boca</span><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Boca"></span>
-              <span class="fx-estadio">Predio Santo Domingo</span>
-            </div>
-            <div class="fixture-row">
-              <span class="fx-hora">15hs</span>
-              <span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Banfield"><span class="fx-partido">Banfield vs Racing</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Racing"></span>
-              <span class="fx-estadio">Campo de Deportes</span>
-            </div>
-            <div class="fixture-row">
-              <span class="fx-hora">15hs</span>
-              <span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Huracán"><span class="fx-partido">Huracán vs Ferro</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Ferro"></span>
-              <span class="fx-estadio">La Quemita</span>
-            </div>
+            <div class="fixture-row"><span class="fx-hora">15hs</span><span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Independiente"><span class="fx-partido">Independiente vs Boca</span><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Boca"></span><span class="fx-estadio">Predio Santo Domingo</span></div>
+            <div class="fixture-row"><span class="fx-hora">15hs</span><span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Banfield"><span class="fx-partido">Banfield vs Racing</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Racing"></span><span class="fx-estadio">Campo de Deportes</span></div>
+            <div class="fixture-row"><span class="fx-hora">15hs</span><span class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Huracán"><span class="fx-partido">Huracán vs Ferro</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" width="22" height="22" style="width:22px;height:22px;object-fit:contain;" alt="Ferro"></span><span class="fx-estadio">La Quemita</span></div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ÚLTIMAS NOTICIAS -->
   <section class="section" id="noticias">
     <div class="section-header">
       <span class="section-pill pill-ultimas">Últimas noticias</span>
@@ -170,7 +126,6 @@
     </div>
   </section>
 
-  <!-- APERTURA FEMENINO -->
   <section class="section section-dark" id="apertura">
     <div class="section-header">
       <span class="section-pill pill-apertura">Apertura Femenino 2026</span>
@@ -184,7 +139,6 @@
     </div>
   </section>
 
-  <!-- SELECCIÓN -->
   <section class="section" id="seleccion">
     <div class="section-header">
       <span class="section-pill pill-seleccion">Selección Argentina</span>
@@ -198,7 +152,6 @@
     </div>
   </section>
 
-  <!-- INTERNACIONAL -->
   <section class="section section-dark" id="internacional">
     <div class="section-header">
       <span class="section-pill pill-internacional">Fútbol Internacional</span>
@@ -212,7 +165,6 @@
     </div>
   </section>
 
-  <!-- STREAMING -->
   <section class="section section-dark streaming-section">
     <div class="streaming-inner">
       <div class="streaming-text">
@@ -233,7 +185,7 @@
         </a>
         <a href="https://youtu.be/LjQjUGXyBn4" target="_blank" class="video-card">
           <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/LjQjUGXyBn4/mqdefault.jpg" alt="femeninoinfo vlog en la cancha" />
+            <img src="https://img.youtube.com/vi/LjQjUGXyBn4/mqdefault.jpg" alt="femeninoinfo vlog" />
             <span class="video-play">▶</span>
           </div>
         </a>
@@ -241,7 +193,6 @@
     </div>
   </section>
 
-  <!-- REDES -->
   <section class="redes-section-nueva">
     <p class="redes-titulo">Seguinos en redes</p>
     <div class="redes-row">
@@ -264,7 +215,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
@@ -290,96 +240,49 @@
   </footer>
 
   <style>
-    .ln-tabs-header { display: flex; border-bottom: 2px solid #3d0066; margin-bottom: 0; }
-    .tab-btn-ln { background: none; border: none; color: #888; font-family: 'Bebas Neue', sans-serif; font-size: 14px; letter-spacing: 1px; padding: 10px 20px; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
-    .tab-btn-ln.active { color: #3d0066; border-bottom-color: #c800ff; }
-    .ln-tab-content { padding-top: 16px; }
-    .tabla-ln { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 12px; }
-    .tabla-ln thead tr { background: #3d0066; }
-    .tabla-ln thead th { color: rgba(255,255,255,0.8); font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 8px 10px; text-align: center; font-weight: 400; }
-    .tabla-ln thead th:nth-child(2) { text-align: left; }
-    .tabla-ln tbody tr { border-bottom: 1px solid #eee; transition: background 0.15s; }
-    .tabla-ln tbody tr:hover { background: rgba(200,0,255,0.04); }
-    .tabla-ln tbody td { padding: 8px 10px; text-align: center; color: #333; font-size: 13px; }
-    .tabla-ln tbody td:nth-child(2) { text-align: left; font-weight: 600; color: #111; }
-    .tabla-ln tbody tr.ln-top2 { background: rgba(0,92,191,0.05); }
-    .tabla-ln tbody tr.ln-top2 td:nth-child(2) { color: #005cbf; }
-    .tabla-ln tbody tr.ln-rep { background: rgba(0,102,68,0.04); }
-    .tabla-ln tbody tr.ln-rep td:nth-child(2) { color: #006644; }
-    .tabla-ln tbody tr.ln-elim td { color: #aaa; }
-    .tabla-ln tbody td strong { font-family: 'Bebas Neue', sans-serif; font-size: 15px; color: #3d0066; }
-    .tabla-ln tbody tr.ln-top2 td strong { color: #005cbf; }
-    .ln-leyenda { display: flex; gap: 12px; flex-wrap: wrap; margin: 10px 0 4px; }
-    .ln-badge { font-size: 11px; padding: 2px 10px; border-radius: 3px; font-family: 'DM Sans', sans-serif; }
-    .ln-top2-badge { background: rgba(0,92,191,0.1); color: #005cbf; border: 1px solid rgba(0,92,191,0.2); }
-    .ln-rep-badge { background: rgba(0,102,68,0.1); color: #006644; border: 1px solid rgba(0,102,68,0.2); }
-    .ln-fixture-list .fixture-row { background: #fff; }
-    .bandera-ln { width: 20px; height: 14px; object-fit: cover; border-radius: 2px; vertical-align: middle; flex-shrink: 0; display: inline-block !important; }
-    .tabla-ln tbody td:nth-child(2) { display: flex; align-items: center; gap: 8px; min-width: 120px; }
-    /* Asegurar que el CSS de liga de naciones no pise el fixture del Apertura */
-    #tab-fixture .fixture-row { background: transparent !important; }
-    .streaming-videos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%; }
-    .video-card { display: block; border-radius: 8px; overflow: hidden; transition: transform 0.2s; }
-    .video-card:hover { transform: scale(1.02); }
-    .video-thumb { position: relative; }
-    .video-thumb img { width: 100%; height: 140px; object-fit: cover; display: block; }
-    .video-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(200,0,255,0.85); color: #fff; font-size: 20px; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3px; }
-    .redes-section-nueva { background: #0a000f; padding: 36px 24px; border-top: 1px solid #1a003a; }
-    .brand-name { font-family: 'Bebas Neue', sans-serif !important; font-size: 24px !important; font-weight: 400 !important; letter-spacing: 3px !important; text-transform: uppercase !important; color: #fff !important; }
-    .brand-logo { width: 34px !important; height: 34px !important; object-fit: contain !important; filter: none !important; }
+    .brand-name { font-family: 'Bebas Neue', sans-serif !important; font-size: 24px !important; font-weight: 400 !important; letter-spacing: 3px !important; color: #fff !important; }
+    .brand-logo { width: 34px !important; height: 34px !important; object-fit: contain !important; }
     .hero-logo-animado { display: none !important; }
-    .ultima-card { display:flex; gap:12px; align-items:center; background:rgba(255,255,255,0.05); border:1px solid rgba(200,0,255,0.25); border-radius:10px; padding:12px; margin-top:28px; transition:background 0.2s, border-color 0.2s; animation: fadeInUp 0.6s ease; }
-    .ultima-card:hover { background:rgba(200,0,255,0.1); border-color:rgba(200,0,255,0.5); }
-    .ultima-card-img-wrap { width:80px; height:60px; flex-shrink:0; border-radius:6px; overflow:hidden; }
-    .ultima-card-img-wrap img { width:100%; height:100%; object-fit:cover; }
-    .ultima-card-body { flex:1; min-width:0; display:flex; flex-direction:column; gap:4px; }
-    .ultima-badge { display:inline-flex; align-items:center; gap:5px; font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#c800ff; text-transform:uppercase; }
+    .ultima-hero { position:relative; margin-top:28px; border-radius:12px; overflow:hidden; height:200px; transition:transform 0.2s; }
+    .ultima-hero:hover { transform:scale(1.01); }
+    .ultima-hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .ultima-hero-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.1) 100%); }
+    .ultima-hero-content { position:absolute; bottom:0; left:0; right:0; padding:16px; }
+    .ultima-badge { display:inline-flex; align-items:center; gap:5px; font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#c800ff; text-transform:uppercase; margin-bottom:6px; }
     .ultima-dot { width:6px; height:6px; background:#c800ff; border-radius:50%; animation:pulseDot 1.5s infinite; flex-shrink:0; }
-    .ultima-titulo { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:700; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-    .ultima-fecha { font-size:11px; color:rgba(255,255,255,0.35); }
-    @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
-    @keyframes fadeInUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
-    .redes-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); text-align: center; margin-bottom: 20px; }
-    .redes-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; max-width: 500px; margin: 0 auto; }
-    .red-item { display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; padding: 16px 24px; border-radius: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); transition: background 0.2s; }
-    .red-item:hover { background: rgba(200,0,255,0.1); border-color: rgba(200,0,255,0.3); }
-    .red-logo { width: 28px; height: 28px; object-fit: contain; }
-    .red-label { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.5px; }
-    @media(max-width:600px){ .redes-row { gap: 10px; } .red-item { padding: 12px 16px; } }
-    #liganaciones { border-top: 3px solid #005cbf; }
-    #liganaciones .section-title { color: #005cbf; }
-    #liganaciones .section-line { background: #005cbf; }
+    .ultima-titulo { font-family:'Bebas Neue',sans-serif; font-size:1.25rem; color:#fff; line-height:1.15; letter-spacing:0.5px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.4)} }
+    .streaming-videos { display:grid; grid-template-columns:1fr 1fr; gap:16px; width:100%; }
+    .video-card { display:block; border-radius:8px; overflow:hidden; transition:transform 0.2s; }
+    .video-card:hover { transform:scale(1.02); }
+    .video-thumb { position:relative; }
+    .video-thumb img { width:100%; height:140px; object-fit:cover; display:block; }
+    .video-play { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(200,0,255,0.85); color:#fff; font-size:20px; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; padding-left:3px; }
+    .redes-section-nueva { background:#0a000f; padding:36px 24px; border-top:1px solid #1a003a; }
+    .redes-titulo { font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center; margin-bottom:20px; }
+    .redes-row { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; max-width:500px; margin:0 auto; }
+    .red-item { display:flex; flex-direction:column; align-items:center; gap:8px; text-decoration:none; padding:16px 24px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); transition:background 0.2s; }
+    .red-item:hover { background:rgba(200,0,255,0.1); border-color:rgba(200,0,255,0.3); }
+    .red-logo { width:28px; height:28px; object-fit:contain; }
+    .red-label { font-size:11px; color:rgba(255,255,255,0.45); letter-spacing:0.5px; }
+    #tab-fixture .fixture-row { background:transparent !important; }
+    @media(max-width:600px){ .streaming-videos{grid-template-columns:1fr} .redes-row{gap:10px} .red-item{padding:12px 16px} }
   </style>
-  <script>
-  function showTabLN(tab, el) {
-    document.getElementById('ln-tabla').style.display   = tab === 'ln-tabla'   ? 'block' : 'none';
-    document.getElementById('ln-fixture').style.display = tab === 'ln-fixture' ? 'block' : 'none';
-    document.querySelectorAll('.tab-btn-ln').forEach(b => b.classList.remove('active'));
-    el.classList.add('active');
-  }
 
-  // Cargar última noticia en el hero — movido después de noticias.js
-
-  document.addEventListener('DOMContentLoaded', () => {
-    cargarUltimaNoticia();
-  });
-  </script>
   <script src="noticias.js"></script>
   <script>
-  // Ejecutar después de que noticias.js cargó
-  function cargarUltimaNoticia() {
-    if (!noticias || noticias.length === 0) return;
-    const n = noticias[0];
-    document.getElementById('ultimaImg').src = n.imagen;
-    document.getElementById('ultimaImg').alt = n.titulo;
-    document.getElementById('ultimaTitulo').textContent = n.titulo;
-    document.getElementById('ultimaFecha').textContent = n.fecha;
-  }
-  function abrirUltima() {
-    if (!noticias || noticias.length === 0) return;
-    window.open(noticias[0].pagina, '_blank');
-  }
-  cargarUltimaNoticia();
+    function cargarUltimaNoticia() {
+      if (!noticias || noticias.length === 0) return;
+      const n = noticias[0];
+      document.getElementById('ultimaImg').src = n.imagen;
+      document.getElementById('ultimaImg').alt = n.titulo;
+      document.getElementById('ultimaTitulo').textContent = n.titulo;
+    }
+    function abrirUltima() {
+      if (!noticias || noticias.length === 0) return;
+      window.open(noticias[0].pagina, '_blank');
+    }
+    cargarUltimaNoticia();
   </script>
   <script src="main.js"></script>
 </body>
