@@ -291,18 +291,26 @@
     <div class="streaming-inner">
       <div class="streaming-text">
         <span class="cat-badge cat-live">● EN VIVO</span>
-        <h2 class="streaming-title">El programa de femeninoinfo</h2>
-        <p>De martes a jueves a las 18 hs por YouTube y Twitch. Análisis, debate y las noticias del día del fútbol femenino.</p>
+        <h2 class="streaming-title">Estamos arrancando con lo lindo</h2>
+        <p>Mirá nuestro streaming en vivo y nuestros vlogs en las canchas. De martes a jueves a las 18 hs por YouTube y Twitch.</p>
         <div class="streaming-links">
           <a href="https://www.youtube.com/@femeninoinfoarg" target="_blank" class="stream-btn yt">YouTube</a>
           <a href="https://www.twitch.tv/femeninoinfo_" target="_blank" class="stream-btn tw">Twitch</a>
         </div>
       </div>
-      <div class="streaming-embed">
-        <div class="embed-placeholder">
-          <span>Últimas transmisiones</span>
-          <a href="https://www.youtube.com/@femeninoinfoarg" target="_blank" class="embed-link">Ver en YouTube →</a>
-        </div>
+      <div class="streaming-videos">
+        <a href="https://youtu.be/ADWMxWgmeT8" target="_blank" class="video-card">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/ADWMxWgmeT8/mqdefault.jpg" alt="femeninoinfo streaming" />
+            <span class="video-play">▶</span>
+          </div>
+        </a>
+        <a href="https://youtu.be/LjQjUGXyBn4" target="_blank" class="video-card">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/LjQjUGXyBn4/mqdefault.jpg" alt="femeninoinfo vlog en la cancha" />
+            <span class="video-play">▶</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -388,6 +396,13 @@
     .tabla-ln tbody td:nth-child(2) { display: flex; align-items: center; gap: 8px; min-width: 120px; }
     /* Asegurar que el CSS de liga de naciones no pise el fixture del Apertura */
     #tab-fixture .fixture-row { background: transparent !important; }
+    .streaming-videos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%; }
+    .video-card { display: block; border-radius: 8px; overflow: hidden; transition: transform 0.2s; }
+    .video-card:hover { transform: scale(1.02); }
+    .video-thumb { position: relative; }
+    .video-thumb img { width: 100%; height: 140px; object-fit: cover; display: block; }
+    .video-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(200,0,255,0.85); color: #fff; font-size: 20px; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3px; }
+    @media(max-width:600px){ .streaming-videos { grid-template-columns: 1fr; } }
     #liganaciones { border-top: 3px solid #005cbf; }
     #liganaciones .section-title { color: #005cbf; }
     #liganaciones .section-line { background: #005cbf; }
