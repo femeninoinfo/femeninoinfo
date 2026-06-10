@@ -59,15 +59,29 @@
 
       <div class="hero-right">
         <div class="tabla-header-afa">
-          <img src="logo-afa.png" alt="AFA" class="tabla-afa-logo" />
+          <img src="logo-afa.png" alt="AFA" class="tabla-afa-logo" id="liga-logo-actual" />
           <div class="tabla-afa-text">
-            <span class="tabla-afa-tag">Apertura 2026</span>
-            <p class="tabla-afa-titulo">Campeonato Primera División<br>del Fútbol Femenino Argentino</p>
+            <span class="tabla-afa-tag" id="liga-tag-actual">Apertura 2026</span>
+            <p class="tabla-afa-titulo" id="liga-titulo-actual">Campeonato Primera División<br>del Fútbol Femenino Argentino</p>
+          </div>
+          <div class="liga-selector">
+            <button class="liga-sel-btn active" onclick="cambiarLiga('afa', this)" title="Apertura Femenino">
+              <img src="logo-afa.png" alt="AFA"/>
+            </button>
+            <button class="liga-sel-btn" onclick="cambiarLiga('nwsl', this)" title="NWSL">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/40px-NWSL_logo.svg.png" alt="NWSL" onerror="this.parentElement.innerHTML='NWSL'"/>
+            </button>
+            <button class="liga-sel-btn" onclick="cambiarLiga('ligaf', this)" title="Liga F">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liga_F_logo.svg/40px-Liga_F_logo.svg.png" alt="Liga F" onerror="this.parentElement.innerHTML='LF'"/>
+            </button>
+            <button class="liga-sel-btn" onclick="cambiarLiga('ligamx', this)" title="Liga MX Femenil">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Liga_MX_Femenil.png/40px-Liga_MX_Femenil.png" alt="LMX" onerror="this.parentElement.innerHTML='MX'"/>
+            </button>
           </div>
         </div>
         <div class="tabs-header">
           <button class="tab-btn active" onclick="showTab('tabla', this)">Tabla</button>
-          <button class="tab-btn" onclick="showTab('fixture', this)">Fixture — Fecha 9</button>
+          <button class="tab-btn" id="tab-fixture-btn" onclick="showTab('fixture', this)">Fixture — Fecha 9</button>
         </div>
 
         <div class="tab-content" id="tab-tabla">
@@ -95,6 +109,60 @@
             </tbody>
           </table>
           <p class="tabla-fecha">Fecha 8 — 8 jun 2026</p>
+        </div>
+
+        <!-- TABLA NWSL -->
+        <div class="tab-content tabla-liga-ext" id="tab-tabla-nwsl" style="display:none;">
+          <table class="tabla-pos">
+            <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead>
+            <tbody>
+              <tr class="top3"><td>1</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Utah_Royals_FC_logo.svg/20px-Utah_Royals_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Utah Royals</td><td>11</td><td>+14</td><td><strong>25</strong></td></tr>
+              <tr class="top3"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/Washington_Spirit_logo.svg/20px-Washington_Spirit_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Washington Spirit</td><td>12</td><td>+12</td><td><strong>24</strong></td></tr>
+              <tr class="top3"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/North_Carolina_Courage_logo.svg/20px-North_Carolina_Courage_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">NC Courage</td><td>12</td><td>+9</td><td><strong>22</strong></td></tr>
+              <tr><td>4</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Orlando_Pride_logo.svg/20px-Orlando_Pride_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Orlando Pride</td><td>11</td><td>+11</td><td><strong>20</strong></td></tr>
+              <tr><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/San_Diego_Wave_FC_logo.svg/20px-San_Diego_Wave_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">San Diego Wave</td><td>11</td><td>+8</td><td><strong>19</strong></td></tr>
+              <tr><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Portland_Thorns_FC_logo.svg/20px-Portland_Thorns_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Portland Thorns</td><td>11</td><td>+5</td><td><strong>18</strong></td></tr>
+              <tr><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Kansas_City_Current_logo.svg/20px-Kansas_City_Current_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Kansas City</td><td>12</td><td>+2</td><td><strong>16</strong></td></tr>
+              <tr><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Gotham_FC_logo.svg/20px-Gotham_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Gotham FC</td><td>12</td><td>-1</td><td><strong>15</strong></td></tr>
+            </tbody>
+          </table>
+          <p class="tabla-fecha">Top 8 — Temporada 2026 en curso</p>
+        </div>
+
+        <!-- TABLA LIGA F -->
+        <div class="tab-content tabla-liga-ext" id="tab-tabla-ligaf" style="display:none;">
+          <table class="tabla-pos">
+            <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead>
+            <tbody>
+              <tr class="top3"><td>🏆</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/20px-FC_Barcelona_%28crest%29.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Barcelona</td><td>30</td><td>+89</td><td><strong>85</strong></td></tr>
+              <tr class="top3"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/20px-Real_Madrid_CF.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Real Madrid</td><td>30</td><td>+42</td><td><strong>72</strong></td></tr>
+              <tr class="top3"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Real_Sociedad_logo.svg/20px-Real_Sociedad_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Real Sociedad</td><td>30</td><td>+18</td><td><strong>60</strong></td></tr>
+              <tr><td>4</td><td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/CD_Tenerife_logo.svg/20px-CD_Tenerife_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Tenerife</td><td>30</td><td>+12</td><td><strong>52</strong></td></tr>
+              <tr><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Atletico_Madrid_2017_logo.svg/20px-Atletico_Madrid_2017_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Atlético Madrid</td><td>30</td><td>+10</td><td><strong>49</strong></td></tr>
+              <tr><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Club_Athletic_de_Bilbao_logo.svg/20px-Club_Athletic_de_Bilbao_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Athletic Club</td><td>30</td><td>+8</td><td><strong>46</strong></td></tr>
+              <tr><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Villarreal_CF_Logo.svg/20px-Villarreal_CF_Logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Villarreal</td><td>30</td><td>+5</td><td><strong>42</strong></td></tr>
+              <tr><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Sevilla_FC_logo.svg/20px-Sevilla_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Sevilla</td><td>30</td><td>+3</td><td><strong>38</strong></td></tr>
+            </tbody>
+          </table>
+          <p class="tabla-fecha">Temporada 2025-26 finalizada — Barcelona campeón</p>
+        </div>
+
+        <!-- TABLA LIGA MX -->
+        <div class="tab-content tabla-liga-ext" id="tab-tabla-ligamx" style="display:none;">
+          <table class="tabla-pos">
+            <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead>
+            <tbody>
+              <tr class="top3"><td>🏆</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Club_Am%C3%A9rica_crest.svg/20px-Club_Am%C3%A9rica_crest.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">América</td><td>17</td><td>+35</td><td><strong>42</strong></td></tr>
+              <tr class="top3"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/CF_Monterrey_logo.svg/20px-CF_Monterrey_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Monterrey</td><td>17</td><td>+28</td><td><strong>38</strong></td></tr>
+              <tr class="top3"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Tigres_UANL_logo.svg/20px-Tigres_UANL_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Tigres UANL</td><td>17</td><td>+24</td><td><strong>35</strong></td></tr>
+              <tr><td>4</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Guadalajara_chivas_logo.svg/20px-Guadalajara_chivas_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Chivas</td><td>17</td><td>+18</td><td><strong>32</strong></td></tr>
+              <tr><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/Cruz_Azul_logo.svg/20px-Cruz_Azul_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Cruz Azul</td><td>17</td><td>+10</td><td><strong>28</strong></td></tr>
+              <tr><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/49/CF_Pachuca_logo.svg/20px-CF_Pachuca_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Pachuca</td><td>17</td><td>+12</td><td><strong>27</strong></td></tr>
+              <tr><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Deportivo_Toluca_F.C._logo.svg/20px-Deportivo_Toluca_F.C._logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Toluca</td><td>17</td><td>+6</td><td><strong>25</strong></td></tr>
+              <tr><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Atlas_FC_logo.svg/20px-Atlas_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" alt="" onerror="this.style.display='none'">Atlas</td><td>17</td><td>+4</td><td><strong>24</strong></td></tr>
+            </tbody>
+          </table>
+          <p class="tabla-fecha">Clausura 2026 finalizado — América campeona</p>
         </div>
 
         <div class="tab-content" id="tab-fixture" style="display:none;">
@@ -464,6 +532,12 @@
     .tabla-liga tbody tr.descenso td { color:#aaa; }
     .tabla-liga tbody td strong { font-family:'Bebas Neue',sans-serif; font-size:14px; color:#3d0066; }
     .tabla-nota { font-size:11px; color:#888; margin-top:8px; padding:4px 0; }
+    .liga-selector { display:flex; gap:4px; margin-left:auto; align-items:center; }
+    .liga-sel-btn { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.1); border-radius:6px; width:32px; height:32px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; padding:4px; font-size:9px; color:#fff; font-weight:700; }
+    .liga-sel-btn:hover { background:rgba(200,0,255,0.2); border-color:rgba(200,0,255,0.4); }
+    .liga-sel-btn.active { background:rgba(200,0,255,0.3); border-color:#c800ff; box-shadow:0 0 8px rgba(200,0,255,0.3); }
+    .liga-sel-btn img { width:22px; height:22px; object-fit:contain; }
+    .tabla-header-afa { display:flex; align-items:center; gap:10px; }
     #tab-fixture .fixture-row { background:transparent !important; }
     .fixture-nuevo { padding:8px 4px; }
     .fx-dia-bloque { margin-bottom:12px; }
@@ -494,6 +568,28 @@
   </script>
   <script src="noticias.js"></script>
   <script>
+  var LIGAS = {
+    afa: { logo:'logo-afa.png', tag:'Apertura 2026', titulo:'Campeonato Primera División<br>del Fútbol Femenino Argentino', tabla:'tab-tabla', fixture:true },
+    nwsl: { logo:'https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/40px-NWSL_logo.svg.png', tag:'NWSL 2026', titulo:'National Women\'s Soccer League', tabla:'tab-tabla-nwsl', fixture:false },
+    ligaf: { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liga_F_logo.svg/40px-Liga_F_logo.svg.png', tag:'Liga F 2025-26', titulo:'Primera División Femenina de España', tabla:'tab-tabla-ligaf', fixture:false },
+    ligamx: { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Liga_MX_Femenil.png/40px-Liga_MX_Femenil.png', tag:'Liga MX Femenil', titulo:'Clausura 2026 — México', tabla:'tab-tabla-ligamx', fixture:false }
+  };
+  function cambiarLiga(liga, btn) {
+    var l = LIGAS[liga];
+    document.getElementById('liga-logo-actual').src = l.logo;
+    document.getElementById('liga-tag-actual').textContent = l.tag;
+    document.getElementById('liga-titulo-actual').innerHTML = l.titulo;
+    document.getElementById('tab-tabla').style.display = 'none';
+    document.querySelectorAll('.tabla-liga-ext').forEach(function(t){ t.style.display='none'; });
+    document.getElementById('tab-fixture').style.display = 'none';
+    document.getElementById(l.tabla).style.display = 'block';
+    var fb = document.getElementById('tab-fixture-btn');
+    if(fb) fb.style.display = l.fixture ? '' : 'none';
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.tab-btn')[0].classList.add('active');
+    document.querySelectorAll('.liga-sel-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
     function cargarUltimaNoticia() {
       if (!noticias || noticias.length === 0) return;
       const n = noticias[0];
