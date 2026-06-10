@@ -202,6 +202,75 @@
       .nota-grilla { height: auto; grid-template-rows: auto; }
       .tabla-panel { height: auto; }
     }
+
+    /* ===== RESPONSIVE MOBILE ===== */
+    @media(max-width:768px) {
+      .portal-inner {
+        grid-template-columns: 1fr !important;
+        padding: 12px !important;
+        gap: 12px !important;
+      }
+      .nota-grande { height: 240px !important; }
+      .nota-grilla {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        height: auto !important;
+        overflow-x: auto !important;
+        scrollbar-width: none !important;
+        padding-bottom: 4px !important;
+      }
+      .nota-grilla::-webkit-scrollbar { display: none !important; }
+      .nota-chica {
+        flex: 0 0 150px !important;
+        height: 110px !important;
+        min-height: unset !important;
+      }
+      .tabla-panel {
+        height: auto !important;
+        max-height: 420px !important;
+      }
+      .tabla-panel .tab-content {
+        max-height: 280px !important;
+      }
+    }
+
+    /* ===== EFECTOS CARRUSEL ===== */
+    .carrusel-wrap { position: relative !important; }
+    .carrusel-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 100%;
+      background: linear-gradient(to right, transparent, rgba(245,240,248,0.9));
+      pointer-events: none;
+      z-index: 5;
+    }
+    .section-dark .carrusel-wrap::after {
+      background: linear-gradient(to right, transparent, rgba(19,0,32,0.9));
+    }
+    .carrusel-btn.next {
+      animation: bounceRight 2s ease-in-out infinite;
+      animation-delay: 1s;
+    }
+    @keyframes bounceRight {
+      0%, 100% { transform: translateY(-50%) translateX(0); }
+      50% { transform: translateY(-50%) translateX(4px); }
+    }
+    /* Label "más noticias" en mobile */
+    .noticias-row-mobile-label {
+      display: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 6px;
+    }
+    @media(max-width:768px) {
+      .noticias-row-mobile-label { display: block; }
+    }
   </style>
 </head>
 <body>
