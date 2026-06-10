@@ -40,7 +40,7 @@
 
   <section class="hero-tabla-section">
     <div class="hero-deco-grid"></div>
-    <div class="hero-tabla-inner">
+    <div class="hero-tabla-inner portal-3col">
 
       <div class="hero-left">
         <p class="hero-tag">última hora</p>
@@ -48,15 +48,19 @@
         <p class="hero-sub">Fútbol femenino argentino, Selección femenina y fútbol internacional.</p>
         <a href="#noticias" class="hero-btn">Ver noticias</a>
 
-        <div class="ultima-hero" id="ultimaHero" onclick="abrirUltima()" style="cursor:pointer;">
-          <img id="ultimaImg" src="" alt="" class="ultima-hero-img"/>
-          <div class="ultima-hero-overlay"></div>
-          <div class="ultima-hero-content">
-            <span class="ultima-badge"><span class="ultima-dot"></span> Reciente</span>
-            <p class="ultima-titulo" id="ultimaTitulo"></p>
-          </div>
+      <!-- NOTA GRANDE -->
+      <div class="nota-grande" id="ultimaHero" onclick="abrirUltima()" style="cursor:pointer;">
+        <img id="ultimaImg" src="" alt="" class="nota-grande-img"/>
+        <div class="nota-grande-overlay"></div>
+        <div class="nota-grande-content">
+          <span class="ultima-badge"><span class="ultima-dot"></span> Reciente</span>
+          <p class="ultima-titulo" id="ultimaTitulo"></p>
+          <p class="nota-grande-resumen" id="ultimaResumen"></p>
         </div>
       </div>
+
+      <!-- NOTICIAS CHICAS -->
+      <div class="nota-grilla" id="noticiasChicas"></div>
 
       <div class="hero-right">
         <div class="tabla-header-afa">
