@@ -90,24 +90,6 @@ const noticias = [
     pagina: "belgrano-talleres.html"
   },
   {
-    id: 10,
-    titulo: "San Lorenzo goleó a Banfield 3-0 y es líder del Apertura 2026",
-    resumen: "Las Santitas ganaron en la Fecha 7 con goles de Pafundi, Molina y Castillo.",
-    imagen: "banini.png",
-    categoria: "apertura",
-    fecha: "22 may 2026",
-    pagina: "banini.html"
-  },
-  {
-    id: 11,
-    titulo: "Messi impulsa la creación de un equipo femenino en la UE Cornellà",
-    resumen: "Primera decisión institucional de peso tras comprar el 85% del club. Arrancará en Segunda Catalana en 2026/2027.",
-    imagen: "portanova-conferencia.png",
-    categoria: "internacional",
-    fecha: "22 may 2026",
-    pagina: "portanova-conferencia.html"
-  },
-  {
     id: 13,
     titulo: "Portanova convocó a 24 jugadoras para la doble fecha de Liga de Naciones",
     resumen: "La Selección Argentina retomó los entrenamientos en Ezeiza de cara a los partidos ante Perú y Ecuador.",
