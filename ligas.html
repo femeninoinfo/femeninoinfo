@@ -78,7 +78,59 @@
 
 <main class="main">
 
-  <!-- NWSL -->
+  <!-- APERTURA FEMENINO ARGENTINO -->
+  <div class="liga-bloque" id="argentina">
+    <div class="liga-bloque-header">
+      <img src="logo-afa.png" class="liga-bloque-logo" alt="AFA"/>
+      <div class="liga-bloque-info">
+        <p class="liga-bloque-nombre">Apertura Femenino 2026 — AFA</p>
+        <p class="liga-bloque-sub">🇦🇷 Argentina — Primera División — 16 equipos</p>
+      </div>
+      <span class="liga-bloque-estado estado-curso">● En curso</span>
+    </div>
+    <div class="liga-tabs-inner">
+      <button class="liga-tab-inner active" onclick="switchTab('arg','tabla',this)">Tabla</button>
+      <button class="liga-tab-inner" onclick="switchTab('arg','fixture',this)">Fixture — Fecha 9</button>
+    </div>
+    <div class="liga-tab-content active" id="arg-tabla">
+      <table>
+        <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead>
+        <tbody>
+          <tr class="playoff"><td>1</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">River</td><td>8</td><td>+13</td><td><strong>20</strong></td></tr>
+          <tr class="playoff"><td>2</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">San Lorenzo</td><td>8</td><td>+16</td><td><strong>19</strong></td></tr>
+          <tr class="playoff"><td>3</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Racing</td><td>8</td><td>+13</td><td><strong>19</strong></td></tr>
+          <tr><td>4</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Banfield</td><td>8</td><td>+2</td><td><strong>15</strong></td></tr>
+          <tr><td>5</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Talleres</td><td>8</td><td>+4</td><td><strong>13</strong></td></tr>
+          <tr><td>6</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">SAT</td><td>8</td><td>+4</td><td><strong>12</strong></td></tr>
+          <tr><td>7</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Gimnasia</td><td>8</td><td>-3</td><td><strong>11</strong></td></tr>
+          <tr><td>8</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">San Luis FC</td><td>8</td><td>+2</td><td><strong>10</strong></td></tr>
+          <tr><td>9</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Huracán</td><td>8</td><td>0</td><td><strong>10</strong></td></tr>
+          <tr><td>10</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Independiente</td><td>8</td><td>-2</td><td><strong>10</strong></td></tr>
+          <tr><td>11</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Belgrano</td><td>8</td><td>-2</td><td><strong>10</strong></td></tr>
+          <tr><td>12</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Boca</td><td>8</td><td>-2</td><td><strong>8</strong></td></tr>
+          <tr><td>13</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Ferro</td><td>8</td><td>-3</td><td><strong>8</strong></td></tr>
+          <tr><td>14</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Newell's</td><td>8</td><td>-11</td><td><strong>5</strong></td></tr>
+          <tr class="descenso"><td>15</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Lanús</td><td>8</td><td>-15</td><td><strong>4</strong></td></tr>
+          <tr class="descenso"><td>16</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Unión</td><td>8</td><td>-16</td><td><strong>2</strong></td></tr>
+        </tbody>
+      </table>
+      <p class="tabla-nota">Fecha 8 — 8 jun 2026. Top 4 clasifican a semifinales.</p>
+    </div>
+    <div class="liga-tab-content" id="arg-fixture">
+      <div style="display:flex;flex-direction:column;gap:8px;padding:4px 0;">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:#c800ff;">Sábado 13/6</p>
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">11:00</span><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>Unión vs Lanús</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">Est. 15 de Abril</span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">14:00</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>SAT vs San Luis FC</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">Est. 12 de Agosto</span></div>
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:#c800ff;margin-top:8px;">Domingo 14/6</p>
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">12:30</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>River vs San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">River Camp</span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(200,0,255,0.07);border:1px solid rgba(200,0,255,0.2);border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">15:30</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span><strong>Belgrano vs Talleres</strong></span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">Gigante de Alberdi</span></div>
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:#c800ff;margin-top:8px;">Lunes 15/6</p>
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">15:00</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>Independiente vs Boca</span><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">Predio Santo Domingo</span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">15:00</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>Banfield vs Racing</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">Campo de Deportes</span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">15:00</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>Huracán vs Ferro</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">La Quemita</span></div>
+      </div>
+    </div>
+  </div>
   <div class="liga-bloque" id="nwsl">
     <div class="liga-bloque-header">
       <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/80px-NWSL_logo.svg.png" class="liga-bloque-logo" alt="NWSL" onerror="this.style.display='none'"/>
