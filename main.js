@@ -1,6 +1,6 @@
 // FEMENINOINFO — MAIN JS
 
-const CATEGORIAS = {
+const CATEGORIAS = { 
   seleccion:     { label: 'Selección Argentina',  clase: 'cat-sel' },
   apertura:      { label: 'Apertura Femenino',    clase: 'cat-arg' },
   internacional: { label: 'Fútbol Internacional', clase: 'cat-int' }
