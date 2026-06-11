@@ -810,7 +810,7 @@ function cargarUltimaNoticia() {
   var chicas = document.getElementById('noticiasChicas');
   if(chicas) {
     chicas.innerHTML = '';
-    var cats = {seleccion:'Selección', apertura:'Apertura', internacional:'Internacional'};
+    var cats = {seleccion:'Selección', apertura:'Argentino', internacional:'Internacional'};
     for(var i=1; i<=3 && i<noticias.length; i++) {
       var m = noticias[i];
       var cat = cats[m.categoria] || m.categoria;
