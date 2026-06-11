@@ -1,9 +1,18 @@
 const noticias = [
   {
+    id: 18,
+    titulo: "Cardozo y Aguirre de Vélez sufrieron rotura de ligamentos cruzados",
+    resumen: "Las dos jugadoras clave del fútbol femenino de Vélez se lesionaron en el entrenamiento del martes. Un golpe muy duro para el equipo de la Primera B.",
+    imagen: "velez-lesiones.png.png",
+    categoria: "apertura",
+    fecha: "13 jun 2026",
+    pagina: "velez-lesiones.html"
+  },
+  {
     id: 17,
     titulo: "Este sábado arranca la fecha 9 del Apertura Femenino",
     resumen: "Siete partidos entre el sábado 13 y el lunes 15 de junio. River vs San Lorenzo es el duelo de la fecha, con el liderato en juego. Todos en vivo y gratis por LPF Play.",
-    imagen: "apertura-fecha9.png",
+    imagen: "apertura-fecha9.png.png",
     categoria: "apertura",
     fecha: "13 jun 2026",
     pagina: "apertura-fecha9.html"
