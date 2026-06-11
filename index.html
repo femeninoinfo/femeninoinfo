@@ -133,14 +133,20 @@
       z-index: 2;
     }
     .nota-chica-cat {
+      display: inline-block;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 9px;
       letter-spacing: 1.5px;
-      color: #c800ff;
       text-transform: uppercase;
-      display: block;
-      margin-bottom: 2px;
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 4px;
+      color: #fff;
+      background: #c800ff;
     }
+    .nota-chica-cat.cat-apertura  { background: #3d0066; }
+    .nota-chica-cat.cat-seleccion { background: #005cbf; }
+    .nota-chica-cat.cat-internacional { background: #006644; }
     .nota-chica-titulo {
       font-size: 12px;
       font-weight: 700;
@@ -346,9 +352,24 @@
         gap: 12px !important;
       }
       .nota-chica { height: 180px !important; min-height: 180px !important; }
+      .nota-chica-cat { display: none !important; }
       .tabla-panel { height: auto !important; }
       .tabla-panel .tab-content { max-height: 380px !important; overflow-y: auto !important; }
-      .grid-ultimas { grid-template-columns: repeat(2, 1fr) !important; }
+      /* Últimas noticias — carrusel en mobile */
+      .grid-ultimas {
+        display: flex !important;
+        gap: 12px !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        scrollbar-width: none !important;
+        padding-bottom: 8px !important;
+      }
+      .grid-ultimas::-webkit-scrollbar { display: none !important; }
+      .grid-ultimas .grid-card {
+        flex: 0 0 75vw !important;
+        scroll-snap-align: start !important;
+        height: 200px !important;
+      }
       .carrusel-track .sec-card { flex: 0 0 80vw !important; }
     }
   </style>
@@ -524,10 +545,10 @@
 </section>
 
 <!-- ÚLTIMAS NOTICIAS — grilla fija 8 cards -->
-<section class="section" id="noticias">
+<section class="section" id="noticias" style="background:#0a000f;border-bottom:2px solid #3d0066;">
   <div class="section-header">
     <span class="section-pill pill-ultimas">Últimas noticias</span>
-    <h2 class="section-title">Últimas noticias</h2>
+    <h2 class="section-title" style="color:#fff;">Últimas noticias</h2>
     <span class="section-line"></span>
   </div>
   <div class="grid-ultimas" id="gridUltimas"></div>
@@ -765,7 +786,8 @@ function cargarUltimaNoticia() {
       var card = document.createElement('div');
       card.className = 'nota-chica';
       card.onclick = (function(p){ return function(){ window.open(p,'_blank'); }; })(m.pagina);
-      card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/><div class="nota-chica-overlay"></div><div class="nota-chica-body"><span class="nota-chica-cat">'+cat+'</span><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
+      var catClass = 'cat-' + (m.categoria || 'apertura');
+      card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/><div class="nota-chica-overlay"></div><div class="nota-chica-body"><span class="nota-chica-cat '+catClass+'">'+cat+'</span><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
       chicas.appendChild(card);
     }
   }
