@@ -1,95 +1,274 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre femeninoinfo</title>
-  <link rel="icon" href="logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Sobre femeninoinfo — medio independiente de fútbol femenino</title>
+  <link rel="icon" href="logo-nuevo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Montserrat:wght@400;800&display=swap" rel="stylesheet"/>
   <style>
-    .sobre-hero { background: var(--dark); padding: 80px 24px; }
-    .sobre-hero-inner { max-width: 760px; margin: 0 auto; }
-    .sobre-hero h1 { font-family: var(--font-display); font-size: clamp(36px,5vw,60px); color: var(--white); letter-spacing: 1px; margin-bottom: 24px; }
-    .sobre-hero p { color: rgba(255,255,255,0.65); font-size: 17px; line-height: 1.7; font-weight: 300; margin-bottom: 16px; }
-    .sobre-body { max-width: 760px; margin: 0 auto; padding: 60px 24px; }
-    .sobre-body h2 { font-family: var(--font-display); font-size: 28px; color: var(--purple); letter-spacing: 1px; margin: 36px 0 12px; }
-    .sobre-body p { font-size: 16px; line-height: 1.7; color: var(--text-light); margin-bottom: 16px; }
-    .stats-row { display: flex; gap: 32px; margin: 36px 0; flex-wrap: wrap; }
-    .stat { text-align: center; }
-    .stat-num { font-family: var(--font-display); font-size: 42px; color: var(--accent); letter-spacing: 1px; }
-    .stat-label { font-size: 13px; color: var(--gray); margin-top: 4px; }
-    .contact-btn { display: inline-block; background: var(--accent); color: var(--white); font-family: var(--font-display); font-size: 16px; letter-spacing: 1px; padding: 14px 32px; border-radius: var(--radius); margin-top: 24px; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: #f5f0f8; color: #1a001f; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* NAV */
+    .nav {
+      background: #1a0035;
+      border-bottom: 2px solid rgba(200,0,255,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      overflow: hidden;
+    }
+    .nav::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%);
+      background-size: 200% 100%;
+      animation: barreSweep 3s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 8px; }
+    .nav-brand img { width: 32px; height: 32px; object-fit: contain; }
+    .nav-brand span { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #fff; }
+    .nav-links { display: flex; gap: 24px; margin-left: auto; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 13px; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; margin-left: auto; }
+    .nav-mobile { display: none; flex-direction: column; background: #130020; padding: 16px 24px; gap: 16px; border-top: 1px solid rgba(200,0,255,0.2); position: relative; z-index: 1; }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: rgba(255,255,255,0.75); font-size: 15px; }
+    @media(max-width:700px) { .nav-links { display: none; } .menu-toggle { display: block; } }
+
+    /* HERO */
+    .sobre-hero {
+      background: #0a000f;
+      padding: 72px 24px 64px;
+      text-align: center;
+      border-bottom: 2px solid #3d0066;
+    }
+    .sobre-hero-tag {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #c800ff;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .sobre-hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: 1px;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+    .sobre-hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      max-width: 560px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    /* CONTENIDO */
+    .sobre-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .sobre-bloque {
+      margin-bottom: 48px;
+    }
+
+    .sobre-bloque h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      color: #3d0066;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+
+    .sobre-bloque p {
+      font-size: 0.97rem;
+      color: #333;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    .sobre-bloque p:last-child { margin-bottom: 0; }
+
+    /* DIVISOR */
+    .divisor {
+      width: 48px;
+      height: 3px;
+      background: #c800ff;
+      border-radius: 2px;
+      margin: 0 0 20px;
+    }
+
+    /* CONTACTO */
+    .contacto-bloque {
+      background: #0a000f;
+      border-radius: 12px;
+      padding: 40px 36px;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .contacto-bloque h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: #fff;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .contacto-bloque p {
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 28px;
+    }
+    .contacto-btn {
+      display: inline-block;
+      background: #c800ff;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+      padding: 14px 36px;
+      border-radius: 4px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .contacto-btn:hover { background: #e066ff; transform: translateY(-2px); }
+
+    /* FOOTER */
+    .footer {
+      background: #0a000f;
+      border-top: 2px solid #3d0066;
+      padding: 40px 24px 20px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding-bottom: 28px;
+    }
+    .footer-brand img { width: 36px; margin-bottom: 10px; }
+    .footer-brand p { color: rgba(255,255,255,0.4); font-size: 13px; line-height: 1.5; }
+    .footer-links h4 { font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 2px; color: #c800ff; text-transform: uppercase; margin-bottom: 10px; }
+    .footer-links a { display: block; color: rgba(255,255,255,0.45); font-size: 13px; margin-bottom: 7px; }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px; text-align: center; max-width: 1100px; margin: 0 auto; }
+    .footer-bottom p { color: rgba(255,255,255,0.25); font-size: 12px; }
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="header-inner">
-      <a href="index.html" class="brand">
-        <img src="logo.png" alt="femeninoinfo" class="brand-logo" />
-        <span class="brand-name">femeninoinfo</span>
-      </a>
-      <nav class="nav">
-        <a href="index.html#apertura">Apertura</a>
-        <a href="index.html#seleccion">Selección</a>
-        <a href="index.html#internacional">Internacional</a>
-        <a href="index.html#exterior">Arg en el exterior</a>
-        <a href="streaming.html">Streaming</a>
-        <a href="sobre.html">Sobre</a>
-      </nav>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    </div>
-  </header>
 
-  <div class="sobre-hero">
-    <div class="sobre-hero-inner">
-      <h1>Un medio independiente para el fútbol femenino</h1>
-      <p>femeninoinfo nació con una idea simple: que el fútbol femenino argentino e internacional tenga la cobertura que merece, sin depender de los medios tradicionales ni quedar como nota de color.</p>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo"/>
+      <span>femeninoinfo</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#apertura">Fútbol Argentino</a>
+      <a href="index.html#seleccion">Selección Argentina</a>
+      <a href="index.html#internacional">Internacional</a>
+      <a href="ligas.html">Ligas del mundo</a>
+      <a href="streaming.html">Streaming</a>
+      <a href="sobre.html">Sobre</a>
     </div>
+    <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
+  </div>
+  <nav class="nav-mobile">
+    <a href="index.html#apertura">Fútbol Argentino</a>
+    <a href="index.html#seleccion">Selección Argentina</a>
+    <a href="index.html#internacional">Internacional</a>
+    <a href="ligas.html">Ligas del mundo</a>
+    <a href="streaming.html">Streaming</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+</nav>
+
+<div class="sobre-hero">
+  <span class="sobre-hero-tag">Sobre nosotras</span>
+  <h1>Un medio independiente que crece todos los días</h1>
+  <p>femeninoinfo es cobertura de fútbol femenino argentino e internacional, sin depender de los medios tradicionales ni quedar como nota de color.</p>
+</div>
+
+<div class="sobre-body">
+
+  <div class="sobre-bloque">
+    <div class="divisor"></div>
+    <h2>El proyecto</h2>
+    <p>Este año le apostamos todo. femeninoinfo arrancó hace más de tres años con una idea simple: que el fútbol femenino tenga la cobertura que merece. En 2026 decidimos ir a fondo — nueva página, streaming en vivo, más contenido, más presencia.</p>
+    <p>Cubrimos el Apertura Femenino, la Selección Argentina, el fútbol internacional y las argentinas que juegan afuera. Sin comparaciones con el fútbol masculino. Sin condescendencia. El fútbol femenino como protagonista.</p>
   </div>
 
-  <div class="sobre-body">
-    <div class="stats-row">
-      <div class="stat"><div class="stat-num">22K</div><div class="stat-label">seguidores en TikTok</div></div>
-      <div class="stat"><div class="stat-num">17K</div><div class="stat-label">seguidores en Instagram</div></div>
-      <div class="stat"><div class="stat-num">3+</div><div class="stat-label">años cubriendo el fútbol femenino</div></div>
-    </div>
+  <div class="sobre-bloque">
+    <div class="divisor"></div>
+    <h2>El streaming</h2>
+    <p>Estamos arrancando con nuestro programa de streaming de martes a jueves a las 18:00 en YouTube y Twitch. Un espacio para hablar de fútbol femenino en serio, con análisis, noticias y debate. Sin filtros y sin protocolo.</p>
+    <p>Podés seguirnos en <a href="https://www.youtube.com/@femeninoinfoarg" style="color:#c800ff;font-weight:600;">YouTube</a> y en <a href="https://www.twitch.tv/femeninoinfo_" style="color:#c800ff;font-weight:600;">Twitch</a>.</p>
+  </div>
 
+  <div class="sobre-bloque">
+    <div class="divisor"></div>
     <h2>Quién está detrás</h2>
-    <p>femeninoinfo es un proyecto unipersonal. Atrás hay una sola persona: profesora de Educación Física con especialización en ciencias del deporte de alto rendimiento y experiencia de trabajo con equipos de fútbol femenino. Hoy, además de periodista y creadora de contenido, conduce un programa de streaming de martes a jueves.</p>
-
-    <h2>De qué se trata</h2>
-    <p>Noticias del Apertura Femenino, la Selección Argentina en su camino al Mundial, el fútbol internacional, las argentinas que juegan afuera. Sin comparaciones con el fútbol masculino. Sin condescendencia. El fútbol femenino como protagonista.</p>
-
-    <h2>Contacto y sponsors</h2>
-    <p>Si querés trabajar con femeninoinfo, sumarte como sponsor o proponernos una colaboración, escribinos.</p>
-    <a href="sponsors.html" class="contact-btn">Ver paquetes de sponsoreo</a>
+    <p>femeninoinfo es creación de <strong>Esperanza Viappiani</strong>, profesora de Educación Física con especialización en ciencias del deporte de alto rendimiento y experiencia de trabajo con equipos de fútbol femenino formativo, juvenil y mayor. Periodista, creadora de contenido y conductora del streaming del medio.</p>
+    <p>Un proyecto unipersonal que se construye día a día.</p>
   </div>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="logo.png" alt="femeninoinfo" class="footer-logo" />
-        <p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Secciones</h4>
-        <a href="index.html#apertura">Apertura Femenino</a>
-        <a href="index.html#seleccion">Selección Argentina</a>
-        <a href="index.html#internacional">Internacional</a>
-        <a href="index.html#exterior">Arg en el exterior</a>
-      </div>
-      <div class="footer-links">
-        <h4>femeninoinfo</h4>
-        <a href="sobre.html">Sobre el medio</a>
-        <a href="streaming.html">Streaming</a>
-        <a href="sponsors.html">Sponsors</a>
-      </div>
+  <div class="contacto-bloque">
+    <h2>¿Tu marca en el fútbol femenino?</h2>
+    <p>Si te gustaría que tu marca sea parte de nuestro medio digital de fútbol femenino, hablanos.</p>
+    <a href="mailto:femeninoinfo@gmail.com" class="contacto-btn">Escribinos</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo"/>
+      <p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 femeninoinfo — Todos los derechos reservados</p>
+    <div class="footer-links">
+      <h4>Secciones</h4>
+      <a href="index.html#apertura">Fútbol Argentino</a>
+      <a href="index.html#seleccion">Selección Argentina</a>
+      <a href="index.html#internacional">Internacional</a>
     </div>
-  </footer>
-  <script src="main.js"></script>
+    <div class="footer-links">
+      <h4>femeninoinfo</h4>
+      <a href="sobre.html">Sobre el medio</a>
+      <a href="streaming.html">Streaming</a>
+      <a href="sponsors.html">Sponsors</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
+</footer>
+
 </body>
 </html>
