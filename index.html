@@ -134,15 +134,17 @@
     }
     .nota-chica-cat {
       display: inline-block;
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: 9px;
-      letter-spacing: 1.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
-      padding: 3px 8px;
+      padding: 2px 7px;
       border-radius: 3px;
       margin-bottom: 4px;
       color: #fff;
       background: #c800ff;
+      max-width: fit-content;
     }
     .nota-chica-cat.cat-apertura  { background: #3d0066; }
     .nota-chica-cat.cat-seleccion { background: #005cbf; }
@@ -819,7 +821,10 @@ function cargarUltimaNoticia() {
       var chicaBorderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
       var chicaBorder = chicaBorderColors[m.categoria] || '#c800ff';
       card.style.borderTop = '3px solid ' + chicaBorder;
-      card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/><div class="nota-chica-overlay"></div><div class="nota-chica-body"><span class="nota-chica-cat '+catClass+'">'+cat+'</span><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
+      card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/>'+
+        '<div class="nota-chica-overlay"></div>'+
+        '<span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#fff;background:'+chicaBorder+';opacity:0.92;">'+cat+'</span>'+
+        '<div class="nota-chica-body"><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
       chicas.appendChild(card);
     }
   }
