@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 17,
+    titulo: "Este sábado arranca la fecha 9 del Apertura Femenino",
+    resumen: "Siete partidos entre el sábado 13 y el lunes 15 de junio. River vs San Lorenzo es el duelo de la fecha, con el liderato en juego. Todos en vivo y gratis por LPF Play.",
+    imagen: "apertura-fecha9.png",
+    categoria: "apertura",
+    fecha: "13 jun 2026",
+    pagina: "apertura-fecha9.html"
+  },
+  {
     id: 15,
     titulo: "España, Alemania, Francia y Dinamarca se clasificaron al Mundial Femenino Brasil 2027",
     resumen: "Las cuatro selecciones europeas sellaron su boleto directo en la última jornada de los clasificatorios de la UEFA. España goleó a Islandia y defendió su título mundial. Ya son 12 los equipos confirmados.",
@@ -127,8 +136,6 @@ const noticias = [
   }
 ];
 
-
-// Cargar hero al terminar de parsear este archivo
 document.addEventListener("DOMContentLoaded", function() {
   if(typeof cargarUltimaNoticia === "function") cargarUltimaNoticia();
 });
