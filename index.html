@@ -752,9 +752,11 @@ function makeGridCard(n) {
   var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
   var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
   var badgeBg = badgeColors[n.categoria] || '#c800ff';
+  var borderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
+  var borderColor = borderColors[n.categoria] || '#c800ff';
   var div = document.createElement('div');
   div.className = 'grid-card';
-  div.style.cssText = 'position:relative;border-radius:10px;overflow:hidden;height:180px;cursor:pointer;transition:transform 0.2s;background:#1a0030;display:block;box-shadow:none;flex-direction:unset;';
+  div.style.cssText = 'position:relative;border-radius:10px;overflow:hidden;height:180px;cursor:pointer;transition:transform 0.2s;background:#1a0030;display:block;box-shadow:none;flex-direction:unset;border-top:3px solid '+borderColor+';';
   div.onclick = function(){ window.open(n.pagina, '_blank'); };
   div.innerHTML =
     '<img src="'+n.imagen+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>'+
@@ -771,9 +773,11 @@ function makeSecCard(n) {
   var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
   var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
   var badgeBg = badgeColors[n.categoria] || '#c800ff';
+  var borderColors2 = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
+  var borderColor2 = borderColors2[n.categoria] || '#c800ff';
   var div = document.createElement('div');
   div.className = 'sec-card';
-  div.style.cssText = 'position:relative;border-radius:10px;overflow:hidden;height:180px;cursor:pointer;transition:transform 0.2s;background:#1a0030;display:block;box-shadow:none;flex-direction:unset;flex:0 0 calc(20% - 10px);scroll-snap-align:start;';
+  div.style.cssText = 'position:relative;border-radius:10px;overflow:hidden;height:180px;cursor:pointer;transition:transform 0.2s;background:#1a0030;display:block;box-shadow:none;flex-direction:unset;flex:0 0 calc(20% - 10px);scroll-snap-align:start;border-top:3px solid '+borderColor2+';';
   div.onclick = function(){ window.open(n.pagina, '_blank'); };
   div.innerHTML =
     '<img src="'+n.imagen+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>'+
@@ -812,6 +816,9 @@ function cargarUltimaNoticia() {
       card.className = 'nota-chica';
       card.onclick = (function(p){ return function(){ window.open(p,'_blank'); }; })(m.pagina);
       var catClass = 'cat-' + (m.categoria || 'apertura');
+      var chicaBorderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
+      var chicaBorder = chicaBorderColors[m.categoria] || '#c800ff';
+      card.style.borderTop = '3px solid ' + chicaBorder;
       card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/><div class="nota-chica-overlay"></div><div class="nota-chica-body"><span class="nota-chica-cat '+catClass+'">'+cat+'</span><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
       chicas.appendChild(card);
     }
