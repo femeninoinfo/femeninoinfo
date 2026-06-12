@@ -180,3 +180,5 @@ const noticias = [
     pagina: "mercedes-diz.html"
   }
 ];
+
+if(typeof cargarUltimaNoticia === "function") cargarUltimaNoticia();
