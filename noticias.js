@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 22,
+    titulo: "Colombia ganó la Liga de Naciones y conquistó su primer título en la historia",
+    resumen: "Las cafeteras se consagraron campeonas de la primera edición de la CONMEBOL Liga de Naciones Femenina. Es el primer trofeo oficial de la selección colombiana y las convierte en el tercer combinado del continente con un título.",
+    imagen: "colombia-liga-naciones.png.png",
+    categoria: "internacional",
+    fecha: "9 jun 2026",
+    pagina: "colombia-liga-naciones.html"
+  },
+  {
     id: 21,
     titulo: "Claudia Martínez, 18 años, fue la máxima goleadora de la Liga de Naciones",
     resumen: "Llegó tarde al torneo, se perdió las primeras tres fechas y terminó liderando la tabla de goleadoras con 6 goles en 6 partidos. La delantera paraguaya del Washington Spirit.",
