@@ -181,7 +181,7 @@
       overflow-y: auto;
     }
 
-    /* ===== GRILLA ÚLTIMAS NOTICIAS ===== */
+    /* ===== GRILLA NOTICIAS (ultimas + secciones) ===== */
     .grid-ultimas {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -247,98 +247,6 @@
       display: block;
     }
 
-    /* ===== CARRUSEL SECCIONES ===== */
-    .carrusel-wrap { position: relative !important; overflow: visible !important; margin: 0 20px; }
-    .carrusel-track {
-      display: flex;
-      gap: 12px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      scroll-behavior: smooth;
-      padding: 8px 4px 12px;
-    }
-    .carrusel-track::-webkit-scrollbar { display: none; }
-    .carrusel-track .sec-card {
-      flex: 0 0 calc(20% - 10px);
-      scroll-snap-align: start;
-    }
-    .sec-card {
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 180px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .sec-card:hover { transform: translateY(-3px); }
-    .sec-card-img {
-      position: absolute;
-      inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
-    .sec-card-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.05) 100%);
-    }
-    .sec-card-badge {
-      position: absolute;
-      top: 10px; left: 10px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: 3px;
-      z-index: 2;
-      color: #fff;
-    }
-    .sec-card-body {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 10px 12px;
-      z-index: 2;
-    }
-    .sec-card-titulo {
-      font-size: 12px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.3;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      margin: 0 0 3px;
-    }
-    .sec-card-fecha {
-      font-size: 10px;
-      color: rgba(255,255,255,0.4);
-      display: block;
-    }
-    .carrusel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #c800ff;
-      border: none;
-      color: #fff;
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      font-size: 14px;
-      cursor: pointer;
-      z-index: 30;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 12px rgba(200,0,255,0.4);
-      transition: background 0.2s;
-    }
-    .carrusel-btn:hover { background: #e066ff; }
-    .carrusel-btn.prev { left: -16px; }
-    .carrusel-btn.next { right: -16px; }
-
     /* ===== MOBILE ===== */
     @media(max-width:768px) {
       .portal-inner {
@@ -347,27 +255,15 @@
         gap: 12px !important;
       }
       .nota-grande { height: 260px !important; }
-      .nota-grilla {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        grid-template-rows: auto auto auto !important;
-        height: auto !important;
-        gap: 12px !important;
-      }
-      .nota-chica { height: 180px !important; min-height: 180px !important; }
-      .nota-chica-cat { display: none !important; }
-      /* Ocultar grilla de notas chicas en mobile */
       .nota-grilla { display: none !important; }
       .tabla-panel { height: auto !important; }
       .tabla-panel .tab-content { max-height: 380px !important; overflow-y: auto !important; }
-      /* Últimas noticias — carrusel en mobile */
       .grid-ultimas {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
         gap: 12px !important;
         overflow-x: auto !important;
-        overflow-y: visible !important;
         scroll-snap-type: x mandatory !important;
         scrollbar-width: none !important;
         padding-bottom: 8px !important;
@@ -385,13 +281,6 @@
         position: relative !important;
         border-radius: 10px !important;
         overflow: hidden !important;
-      }
-      .carrusel-track .sec-card {
-        flex: 0 0 75vw !important;
-        flex-shrink: 0 !important;
-        width: 75vw !important;
-        min-width: 75vw !important;
-        height: 180px !important;
       }
     }
   </style>
@@ -566,7 +455,7 @@
   </div>
 </section>
 
-<!-- ÚLTIMAS NOTICIAS — grilla fija 8 cards -->
+<!-- ÚLTIMAS NOTICIAS -->
 <section id="noticias" style="background:#0a000f;padding:48px 24px;border-bottom:2px solid #3d0066;">
   <div style="max-width:1280px;margin:0 auto;">
     <div class="section-header">
@@ -578,44 +467,43 @@
   </div>
 </section>
 
-<!-- APERTURA — carrusel 5 visibles -->
-<section class="section section-dark" id="apertura">
-  <div class="section-header">
-    <span class="section-pill pill-apertura">Apertura Femenino 2026</span>
-    <h2 class="section-title">Apertura Femenino 2026</h2>
-    <span class="section-line"></span>
-  </div>
-  <div class="carrusel-wrap">
-    <button class="carrusel-btn prev" onclick="scrollCarrusel('gridApertura', -1)">&#8592;</button>
-    <div class="carrusel-track" id="gridApertura"></div>
-    <button class="carrusel-btn next" onclick="scrollCarrusel('gridApertura', 1)">&#8594;</button>
+<!-- FÚTBOL ARGENTINO -->
+<section class="sec-clara sec-arg" id="apertura">
+  <div class="sec-clara-inner">
+    <div class="section-header">
+      <span class="section-pill pill-apertura">Fútbol Argentino</span>
+      <h2 class="section-title sec-title-arg">Fútbol Argentino</h2>
+      <span class="section-line line-arg"></span>
+    </div>
+    <div class="grid-ultimas" id="gridApertura"></div>
   </div>
 </section>
 
-<!-- SELECCIÓN — carrusel 5 visibles -->
-<section class="section" id="seleccion">
-  <div style="max-width:1280px;margin:0 auto;">
+<!-- SELECCIÓN ARGENTINA -->
+<section class="sec-clara sec-sel" id="seleccion">
+  <div class="sec-clara-inner">
     <div class="section-header">
       <span class="section-pill pill-seleccion">Selección Argentina</span>
-      <h2 class="section-title">Selección Argentina</h2>
-      <span class="section-line"></span>
+      <h2 class="section-title sec-title-sel">Selección Argentina</h2>
+      <span class="section-line line-sel"></span>
     </div>
     <div class="grid-ultimas" id="gridSeleccion"></div>
   </div>
 </section>
 
-<!-- INTERNACIONAL — carrusel 5 visibles -->
-<section class="section section-dark" id="internacional">
-  <div style="max-width:1280px;margin:0 auto;">
+<!-- INTERNACIONAL -->
+<section class="sec-clara sec-int" id="internacional">
+  <div class="sec-clara-inner">
     <div class="section-header">
       <span class="section-pill pill-internacional">Fútbol Internacional</span>
-      <h2 class="section-title" style="color:#fff;">Fútbol Internacional</h2>
-      <span class="section-line"></span>
+      <h2 class="section-title sec-title-int">Fútbol Internacional</h2>
+      <span class="section-line line-int"></span>
     </div>
     <div class="grid-ultimas" id="gridInternacional"></div>
   </div>
 </section>
 
+<!-- STREAMING -->
 <section class="section section-dark streaming-section">
   <div class="streaming-inner">
     <div class="streaming-text">
@@ -644,6 +532,7 @@
   </div>
 </section>
 
+<!-- REDES -->
 <section class="redes-section-nueva">
   <p class="redes-titulo">Seguinos en redes</p>
   <div class="redes-row">
@@ -662,7 +551,7 @@
     </div>
     <div class="footer-links">
       <h4>Secciones</h4>
-      <a href="#apertura">Apertura Femenino</a>
+      <a href="#apertura">Fútbol Argentino</a>
       <a href="#seleccion">Selección Argentina</a>
       <a href="#internacional">Internacional</a>
     </div>
@@ -716,6 +605,21 @@
   .fx-card-vs { font-size:9px; color:rgba(255,255,255,0.3); font-weight:400; flex-shrink:0; }
   .fx-card-estadio { font-size:9px; color:rgba(255,255,255,0.3); text-align:right; white-space:nowrap; flex-shrink:0; }
   @media(max-width:600px) { .streaming-videos{grid-template-columns:1fr} .redes-row{gap:10px} .red-item{padding:12px 16px} }
+
+  /* ===== SECCIONES CLARAS ===== */
+  .sec-clara { background:#f5f0f8; padding:48px 0; border-top:5px solid transparent; }
+  .sec-clara-inner { max-width:1280px; margin:0 auto; padding:0 24px; }
+  .sec-arg  { border-top-color:#3d0066; }
+  .sec-sel  { border-top-color:#005cbf; }
+  .sec-int  { border-top-color:#006644; }
+  .sec-title-arg { color:#3d0066 !important; }
+  .sec-title-sel { color:#005cbf !important; }
+  .sec-title-int { color:#006644 !important; }
+  .line-arg { background:#3d0066 !important; }
+  .line-sel { background:#005cbf !important; }
+  .line-int { background:#006644 !important; }
+  .sec-clara .grid-card { box-shadow:0 2px 12px rgba(0,0,0,0.12); }
+  .sec-clara .grid-card:hover { box-shadow:0 6px 20px rgba(0,0,0,0.18); transform:translateY(-3px); }
 </style>
 
 <script>
@@ -723,7 +627,7 @@ var BADGE_CLASES = { apertura:'badge-apertura', seleccion:'badge-seleccion', int
 var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional' };
 
 var LIGAS = {
-  afa:    { logo:'logo-afa.png', tag:'Apertura 2026', titulo:'Campeonato Primera División<br>del Fútbol Femenino Argentino', tabla:'tab-tabla', fixture:true },
+  afa:    { logo:'logo-afa.png', tag:'Apertura 2026', titulo:'Primera División Femenino ARG', tabla:'tab-tabla', fixture:true },
   nwsl:   { logo:'https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/40px-NWSL_logo.svg.png', tag:'NWSL 2026', titulo:'National Women Soccer League', tabla:'tab-tabla-nwsl', fixture:false },
   ligaf:  { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liga_F_logo.svg/40px-Liga_F_logo.svg.png', tag:'Liga F 2025-26', titulo:'Primera División Femenina de España', tabla:'tab-tabla-ligaf', fixture:false },
   ligamx: { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Liga_MX_Femenil.png/40px-Liga_MX_Femenil.png', tag:'Liga MX Femenil', titulo:'Clausura 2026 Mexico', tabla:'tab-tabla-ligamx', fixture:false }
@@ -754,7 +658,7 @@ function makeGridCard(n) {
   var borderColor = borderColors[n.categoria] || '#c800ff';
   var div = document.createElement('div');
   div.className = 'grid-card';
-  div.style.cssText = 'position:relative;border-radius:10px;overflow:hidden;height:220px;cursor:pointer;transition:transform 0.2s;background:#1a0030;display:block;box-shadow:none;flex-direction:unset;border-top:4px solid '+borderColor+';';
+  div.style.cssText = 'border-top:4px solid '+borderColor+';';
   div.onclick = function(){ window.open(n.pagina, '_blank'); };
   div.innerHTML =
     '<img src="'+n.imagen+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>'+
@@ -765,33 +669,6 @@ function makeGridCard(n) {
       '<span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">'+n.fecha+'</span>'+
     '</div>';
   return div;
-}
-
-function makeSecCard(n) {
-  var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
-  var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
-  var badgeBg = badgeColors[n.categoria] || '#c800ff';
-  var borderColors2 = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
-  var borderColor2 = borderColors2[n.categoria] || '#c800ff';
-  var div = document.createElement('div');
-  div.className = 'sec-card';
-  div.style.cssText = 'position:relative;border-radius:10px;overflow:hidden;height:220px;cursor:pointer;transition:transform 0.2s;background:#1a0030;display:block;box-shadow:none;flex-direction:unset;flex:0 0 calc(20% - 10px);scroll-snap-align:start;border-top:4px solid '+borderColor2+';';
-  div.onclick = function(){ window.open(n.pagina, '_blank'); };
-  div.innerHTML =
-    '<img src="'+n.imagen+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>'+
-    '<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>'+
-    '<span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#fff;background:'+badgeBg+';opacity:0.92;">'+badgeLabel+'</span>'+
-    '<div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2;">'+
-      '<p style="font-size:14px;font-weight:700;color:#fff;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">'+n.titulo+'</p>'+
-      '<span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">'+n.fecha+'</span>'+
-    '</div>';
-  return div;
-}
-
-function scrollCarrusel(id, dir) {
-  var track = document.getElementById(id);
-  if(!track) return;
-  track.scrollBy({ left: dir * track.offsetWidth * 0.8, behavior: 'smooth' });
 }
 
 function cargarUltimaNoticia() {
@@ -813,7 +690,6 @@ function cargarUltimaNoticia() {
       var card = document.createElement('div');
       card.className = 'nota-chica';
       card.onclick = (function(p){ return function(){ window.open(p,'_blank'); }; })(m.pagina);
-      var catClass = 'cat-' + (m.categoria || 'apertura');
       var chicaBorderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
       var chicaBorder = chicaBorderColors[m.categoria] || '#c800ff';
       card.style.borderTop = '3px solid ' + chicaBorder;
@@ -857,7 +733,6 @@ function abrirUltima() {
   if(!noticias || noticias.length === 0) return;
   window.open(noticias[0].pagina, '_blank');
 }
-
 </script>
 <script src="noticias.js"></script>
 <script src="main.js"></script>
