@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 26,
+    titulo: "El fixture confirmado y el impacto histórico de jugar en casa para Sudamérica",
+    resumen: "La FIFA ratificó las fechas: el Mundial de Brasil 2027 se jugará entre el 24 de junio y el 25 de julio. 32 selecciones, 64 partidos y el último torneo con este formato antes de la expansión a 48 equipos.",
+    imagen: "mundial-fixture.png.png",
+    categoria: "mundial2027",
+    fecha: "jun 2026",
+    pagina: "mundial-fixture.html"
+  },
+  {
+    id: 25,
+    titulo: "Las 8 sedes donde se va a escribir la historia del Mundial Femenino Brasil 2027",
+    resumen: "El Maracaná albergará la final. Porto Alegre será la sede más cercana al público rioplatense. Las ocho canchas confirmadas por la FIFA para el torneo.",
+    imagen: "mundial-sedes.png.png",
+    categoria: "mundial2027",
+    fecha: "jun 2026",
+    pagina: "mundial-sedes.html"
+  },
+  {
+    id: 24,
+    titulo: "El mapa de la clasificación al Mundial 2027: quiénes ya tienen su lugar asegurado",
+    resumen: "Argentina, Colombia, España, Alemania, Japón, Australia y más selecciones cerraron su clasificación. Repaso confederación por confederación de los 32 cupos.",
+    imagen: "mundial-clasificacion.png.png",
+    categoria: "mundial2027",
+    fecha: "jun 2026",
+    pagina: "mundial-clasificacion.html"
+  },
+  {
+    id: 23,
+    titulo: "Centros de entrenamiento y campamentos base: el Mundial se expande por todo Brasil",
+    resumen: "Las selecciones no vivirán pegadas a los estadios. Los Team Base Camps llevan la fiebre mundialista al interior y dejan un legado directo para el fútbol femenino formativo local.",
+    imagen: "mundial-campamentos.png.png",
+    categoria: "mundial2027",
+    fecha: "jun 2026",
+    pagina: "mundial-campamentos.html"
+  },
+  {
     id: 22,
     titulo: "Colombia ganó la Liga de Naciones y conquistó su primer título en la historia",
     resumen: "Las cafeteras se consagraron campeonas de la primera edición de la CONMEBOL Liga de Naciones Femenina. Es el primer trofeo oficial de la selección colombiana y las convierte en el tercer combinado del continente con un título.",

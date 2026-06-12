@@ -297,6 +297,7 @@
       <a href="futbol-argentino.html">Fútbol Argentino</a>
       <a href="seleccion-argentina.html">Selección Argentina</a>
       <a href="internacional.html">Internacional</a>
+      <a href="mundial-2027.html">Mundial 2027</a>
       <a href="ligas.html">Ligas del mundo</a>
       <a href="streaming.html">Streaming</a>
       <a href="sobre.html">Sobre</a>
@@ -307,6 +308,7 @@
     <a href="futbol-argentino.html" onclick="toggleMenu()">Fútbol Argentino</a>
     <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
     <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
+    <a href="mundial-2027.html" onclick="toggleMenu()">Mundial 2027</a>
     <a href="ligas.html" onclick="toggleMenu()">Ligas del mundo</a>
     <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
     <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
@@ -512,6 +514,21 @@
   </div>
 </section>
 
+<!-- MUNDIAL BRASIL 2027 -->
+<section class="sec-clara sec-mundial" id="mundial">
+  <div class="sec-clara-inner">
+    <div class="section-header" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <div>
+        <span class="section-pill pill-mundial">Mundial Brasil 2027</span>
+        <h2 class="section-title sec-title-mundial">Mundial Brasil 2027</h2>
+        <span class="section-line line-mundial"></span>
+      </div>
+      <a href="mundial-2027.html" class="ver-mas-btn ver-mas-mundial">Ver todas →</a>
+    </div>
+    <div class="grid-ultimas" id="gridMundial"></div>
+  </div>
+</section>
+
 <!-- STREAMING -->
 <section class="section section-dark streaming-section">
   <div class="streaming-inner">
@@ -650,11 +667,19 @@
   .ver-mas-sel:hover { background: #005cbf; color: #fff; }
   .ver-mas-int { color: #006644; }
   .ver-mas-int:hover { background: #006644; color: #fff; }
+  .ver-mas-mundial { color: #002776; }
+  .ver-mas-mundial:hover { background: #002776; color: #fff; }
+
+  /* Sección Mundial */
+  .sec-mundial { border-top-color: #009c3b; }
+  .sec-title-mundial { color: #009c3b !important; }
+  .line-mundial { background: #002776 !important; }
+  .pill-mundial { background: #ffdf00 !important; color: #5a3d00 !important; }
 </style>
 
 <script>
-var BADGE_CLASES = { apertura:'badge-apertura', seleccion:'badge-seleccion', internacional:'badge-internacional' };
-var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional' };
+var BADGE_CLASES = { apertura:'badge-apertura', seleccion:'badge-seleccion', internacional:'badge-internacional', mundial2027:'badge-mundial' };
+var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027' };
 
 var LIGAS = {
   afa:    { logo:'logo-afa.png', tag:'Apertura 2026', titulo:'Primera División Femenino ARG', tabla:'tab-tabla', fixture:true },
@@ -681,10 +706,11 @@ function cambiarLiga(liga, btn) {
 }
 
 function makeGridCard(n) {
-  var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
+  var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00' };
   var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
   var badgeBg = badgeColors[n.categoria] || '#c800ff';
-  var borderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
+  var badgeTextColor = n.categoria === 'mundial2027' ? '#5a3d00' : '#fff';
+  var borderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b' };
   var borderColor = borderColors[n.categoria] || '#c800ff';
   var div = document.createElement('div');
   div.className = 'grid-card';
@@ -693,7 +719,7 @@ function makeGridCard(n) {
   div.innerHTML =
     '<img src="'+n.imagen+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>'+
     '<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>'+
-    '<span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#fff;background:'+badgeBg+';opacity:0.92;">'+badgeLabel+'</span>'+
+    '<span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:'+badgeTextColor+';background:'+badgeBg+';opacity:0.92;">'+badgeLabel+'</span>'+
     '<div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2;">'+
       '<p style="font-size:14px;font-weight:700;color:#fff;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">'+n.titulo+'</p>'+
       '<span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">'+n.fecha+'</span>'+
@@ -756,6 +782,13 @@ function cargarUltimaNoticia() {
     gridI.innerHTML = '';
     noticias.filter(function(n){ return n.categoria === 'internacional'; })
       .slice(0, 8).forEach(function(n){ gridI.appendChild(makeGridCard(n)); });
+  }
+
+  var gridM = document.getElementById('gridMundial');
+  if(gridM) {
+    gridM.innerHTML = '';
+    noticias.filter(function(n){ return n.categoria === 'mundial2027'; })
+      .slice(0, 8).forEach(function(n){ gridM.appendChild(makeGridCard(n)); });
   }
 }
 
