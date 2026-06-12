@@ -294,9 +294,9 @@
       <span class="brand-name">femeninoinfo</span>
     </a>
     <nav class="nav">
-      <a href="#apertura">Fútbol Argentino</a>
-      <a href="#seleccion">Selección Argentina</a>
-      <a href="#internacional">Internacional</a>
+      <a href="futbol-argentino.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
       <a href="ligas.html">Ligas del mundo</a>
       <a href="streaming.html">Streaming</a>
       <a href="sobre.html">Sobre</a>
@@ -304,9 +304,9 @@
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </div>
   <nav class="nav-mobile" id="navMobile">
-    <a href="#apertura" onclick="toggleMenu()">Fútbol Argentino</a>
-    <a href="#seleccion" onclick="toggleMenu()">Selección Argentina</a>
-    <a href="#internacional" onclick="toggleMenu()">Internacional</a>
+    <a href="futbol-argentino.html" onclick="toggleMenu()">Fútbol Argentino</a>
+    <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
+    <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
     <a href="ligas.html" onclick="toggleMenu()">Ligas del mundo</a>
     <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
     <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
@@ -470,10 +470,13 @@
 <!-- FÚTBOL ARGENTINO -->
 <section class="sec-clara sec-arg" id="apertura">
   <div class="sec-clara-inner">
-    <div class="section-header">
-      <span class="section-pill pill-apertura">Fútbol Argentino</span>
-      <h2 class="section-title sec-title-arg">Fútbol Argentino</h2>
-      <span class="section-line line-arg"></span>
+    <div class="section-header" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <div>
+        <span class="section-pill pill-apertura">Fútbol Argentino</span>
+        <h2 class="section-title sec-title-arg">Fútbol Argentino</h2>
+        <span class="section-line line-arg"></span>
+      </div>
+      <a href="futbol-argentino.html" class="ver-mas-btn ver-mas-arg">Ver todas →</a>
     </div>
     <div class="grid-ultimas" id="gridApertura"></div>
   </div>
@@ -482,10 +485,13 @@
 <!-- SELECCIÓN ARGENTINA -->
 <section class="sec-clara sec-sel" id="seleccion">
   <div class="sec-clara-inner">
-    <div class="section-header">
-      <span class="section-pill pill-seleccion">Selección Argentina</span>
-      <h2 class="section-title sec-title-sel">Selección Argentina</h2>
-      <span class="section-line line-sel"></span>
+    <div class="section-header" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <div>
+        <span class="section-pill pill-seleccion">Selección Argentina</span>
+        <h2 class="section-title sec-title-sel">Selección Argentina</h2>
+        <span class="section-line line-sel"></span>
+      </div>
+      <a href="seleccion-argentina.html" class="ver-mas-btn ver-mas-sel">Ver todas →</a>
     </div>
     <div class="grid-ultimas" id="gridSeleccion"></div>
   </div>
@@ -494,10 +500,13 @@
 <!-- INTERNACIONAL -->
 <section class="sec-clara sec-int" id="internacional">
   <div class="sec-clara-inner">
-    <div class="section-header">
-      <span class="section-pill pill-internacional">Fútbol Internacional</span>
-      <h2 class="section-title sec-title-int">Fútbol Internacional</h2>
-      <span class="section-line line-int"></span>
+    <div class="section-header" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <div>
+        <span class="section-pill pill-internacional">Fútbol Internacional</span>
+        <h2 class="section-title sec-title-int">Fútbol Internacional</h2>
+        <span class="section-line line-int"></span>
+      </div>
+      <a href="internacional.html" class="ver-mas-btn ver-mas-int">Ver todas →</a>
     </div>
     <div class="grid-ultimas" id="gridInternacional"></div>
   </div>
@@ -620,6 +629,27 @@
   .line-int { background:#006644 !important; }
   .sec-clara .grid-card { box-shadow:0 2px 12px rgba(0,0,0,0.12); }
   .sec-clara .grid-card:hover { box-shadow:0 6px 20px rgba(0,0,0,0.18); transform:translateY(-3px); }
+
+  /* Botones Ver todas */
+  .ver-mas-btn {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 1.5px solid currentColor;
+    text-decoration: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+    margin-bottom: 4px;
+  }
+  .ver-mas-arg { color: #3d0066; }
+  .ver-mas-arg:hover { background: #3d0066; color: #fff; }
+  .ver-mas-sel { color: #005cbf; }
+  .ver-mas-sel:hover { background: #005cbf; color: #fff; }
+  .ver-mas-int { color: #006644; }
+  .ver-mas-int:hover { background: #006644; color: #fff; }
 </style>
 
 <script>

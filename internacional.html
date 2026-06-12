@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Internacional — femeninoinfo</title>
+  <meta name="description" content="Todas las noticias de fútbol femenino internacional."/>
+  <link rel="icon" href="logo-nuevo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .header { background:#1a0035 !important; border-bottom:2px solid rgba(200,0,255,0.3) !important; position:relative !important; overflow:hidden !important; }
+    .header::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%); background-size:200% 100%; animation:barreSweep 3s linear infinite; pointer-events:none; z-index:0; }
+    @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+    .header-inner, .nav-mobile { position:relative; z-index:1; }
+
+    .archivo-hero {
+      background: #f5f0f8;
+      border-top: 5px solid #006644;
+      padding: 32px 24px 24px;
+    }
+    .archivo-hero-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .archivo-pill {
+      display: inline-block;
+      background: #006644;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .archivo-titulo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      color: #006644;
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .archivo-line {
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: #006644;
+      border-radius: 2px;
+    }
+    .archivo-count {
+      font-size: 13px;
+      color: #888;
+      margin-top: 8px;
+    }
+    .archivo-volver {
+      font-size: 13px;
+      color: #006644;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1.5px solid #006644;
+      border-radius: 6px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .archivo-volver:hover { background: #006644; color: #fff; }
+
+    .lista-wrap {
+      background: #f5f0f8;
+      padding: 20px 24px 48px;
+    }
+    .lista-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .nota-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #fff;
+      border-radius: 10px;
+      border-left: 4px solid #006644;
+      padding: 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: box-shadow 0.15s, transform 0.15s;
+      text-decoration: none;
+    }
+    .nota-row:hover {
+      box-shadow: 0 4px 16px rgba(0,102,68,0.12);
+      transform: translateX(3px);
+    }
+    .nota-thumb {
+      width: 120px;
+      height: 80px;
+      border-radius: 7px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #ddd;
+      display: block;
+    }
+    .nota-info { flex: 1; min-width: 0; }
+    .nota-badge {
+      display: inline-block;
+      background: #006644;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 3px;
+      margin-bottom: 6px;
+    }
+    .nota-titulo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a001f;
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+    .nota-resumen {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+    .nota-fecha {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      color: #aaa;
+    }
+
+    /* PAGINACIÓN */
+    .paginacion {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 32px 0 16px;
+    }
+    .pag-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      border: 1.5px solid #006644;
+      background: transparent;
+      color: #006644;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pag-btn:hover { background: #006644; color: #fff; }
+    .pag-btn.active { background: #006644; color: #fff; }
+    .pag-btn.pag-arrow { font-size: 16px; }
+    .pag-btn:disabled { opacity: 0.3; cursor: default; }
+    .pag-btn:disabled:hover { background: transparent; color: #006644; }
+
+    @media(max-width:768px) {
+      .nota-thumb { width: 90px; height: 64px; }
+      .nota-titulo { font-size: 14px; }
+      .nota-resumen { display: none; }
+      .archivo-hero-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo"/>
+      <span class="brand-name">femeninoinfo</span>
+    </a>
+    <nav class="nav">
+      <a href="internacional.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
+      <a href="ligas.html">Ligas del mundo</a>
+      <a href="streaming.html">Streaming</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="internacional.html" onclick="toggleMenu()">Fútbol Argentino</a>
+    <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
+    <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
+    <a href="ligas.html" onclick="toggleMenu()">Ligas del mundo</a>
+    <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
+    <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
+  </nav>
+</header>
+
+<div class="archivo-hero">
+  <div class="archivo-hero-inner">
+    <div>
+      <span class="archivo-pill">Sección</span>
+      <div class="archivo-titulo">Internacional</div>
+      <span class="archivo-line"></span>
+      <p class="archivo-count" id="totalCount"></p>
+    </div>
+    <a href="index.html" class="archivo-volver">← Volver al inicio</a>
+  </div>
+</div>
+
+<div class="lista-wrap">
+  <div class="lista-inner">
+    <div id="listaNotas"></div>
+    <div class="paginacion" id="paginacion"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="footer-logo"/>
+      <p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Secciones</h4>
+      <a href="internacional.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
+    </div>
+    <div class="footer-links">
+      <h4>femeninoinfo</h4>
+      <a href="sobre.html">Sobre el medio</a>
+      <a href="streaming.html">Streaming</a>
+      <a href="sponsors.html">Sponsors</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
+</footer>
+
+<script>
+var POR_PAGINA = 12;
+var paginaActual = 1;
+var noticiasCategoria = [];
+
+function renderLista(pagina) {
+  var lista = document.getElementById('listaNotas');
+  var desde = (pagina - 1) * POR_PAGINA;
+  var hasta = desde + POR_PAGINA;
+  var pagNotas = noticiasCategoria.slice(desde, hasta);
+  lista.innerHTML = '';
+  pagNotas.forEach(function(n) {
+    var a = document.createElement('a');
+    a.className = 'nota-row';
+    a.href = n.pagina;
+    a.target = '_blank';
+    a.innerHTML =
+      '<img class="nota-thumb" src="'+n.imagen+'" alt="'+n.titulo+'" onerror="this.style.background=\'#ddd\'"/>'+
+      '<div class="nota-info">'+
+        '<span class="nota-badge">Argentino</span>'+
+        '<div class="nota-titulo">'+n.titulo+'</div>'+
+        '<div class="nota-resumen">'+(n.resumen||'')+'</div>'+
+        '<span class="nota-fecha">'+n.fecha+'</span>'+
+      '</div>';
+    lista.appendChild(a);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderPaginacion(total, pagina) {
+  var totalPags = Math.ceil(total / POR_PAGINA);
+  var pag = document.getElementById('paginacion');
+  pag.innerHTML = '';
+  if(totalPags <= 1) return;
+
+  var prev = document.createElement('button');
+  prev.className = 'pag-btn pag-arrow';
+  prev.textContent = '←';
+  prev.disabled = pagina === 1;
+  prev.onclick = function() { cambiarPagina(pagina - 1); };
+  pag.appendChild(prev);
+
+  for(var i = 1; i <= totalPags; i++) {
+    (function(num) {
+      var btn = document.createElement('button');
+      btn.className = 'pag-btn' + (num === pagina ? ' active' : '');
+      btn.textContent = num;
+      btn.onclick = function() { cambiarPagina(num); };
+      pag.appendChild(btn);
+    })(i);
+  }
+
+  var next = document.createElement('button');
+  next.className = 'pag-btn pag-arrow';
+  next.textContent = '→';
+  next.disabled = pagina === totalPags;
+  next.onclick = function() { cambiarPagina(pagina + 1); };
+  pag.appendChild(next);
+}
+
+function cambiarPagina(num) {
+  paginaActual = num;
+  renderLista(paginaActual);
+  renderPaginacion(noticiasCategoria.length, paginaActual);
+}
+
+function init() {
+  noticiasCategoria = noticias.filter(function(n) { return n.categoria === 'internacional'; });
+  var count = document.getElementById('totalCount');
+  if(count) count.textContent = noticiasCategoria.length + ' ' + (noticiasCategoria.length === 1 ? 'noticia' : 'noticias');
+  renderLista(1);
+  renderPaginacion(noticiasCategoria.length, 1);
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  if(typeof noticias !== 'undefined') { init(); }
+});
+</script>
+<script src="noticias.js"></script>
+<script>
+if(typeof noticias !== 'undefined' && document.getElementById('listaNotas').innerHTML === '') { init(); }
+</script>
+<script src="main.js"></script>
+</body>
+</html>
