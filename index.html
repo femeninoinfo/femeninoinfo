@@ -191,7 +191,7 @@
       position: relative;
       border-radius: 10px;
       overflow: hidden;
-      height: 180px;
+      height: 220px;
       cursor: pointer;
       transition: transform 0.2s;
     }
@@ -758,14 +758,14 @@ function makeGridCard(n) {
   var borderColor = borderColors[n.categoria] || '#c800ff';
   var div = document.createElement('div');
   div.className = 'grid-card';
-  div.style.cssText = 'position:relative;border-radius:10px;overflow:hidden;height:180px;cursor:pointer;transition:transform 0.2s;background:#1a0030;display:block;box-shadow:none;flex-direction:unset;border-top:4px solid '+borderColor+';';
+  div.style.cssText = 'position:relative;border-radius:10px;overflow:hidden;height:220px;cursor:pointer;transition:transform 0.2s;background:#1a0030;display:block;box-shadow:none;flex-direction:unset;border-top:4px solid '+borderColor+';';
   div.onclick = function(){ window.open(n.pagina, '_blank'); };
   div.innerHTML =
     '<img src="'+n.imagen+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>'+
     '<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>'+
     '<span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#fff;background:'+badgeBg+';opacity:0.92;">'+badgeLabel+'</span>'+
     '<div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2;">'+
-      '<p style="font-size:12px;font-weight:700;color:#fff;line-height:1.3;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">'+n.titulo+'</p>'+
+      '<p style="font-size:14px;font-weight:700;color:#fff;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">'+n.titulo+'</p>'+
       '<span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">'+n.fecha+'</span>'+
     '</div>';
   return div;
@@ -779,14 +779,14 @@ function makeSecCard(n) {
   var borderColor2 = borderColors2[n.categoria] || '#c800ff';
   var div = document.createElement('div');
   div.className = 'sec-card';
-  div.style.cssText = 'position:relative;border-radius:10px;overflow:hidden;height:180px;cursor:pointer;transition:transform 0.2s;background:#1a0030;display:block;box-shadow:none;flex-direction:unset;flex:0 0 calc(20% - 10px);scroll-snap-align:start;border-top:4px solid '+borderColor2+';';
+  div.style.cssText = 'position:relative;border-radius:10px;overflow:hidden;height:220px;cursor:pointer;transition:transform 0.2s;background:#1a0030;display:block;box-shadow:none;flex-direction:unset;flex:0 0 calc(20% - 10px);scroll-snap-align:start;border-top:4px solid '+borderColor2+';';
   div.onclick = function(){ window.open(n.pagina, '_blank'); };
   div.innerHTML =
     '<img src="'+n.imagen+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>'+
     '<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>'+
     '<span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#fff;background:'+badgeBg+';opacity:0.92;">'+badgeLabel+'</span>'+
     '<div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2;">'+
-      '<p style="font-size:12px;font-weight:700;color:#fff;line-height:1.3;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">'+n.titulo+'</p>'+
+      '<p style="font-size:14px;font-weight:700;color:#fff;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">'+n.titulo+'</p>'+
       '<span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">'+n.fecha+'</span>'+
     '</div>';
   return div;
