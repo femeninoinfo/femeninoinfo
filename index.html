@@ -594,29 +594,25 @@
 
 <!-- SELECCIÓN — carrusel 5 visibles -->
 <section class="section" id="seleccion">
-  <div class="section-header">
-    <span class="section-pill pill-seleccion">Selección Argentina</span>
-    <h2 class="section-title">Selección Argentina</h2>
-    <span class="section-line"></span>
-  </div>
-  <div class="carrusel-wrap">
-    <button class="carrusel-btn prev" onclick="scrollCarrusel('gridSeleccion', -1)">&#8592;</button>
-    <div class="carrusel-track" id="gridSeleccion"></div>
-    <button class="carrusel-btn next" onclick="scrollCarrusel('gridSeleccion', 1)">&#8594;</button>
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="section-header">
+      <span class="section-pill pill-seleccion">Selección Argentina</span>
+      <h2 class="section-title">Selección Argentina</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="grid-ultimas" id="gridSeleccion"></div>
   </div>
 </section>
 
 <!-- INTERNACIONAL — carrusel 5 visibles -->
 <section class="section section-dark" id="internacional">
-  <div class="section-header">
-    <span class="section-pill pill-internacional">Fútbol Internacional</span>
-    <h2 class="section-title">Fútbol Internacional</h2>
-    <span class="section-line"></span>
-  </div>
-  <div class="carrusel-wrap">
-    <button class="carrusel-btn prev" onclick="scrollCarrusel('gridInternacional', -1)">&#8592;</button>
-    <div class="carrusel-track" id="gridInternacional"></div>
-    <button class="carrusel-btn next" onclick="scrollCarrusel('gridInternacional', 1)">&#8594;</button>
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="section-header">
+      <span class="section-pill pill-internacional">Fútbol Internacional</span>
+      <h2 class="section-title" style="color:#fff;">Fútbol Internacional</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="grid-ultimas" id="gridInternacional"></div>
   </div>
 </section>
 
@@ -839,21 +835,21 @@ function cargarUltimaNoticia() {
   if(gridA) {
     gridA.innerHTML = '';
     noticias.filter(function(n){ return n.categoria === 'apertura'; })
-      .forEach(function(n){ gridA.appendChild(makeSecCard(n)); });
+      .slice(0, 8).forEach(function(n){ gridA.appendChild(makeGridCard(n)); });
   }
 
   var gridS = document.getElementById('gridSeleccion');
   if(gridS) {
     gridS.innerHTML = '';
     noticias.filter(function(n){ return n.categoria === 'seleccion'; })
-      .forEach(function(n){ gridS.appendChild(makeSecCard(n)); });
+      .slice(0, 8).forEach(function(n){ gridS.appendChild(makeGridCard(n)); });
   }
 
   var gridI = document.getElementById('gridInternacional');
   if(gridI) {
     gridI.innerHTML = '';
     noticias.filter(function(n){ return n.categoria === 'internacional'; })
-      .forEach(function(n){ gridI.appendChild(makeSecCard(n)); });
+      .slice(0, 8).forEach(function(n){ gridI.appendChild(makeGridCard(n)); });
   }
 }
 
