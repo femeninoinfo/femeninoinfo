@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 21,
+    titulo: "Claudia Martínez, 18 años, fue la máxima goleadora de la Liga de Naciones",
+    resumen: "Llegó tarde al torneo, se perdió las primeras tres fechas y terminó liderando la tabla de goleadoras con 6 goles en 6 partidos. La delantera paraguaya del Washington Spirit.",
+    imagen: "claudia-martinez.png.png",
+    categoria: "internacional",
+    fecha: "13 jun 2026",
+    pagina: "claudia-martinez.html"
+  },
+  {
+    id: 20,
+    titulo: "Falfán, Morcillo, Ongaro y Giménez renuevan con DUX Logroño",
+    resumen: "Cuatro jugadoras de la Selección Argentina seguirán en la Liga F española la próxima temporada. El DUX estuvo peleando el descenso y finalmente se mantuvo en primera división.",
+    imagen: "argentinas-dux.png.png",
+    categoria: "seleccion",
+    fecha: "13 jun 2026",
+    pagina: "argentinas-dux.html"
+  },
+  {
+    id: 19,
+    titulo: "Stephanie Melgarejo dio a luz a Amadeo",
+    resumen: "El 8 de junio nació Amadeo, el hijo de la futbolista de Primera División. Una mamá y una deportista de alto rendimiento celebran juntas.",
+    imagen: "melgarejo-amadeo.png.png",
+    categoria: "apertura",
+    fecha: "13 jun 2026",
+    pagina: "melgarejo-amadeo.html"
+  },
+  {
     id: 18,
     titulo: "Cardozo y Aguirre de Vélez sufrieron rotura de ligamentos cruzados",
     resumen: "Las dos jugadoras clave del fútbol femenino de Vélez se lesionaron en el entrenamiento del martes. Un golpe muy duro para el equipo de la Primera B.",
@@ -20,7 +47,7 @@ const noticias = [
   {
     id: 15,
     titulo: "España, Alemania, Francia y Dinamarca se clasificaron al Mundial Femenino Brasil 2027",
-    resumen: "Las cuatro selecciones europeas sellaron su boleto directo en la última jornada de los clasificatorios de la UEFA. España goleó a Islandia y defendió su título mundial. Ya son 12 los equipos confirmados.",
+    resumen: "Las cuatro selecciones europeas sellaron su boleto directo en la última jornada de los clasificatorios de la UEFA. España goleó a Islandia y defendió su título mundial.",
     imagen: "mundial-clasificadas.png",
     categoria: "internacional",
     fecha: "9 jun 2026",
@@ -29,7 +56,7 @@ const noticias = [
   {
     id: 16,
     titulo: "8 rojas en el amistoso entre Brasil y EEUU: polémica arbitral y Marta furiosa",
-    resumen: "El partido amistoso entre Brasil y Estados Unidos terminó con escándalo. Ocho expulsiones, dos en el banco incluidas, y Marta encaró al árbitro al finalizar el partido. La CONMEBOL investiga los incidentes.",
+    resumen: "El partido amistoso entre Brasil y Estados Unidos terminó con escándalo. Ocho expulsiones, dos en el banco incluidas, y Marta encaró al árbitro al finalizar el partido.",
     imagen: "brasil-eeuu-rojas.png",
     categoria: "internacional",
     fecha: "9 jun 2026",
@@ -47,7 +74,7 @@ const noticias = [
   {
     id: 12,
     titulo: "Argentina vs Ecuador: hoy a las 20 por el título de la Liga de Naciones",
-    resumen: "La Selección ya está clasificada al Mundial 2027 pero puede salir campeona. Si gana y Colombia no gana, la Albiceleste se queda con el título. Partido en Quito a las 20:00, gratis por AFA Estudio.",
+    resumen: "La Selección ya está clasificada al Mundial 2027 pero puede salir campeona. Si gana y Colombia no gana, la Albiceleste se queda con el título.",
     imagen: "argentina-ecuador.png",
     categoria: "seleccion",
     fecha: "9 jun 2026",
