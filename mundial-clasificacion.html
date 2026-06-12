@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>El mapa de la clasificación al Mundial Femenino Brasil 2027 — femeninoinfo</title>
+  <meta name="description" content="Argentina, España, Alemania, Japón, Australia y más. Quiénes ya tienen su lugar asegurado en el Mundial Femenino Brasil 2027."/>
+  <link rel="icon" href="logo-nuevo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .header { background:#1a0035 !important; border-bottom:2px solid rgba(200,0,255,0.3) !important; position:relative !important; overflow:hidden !important; }
+    .header::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%); background-size:200% 100%; animation:barreSweep 3s linear infinite; pointer-events:none; z-index:0; }
+    @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+    .header-inner, .nav-mobile { position:relative; z-index:1; }
+    body { background: #f5f0f8; }
+    .art-wrap { max-width: 860px; margin: 0 auto; padding: 40px 24px 64px; }
+    .art-volver { display:inline-flex; align-items:center; gap:6px; color:#009c3b; font-size:13px; font-weight:600; text-decoration:none; margin-bottom:24px; }
+    .art-volver:hover { text-decoration:underline; }
+    .art-categoria { display:inline-block; background:#ffdf00; color:#5a3d00; font-family:'DM Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 10px; border-radius:3px; margin-bottom:14px; }
+    .art-titulo { font-family:'DM Sans',sans-serif; font-size:clamp(22px,4vw,34px); font-weight:700; color:#009c3b; line-height:1.25; margin-bottom:10px; }
+    .art-fecha { font-size:12px; color:#aaa; margin-bottom:16px; display:block; }
+    .art-bajada { font-size:16px; color:#333; line-height:1.65; font-weight:400; margin-bottom:24px; border-left:3px solid #ffdf00; padding-left:16px; }
+    .art-foto { width:100%; border-radius:10px; object-fit:cover; max-height:420px; margin-bottom:28px; display:block; }
+    .art-body { font-size:15px; color:#222; line-height:1.75; }
+    .art-body p { margin-bottom:18px; }
+    .art-body h3 { font-family:'DM Sans',sans-serif; font-size:17px; font-weight:700; color:#009c3b; margin:28px 0 10px; }
+    .art-body strong { color:#002776; }
+    .art-fuente { font-size:12px; color:#aaa; margin-top:32px; padding-top:16px; border-top:1px solid #ddd; }
+    .art-separador { width:48px; height:3px; background:#002776; border-radius:2px; margin:28px 0; }
+    .conf-bloque { background:#fff; border-radius:10px; border-top:4px solid #009c3b; padding:18px 20px; margin-bottom:14px; }
+    .conf-nombre { font-family:'Bebas Neue',sans-serif; font-size:18px; color:#009c3b; letter-spacing:1px; margin-bottom:6px; }
+    .conf-cupos { font-size:11px; color:#888; margin-bottom:10px; }
+    .conf-lista { display:flex; flex-wrap:wrap; gap:7px; }
+    .conf-pais { background:#ffdf00; color:#5a3d00; font-size:12px; font-weight:700; padding:4px 10px; border-radius:4px; }
+    .conf-pais.host { background:#002776; color:#fff; }
+    .conf-pais.pendiente { background:#eee; color:#888; font-style:italic; }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo"/>
+      <span class="brand-name">femeninoinfo</span>
+    </a>
+    <nav class="nav">
+      <a href="futbol-argentino.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
+      <a href="mundial-2027.html">Mundial 2027</a>
+      <a href="ligas.html">Ligas del mundo</a>
+      <a href="streaming.html">Streaming</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="futbol-argentino.html" onclick="toggleMenu()">Fútbol Argentino</a>
+    <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
+    <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
+    <a href="mundial-2027.html" onclick="toggleMenu()">Mundial 2027</a>
+    <a href="ligas.html" onclick="toggleMenu()">Ligas del mundo</a>
+    <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
+    <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
+  </nav>
+</header>
+
+<div class="art-wrap">
+  <a href="mundial-2027.html" class="art-volver">← Mundial Brasil 2027</a>
+  <span class="art-categoria">Mundial 2027</span>
+  <h1 class="art-titulo">El mapa de la clasificación: quiénes ya tienen su lugar asegurado</h1>
+  <span class="art-fecha">junio 2026</span>
+  <p class="art-bajada">Argentina ya tiene su pasaje. España, Alemania, Japón, Australia y más selecciones cerraron su clasificación. Repaso confederación por confederación del estado actual de los 32 cupos.</p>
+  <img src="mundial-clasificacion.png.png" alt="Clasificadas al Mundial Femenino Brasil 2027" class="art-foto"/>
+  <div class="art-separador"></div>
+  <div class="art-body">
+    <p>Con los torneos continentales y las eliminatorias en marcha, las 32 plazas disponibles se están definiendo palmo a palmo. El panorama confederación por confederación:</p>
+
+    <div class="conf-bloque">
+      <div class="conf-nombre">CONMEBOL — Sudamérica</div>
+      <div class="conf-cupos">Clasificadas confirmadas</div>
+      <div class="conf-lista">
+        <span class="conf-pais host">Brasil (sede)</span>
+        <span class="conf-pais">Argentina</span>
+        <span class="conf-pais">Colombia</span>
+      </div>
+    </div>
+
+    <div class="conf-bloque">
+      <div class="conf-nombre">UEFA — Europa</div>
+      <div class="conf-cupos">Clasificadas confirmadas</div>
+      <div class="conf-lista">
+        <span class="conf-pais">España</span>
+        <span class="conf-pais">Alemania</span>
+        <span class="conf-pais">Francia</span>
+        <span class="conf-pais">Dinamarca</span>
+        <span class="conf-pais pendiente">Play-offs en curso</span>
+      </div>
+    </div>
+
+    <div class="conf-bloque">
+      <div class="conf-nombre">AFC — Asia</div>
+      <div class="conf-cupos">Clasificadas confirmadas</div>
+      <div class="conf-lista">
+        <span class="conf-pais">Australia</span>
+        <span class="conf-pais">China</span>
+        <span class="conf-pais">Corea del Norte</span>
+        <span class="conf-pais">Corea del Sur</span>
+        <span class="conf-pais">Japón</span>
+        <span class="conf-pais">Filipinas</span>
+      </div>
+    </div>
+
+    <div class="conf-bloque">
+      <div class="conf-nombre">OFC — Oceanía</div>
+      <div class="conf-cupos">Clasificadas confirmadas</div>
+      <div class="conf-lista">
+        <span class="conf-pais">Nueva Zelanda</span>
+      </div>
+    </div>
+
+    <h3>Argentina, clasificada y en ascenso</h3>
+    <p>La Selección cerró su pasaporte en la última fecha de la Liga de Naciones con el gol de Mercedes Diz ante Perú en Lanús. Es la tercera participación mundialista consecutiva y llega con un equipo que terminó subcampeón del torneo continental.</p>
+  </div>
+  <p class="art-fuente">Fuente: FIFA / CONMEBOL — femeninoinfo</p>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="footer-logo"/>
+      <p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Secciones</h4>
+      <a href="futbol-argentino.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
+    </div>
+    <div class="footer-links">
+      <h4>femeninoinfo</h4>
+      <a href="sobre.html">Sobre el medio</a>
+      <a href="streaming.html">Streaming</a>
+      <a href="sponsors.html">Sponsors</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
