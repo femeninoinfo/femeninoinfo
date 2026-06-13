@@ -13,18 +13,18 @@
     .header::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%); background-size:200% 100%; animation:barreSweep 3s linear infinite; pointer-events:none; z-index:0; }
     @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
     .header-inner, .nav-mobile { position:relative; z-index:1; }
-    body { background: #f5f0f8; }
-    .art-wrap { max-width: 860px; margin: 0 auto; padding: 40px 24px 64px; }
+    body { background:#f5f0f8; }
+    .art-wrap { max-width:860px; margin:0 auto; padding:40px 24px 64px; }
     .art-volver { display:inline-flex; align-items:center; gap:6px; color:#009c3b; font-size:13px; font-weight:600; text-decoration:none; margin-bottom:24px; }
     .art-volver:hover { text-decoration:underline; }
     .art-categoria { display:inline-block; background:#ffdf00; color:#5a3d00; font-family:'DM Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 10px; border-radius:3px; margin-bottom:14px; }
-    .art-titulo { font-family:'DM Sans',sans-serif; font-size:clamp(22px,4vw,34px); font-weight:700; color:#009c3b; line-height:1.25; margin-bottom:10px; }
+    .art-titulo { font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,5vw,48px); color:#009c3b; line-height:1.1; letter-spacing:1px; margin-bottom:10px; }
     .art-fecha { font-size:12px; color:#aaa; margin-bottom:16px; display:block; }
     .art-bajada { font-size:16px; color:#333; line-height:1.65; font-weight:400; margin-bottom:24px; border-left:3px solid #ffdf00; padding-left:16px; }
     .art-foto { width:100%; border-radius:10px; object-fit:cover; max-height:420px; margin-bottom:28px; display:block; }
     .art-body { font-size:15px; color:#222; line-height:1.75; }
     .art-body p { margin-bottom:18px; }
-    .art-body h3 { font-family:'DM Sans',sans-serif; font-size:17px; font-weight:700; color:#009c3b; margin:28px 0 10px; }
+    .art-body h3 { font-family:'Bebas Neue',sans-serif; font-size:22px; color:#009c3b; margin:28px 0 10px; letter-spacing:0.5px; }
     .art-body strong { color:#002776; }
     .art-fuente { font-size:12px; color:#aaa; margin-top:32px; padding-top:16px; border-top:1px solid #ddd; }
     .art-separador { width:48px; height:3px; background:#002776; border-radius:2px; margin:28px 0; }
@@ -34,7 +34,19 @@
     .sede-card-estadio { font-size:13px; font-weight:700; color:#222; margin-bottom:4px; }
     .sede-card-cap { font-size:12px; color:#888; }
     .sede-card.final { border-left-color:#002776; }
-    @media(max-width:600px) { .sedes-grid { grid-template-columns:1fr; } }
+    /* SEGUIR LEYENDO */
+    .seguir-leyendo { background:#fff; border-top:4px solid #009c3b; padding:40px 24px; }
+    .seguir-inner { max-width:860px; margin:0 auto; }
+    .seguir-titulo { font-family:'Bebas Neue',sans-serif; font-size:20px; color:#009c3b; letter-spacing:1px; margin-bottom:20px; }
+    .seguir-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .seguir-card { position:relative; border-radius:10px; overflow:hidden; height:180px; cursor:pointer; transition:transform 0.2s; border-top:3px solid #ffdf00; }
+    .seguir-card:hover { transform:translateY(-3px); }
+    .seguir-card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .seguir-card-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.2) 100%); }
+    .seguir-card-body { position:absolute; bottom:0; left:0; right:0; padding:10px 12px; z-index:2; }
+    .seguir-card-titulo { font-size:12px; font-weight:700; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; margin-bottom:3px; }
+    .seguir-card-fecha { font-size:10px; color:rgba(255,255,255,0.4); }
+    @media(max-width:600px) { .sedes-grid { grid-template-columns:1fr; } .seguir-grid { grid-template-columns:repeat(2,1fr); } }
   </style>
 </head>
 <body>
@@ -70,13 +82,12 @@
   <a href="mundial-2027.html" class="art-volver">← Mundial Brasil 2027</a>
   <span class="art-categoria">Mundial 2027</span>
   <h1 class="art-titulo">Las 8 sedes donde se va a escribir la historia</h1>
-  <span class="art-fecha">junio 2026</span>
+  <span class="art-fecha">12 de junio de 2026</span>
   <p class="art-bajada">El Maracaná albergará la final. Porto Alegre será la sede más cercana al público rioplatense. Las ocho canchas confirmadas por la FIFA para el Mundial Femenino Brasil 2027.</p>
   <img src="mundial-sedes.png.png" alt="Sedes Mundial Femenino Brasil 2027" class="art-foto"/>
   <div class="art-separador"></div>
   <div class="art-body">
     <p>Tras un largo proceso de evaluación técnica que dejó afuera a ciudades como Manaos y Belém para priorizar la logística, la FIFA confirmó las ocho sedes oficiales. La distribución equilibra la tradición futbolera del sur con la calidez del nordeste brasileño.</p>
-
     <div class="sedes-grid">
       <div class="sede-card final">
         <div class="sede-card-ciudad">Río de Janeiro</div>
@@ -119,12 +130,18 @@
         <div class="sede-card-cap">45.440 espectadores</div>
       </div>
     </div>
-
     <h3>Porto Alegre, la sede del público rioplatense</h3>
     <p>El Beira-Rio es el estadio más cercano a Argentina y Uruguay, y se espera que concentre la mayor parte de las hinchadas del Cono Sur durante la fase de grupos. Para quienes quieran ver a la Selección en vivo, va a ser la opción más accesible logísticamente.</p>
   </div>
   <p class="art-fuente">Fuente: FIFA — femeninoinfo</p>
 </div>
+
+<section class="seguir-leyendo">
+  <div class="seguir-inner">
+    <p class="seguir-titulo">Seguir leyendo</p>
+    <div class="seguir-grid" id="seguirGrid"></div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="footer-inner">
@@ -147,6 +164,33 @@
   </div>
   <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
 </footer>
+<script>
+var PAGINA_ACTUAL = 'mundial-sedes.html';
+var CATEGORIA_ACTUAL = 'mundial2027';
+</script>
+<script src="noticias.js"></script>
+<script>
+(function() {
+  var grid = document.getElementById('seguirGrid');
+  if(!grid || typeof noticias === 'undefined') return;
+  var otras = noticias.filter(function(n) {
+    return n.categoria === CATEGORIA_ACTUAL && n.pagina !== PAGINA_ACTUAL;
+  }).slice(0, 4);
+  otras.forEach(function(n) {
+    var div = document.createElement('div');
+    div.className = 'seguir-card';
+    div.onclick = function(){ window.location.href = n.pagina; };
+    div.innerHTML =
+      '<img src="'+n.imagen+'" alt="'+n.titulo+'"/>'+
+      '<div class="seguir-card-overlay"></div>'+
+      '<div class="seguir-card-body">'+
+        '<p class="seguir-card-titulo">'+n.titulo+'</p>'+
+        '<span class="seguir-card-fecha">'+n.fecha+'</span>'+
+      '</div>';
+    grid.appendChild(div);
+  });
+})();
+</script>
 <script src="main.js"></script>
 </body>
 </html>

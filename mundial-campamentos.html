@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Centros de entrenamiento y campamentos base del Mundial 2027 — femeninoinfo</title>
-  <meta name="description" content="El Mundial no será solo en las 8 sedes. Los Team Base Camps llevan la fiebre mundialista a todo Brasil y acercan las mejores jugadoras del mundo al interior del país."/>
+  <meta name="description" content="Los Team Base Camps llevan la fiebre mundialista a todo Brasil y acercan las mejores jugadoras del mundo al interior del país."/>
   <link rel="icon" href="logo-nuevo.png"/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
@@ -13,34 +13,38 @@
     .header::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%); background-size:200% 100%; animation:barreSweep 3s linear infinite; pointer-events:none; z-index:0; }
     @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
     .header-inner, .nav-mobile { position:relative; z-index:1; }
-    body { background: #f5f0f8; }
-    .art-wrap { max-width: 860px; margin: 0 auto; padding: 40px 24px 64px; }
+    body { background:#f5f0f8; }
+    .art-wrap { max-width:860px; margin:0 auto; padding:40px 24px 64px; }
     .art-volver { display:inline-flex; align-items:center; gap:6px; color:#009c3b; font-size:13px; font-weight:600; text-decoration:none; margin-bottom:24px; }
     .art-volver:hover { text-decoration:underline; }
     .art-categoria { display:inline-block; background:#ffdf00; color:#5a3d00; font-family:'DM Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 10px; border-radius:3px; margin-bottom:14px; }
-    .art-titulo { font-family:'DM Sans',sans-serif; font-size:clamp(22px,4vw,34px); font-weight:700; color:#009c3b; line-height:1.25; margin-bottom:10px; }
+    .art-titulo { font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,5vw,48px); color:#009c3b; line-height:1.1; letter-spacing:1px; margin-bottom:10px; }
     .art-fecha { font-size:12px; color:#aaa; margin-bottom:16px; display:block; }
     .art-bajada { font-size:16px; color:#333; line-height:1.65; font-weight:400; margin-bottom:24px; border-left:3px solid #ffdf00; padding-left:16px; }
     .art-foto { width:100%; border-radius:10px; object-fit:cover; max-height:420px; margin-bottom:28px; display:block; }
     .art-body { font-size:15px; color:#222; line-height:1.75; }
     .art-body p { margin-bottom:18px; }
-    .art-body h3 { font-family:'DM Sans',sans-serif; font-size:17px; font-weight:700; color:#009c3b; margin:28px 0 10px; }
+    .art-body h3 { font-family:'Bebas Neue',sans-serif; font-size:22px; color:#009c3b; margin:28px 0 10px; letter-spacing:0.5px; }
     .art-body strong { color:#002776; }
     .art-body ul { margin:0 0 18px 20px; }
     .art-body ul li { margin-bottom:8px; line-height:1.6; }
     .art-fuente { font-size:12px; color:#aaa; margin-top:32px; padding-top:16px; border-top:1px solid #ddd; }
     .art-separador { width:48px; height:3px; background:#002776; border-radius:2px; margin:28px 0; }
-    .dato-destaque {
-      background:#fff;
-      border-radius:8px;
-      border-left:4px solid #002776;
-      padding:16px 20px;
-      margin:24px 0;
-      font-size:15px;
-      color:#222;
-      line-height:1.6;
-    }
+    .dato-destaque { background:#fff; border-radius:8px; border-left:4px solid #002776; padding:16px 20px; margin:24px 0; font-size:15px; color:#222; line-height:1.6; }
     .dato-destaque strong { color:#002776; }
+    /* SEGUIR LEYENDO */
+    .seguir-leyendo { background:#fff; border-top:4px solid #009c3b; padding:40px 24px; }
+    .seguir-inner { max-width:860px; margin:0 auto; }
+    .seguir-titulo { font-family:'Bebas Neue',sans-serif; font-size:20px; color:#009c3b; letter-spacing:1px; margin-bottom:20px; }
+    .seguir-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .seguir-card { position:relative; border-radius:10px; overflow:hidden; height:180px; cursor:pointer; transition:transform 0.2s; border-top:3px solid #ffdf00; }
+    .seguir-card:hover { transform:translateY(-3px); }
+    .seguir-card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .seguir-card-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.2) 100%); }
+    .seguir-card-body { position:absolute; bottom:0; left:0; right:0; padding:10px 12px; z-index:2; }
+    .seguir-card-titulo { font-size:12px; font-weight:700; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; margin-bottom:3px; }
+    .seguir-card-fecha { font-size:10px; color:rgba(255,255,255,0.4); }
+    @media(max-width:768px) { .seguir-grid { grid-template-columns:repeat(2,1fr); } }
   </style>
 </head>
 <body>
@@ -76,17 +80,15 @@
   <a href="mundial-2027.html" class="art-volver">← Mundial Brasil 2027</a>
   <span class="art-categoria">Mundial 2027</span>
   <h1 class="art-titulo">Centros de entrenamiento y campamentos base: el Mundial se expande por todo Brasil</h1>
-  <span class="art-fecha">junio 2026</span>
+  <span class="art-fecha">10 de junio de 2026</span>
   <p class="art-bajada">Las selecciones no vivirán pegadas a los estadios. Los Team Base Camps llevan la fiebre mundialista al interior del país y dejan un legado directo para el fútbol femenino formativo local.</p>
   <img src="mundial-campamentos.png.png" alt="Campamentos base Mundial Femenino Brasil 2027" class="art-foto"/>
   <div class="art-separador"></div>
   <div class="art-body">
     <p>Uno de los puntos más interesantes de la planificación logística es la estrategia de los Team Base Camps. La organización decidió descentralizar las concentraciones de los planteles: las selecciones no vivirán pegadas a los estadios donde juegan, sino que se hospedarán en ciudades del interior.</p>
-
     <div class="dato-destaque">
       <strong>¿Qué es un Team Base Camp?</strong> Es la ciudad y el complejo deportivo donde una selección se instala durante todo el torneo. Desde ahí viaja a cada partido y vuelve. No es la sede, es la casa.
     </div>
-
     <h3>El legado para el interior</h3>
     <p>Las inspecciones de la FIFA ya dejaron aprobados varios complejos de alto rendimiento que buscan llevar la fiebre mundialista a todos los rincones del país:</p>
     <ul>
@@ -94,12 +96,18 @@
       <li><strong>Infraestructura para el fútbol local.</strong> Los clubes de ligas regionales del interior reciben mejoras en sus canchas de entrenamiento como parte del proceso de habilitación.</li>
       <li><strong>Contacto directo con las mejores.</strong> Las escuelas de fútbol femenino formativo del interior tendrán acceso a entrenamientos abiertos y actividades de prensa con las mejores jugadoras del planeta.</li>
     </ul>
-
     <h3>Por qué importa esto para Argentina</h3>
     <p>La cercanía geográfica con los campamentos del sur de Brasil abre una posibilidad concreta: que jugadoras argentinas en etapa formativa puedan tener contacto real con las selecciones más fuertes del mundo durante la preparación del torneo. Una oportunidad que difícilmente se repita en otra generación.</p>
   </div>
   <p class="art-fuente">Fuente: FIFA — femeninoinfo</p>
 </div>
+
+<section class="seguir-leyendo">
+  <div class="seguir-inner">
+    <p class="seguir-titulo">Seguir leyendo</p>
+    <div class="seguir-grid" id="seguirGrid"></div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="footer-inner">
@@ -122,6 +130,33 @@
   </div>
   <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
 </footer>
+<script>
+var PAGINA_ACTUAL = 'mundial-campamentos.html';
+var CATEGORIA_ACTUAL = 'mundial2027';
+</script>
+<script src="noticias.js"></script>
+<script>
+(function() {
+  var grid = document.getElementById('seguirGrid');
+  if(!grid || typeof noticias === 'undefined') return;
+  var otras = noticias.filter(function(n) {
+    return n.categoria === CATEGORIA_ACTUAL && n.pagina !== PAGINA_ACTUAL;
+  }).slice(0, 4);
+  otras.forEach(function(n) {
+    var div = document.createElement('div');
+    div.className = 'seguir-card';
+    div.onclick = function(){ window.location.href = n.pagina; };
+    div.innerHTML =
+      '<img src="'+n.imagen+'" alt="'+n.titulo+'"/>'+
+      '<div class="seguir-card-overlay"></div>'+
+      '<div class="seguir-card-body">'+
+        '<p class="seguir-card-titulo">'+n.titulo+'</p>'+
+        '<span class="seguir-card-fecha">'+n.fecha+'</span>'+
+      '</div>';
+    grid.appendChild(div);
+  });
+})();
+</script>
 <script src="main.js"></script>
 </body>
 </html>

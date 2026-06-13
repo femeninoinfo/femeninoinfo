@@ -5,7 +5,7 @@ const noticias = [
     resumen: "La FIFA ratificó las fechas: el Mundial de Brasil 2027 se jugará entre el 24 de junio y el 25 de julio. 32 selecciones, 64 partidos y el último torneo con este formato antes de la expansión a 48 equipos.",
     imagen: "mundial-fixture.png.png",
     categoria: "mundial2027",
-    fecha: "jun 2026",
+    fecha: "12 jun 2026",
     pagina: "mundial-fixture.html"
   },
   {
@@ -14,7 +14,7 @@ const noticias = [
     resumen: "El Maracaná albergará la final. Porto Alegre será la sede más cercana al público rioplatense. Las ocho canchas confirmadas por la FIFA para el torneo.",
     imagen: "mundial-sedes.png.png",
     categoria: "mundial2027",
-    fecha: "jun 2026",
+    fecha: "12 jun 2026",
     pagina: "mundial-sedes.html"
   },
   {
@@ -23,7 +23,7 @@ const noticias = [
     resumen: "Argentina, Colombia, España, Alemania, Japón, Australia y más selecciones cerraron su clasificación. Repaso confederación por confederación de los 32 cupos.",
     imagen: "mundial-clasificacion.png.png",
     categoria: "mundial2027",
-    fecha: "jun 2026",
+    fecha: "10 jun 2026",
     pagina: "mundial-clasificacion.html"
   },
   {
@@ -32,7 +32,7 @@ const noticias = [
     resumen: "Las selecciones no vivirán pegadas a los estadios. Los Team Base Camps llevan la fiebre mundialista al interior y dejan un legado directo para el fútbol femenino formativo local.",
     imagen: "mundial-campamentos.png.png",
     categoria: "mundial2027",
-    fecha: "jun 2026",
+    fecha: "10 jun 2026",
     pagina: "mundial-campamentos.html"
   },
   {
