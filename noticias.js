@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 28,
+    titulo: "Las 6 árbitras que van a hacer historia en el Mundial masculino 2026",
+    resumen: "La FIFA designó seis mujeres en el equipo arbitral del Mundial de Estados Unidos, México y Canadá. Tori Penso y Katia Itzel García arbitran en cancha. Acá están sus nombres y sus historias.",
+    imagen: "arbitras-mundial-2026.png.png",
+    categoria: "internacional",
+    fecha: "13 jun 2026",
+    pagina: "arbitras-mundial-2026.html"
+  },
+  {
     id: 27,
     titulo: "Aitana Bonmatí será comentarista del Mundial masculino 2026 en TUDN",
     resumen: "La triple Balón de Oro y figura del FC Barcelona confirmó que debutará como comentarista en la Copa del Mundo 2026 junto a la cadena mexicana TUDN. Un hito para el fútbol femenino.",
