@@ -47,6 +47,35 @@
     .seguir-card-titulo { font-size:12px; font-weight:700; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; margin-bottom:3px; }
     .seguir-card-fecha { font-size:10px; color:rgba(255,255,255,0.4); }
     @media(max-width:600px) { .sedes-grid { grid-template-columns:1fr; } .seguir-grid { grid-template-columns:repeat(2,1fr); } }
+    /* ===== BUSCADOR ===== */
+  .search-toggle { background:rgba(200,0,255,0.15); border:1.5px solid rgba(200,0,255,0.4); border-radius:8px; width:38px; height:38px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; color:#c800ff; font-size:17px; flex-shrink:0; }
+  .search-toggle:hover, .search-toggle.active { background:rgba(200,0,255,0.3); border-color:#c800ff; }
+  .search-bar { background:#0d0020; border-bottom:2px solid #3d0066; overflow:hidden; max-height:0; transition:max-height 0.3s ease, padding 0.3s ease; padding:0 24px; position:relative; z-index:99; }
+  .search-bar.open { max-height:500px; padding:16px 24px; }
+  .search-bar-inner { max-width:1280px; margin:0 auto; }
+  .search-input-wrap { display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.06); border:1.5px solid rgba(200,0,255,0.35); border-radius:10px; padding:12px 18px; }
+  .search-input-wrap:focus-within { border-color:#c800ff; background:rgba(200,0,255,0.07); }
+  .search-icon { color:rgba(200,0,255,0.7); font-size:18px; flex-shrink:0; }
+  .search-input { background:none; border:none; outline:none; color:#fff; font-size:15px; font-family:"DM Sans",sans-serif; flex:1; caret-color:#c800ff; }
+  .search-input::placeholder { color:rgba(255,255,255,0.3); }
+  .search-clear { background:none; border:none; color:rgba(255,255,255,0.3); font-size:18px; cursor:pointer; padding:0; display:none; }
+  .search-clear.visible { display:block; }
+  .search-clear:hover { color:rgba(255,255,255,0.7); }
+  .search-hint { font-size:12px; color:rgba(255,255,255,0.25); text-align:center; padding:14px 0 4px; }
+  .search-empty { font-size:13px; color:rgba(255,255,255,0.35); text-align:center; padding:20px 0; }
+  .search-more { font-size:11px; color:rgba(255,255,255,0.3); text-align:center; padding:8px 0; }
+  .search-results-list { display:flex; flex-direction:column; gap:6px; margin-top:10px; max-height:360px; overflow-y:auto; }
+  .search-result-item { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:8px; padding:10px 14px; cursor:pointer; transition:all 0.15s; text-decoration:none; }
+  .search-result-item:hover { background:rgba(200,0,255,0.1); border-color:rgba(200,0,255,0.35); transform:translateX(2px); }
+  .search-result-img { width:64px; height:42px; border-radius:5px; object-fit:cover; flex-shrink:0; background:#2a0044; display:block; }
+  .search-result-info { flex:1; min-width:0; }
+  .search-result-titulo { font-size:13px; font-weight:700; color:#fff; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:4px; }
+  .search-result-meta { display:flex; align-items:center; gap:8px; }
+  .search-badge { font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:2px 7px; border-radius:3px; color:#fff; }
+  .badge-apertura { background:#3d0066; } .badge-seleccion { background:#005cbf; } .badge-internacional { background:#006644; } .badge-mundial2027 { background:#009c3b; }
+  .search-result-fecha { font-size:10px; color:rgba(255,255,255,0.35); }
+  .search-arrow { color:rgba(200,0,255,0.5); font-size:16px; flex-shrink:0; }
+  .search-mark { background:rgba(200,0,255,0.35); color:#fff; border-radius:2px; padding:0 2px; }
   </style>
 </head>
 <body>
@@ -64,6 +93,7 @@
       <a href="ligas.html">Ligas del mundo</a>
       <a href="streaming.html">Streaming</a>
       <a href="sobre.html">Sobre</a>
+      <button class="search-toggle" id="searchToggle" aria-label="Buscar noticias">&#128269;</button>
     </nav>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </div>
@@ -77,6 +107,17 @@
     <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
   </nav>
 </header>
+
+<div class="search-bar" id="searchBar">
+  <div class="search-bar-inner">
+    <div class="search-input-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input class="search-input" id="searchInput" placeholder="Buscá una noticia, jugadora, equipo..." autocomplete="off"/>
+      <button class="search-clear" id="searchClear">&#10005;</button>
+    </div>
+    <div id="searchBody"><p class="search-hint">Escribí al menos 2 caracteres para buscar</p></div>
+  </div>
+</div>
 
 <div class="art-wrap">
   <a href="mundial-2027.html" class="art-volver">← Mundial Brasil 2027</a>
@@ -191,6 +232,8 @@ var CATEGORIA_ACTUAL = 'mundial2027';
   });
 })();
 </script>
+<script src="noticias.js"></script>
+<script src="buscador.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
