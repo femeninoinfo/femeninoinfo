@@ -1,280 +1,688 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Ligas del mundo — femeninoinfo</title>
+  <meta name="description" content="Tablas de posiciones del fútbol femenino mundial. Apertura ARG, NWSL, Liga F y Liga MX Femenil."/>
   <link rel="icon" href="logo-nuevo.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'DM Sans',sans-serif;background:#f5f0f8;color:#111}
-    a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
-    .nav{background:#1a0035;border-bottom:2px solid rgba(200,0,255,0.3);position:sticky;top:0;z-index:100;overflow:hidden;}
-    .nav::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(200,0,255,0.25) 40%,rgba(230,102,255,0.35) 50%,rgba(200,0,255,0.25) 60%,transparent 100%);background-size:200% 100%;animation:barreSweep 3s linear infinite;pointer-events:none;}
-    @keyframes barreSweep{0%{background-position:200% 0}100%{background-position:-200% 0}}
-    .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;gap:32px;position:relative;z-index:1;}
-    .nav-brand{display:flex;align-items:center;gap:8px}
-    .nav-brand img{width:28px;height:28px;object-fit:contain}
-    .nav-brand span{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff}
-    .nav-links{display:flex;gap:24px;margin-left:auto}
-    .nav-links a{color:rgba(255,255,255,0.75);font-size:13px}
-    .nav-links a:hover{color:#fff}
-    .page-header{background:#0a000f;padding:40px 24px 32px;border-bottom:2px solid rgba(200,0,255,0.2);}
-    .page-header-inner{max-width:1100px;margin:0 auto;}
-    .page-header h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3rem);color:#fff;letter-spacing:1px;margin-bottom:6px;}
-    .page-header p{color:rgba(255,255,255,0.5);font-size:14px;}
-    .main{max-width:1100px;margin:0 auto;padding:40px 24px 64px;}
-    .liga-bloque{background:#fff;border-radius:12px;overflow:hidden;margin-bottom:32px;box-shadow:0 2px 16px rgba(61,0,102,0.08);}
-    .liga-bloque-header{padding:20px 24px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:16px;}
-    .liga-bloque-logo{width:48px;height:48px;object-fit:contain;flex-shrink:0;}
-    .liga-bloque-info{flex:1;}
-    .liga-bloque-nombre{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#3d0066;letter-spacing:1px;}
-    .liga-bloque-sub{font-size:12px;color:#888;margin-top:2px;}
-    .liga-bloque-estado{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;flex-shrink:0;}
-    .estado-curso{background:rgba(0,100,0,0.1);color:#006600;}
-    .estado-fin{background:rgba(100,100,100,0.1);color:#666;}
-    .liga-tabs-inner{display:flex;border-bottom:1px solid #eee;}
-    .liga-tab-inner{background:none;border:none;padding:12px 20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#888;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all 0.2s;}
-    .liga-tab-inner.active{color:#3d0066;border-bottom-color:#c800ff;}
-    .liga-tab-content{padding:20px 24px;display:none;}
-    .liga-tab-content.active{display:block;}
-    table{width:100%;border-collapse:collapse;font-size:13px;}
-    thead tr{background:#3d0066;}
-    thead th{color:rgba(255,255,255,0.8);font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:1px;padding:8px 10px;text-align:center;font-weight:400;}
-    thead th:nth-child(2){text-align:left;}
-    tbody tr{border-bottom:1px solid #eee;transition:background 0.15s;}
-    tbody tr:hover{background:rgba(200,0,255,0.03);}
-    tbody td{padding:8px 10px;text-align:center;color:#333;font-size:13px;}
-    tbody td:nth-child(2){text-align:left;font-weight:600;color:#111;}
-    tr.campeon{background:rgba(255,215,0,0.08);}tr.campeon td:nth-child(2){color:#996600;}
-    tr.playoff td:nth-child(2){color:#005cbf;}tr.champions td:nth-child(2){color:#005cbf;}
-    tr.descenso td{color:#bbb;}
-    td strong{font-family:'Bebas Neue',sans-serif;font-size:15px;color:#3d0066;}
-    .tabla-nota{font-size:11px;color:#888;margin-top:10px;}
-    .footer{background:#0a000f;border-top:2px solid #3d0066;padding:32px 24px 16px;margin-top:64px;}
-    .footer-inner{max-width:1100px;margin:0 auto;display:flex;gap:40px;flex-wrap:wrap;padding-bottom:20px;}
-    .footer-brand img{width:36px;margin-bottom:8px;}
-    .footer-brand p{color:rgba(255,255,255,0.4);font-size:13px;line-height:1.5;}
-    .footer-links h4{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;color:#c800ff;text-transform:uppercase;margin-bottom:10px;}
-    .footer-links a{display:block;color:rgba(255,255,255,0.45);font-size:13px;margin-bottom:7px;}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:14px;text-align:center;max-width:1100px;margin:0 auto;}
-    .footer-bottom p{color:rgba(255,255,255,0.25);font-size:12px;}
-    @media(max-width:600px){.nav-links{display:none}.liga-bloque-header{flex-wrap:wrap;gap:10px}}
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+    .header { background:#1a0035 !important; border-bottom:2px solid rgba(200,0,255,0.3) !important; position:relative !important; overflow:hidden !important; }
+    .header::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%); background-size:200% 100%; animation:barreSweep 3s linear infinite; pointer-events:none; z-index:0; }
+    @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+    .header-inner, .nav-mobile { position:relative; z-index:1; }
+
+    /* ===== BUSCADOR ===== */
+    .search-toggle { background:rgba(200,0,255,0.15); border:1.5px solid rgba(200,0,255,0.4); border-radius:8px; width:38px; height:38px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; color:#c800ff; font-size:17px; flex-shrink:0; }
+    .search-toggle:hover, .search-toggle.active { background:rgba(200,0,255,0.3); border-color:#c800ff; }
+    .search-bar { background:#0d0020; border-bottom:2px solid #3d0066; overflow:hidden; max-height:0; transition:max-height 0.3s ease, padding 0.3s ease; padding:0 24px; position:relative; z-index:99; }
+    .search-bar.open { max-height:500px; padding:16px 24px; }
+    .search-bar-inner { max-width:1280px; margin:0 auto; }
+    .search-input-wrap { display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.06); border:1.5px solid rgba(200,0,255,0.35); border-radius:10px; padding:12px 18px; }
+    .search-input-wrap:focus-within { border-color:#c800ff; background:rgba(200,0,255,0.07); }
+    .search-icon { color:rgba(200,0,255,0.7); font-size:18px; flex-shrink:0; }
+    .search-input { background:none; border:none; outline:none; color:#fff; font-size:15px; font-family:'DM Sans',sans-serif; flex:1; caret-color:#c800ff; }
+    .search-input::placeholder { color:rgba(255,255,255,0.3); }
+    .search-clear { background:none; border:none; color:rgba(255,255,255,0.3); font-size:18px; cursor:pointer; padding:0; display:none; }
+    .search-clear.visible { display:block; }
+    .search-hint { font-size:12px; color:rgba(255,255,255,0.25); text-align:center; padding:14px 0 4px; }
+    .search-empty { font-size:13px; color:rgba(255,255,255,0.35); text-align:center; padding:20px 0; }
+    .search-more { font-size:11px; color:rgba(255,255,255,0.3); text-align:center; padding:8px 0; }
+    .search-results-list { display:flex; flex-direction:column; gap:6px; margin-top:10px; max-height:360px; overflow-y:auto; }
+    .search-result-item { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:8px; padding:10px 14px; cursor:pointer; transition:all 0.15s; text-decoration:none; }
+    .search-result-item:hover { background:rgba(200,0,255,0.1); border-color:rgba(200,0,255,0.35); transform:translateX(2px); }
+    .search-result-img { width:64px; height:42px; border-radius:5px; object-fit:cover; flex-shrink:0; background:#2a0044; display:block; }
+    .search-result-info { flex:1; min-width:0; }
+    .search-result-titulo { font-size:13px; font-weight:700; color:#fff; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:4px; }
+    .search-result-meta { display:flex; align-items:center; gap:8px; }
+    .search-badge { font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:2px 7px; border-radius:3px; color:#fff; }
+    .badge-apertura { background:#3d0066; } .badge-seleccion { background:#005cbf; } .badge-internacional { background:#006644; } .badge-mundial2027 { background:#009c3b; }
+    .search-result-fecha { font-size:10px; color:rgba(255,255,255,0.35); }
+    .search-arrow { color:rgba(200,0,255,0.5); font-size:16px; flex-shrink:0; }
+    .search-mark { background:rgba(200,0,255,0.35); color:#fff; border-radius:2px; padding:0 2px; }
+
+    body { background:#f5f0f8; }
+
+    /* PAGE HEADER */
+    .page-hero {
+      background:#0a000f;
+      border-bottom:2px solid rgba(200,0,255,0.2);
+      padding:36px 24px 28px;
+    }
+    .page-hero-inner { max-width:1280px; margin:0 auto; }
+    .page-hero h1 {
+      font-family:'Bebas Neue',sans-serif;
+      font-size:clamp(2rem,5vw,3.2rem);
+      color:#fff;
+      letter-spacing:1px;
+      margin-bottom:6px;
+    }
+    .page-hero p { color:rgba(255,255,255,0.4); font-size:13px; }
+
+    /* LIGA SELECTOR TABS */
+    .ligas-nav {
+      background:#fff;
+      border-bottom:1px solid #e8e0f0;
+      position:sticky;
+      top:64px;
+      z-index:50;
+    }
+    .ligas-nav-inner {
+      max-width:1280px;
+      margin:0 auto;
+      padding:0 24px;
+      display:flex;
+      gap:4px;
+      overflow-x:auto;
+      scrollbar-width:none;
+    }
+    .ligas-nav-inner::-webkit-scrollbar { display:none; }
+    .liga-nav-btn {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:14px 20px;
+      background:none;
+      border:none;
+      border-bottom:3px solid transparent;
+      cursor:pointer;
+      white-space:nowrap;
+      font-family:'DM Sans',sans-serif;
+      font-size:13px;
+      font-weight:600;
+      color:#888;
+      transition:all 0.2s;
+      margin-bottom:-1px;
+    }
+    .liga-nav-btn:hover { color:#3d0066; }
+    .liga-nav-btn.active { color:#3d0066; border-bottom-color:#c800ff; }
+    .liga-nav-btn img { width:20px; height:14px; object-fit:cover; border-radius:2px; flex-shrink:0; }
+
+    /* MAIN */
+    .ligas-main { max-width:1280px; margin:0 auto; padding:32px 24px 64px; }
+
+    /* LIGA PANEL */
+    .liga-panel { display:none; }
+    .liga-panel.active { display:block; }
+
+    .liga-header {
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:24px;
+      flex-wrap:wrap;
+    }
+    .liga-flag { width:36px; height:24px; object-fit:cover; border-radius:3px; flex-shrink:0; }
+    .liga-header-info { flex:1; }
+    .liga-nombre {
+      font-family:'Bebas Neue',sans-serif;
+      font-size:clamp(1.4rem,3vw,2rem);
+      color:#3d0066;
+      letter-spacing:1px;
+      line-height:1;
+    }
+    .liga-sub { font-size:12px; color:#888; margin-top:3px; }
+    .liga-estado {
+      font-size:11px;
+      font-weight:700;
+      padding:4px 12px;
+      border-radius:20px;
+      flex-shrink:0;
+    }
+    .estado-curso { background:rgba(0,120,0,0.1); color:#006600; }
+    .estado-fin { background:rgba(100,100,100,0.1); color:#666; }
+
+    /* STATS RÁPIDOS */
+    .liga-stats {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin-bottom:24px;
+    }
+    .liga-stat {
+      background:#fff;
+      border-radius:8px;
+      padding:12px 16px;
+      border-left:3px solid #c800ff;
+    }
+    .liga-stat-label { font-size:10px; color:#aaa; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px; }
+    .liga-stat-val { font-family:'Bebas Neue',sans-serif; font-size:18px; color:#3d0066; line-height:1; }
+    .liga-stat-sub { font-size:11px; color:#888; margin-top:2px; }
+
+    /* TABS */
+    .liga-tabs { display:flex; border-bottom:1px solid #e0d8ea; margin-bottom:0; }
+    .liga-tab {
+      background:none;
+      border:none;
+      padding:10px 18px;
+      font-family:'DM Sans',sans-serif;
+      font-size:13px;
+      font-weight:600;
+      color:#888;
+      cursor:pointer;
+      border-bottom:2px solid transparent;
+      margin-bottom:-1px;
+      transition:all 0.2s;
+    }
+    .liga-tab:hover { color:#3d0066; }
+    .liga-tab.active { color:#3d0066; border-bottom-color:#c800ff; }
+
+    .liga-tab-content { display:none; background:#fff; border-radius:0 0 10px 10px; }
+    .liga-tab-content.active { display:block; }
+
+    /* TABLA */
+    .tabla-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; font-size:13px; }
+    thead tr { background:#f5f0f8; }
+    thead th {
+      color:#888;
+      font-family:'Bebas Neue',sans-serif;
+      font-size:10px;
+      letter-spacing:1px;
+      padding:10px 10px;
+      text-align:center;
+      font-weight:400;
+      border-bottom:2px solid #e0d8ea;
+    }
+    thead th:nth-child(2) { text-align:left; }
+    tbody tr { border-bottom:1px solid #f0eaf8; transition:background 0.1s; }
+    tbody tr:last-child { border-bottom:none; }
+    tbody tr:hover { background:#faf5ff; }
+    tbody td { padding:9px 10px; text-align:center; color:#444; font-size:13px; }
+    tbody td:nth-child(2) { text-align:left; font-weight:600; color:#111; display:flex; align-items:center; gap:7px; min-width:140px; }
+    .escudo { width:20px; height:20px; object-fit:contain; flex-shrink:0; }
+    td strong { font-family:'Bebas Neue',sans-serif; font-size:15px; color:#3d0066; }
+    tr.campeon { background:rgba(255,215,0,0.07); }
+    tr.campeon td:nth-child(2) { color:#7a5a00; }
+    tr.playoff td:nth-child(2) { color:#005cbf; }
+    tr.champions td:nth-child(2) { color:#1a6b3a; }
+    tr.descenso td { color:#ccc; }
+    tr.descenso td:nth-child(2) { color:#bbb; }
+    .tabla-leyenda {
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      padding:10px 16px;
+      font-size:11px;
+      color:#888;
+      border-top:1px solid #f0eaf8;
+    }
+    .leyenda-item { display:flex; align-items:center; gap:5px; }
+    .leyenda-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+
+    /* FIXTURE */
+    .fixture-wrap { padding:16px; }
+    .fx-dia { font-family:'Bebas Neue',sans-serif; font-size:11px; letter-spacing:2px; color:#c800ff; text-transform:uppercase; margin:12px 0 6px; }
+    .fx-dia:first-child { margin-top:0; }
+    .fx-row {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 12px;
+      background:#f9f5ff;
+      border-radius:6px;
+      font-size:13px;
+      margin-bottom:4px;
+    }
+    .fx-row.destacado { background:rgba(200,0,255,0.06); border:1px solid rgba(200,0,255,0.2); }
+    .fx-hora { font-family:'Bebas Neue',sans-serif; color:#c800ff; min-width:40px; font-size:12px; }
+    .fx-equipos { display:flex; align-items:center; gap:6px; flex:1; font-size:12px; color:#333; }
+    .fx-escudo { width:18px; height:18px; object-fit:contain; }
+    .fx-estadio { font-size:11px; color:#aaa; margin-left:auto; white-space:nowrap; }
+
+    /* INFO TAB */
+    .liga-info-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      padding:16px;
+    }
+    .info-card {
+      background:#f9f5ff;
+      border-radius:8px;
+      padding:14px 16px;
+    }
+    .info-card-label { font-size:10px; color:#aaa; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px; }
+    .info-card-val { font-size:14px; font-weight:700; color:#3d0066; line-height:1.3; }
+    .info-card-sub { font-size:11px; color:#888; margin-top:3px; }
+
+    @media(max-width:768px) {
+      .liga-stats { grid-template-columns:repeat(2,1fr); }
+      .liga-info-grid { grid-template-columns:1fr; }
+      .liga-nombre { font-size:1.4rem; }
+    }
   </style>
 </head>
 <body>
-<nav class="nav"><div class="nav-inner">
-  <a href="index.html" class="nav-brand"><img src="logo-nuevo.png" alt="femeninoinfo"/><span>femeninoinfo</span></a>
-  <div class="nav-links"><a href="index.html#apertura">Fútbol Argentino</a><a href="index.html#seleccion">Selección Argentina</a><a href="index.html#internacional">Internacional</a><a href="ligas.html">Ligas del mundo</a><a href="streaming.html">Streaming</a><a href="sobre.html">Sobre</a></div>
-</div></nav>
 
-<div class="page-header">
-  <div class="page-header-inner">
-    <h1>Ligas del mundo</h1>
-    <p>Tablas de posiciones y resultados del fútbol femenino internacional</p>
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo"/>
+      <span class="brand-name">femeninoinfo</span>
+    </a>
+    <nav class="nav">
+      <a href="futbol-argentino.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
+      <a href="mundial-2027.html">Mundial 2027</a>
+      <a href="ligas.html">Ligas del mundo</a>
+      <a href="streaming.html">Streaming</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <button class="search-toggle" id="searchToggle" aria-label="Buscar noticias">&#128269;</button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="futbol-argentino.html" onclick="toggleMenu()">Fútbol Argentino</a>
+    <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
+    <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
+    <a href="mundial-2027.html" onclick="toggleMenu()">Mundial 2027</a>
+    <a href="ligas.html" onclick="toggleMenu()">Ligas del mundo</a>
+    <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
+    <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
+  </nav>
+</header>
+
+<div class="search-bar" id="searchBar">
+  <div class="search-bar-inner">
+    <div class="search-input-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input class="search-input" id="searchInput" placeholder="Buscá una noticia, jugadora, equipo..." autocomplete="off"/>
+      <button class="search-clear" id="searchClear">&#10005;</button>
+    </div>
+    <div id="searchBody"><p class="search-hint">Escribí al menos 2 caracteres para buscar</p></div>
   </div>
 </div>
 
-<main class="main">
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Ligas del mundo</h1>
+    <p>Tablas de posiciones y datos del fútbol femenino internacional</p>
+  </div>
+</div>
 
-  <!-- APERTURA FEMENINO ARGENTINO -->
-  <div class="liga-bloque" id="argentina">
-    <div class="liga-bloque-header">
-      <img src="logo-afa.png" class="liga-bloque-logo" alt="AFA"/>
-      <div class="liga-bloque-info">
-        <p class="liga-bloque-nombre">Apertura Femenino 2026 — AFA</p>
-        <p class="liga-bloque-sub">🇦🇷 Argentina — Primera División — 16 equipos</p>
+<!-- NAV DE LIGAS -->
+<div class="ligas-nav">
+  <div class="ligas-nav-inner">
+    <button class="liga-nav-btn active" onclick="mostrarLiga('arg',this)">
+      <img src="https://flagcdn.com/w40/ar.png" alt="ARG"/> Apertura ARG
+    </button>
+    <button class="liga-nav-btn" onclick="mostrarLiga('nwsl',this)">
+      <img src="https://flagcdn.com/w40/us.png" alt="USA"/> NWSL
+    </button>
+    <button class="liga-nav-btn" onclick="mostrarLiga('ligaf',this)">
+      <img src="https://flagcdn.com/w40/es.png" alt="ESP"/> Liga F
+    </button>
+    <button class="liga-nav-btn" onclick="mostrarLiga('ligamx',this)">
+      <img src="https://flagcdn.com/w40/mx.png" alt="MEX"/> Liga MX Femenil
+    </button>
+  </div>
+</div>
+
+<div class="ligas-main">
+
+  <!-- ===== APERTURA ARG ===== -->
+  <div class="liga-panel active" id="panel-arg">
+    <div class="liga-header">
+      <img src="https://flagcdn.com/w40/ar.png" class="liga-flag" alt="ARG"/>
+      <div class="liga-header-info">
+        <p class="liga-nombre">Apertura Femenino 2026</p>
+        <p class="liga-sub">Primera División — AFA — 16 equipos</p>
       </div>
-      <span class="liga-bloque-estado estado-curso">● En curso</span>
+      <span class="liga-estado estado-curso">● En curso</span>
     </div>
-    <div class="liga-tabs-inner">
-      <button class="liga-tab-inner active" onclick="switchTab('arg','tabla',this)">Tabla</button>
-      <button class="liga-tab-inner" onclick="switchTab('arg','fixture',this)">Fixture — Fecha 9</button>
+    <div class="liga-stats">
+      <div class="liga-stat">
+        <div class="liga-stat-label">Lider</div>
+        <div class="liga-stat-val">River</div>
+        <div class="liga-stat-sub">20 pts — 8 PJ</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Fecha</div>
+        <div class="liga-stat-val">9 de 16</div>
+        <div class="liga-stat-sub">13-15 jun 2026</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Clasifican</div>
+        <div class="liga-stat-val">Top 4</div>
+        <div class="liga-stat-sub">Semis del torneo</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Descenso</div>
+        <div class="liga-stat-val">2 equipos</div>
+        <div class="liga-stat-sub">Lanús y Unión</div>
+      </div>
+    </div>
+    <div class="liga-tabs">
+      <button class="liga-tab active" onclick="switchTab('arg','tabla',this)">Tabla</button>
+      <button class="liga-tab" onclick="switchTab('arg','fixture',this)">Fixture — Fecha 9</button>
     </div>
     <div class="liga-tab-content active" id="arg-tabla">
-      <table>
-        <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead>
-        <tbody>
-          <tr class="playoff"><td>1</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">River</td><td>8</td><td>+13</td><td><strong>20</strong></td></tr>
-          <tr class="playoff"><td>2</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">San Lorenzo</td><td>8</td><td>+16</td><td><strong>19</strong></td></tr>
-          <tr class="playoff"><td>3</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Racing</td><td>8</td><td>+13</td><td><strong>19</strong></td></tr>
-          <tr><td>4</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Banfield</td><td>8</td><td>+2</td><td><strong>15</strong></td></tr>
-          <tr><td>5</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Talleres</td><td>8</td><td>+4</td><td><strong>13</strong></td></tr>
-          <tr><td>6</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">SAT</td><td>8</td><td>+4</td><td><strong>12</strong></td></tr>
-          <tr><td>7</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Gimnasia</td><td>8</td><td>-3</td><td><strong>11</strong></td></tr>
-          <tr><td>8</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">San Luis FC</td><td>8</td><td>+2</td><td><strong>10</strong></td></tr>
-          <tr><td>9</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Huracán</td><td>8</td><td>0</td><td><strong>10</strong></td></tr>
-          <tr><td>10</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Independiente</td><td>8</td><td>-2</td><td><strong>10</strong></td></tr>
-          <tr><td>11</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Belgrano</td><td>8</td><td>-2</td><td><strong>10</strong></td></tr>
-          <tr><td>12</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Boca</td><td>8</td><td>-2</td><td><strong>8</strong></td></tr>
-          <tr><td>13</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Ferro</td><td>8</td><td>-3</td><td><strong>8</strong></td></tr>
-          <tr><td>14</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Newell's</td><td>8</td><td>-11</td><td><strong>5</strong></td></tr>
-          <tr class="descenso"><td>15</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Lanús</td><td>8</td><td>-15</td><td><strong>4</strong></td></tr>
-          <tr class="descenso"><td>16</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">Unión</td><td>8</td><td>-16</td><td><strong>2</strong></td></tr>
-        </tbody>
-      </table>
-      <p class="tabla-nota">Fecha 8 — 8 jun 2026. Top 4 clasifican a semifinales.</p>
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead>
+          <tbody>
+            <tr class="playoff"><td>1</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="escudo" alt="">River</td><td>8</td><td>+13</td><td><strong>20</strong></td></tr>
+            <tr class="playoff"><td>2</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="escudo" alt="">San Lorenzo</td><td>8</td><td>+16</td><td><strong>19</strong></td></tr>
+            <tr class="playoff"><td>3</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="escudo" alt="">Racing</td><td>8</td><td>+13</td><td><strong>19</strong></td></tr>
+            <tr class="playoff"><td>4</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="escudo" alt="">Banfield</td><td>8</td><td>+2</td><td><strong>15</strong></td></tr>
+            <tr><td>5</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="escudo" alt="">Talleres</td><td>8</td><td>+4</td><td><strong>13</strong></td></tr>
+            <tr><td>6</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="escudo" alt="">SAT</td><td>8</td><td>+4</td><td><strong>12</strong></td></tr>
+            <tr><td>7</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="escudo" alt="">Gimnasia</td><td>8</td><td>-3</td><td><strong>11</strong></td></tr>
+            <tr><td>8</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="escudo" alt="">San Luis FC</td><td>8</td><td>+2</td><td><strong>10</strong></td></tr>
+            <tr><td>9</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="escudo" alt="">Huracán</td><td>8</td><td>0</td><td><strong>10</strong></td></tr>
+            <tr><td>10</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="escudo" alt="">Independiente</td><td>8</td><td>-2</td><td><strong>10</strong></td></tr>
+            <tr><td>11</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="escudo" alt="">Belgrano</td><td>8</td><td>-2</td><td><strong>10</strong></td></tr>
+            <tr><td>12</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="escudo" alt="">Boca</td><td>8</td><td>-2</td><td><strong>8</strong></td></tr>
+            <tr><td>13</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="escudo" alt="">Ferro</td><td>8</td><td>-3</td><td><strong>8</strong></td></tr>
+            <tr><td>14</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="escudo" alt="">Newell's</td><td>8</td><td>-11</td><td><strong>5</strong></td></tr>
+            <tr class="descenso"><td>15</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="escudo" alt="">Lanús</td><td>8</td><td>-15</td><td><strong>4</strong></td></tr>
+            <tr class="descenso"><td>16</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="escudo" alt="">Unión</td><td>8</td><td>-16</td><td><strong>2</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tabla-leyenda">
+        <span class="leyenda-item"><span class="leyenda-dot" style="background:#005cbf;"></span> Top 4 — Semifinales</span>
+        <span class="leyenda-item"><span class="leyenda-dot" style="background:#ddd;"></span> Descenso</span>
+        <span style="margin-left:auto;">Fecha 8 — 8 jun 2026</span>
+      </div>
     </div>
     <div class="liga-tab-content" id="arg-fixture">
-      <div style="display:flex;flex-direction:column;gap:8px;padding:4px 0;">
-        <p style="font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:#c800ff;">Sábado 13/6</p>
-        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">11:00</span><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>Unión vs Lanús</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">Est. 15 de Abril</span></div>
-        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">14:00</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>SAT vs San Luis FC</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">Est. 12 de Agosto</span></div>
-        <p style="font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:#c800ff;margin-top:8px;">Domingo 14/6</p>
-        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">12:30</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>River vs San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">River Camp</span></div>
-        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(200,0,255,0.07);border:1px solid rgba(200,0,255,0.2);border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">15:30</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span><strong>Belgrano vs Talleres</strong></span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">Gigante de Alberdi</span></div>
-        <p style="font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:#c800ff;margin-top:8px;">Lunes 15/6</p>
-        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">15:00</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>Independiente vs Boca</span><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">Predio Santo Domingo</span></div>
-        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">15:00</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>Banfield vs Racing</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">Campo de Deportes</span></div>
-        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f5f0f8;border-radius:6px;font-size:13px;"><span style="color:#c800ff;font-family:'Bebas Neue',sans-serif;min-width:40px;">15:00</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" style="width:20px;height:20px;object-fit:contain;" alt=""><span>Huracán vs Ferro</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" style="width:20px;height:20px;object-fit:contain;margin-left:4px;" alt=""><span style="margin-left:auto;font-size:11px;color:#888;">La Quemita</span></div>
+      <div class="fixture-wrap">
+        <p class="fx-dia">Sábado 13/6</p>
+        <div class="fx-row"><span class="fx-hora">11:00</span><div class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="fx-escudo" alt="">Unión<span style="color:#bbb;margin:0 4px;">vs</span>Lanús<img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="fx-escudo" alt=""></div><span class="fx-estadio">Est. 15 de Abril</span></div>
+        <div class="fx-row"><span class="fx-hora">14:00</span><div class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="fx-escudo" alt="">SAT<span style="color:#bbb;margin:0 4px;">vs</span>San Luis FC<img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="fx-escudo" alt=""></div><span class="fx-estadio">Est. 12 de Agosto</span></div>
+        <p class="fx-dia">Domingo 14/6</p>
+        <div class="fx-row destacado"><span class="fx-hora">12:30</span><div class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="fx-escudo" alt="">River<span style="color:#bbb;margin:0 4px;">vs</span>San Lorenzo<img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="fx-escudo" alt=""></div><span class="fx-estadio">River Camp</span></div>
+        <div class="fx-row"><span class="fx-hora">13:00</span><div class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="fx-escudo" alt="">Gimnasia<span style="color:#bbb;margin:0 4px;">vs</span>Newell's<img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="fx-escudo" alt=""></div><span class="fx-estadio">Estancia Chica</span></div>
+        <div class="fx-row"><span class="fx-hora">15:30</span><div class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="fx-escudo" alt="">Belgrano<span style="color:#bbb;margin:0 4px;">vs</span>Talleres<img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="fx-escudo" alt=""></div><span class="fx-estadio">Gigante de Alberdi</span></div>
+        <p class="fx-dia">Lunes 15/6</p>
+        <div class="fx-row"><span class="fx-hora">15:00</span><div class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="fx-escudo" alt="">Independiente<span style="color:#bbb;margin:0 4px;">vs</span>Boca<img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="fx-escudo" alt=""></div><span class="fx-estadio">Predio Santo Domingo</span></div>
+        <div class="fx-row"><span class="fx-hora">15:00</span><div class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="fx-escudo" alt="">Banfield<span style="color:#bbb;margin:0 4px;">vs</span>Racing<img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="fx-escudo" alt=""></div><span class="fx-estadio">Campo de Deportes</span></div>
+        <div class="fx-row"><span class="fx-hora">15:00</span><div class="fx-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="fx-escudo" alt="">Huracán<span style="color:#bbb;margin:0 4px;">vs</span>Ferro<img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="fx-escudo" alt=""></div><span class="fx-estadio">La Quemita</span></div>
       </div>
     </div>
   </div>
-  <div class="liga-bloque" id="nwsl">
-    <div class="liga-bloque-header">
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/80px-NWSL_logo.svg.png" class="liga-bloque-logo" alt="NWSL" onerror="this.style.display='none'"/>
-      <div class="liga-bloque-info">
-        <p class="liga-bloque-nombre">NWSL — National Women's Soccer League</p>
-        <p class="liga-bloque-sub">🇺🇸 Estados Unidos — Temporada 2026 — 16 equipos</p>
+
+  <!-- ===== NWSL ===== -->
+  <div class="liga-panel" id="panel-nwsl">
+    <div class="liga-header">
+      <img src="https://flagcdn.com/w40/us.png" class="liga-flag" alt="USA"/>
+      <div class="liga-header-info">
+        <p class="liga-nombre">NWSL 2026</p>
+        <p class="liga-sub">National Women's Soccer League — 16 equipos</p>
       </div>
-      <span class="liga-bloque-estado estado-curso">● En curso</span>
+      <span class="liga-estado estado-curso">● En curso</span>
     </div>
-    <div class="liga-tabs-inner">
-      <button class="liga-tab-inner active" onclick="switchTab('nwsl','tabla',this)">Tabla</button>
-      <button class="liga-tab-inner" onclick="switchTab('nwsl','info',this)">Datos</button>
+    <div class="liga-stats">
+      <div class="liga-stat">
+        <div class="liga-stat-label">Líder</div>
+        <div class="liga-stat-val">Utah Royals</div>
+        <div class="liga-stat-sub">25 pts — 11 PJ</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Goleadora</div>
+        <div class="liga-stat-val">Barbra Banda</div>
+        <div class="liga-stat-sub">9 goles</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Playoffs</div>
+        <div class="liga-stat-val">Top 8</div>
+        <div class="liga-stat-sub">Noviembre 2026</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Campeona vigente</div>
+        <div class="liga-stat-val">Gotham FC</div>
+        <div class="liga-stat-sub">Temporada 2025</div>
+      </div>
+    </div>
+    <div class="liga-tabs">
+      <button class="liga-tab active" onclick="switchTab('nwsl','tabla',this)">Tabla</button>
+      <button class="liga-tab" onclick="switchTab('nwsl','info',this)">Datos</button>
     </div>
     <div class="liga-tab-content active" id="nwsl-tabla">
-      <table>
-        <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>DG</th><th>Pts</th></tr></thead>
-        <tbody>
-          <tr class="playoff"><td>1</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Utah_Royals_FC_logo.svg/50px-Utah_Royals_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Utah Royals" onerror="this.style.display='none'">Utah Royals</td><td>11</td><td>8</td><td>1</td><td>2</td><td>+14</td><td><strong>25</strong></td></tr>
-          <tr class="playoff"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/Washington_Spirit_logo.svg/50px-Washington_Spirit_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Washington Spirit" onerror="this.style.display='none'">Washington Spirit</td><td>12</td><td>7</td><td>3</td><td>2</td><td>+12</td><td><strong>24</strong></td></tr>
-          <tr class="playoff"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/North_Carolina_Courage_logo.svg/50px-North_Carolina_Courage_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="North Carolina Courage" onerror="this.style.display='none'">North Carolina Courage</td><td>12</td><td>7</td><td>1</td><td>4</td><td>+9</td><td><strong>22</strong></td></tr>
-          <tr class="playoff"><td>4</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Orlando_Pride_logo.svg/50px-Orlando_Pride_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Orlando Pride" onerror="this.style.display='none'">Orlando Pride</td><td>11</td><td>6</td><td>2</td><td>3</td><td>+11</td><td><strong>20</strong></td></tr>
-          <tr class="playoff"><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/San_Diego_Wave_FC_logo.svg/50px-San_Diego_Wave_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="San Diego Wave" onerror="this.style.display='none'">San Diego Wave</td><td>11</td><td>6</td><td>1</td><td>4</td><td>+8</td><td><strong>19</strong></td></tr>
-          <tr class="playoff"><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Portland_Thorns_FC_logo.svg/50px-Portland_Thorns_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Portland Thorns" onerror="this.style.display='none'">Portland Thorns</td><td>11</td><td>5</td><td>3</td><td>3</td><td>+5</td><td><strong>18</strong></td></tr>
-          <tr class="playoff"><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Denver_Summit_FC_logo.svg/50px-Denver_Summit_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Denver Summit" onerror="this.style.display='none'">Denver Summit</td><td>11</td><td>5</td><td>2</td><td>4</td><td>+3</td><td><strong>17</strong></td></tr>
-          <tr class="playoff"><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Kansas_City_Current_logo.svg/50px-Kansas_City_Current_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Kansas City Current" onerror="this.style.display='none'">Kansas City Current</td><td>12</td><td>4</td><td>4</td><td>4</td><td>+2</td><td><strong>16</strong></td></tr>
-          <tr><td>9</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Gotham_FC_logo.svg/50px-Gotham_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Gotham FC" onerror="this.style.display='none'">Gotham FC</td><td>12</td><td>4</td><td>3</td><td>5</td><td>-1</td><td><strong>15</strong></td></tr>
-          <tr><td>10</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Seattle_Reign_FC_logo.svg/50px-Seattle_Reign_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Seattle Reign" onerror="this.style.display='none'">Seattle Reign</td><td>11</td><td>4</td><td>2</td><td>5</td><td>-2</td><td><strong>14</strong></td></tr>
-          <tr><td>11</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Houston_Dash_logo.svg/50px-Houston_Dash_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Houston Dash" onerror="this.style.display='none'">Houston Dash</td><td>11</td><td>4</td><td>2</td><td>5</td><td>-4</td><td><strong>14</strong></td></tr>
-          <tr><td>12</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Angel_City_FC_logo.svg/50px-Angel_City_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Angel City FC" onerror="this.style.display='none'">Angel City FC</td><td>10</td><td>4</td><td>1</td><td>5</td><td>+3</td><td><strong>13</strong></td></tr>
-          <tr><td>13</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Bay_FC_logo.svg/50px-Bay_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Bay FC" onerror="this.style.display='none'">Bay FC</td><td>11</td><td>3</td><td>2</td><td>6</td><td>-8</td><td><strong>11</strong></td></tr>
-          <tr><td>14</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Boston_Legacy_FC_logo.svg/50px-Boston_Legacy_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Boston Legacy FC" onerror="this.style.display='none'">Boston Legacy FC</td><td>12</td><td>2</td><td>3</td><td>7</td><td>-8</td><td><strong>9</strong></td></tr>
-          <tr><td>15</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Chicago_Stars_FC_logo.svg/50px-Chicago_Stars_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Chicago Stars FC" onerror="this.style.display='none'">Chicago Stars FC</td><td>11</td><td>3</td><td>0</td><td>8</td><td>-17</td><td><strong>9</strong></td></tr>
-          <tr><td>16</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Racing_Louisville_FC_logo.svg/50px-Racing_Louisville_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Racing Louisville" onerror="this.style.display='none'">Racing Louisville</td><td>11</td><td>2</td><td>1</td><td>8</td><td>-5</td><td><strong>7</strong></td></tr>
-        </tbody>
-      </table>
-      <p class="tabla-nota">Actualizada a mayo 2026. Top 8 clasifican a playoffs (noviembre 2026). Máxima goleadora: Barbra Banda (9 goles).</p>
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead>
+          <tbody>
+            <tr class="playoff"><td>1</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Utah_Royals_FC_logo.svg/50px-Utah_Royals_FC_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Utah Royals</td><td>11</td><td>+14</td><td><strong>25</strong></td></tr>
+            <tr class="playoff"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/Washington_Spirit_logo.svg/50px-Washington_Spirit_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Washington Spirit</td><td>12</td><td>+12</td><td><strong>24</strong></td></tr>
+            <tr class="playoff"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/North_Carolina_Courage_logo.svg/50px-North_Carolina_Courage_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">NC Courage</td><td>12</td><td>+9</td><td><strong>22</strong></td></tr>
+            <tr class="playoff"><td>4</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Orlando_Pride_logo.svg/50px-Orlando_Pride_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Orlando Pride</td><td>11</td><td>+11</td><td><strong>20</strong></td></tr>
+            <tr class="playoff"><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/San_Diego_Wave_FC_logo.svg/50px-San_Diego_Wave_FC_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">San Diego Wave</td><td>11</td><td>+8</td><td><strong>19</strong></td></tr>
+            <tr class="playoff"><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Portland_Thorns_FC_logo.svg/50px-Portland_Thorns_FC_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Portland Thorns</td><td>11</td><td>+5</td><td><strong>18</strong></td></tr>
+            <tr class="playoff"><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Kansas_City_Current_logo.svg/50px-Kansas_City_Current_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Kansas City Current</td><td>12</td><td>+2</td><td><strong>16</strong></td></tr>
+            <tr class="playoff"><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Gotham_FC_logo.svg/50px-Gotham_FC_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Gotham FC</td><td>12</td><td>-1</td><td><strong>15</strong></td></tr>
+            <tr><td>9</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Seattle_Reign_FC_logo.svg/50px-Seattle_Reign_FC_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Seattle Reign</td><td>11</td><td>-2</td><td><strong>14</strong></td></tr>
+            <tr><td>10</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Houston_Dash_logo.svg/50px-Houston_Dash_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Houston Dash</td><td>11</td><td>-4</td><td><strong>14</strong></td></tr>
+            <tr><td>11</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Angel_City_FC_logo.svg/50px-Angel_City_FC_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Angel City FC</td><td>10</td><td>+3</td><td><strong>13</strong></td></tr>
+            <tr><td>12</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Bay_FC_logo.svg/50px-Bay_FC_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Bay FC</td><td>11</td><td>-8</td><td><strong>11</strong></td></tr>
+            <tr><td>13</td><td>Boston Legacy FC</td><td>12</td><td>-8</td><td><strong>9</strong></td></tr>
+            <tr><td>14</td><td>Chicago Stars FC</td><td>11</td><td>-17</td><td><strong>9</strong></td></tr>
+            <tr><td>15</td><td>Racing Louisville</td><td>11</td><td>-5</td><td><strong>7</strong></td></tr>
+            <tr><td>16</td><td>Denver Summit</td><td>11</td><td>+3</td><td><strong>17</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tabla-leyenda">
+        <span class="leyenda-item"><span class="leyenda-dot" style="background:#005cbf;"></span> Top 8 — Playoffs</span>
+        <span style="margin-left:auto;">Actualizada mayo 2026</span>
+      </div>
     </div>
     <div class="liga-tab-content" id="nwsl-info">
-      <p style="font-size:13px;color:#333;line-height:1.8;"><strong>Temporada:</strong> Marzo – Noviembre 2026<br><strong>Equipos:</strong> 16<br><strong>Campeona vigente:</strong> Gotham FC (2025)<br><strong>Goleadora:</strong> Barbra Banda (9 goles)<br><strong>Mayor asistencia:</strong> 63.004 — Denver vs Washington (28/3/2026)<br><strong>Playoffs:</strong> Top 8 — Noviembre 2026</p>
+      <div class="liga-info-grid">
+        <div class="info-card"><div class="info-card-label">Temporada</div><div class="info-card-val">Marzo – Noviembre 2026</div></div>
+        <div class="info-card"><div class="info-card-label">Campeona vigente</div><div class="info-card-val">Gotham FC</div><div class="info-card-sub">Título 2025</div></div>
+        <div class="info-card"><div class="info-card-label">Goleadora</div><div class="info-card-val">Barbra Banda</div><div class="info-card-sub">9 goles — Houston Dash</div></div>
+        <div class="info-card"><div class="info-card-label">Mayor asistencia</div><div class="info-card-val">63.004 espectadoras</div><div class="info-card-sub">Denver vs Washington — 28 mar 2026</div></div>
+        <div class="info-card"><div class="info-card-label">Playoffs</div><div class="info-card-val">Top 8 clasifica</div><div class="info-card-sub">Noviembre 2026</div></div>
+        <div class="info-card"><div class="info-card-label">Equipos</div><div class="info-card-val">16 equipos</div><div class="info-card-sub">Estados Unidos</div></div>
+      </div>
     </div>
   </div>
 
-  <!-- LIGA F -->
-  <div class="liga-bloque" id="ligaf">
-    <div class="liga-bloque-header">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liga_F_logo.svg/80px-Liga_F_logo.svg.png" class="liga-bloque-logo" alt="Liga F" onerror="this.style.display='none'"/>
-      <div class="liga-bloque-info">
-        <p class="liga-bloque-nombre">Liga F — Primera División Femenina de España</p>
-        <p class="liga-bloque-sub">🇪🇸 España — Temporada 2025-26 — 16 equipos</p>
+  <!-- ===== LIGA F ===== -->
+  <div class="liga-panel" id="panel-ligaf">
+    <div class="liga-header">
+      <img src="https://flagcdn.com/w40/es.png" class="liga-flag" alt="ESP"/>
+      <div class="liga-header-info">
+        <p class="liga-nombre">Liga F 2025-26</p>
+        <p class="liga-sub">Primera División Femenina de España — 16 equipos</p>
       </div>
-      <span class="liga-bloque-estado estado-fin">✓ Finalizada</span>
+      <span class="liga-estado estado-fin">✓ Finalizada</span>
     </div>
-    <div class="liga-tabs-inner">
-      <button class="liga-tab-inner active" onclick="switchTab('ligaf','tabla',this)">Tabla final</button>
-      <button class="liga-tab-inner" onclick="switchTab('ligaf','info',this)">Datos</button>
+    <div class="liga-stats">
+      <div class="liga-stat">
+        <div class="liga-stat-label">Campeona</div>
+        <div class="liga-stat-val">Barcelona</div>
+        <div class="liga-stat-sub">11° título</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Goleadora</div>
+        <div class="liga-stat-val">Clàudia Pina</div>
+        <div class="liga-stat-sub">21 goles</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Récord goleada</div>
+        <div class="liga-stat-val">Barça 12-1</div>
+        <div class="liga-stat-sub">vs Madrid CFF — ene 2026</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Mayor asistencia</div>
+        <div class="liga-stat-val">36.276</div>
+        <div class="liga-stat-sub">Barça vs Real Madrid — nov 2025</div>
+      </div>
+    </div>
+    <div class="liga-tabs">
+      <button class="liga-tab active" onclick="switchTab('ligaf','tabla',this)">Tabla final</button>
+      <button class="liga-tab" onclick="switchTab('ligaf','info',this)">Datos</button>
     </div>
     <div class="liga-tab-content active" id="ligaf-tabla">
-      <table>
-        <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>DG</th><th>Pts</th></tr></thead>
-        <tbody>
-          <tr class="campeon"><td>🏆</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/50px-FC_Barcelona_%28crest%29.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="FC Barcelona" onerror="this.style.display='none'">FC Barcelona</td><td>30</td><td>28</td><td>1</td><td>1</td><td>+89</td><td><strong>85</strong></td></tr>
-          <tr class="champions"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/50px-Real_Madrid_CF.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Real Madrid" onerror="this.style.display='none'">Real Madrid</td><td>30</td><td>23</td><td>3</td><td>4</td><td>+42</td><td><strong>72</strong></td></tr>
-          <tr class="champions"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Real_Sociedad_logo.svg/50px-Real_Sociedad_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Real Sociedad" onerror="this.style.display='none'">Real Sociedad</td><td>30</td><td>19</td><td>3</td><td>8</td><td>+18</td><td><strong>60</strong></td></tr>
-          <tr class="champions"><td>4</td><td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/CD_Tenerife_logo.svg/50px-CD_Tenerife_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Costa Adeje Tenerife" onerror="this.style.display='none'">Costa Adeje Tenerife</td><td>30</td><td>16</td><td>4</td><td>10</td><td>+12</td><td><strong>52</strong></td></tr>
-          <tr><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Atletico_Madrid_2017_logo.svg/50px-Atletico_Madrid_2017_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Atlético Madrid" onerror="this.style.display='none'">Atlético Madrid</td><td>30</td><td>15</td><td>4</td><td>11</td><td>+10</td><td><strong>49</strong></td></tr>
-          <tr><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Club_Athletic_de_Bilbao_logo.svg/50px-Club_Athletic_de_Bilbao_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Athletic Club" onerror="this.style.display='none'">Athletic Club</td><td>30</td><td>14</td><td>4</td><td>12</td><td>+8</td><td><strong>46</strong></td></tr>
-          <tr><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Villarreal_CF_Logo.svg/50px-Villarreal_CF_Logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Villarreal CF" onerror="this.style.display='none'">Villarreal CF</td><td>30</td><td>13</td><td>3</td><td>14</td><td>+5</td><td><strong>42</strong></td></tr>
-          <tr><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Sevilla_FC_logo.svg/50px-Sevilla_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Sevilla FC" onerror="this.style.display='none'">Sevilla FC</td><td>30</td><td>11</td><td>5</td><td>14</td><td>+3</td><td><strong>38</strong></td></tr>
-          <tr><td>9</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Valenciacf.svg/50px-Valenciacf.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Valencia CF" onerror="this.style.display='none'">Valencia CF</td><td>30</td><td>10</td><td>4</td><td>16</td><td>-2</td><td><strong>34</strong></td></tr>
-          <tr><td>10</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Real_betis_logo.svg/50px-Real_betis_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Betis" onerror="this.style.display='none'">Betis</td><td>30</td><td>9</td><td>5</td><td>16</td><td>-4</td><td><strong>32</strong></td></tr>
-          <tr><td>11</td><td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Madrid_CFF.png/50px-Madrid_CFF.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Madrid CFF" onerror="this.style.display='none'">Madrid CFF</td><td>30</td><td>9</td><td>3</td><td>18</td><td>-8</td><td><strong>30</strong></td></tr>
-          <tr><td>12</td><td>🇪🇸 Deportivo de La Coruña</td><td>30</td><td>8</td><td>4</td><td>18</td><td>-10</td><td><strong>28</strong></td></tr>
-          <tr><td>13</td><td>🇪🇸 Granada CF</td><td>30</td><td>7</td><td>4</td><td>19</td><td>-15</td><td><strong>25</strong></td></tr>
-          <tr><td>14</td><td>🇪🇸 F.C. Badalona Women</td><td>30</td><td>6</td><td>2</td><td>22</td><td>-22</td><td><strong>17</strong></td></tr>
-          <tr class="descenso"><td>15</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/Levante_UD.svg/50px-Levante_UD.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Levante UD" onerror="this.style.display='none'">Levante UD</td><td>30</td><td>5</td><td>3</td><td>22</td><td>-28</td><td><strong>18</strong></td></tr>
-          <tr class="descenso"><td>16</td><td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Alhama_CF_ElPozo.png/50px-Alhama_CF_ElPozo.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Alhama CF ElPozo" onerror="this.style.display='none'">Alhama CF ElPozo</td><td>30</td><td>3</td><td>3</td><td>24</td><td>-35</td><td><strong>12</strong></td></tr>
-        </tbody>
-      </table>
-      <p class="tabla-nota">Barcelona campeón 2025-26 — 11° título. Clàudia Pina máxima goleadora (21 goles). Top 3 a UEFA Women's Champions League.</p>
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead>
+          <tbody>
+            <tr class="campeon"><td>🏆</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/50px-FC_Barcelona_%28crest%29.svg.png" class="escudo" alt="" onerror="this.style.display='none'">FC Barcelona</td><td>30</td><td>+89</td><td><strong>85</strong></td></tr>
+            <tr class="champions"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/50px-Real_Madrid_CF.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Real Madrid</td><td>30</td><td>+42</td><td><strong>72</strong></td></tr>
+            <tr class="champions"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Real_Sociedad_logo.svg/50px-Real_Sociedad_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Real Sociedad</td><td>30</td><td>+18</td><td><strong>60</strong></td></tr>
+            <tr><td>4</td><td>Costa Adeje Tenerife</td><td>30</td><td>+12</td><td><strong>52</strong></td></tr>
+            <tr><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Atletico_Madrid_2017_logo.svg/50px-Atletico_Madrid_2017_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Atlético Madrid</td><td>30</td><td>+10</td><td><strong>49</strong></td></tr>
+            <tr><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Club_Athletic_de_Bilbao_logo.svg/50px-Club_Athletic_de_Bilbao_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Athletic Club</td><td>30</td><td>+8</td><td><strong>46</strong></td></tr>
+            <tr><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Villarreal_CF_Logo.svg/50px-Villarreal_CF_Logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Villarreal CF</td><td>30</td><td>+5</td><td><strong>42</strong></td></tr>
+            <tr><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Sevilla_FC_logo.svg/50px-Sevilla_FC_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Sevilla FC</td><td>30</td><td>+3</td><td><strong>38</strong></td></tr>
+            <tr><td>9</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Valenciacf.svg/50px-Valenciacf.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Valencia CF</td><td>30</td><td>-2</td><td><strong>34</strong></td></tr>
+            <tr><td>10</td><td>Betis</td><td>30</td><td>-4</td><td><strong>32</strong></td></tr>
+            <tr><td>11</td><td>Madrid CFF</td><td>30</td><td>-8</td><td><strong>30</strong></td></tr>
+            <tr><td>12</td><td>Deportivo La Coruña</td><td>30</td><td>-10</td><td><strong>28</strong></td></tr>
+            <tr><td>13</td><td>Granada CF</td><td>30</td><td>-15</td><td><strong>25</strong></td></tr>
+            <tr><td>14</td><td>FC Badalona Women</td><td>30</td><td>-22</td><td><strong>17</strong></td></tr>
+            <tr class="descenso"><td>15</td><td>Levante UD</td><td>30</td><td>-28</td><td><strong>18</strong></td></tr>
+            <tr class="descenso"><td>16</td><td>Alhama CF ElPozo</td><td>30</td><td>-35</td><td><strong>12</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tabla-leyenda">
+        <span class="leyenda-item"><span class="leyenda-dot" style="background:#ffd700;"></span> Campeona</span>
+        <span class="leyenda-item"><span class="leyenda-dot" style="background:#1a6b3a;"></span> UEFA Women's CL</span>
+        <span class="leyenda-item"><span class="leyenda-dot" style="background:#ddd;"></span> Descenso</span>
+      </div>
     </div>
     <div class="liga-tab-content" id="ligaf-info">
-      <p style="font-size:13px;color:#333;line-height:1.8;"><strong>Campeona:</strong> FC Barcelona (11° título)<br><strong>Goleadora:</strong> Clàudia Pina — 21 goles<br><strong>Mayor asistencia:</strong> 36.276 — Barcelona 4-0 Real Madrid (15/11/2025)<br><strong>Goleada histórica:</strong> Barcelona 12-1 Madrid CFF (10/1/2026)<br><strong>Champions League:</strong> Barcelona, Real Madrid y Real Sociedad<br><strong>Descenso:</strong> Levante UD y Alhama CF ElPozo</p>
+      <div class="liga-info-grid">
+        <div class="info-card"><div class="info-card-label">Campeona</div><div class="info-card-val">FC Barcelona</div><div class="info-card-sub">11° título — 85 puntos</div></div>
+        <div class="info-card"><div class="info-card-label">Goleadora</div><div class="info-card-val">Clàudia Pina</div><div class="info-card-sub">21 goles — FC Barcelona</div></div>
+        <div class="info-card"><div class="info-card-label">Mayor asistencia</div><div class="info-card-val">36.276 espectadoras</div><div class="info-card-sub">Barcelona 4-0 Real Madrid — nov 2025</div></div>
+        <div class="info-card"><div class="info-card-label">Récord de goleada</div><div class="info-card-val">Barcelona 12-1 Madrid CFF</div><div class="info-card-sub">10 enero 2026</div></div>
+        <div class="info-card"><div class="info-card-label">Champions League</div><div class="info-card-val">Barcelona, Real Madrid y Real Sociedad</div><div class="info-card-sub">Top 3 clasificaron</div></div>
+        <div class="info-card"><div class="info-card-label">Descenso</div><div class="info-card-val">Levante UD y Alhama CF ElPozo</div></div>
+      </div>
     </div>
   </div>
 
-  <!-- LIGA MX FEMENIL -->
-  <div class="liga-bloque" id="ligamx">
-    <div class="liga-bloque-header">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Liga_MX_Femenil.png/80px-Liga_MX_Femenil.png" class="liga-bloque-logo" alt="Liga MX Femenil" onerror="this.style.display='none'"/>
-      <div class="liga-bloque-info">
-        <p class="liga-bloque-nombre">Liga MX Femenil — Clausura 2026</p>
-        <p class="liga-bloque-sub">🇲🇽 México — Temporada 2025-26 — 18 equipos</p>
+  <!-- ===== LIGA MX ===== -->
+  <div class="liga-panel" id="panel-ligamx">
+    <div class="liga-header">
+      <img src="https://flagcdn.com/w40/mx.png" class="liga-flag" alt="MEX"/>
+      <div class="liga-header-info">
+        <p class="liga-nombre">Liga MX Femenil — Clausura 2026</p>
+        <p class="liga-sub">Primera División — México — 18 equipos</p>
       </div>
-      <span class="liga-bloque-estado estado-fin">✓ Finalizada</span>
+      <span class="liga-estado estado-fin">✓ Finalizada</span>
     </div>
-    <div class="liga-tabs-inner">
-      <button class="liga-tab-inner active" onclick="switchTab('ligamx','tabla',this)">Tabla final</button>
-      <button class="liga-tab-inner" onclick="switchTab('ligamx','info',this)">Datos</button>
+    <div class="liga-stats">
+      <div class="liga-stat">
+        <div class="liga-stat-label">Campeona</div>
+        <div class="liga-stat-val">América</div>
+        <div class="liga-stat-sub">3° título — Clausura 2026</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Goleadora</div>
+        <div class="liga-stat-val">Le Sommer / Ordóñez</div>
+        <div class="liga-stat-sub">18 goles c/u</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Mayor asistencia</div>
+        <div class="liga-stat-val">27.408</div>
+        <div class="liga-stat-sub">Monterrey vs UANL — abr 2026</div>
+      </div>
+      <div class="liga-stat">
+        <div class="liga-stat-label">Audiencia 2025</div>
+        <div class="liga-stat-val">67.8M</div>
+        <div class="liga-stat-sub">Liga más vista del mundo</div>
+      </div>
+    </div>
+    <div class="liga-tabs">
+      <button class="liga-tab active" onclick="switchTab('ligamx','tabla',this)">Tabla final</button>
+      <button class="liga-tab" onclick="switchTab('ligamx','info',this)">Datos</button>
     </div>
     <div class="liga-tab-content active" id="ligamx-tabla">
-      <table>
-        <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>DG</th><th>Pts</th></tr></thead>
-        <tbody>
-          <tr class="campeon"><td>🏆</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Club_Am%C3%A9rica_crest.svg/50px-Club_Am%C3%A9rica_crest.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="América" onerror="this.style.display='none'">América</td><td>17</td><td>14</td><td>0</td><td>3</td><td>+35</td><td><strong>42</strong></td></tr>
-          <tr class="playoff"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/CF_Monterrey_logo.svg/50px-CF_Monterrey_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Rayadas de Monterrey" onerror="this.style.display='none'">Rayadas de Monterrey</td><td>17</td><td>12</td><td>2</td><td>3</td><td>+28</td><td><strong>38</strong></td></tr>
-          <tr class="playoff"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Tigres_UANL_logo.svg/50px-Tigres_UANL_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Tigres UANL" onerror="this.style.display='none'">Tigres UANL</td><td>17</td><td>11</td><td>2</td><td>4</td><td>+24</td><td><strong>35</strong></td></tr>
-          <tr class="playoff"><td>4</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Guadalajara_chivas_logo.svg/50px-Guadalajara_chivas_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Guadalajara (Chivas)" onerror="this.style.display='none'">Guadalajara (Chivas)</td><td>17</td><td>10</td><td>2</td><td>5</td><td>+18</td><td><strong>32</strong></td></tr>
-          <tr class="playoff"><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/Cruz_Azul_logo.svg/50px-Cruz_Azul_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Cruz Azul" onerror="this.style.display='none'">Cruz Azul</td><td>17</td><td>8</td><td>4</td><td>5</td><td>+10</td><td><strong>28</strong></td></tr>
-          <tr class="playoff"><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/49/CF_Pachuca_logo.svg/50px-CF_Pachuca_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Pachuca" onerror="this.style.display='none'">Pachuca</td><td>17</td><td>8</td><td>3</td><td>6</td><td>+12</td><td><strong>27</strong></td></tr>
-          <tr class="playoff"><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Deportivo_Toluca_F.C._logo.svg/50px-Deportivo_Toluca_F.C._logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Toluca" onerror="this.style.display='none'">Toluca</td><td>17</td><td>7</td><td>4</td><td>6</td><td>+6</td><td><strong>25</strong></td></tr>
-          <tr class="playoff"><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Atlas_FC_logo.svg/50px-Atlas_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Atlas" onerror="this.style.display='none'">Atlas</td><td>17</td><td>7</td><td>3</td><td>7</td><td>+4</td><td><strong>24</strong></td></tr>
-          <tr><td>9</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Club_Le%C3%B3n_logo.svg/50px-Club_Le%C3%B3n_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="León" onerror="this.style.display='none'">León</td><td>17</td><td>6</td><td>4</td><td>7</td><td>+2</td><td><strong>22</strong></td></tr>
-          <tr><td>10</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/71/Atletico_de_San_Luis.svg/50px-Atletico_de_San_Luis.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Atlético San Luis" onerror="this.style.display='none'">Atlético San Luis</td><td>17</td><td>5</td><td>3</td><td>9</td><td>-3</td><td><strong>18</strong></td></tr>
-          <tr><td>11</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/FC_Ju%C3%A1rez_logo.svg/50px-FC_Ju%C3%A1rez_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Juárez" onerror="this.style.display='none'">Juárez</td><td>17</td><td>5</td><td>2</td><td>10</td><td>-5</td><td><strong>17</strong></td></tr>
-          <tr><td>12</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Mazatlan_FC_logo.svg/50px-Mazatlan_FC_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Mazatlán" onerror="this.style.display='none'">Mazatlán</td><td>17</td><td>4</td><td>3</td><td>10</td><td>-8</td><td><strong>15</strong></td></tr>
-          <tr><td>13</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/UNAM_Pumas_logo.svg/50px-UNAM_Pumas_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="UNAM Pumas" onerror="this.style.display='none'">UNAM Pumas</td><td>17</td><td>4</td><td>2</td><td>11</td><td>-10</td><td><strong>14</strong></td></tr>
-          <tr><td>14</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Xolos_de_Tijuana_logo.svg/50px-Xolos_de_Tijuana_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Tijuana" onerror="this.style.display='none'">Tijuana</td><td>17</td><td>3</td><td>4</td><td>10</td><td>-12</td><td><strong>13</strong></td></tr>
-          <tr><td>15</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Club_Puebla_logo.svg/50px-Club_Puebla_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Puebla" onerror="this.style.display='none'">Puebla</td><td>17</td><td>3</td><td>3</td><td>11</td><td>-14</td><td><strong>12</strong></td></tr>
-          <tr><td>16</td><td>🇲🇽 Querétaro</td><td>17</td><td>3</td><td>2</td><td>12</td><td>-18</td><td><strong>11</strong></td></tr>
-          <tr><td>17</td><td>🇲🇽 Santos Laguna</td><td>17</td><td>2</td><td>3</td><td>12</td><td>-22</td><td><strong>9</strong></td></tr>
-          <tr><td>18</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/27/Club_Necaxa_logo.svg/50px-Club_Necaxa_logo.svg.png" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="Necaxa" onerror="this.style.display='none'">Necaxa</td><td>17</td><td>1</td><td>2</td><td>14</td><td>-30</td><td><strong>5</strong></td></tr>
-        </tbody>
-      </table>
-      <p class="tabla-nota">América campeona del Clausura 2026. Tigres UANL campeona del Apertura 2025. Top 8 avanzaron a liguilla.</p>
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead>
+          <tbody>
+            <tr class="campeon"><td>🏆</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Club_Am%C3%A9rica_crest.svg/50px-Club_Am%C3%A9rica_crest.svg.png" class="escudo" alt="" onerror="this.style.display='none'">América</td><td>17</td><td>+35</td><td><strong>42</strong></td></tr>
+            <tr class="playoff"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/CF_Monterrey_logo.svg/50px-CF_Monterrey_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Rayadas de Monterrey</td><td>17</td><td>+28</td><td><strong>38</strong></td></tr>
+            <tr class="playoff"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Tigres_UANL_logo.svg/50px-Tigres_UANL_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Tigres UANL</td><td>17</td><td>+24</td><td><strong>35</strong></td></tr>
+            <tr class="playoff"><td>4</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Guadalajara_chivas_logo.svg/50px-Guadalajara_chivas_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Chivas</td><td>17</td><td>+18</td><td><strong>32</strong></td></tr>
+            <tr class="playoff"><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/Cruz_Azul_logo.svg/50px-Cruz_Azul_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Cruz Azul</td><td>17</td><td>+10</td><td><strong>28</strong></td></tr>
+            <tr class="playoff"><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/49/CF_Pachuca_logo.svg/50px-CF_Pachuca_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Pachuca</td><td>17</td><td>+12</td><td><strong>27</strong></td></tr>
+            <tr class="playoff"><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Deportivo_Toluca_F.C._logo.svg/50px-Deportivo_Toluca_F.C._logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Toluca</td><td>17</td><td>+6</td><td><strong>25</strong></td></tr>
+            <tr class="playoff"><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Atlas_FC_logo.svg/50px-Atlas_FC_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">Atlas</td><td>17</td><td>+4</td><td><strong>24</strong></td></tr>
+            <tr><td>9</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Club_Le%C3%B3n_logo.svg/50px-Club_Le%C3%B3n_logo.svg.png" class="escudo" alt="" onerror="this.style.display='none'">León</td><td>17</td><td>+2</td><td><strong>22</strong></td></tr>
+            <tr><td>10</td><td>Atlético San Luis</td><td>17</td><td>-3</td><td><strong>18</strong></td></tr>
+            <tr><td>11</td><td>Juárez</td><td>17</td><td>-5</td><td><strong>17</strong></td></tr>
+            <tr><td>12</td><td>Mazatlán</td><td>17</td><td>-8</td><td><strong>15</strong></td></tr>
+            <tr><td>13</td><td>UNAM Pumas</td><td>17</td><td>-10</td><td><strong>14</strong></td></tr>
+            <tr><td>14</td><td>Tijuana</td><td>17</td><td>-12</td><td><strong>13</strong></td></tr>
+            <tr><td>15</td><td>Puebla</td><td>17</td><td>-14</td><td><strong>12</strong></td></tr>
+            <tr><td>16</td><td>Querétaro</td><td>17</td><td>-18</td><td><strong>11</strong></td></tr>
+            <tr><td>17</td><td>Santos Laguna</td><td>17</td><td>-22</td><td><strong>9</strong></td></tr>
+            <tr><td>18</td><td>Necaxa</td><td>17</td><td>-30</td><td><strong>5</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tabla-leyenda">
+        <span class="leyenda-item"><span class="leyenda-dot" style="background:#ffd700;"></span> Campeona</span>
+        <span class="leyenda-item"><span class="leyenda-dot" style="background:#005cbf;"></span> Top 8 — Liguilla</span>
+      </div>
     </div>
     <div class="liga-tab-content" id="ligamx-info">
-      <p style="font-size:13px;color:#333;line-height:1.8;"><strong>Campeona Clausura 2026:</strong> América (3° título)<br><strong>Campeona Apertura 2025:</strong> Tigres UANL (7° título)<br><strong>Goleadora Clausura:</strong> Eugénie Le Sommer / Diana Ordóñez (18 goles)<br><strong>Mayor asistencia:</strong> 27.408 — Monterrey vs UANL (24/4/2026)<br><strong>Liga más vista del mundo:</strong> 67.8 millones de espectadores en 2025</p>
+      <div class="liga-info-grid">
+        <div class="info-card"><div class="info-card-label">Campeona Clausura 2026</div><div class="info-card-val">América</div><div class="info-card-sub">3° título en la historia</div></div>
+        <div class="info-card"><div class="info-card-label">Campeona Apertura 2025</div><div class="info-card-val">Tigres UANL</div><div class="info-card-sub">7° título</div></div>
+        <div class="info-card"><div class="info-card-label">Goleadora Clausura</div><div class="info-card-val">Le Sommer / Ordóñez</div><div class="info-card-sub">18 goles cada una</div></div>
+        <div class="info-card"><div class="info-card-label">Mayor asistencia</div><div class="info-card-val">27.408 espectadoras</div><div class="info-card-sub">Monterrey vs UANL — 24 abr 2026</div></div>
+        <div class="info-card"><div class="info-card-label">Audiencia global 2025</div><div class="info-card-val">67.8 millones</div><div class="info-card-sub">Liga más vista del mundo</div></div>
+        <div class="info-card"><div class="info-card-label">Crecimiento</div><div class="info-card-val">+85%</div><div class="info-card-sub">Clausura 2026 vs año anterior</div></div>
+      </div>
     </div>
   </div>
 
-</main>
+</div>
 
-<footer class="footer"><div class="footer-inner">
-  <div class="footer-brand"><img src="logo-nuevo.png" alt=""/><p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p></div>
-  <div class="footer-links"><h4>Secciones</h4><a href="index.html#apertura">Apertura Femenino</a><a href="index.html#seleccion">Selección Argentina</a><a href="index.html#internacional">Internacional</a></div>
-  <div class="footer-links"><h4>femeninoinfo</h4><a href="sobre.html">Sobre el medio</a><a href="streaming.html">Streaming</a><a href="sponsors.html">Sponsors</a></div>
-</div><div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div></footer>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="footer-logo"/>
+      <p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Secciones</h4>
+      <a href="futbol-argentino.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
+    </div>
+    <div class="footer-links">
+      <h4>femeninoinfo</h4>
+      <a href="sobre.html">Sobre el medio</a>
+      <a href="streaming.html">Streaming</a>
+      <a href="sponsors.html">Sponsors</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
+</footer>
 
 <script>
-function switchTab(liga, tab, el) {
-  document.querySelectorAll('#' + liga + '-tabla, #' + liga + '-info').forEach(c => c.classList.remove('active'));
-  document.getElementById(liga + '-' + tab).classList.add('active');
-  el.closest('.liga-bloque').querySelectorAll('.liga-tab-inner').forEach(b => b.classList.remove('active'));
-  el.classList.add('active');
+function mostrarLiga(liga, btn) {
+  document.querySelectorAll('.liga-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById('panel-'+liga).classList.add('active');
+  document.querySelectorAll('.liga-nav-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+}
+
+function switchTab(liga, tab, btn) {
+  var panel = document.getElementById('panel-'+liga);
+  panel.querySelectorAll('.liga-tab-content').forEach(function(c){ c.classList.remove('active'); });
+  document.getElementById(liga+'-'+tab).classList.add('active');
+  panel.querySelectorAll('.liga-tab').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
 }
 </script>
-</body></html>
+<script src="noticias.js"></script>
+<script src="buscador.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
