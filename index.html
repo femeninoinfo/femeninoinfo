@@ -494,6 +494,7 @@
   @media(max-width:600px) { .streaming-videos{grid-template-columns:1fr} .redes-row{gap:10px} .red-item{padding:12px 16px} }
 </style>
 
+<script src="noticias.js"></script>
 <script>
 var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027' };
 var LIGAS = {
@@ -584,10 +585,9 @@ function abrirUltima() {
   window.open(noticias[0].pagina, '_blank');
 }
 
-/* Stub para evitar error si noticias.js llama cargarUltimaNoticia antes de tiempo */
 function cargarUltimaNoticia() {
-  if(!window.noticias || window.noticias.length === 0) return;
-  var n = window.noticias[0];
+  if(typeof noticias === 'undefined' || noticias.length === 0) return;
+  var n = noticias[0];
   var img = document.getElementById('ultimaImg');
   if(img) { img.src = n.imagen; img.alt = n.titulo; }
   var tit = document.getElementById('ultimaTitulo');
@@ -598,8 +598,8 @@ function cargarUltimaNoticia() {
   if(chicas) {
     chicas.innerHTML = '';
     var cats = {seleccion:'Selección', apertura:'Argentino', internacional:'Internacional'};
-    for(var i=1; i<=3 && i<window.noticias.length; i++) {
-      var m = window.noticias[i];
+    for(var i=1; i<=3 && i<noticias.length; i++) {
+      var m = noticias[i];
       var cat = cats[m.categoria] || m.categoria;
       var card = document.createElement('div');
       card.className = 'nota-chica';
@@ -615,15 +615,15 @@ function cargarUltimaNoticia() {
     }
   }
   var gridU = document.getElementById('gridUltimas');
-  if(gridU) { gridU.innerHTML = ''; window.noticias.slice(0,8).forEach(function(n){ gridU.appendChild(makeGridCard(n)); }); }
+  if(gridU) { gridU.innerHTML = ''; noticias.slice(0,8).forEach(function(n){ gridU.appendChild(makeGridCard(n)); }); }
   var gridA = document.getElementById('gridApertura');
-  if(gridA) { gridA.innerHTML = ''; window.noticias.filter(function(n){ return n.categoria==='apertura'; }).slice(0,8).forEach(function(n){ gridA.appendChild(makeGridCard(n)); }); }
+  if(gridA) { gridA.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='apertura'; }).slice(0,8).forEach(function(n){ gridA.appendChild(makeGridCard(n)); }); }
   var gridS = document.getElementById('gridSeleccion');
-  if(gridS) { gridS.innerHTML = ''; window.noticias.filter(function(n){ return n.categoria==='seleccion'; }).slice(0,8).forEach(function(n){ gridS.appendChild(makeGridCard(n)); }); }
+  if(gridS) { gridS.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='seleccion'; }).slice(0,8).forEach(function(n){ gridS.appendChild(makeGridCard(n)); }); }
   var gridI = document.getElementById('gridInternacional');
-  if(gridI) { gridI.innerHTML = ''; window.noticias.filter(function(n){ return n.categoria==='internacional'; }).slice(0,8).forEach(function(n){ gridI.appendChild(makeGridCard(n)); }); }
+  if(gridI) { gridI.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='internacional'; }).slice(0,8).forEach(function(n){ gridI.appendChild(makeGridCard(n)); }); }
   var gridM = document.getElementById('gridMundial');
-  if(gridM) { gridM.innerHTML = ''; window.noticias.filter(function(n){ return n.categoria==='mundial2027'; }).slice(0,8).forEach(function(n){ gridM.appendChild(makeGridCard(n)); }); }
+  if(gridM) { gridM.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='mundial2027'; }).slice(0,8).forEach(function(n){ gridM.appendChild(makeGridCard(n)); }); }
 }
 
 /* TICKER */
@@ -653,7 +653,6 @@ function cargarUltimaNoticia() {
   }
 })();
 </script>
-<script src="noticias.js"></script>
 <script src="buscador.js"></script>
 <script src="main.js"></script>
 </body>
