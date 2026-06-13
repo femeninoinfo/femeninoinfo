@@ -56,7 +56,7 @@ const noticias = [
   {
     id: 22,
     titulo: "Colombia ganó la Liga de Naciones y conquistó su primer título en la historia",
-    resumen: "Las cafeteras se consagraron campeonas de la primera edición de la CONMEBOL Liga de Naciones Femenina. Es el primer trofeo oficial de la selección colombiana y las convierte en el tercer combinado del continente con un título.",
+    resumen: "Las cafeteras se consagraron campeonas de la primera edición de la CONMEBOL Liga de Naciones Femenina. Es el primer trofeo oficial de la selección colombiana.",
     imagen: "colombia-liga-naciones.png.png",
     categoria: "internacional",
     fecha: "9 jun 2026",
@@ -110,7 +110,7 @@ const noticias = [
   {
     id: 15,
     titulo: "España, Alemania, Francia y Dinamarca se clasificaron al Mundial Femenino Brasil 2027",
-    resumen: "Las cuatro selecciones europeas sellaron su boleto directo en la última jornada de los clasificatorios de la UEFA. España goleó a Islandia y defendió su título mundial.",
+    resumen: "Las cuatro selecciones europeas sellaron su boleto directo en la última jornada de los clasificatorios de la UEFA.",
     imagen: "mundial-clasificadas.png",
     categoria: "internacional",
     fecha: "9 jun 2026",
@@ -235,4 +235,6 @@ const noticias = [
   }
 ];
 
-if(typeof cargarUltimaNoticia === "function") cargarUltimaNoticia();
+document.addEventListener('DOMContentLoaded', function() {
+  if(typeof cargarUltimaNoticia === "function") cargarUltimaNoticia();
+});
