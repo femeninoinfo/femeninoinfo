@@ -1,58 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Streaming — femeninoinfo</title>
+  <meta name="description" content="El programa de femeninoinfo. Fútbol femenino en vivo de martes a jueves a las 18:00 por YouTube y Twitch."/>
   <link rel="icon" href="logo-nuevo.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Montserrat:wght@400;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'DM Sans', sans-serif; background: #0a000f; color: #f0e6ff; }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-
-    /* NAV */
-    .nav {
-      background: #1a0035;
-      border-bottom: 2px solid rgba(200,0,255,0.3);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      overflow: hidden;
-    }
-    .nav::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%);
-      background-size: 200% 100%;
-      animation: barreSweep 3s linear infinite;
-      pointer-events: none;
-      z-index: 0;
-    }
+    .header { background:#1a0035 !important; border-bottom:2px solid rgba(200,0,255,0.3) !important; position:relative !important; overflow:hidden !important; }
+    .header::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%); background-size:200% 100%; animation:barreSweep 3s linear infinite; pointer-events:none; z-index:0; }
     @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      position: relative;
-      z-index: 1;
-    }
-    .nav-brand { display: flex; align-items: center; gap: 8px; }
-    .nav-brand img { width: 32px; height: 32px; object-fit: contain; }
-    .nav-brand span { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #fff; }
-    .nav-links { display: flex; gap: 24px; margin-left: auto; }
-    .nav-links a { color: rgba(255,255,255,0.75); font-size: 13px; transition: color 0.2s; }
-    .nav-links a:hover { color: #fff; }
-    .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; margin-left: auto; }
-    .nav-mobile { display: none; flex-direction: column; background: #130020; padding: 16px 24px; gap: 16px; border-top: 1px solid rgba(200,0,255,0.2); position: relative; z-index: 1; }
-    .nav-mobile.open { display: flex; }
-    .nav-mobile a { color: rgba(255,255,255,0.75); font-size: 15px; }
-    @media(max-width:700px) { .nav-links { display: none; } .menu-toggle { display: block; } }
+    .header-inner, .nav-mobile { position:relative; z-index:1; }
+
+    /* BUSCADOR */
+    .search-toggle { background:rgba(200,0,255,0.15); border:1.5px solid rgba(200,0,255,0.4); border-radius:8px; width:38px; height:38px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; color:#c800ff; font-size:17px; flex-shrink:0; }
+    .search-toggle:hover, .search-toggle.active { background:rgba(200,0,255,0.3); border-color:#c800ff; }
+    .search-bar { background:#0d0020; border-bottom:2px solid #3d0066; overflow:hidden; max-height:0; transition:max-height 0.3s ease, padding 0.3s ease; padding:0 24px; position:relative; z-index:99; }
+    .search-bar.open { max-height:500px; padding:16px 24px; }
+    .search-bar-inner { max-width:1280px; margin:0 auto; }
+    .search-input-wrap { display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.06); border:1.5px solid rgba(200,0,255,0.35); border-radius:10px; padding:12px 18px; }
+    .search-input-wrap:focus-within { border-color:#c800ff; background:rgba(200,0,255,0.07); }
+    .search-icon { color:rgba(200,0,255,0.7); font-size:18px; flex-shrink:0; }
+    .search-input { background:none; border:none; outline:none; color:#fff; font-size:15px; font-family:'DM Sans',sans-serif; flex:1; caret-color:#c800ff; }
+    .search-input::placeholder { color:rgba(255,255,255,0.3); }
+    .search-clear { background:none; border:none; color:rgba(255,255,255,0.3); font-size:18px; cursor:pointer; padding:0; display:none; }
+    .search-clear.visible { display:block; }
+    .search-hint { font-size:12px; color:rgba(255,255,255,0.25); text-align:center; padding:14px 0 4px; }
+    .search-empty { font-size:13px; color:rgba(255,255,255,0.35); text-align:center; padding:20px 0; }
+    .search-more { font-size:11px; color:rgba(255,255,255,0.3); text-align:center; padding:8px 0; }
+    .search-results-list { display:flex; flex-direction:column; gap:6px; margin-top:10px; max-height:360px; overflow-y:auto; }
+    .search-result-item { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:8px; padding:10px 14px; cursor:pointer; transition:all 0.15s; text-decoration:none; }
+    .search-result-item:hover { background:rgba(200,0,255,0.1); border-color:rgba(200,0,255,0.35); transform:translateX(2px); }
+    .search-result-img { width:64px; height:42px; border-radius:5px; object-fit:cover; flex-shrink:0; background:#2a0044; display:block; }
+    .search-result-info { flex:1; min-width:0; }
+    .search-result-titulo { font-size:13px; font-weight:700; color:#fff; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:4px; }
+    .search-result-meta { display:flex; align-items:center; gap:8px; }
+    .search-badge { font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:2px 7px; border-radius:3px; color:#fff; }
+    .badge-apertura { background:#3d0066; } .badge-seleccion { background:#005cbf; } .badge-internacional { background:#006644; } .badge-mundial2027 { background:#009c3b; }
+    .search-result-fecha { font-size:10px; color:rgba(255,255,255,0.35); }
+    .search-arrow { color:rgba(200,0,255,0.5); font-size:16px; flex-shrink:0; }
+    .search-mark { background:rgba(200,0,255,0.35); color:#fff; border-radius:2px; padding:0 2px; }
+
+    body { background:#0a000f; color:#f0e6ff; }
 
     /* HERO */
     .stream-hero {
@@ -82,11 +73,11 @@
       margin-bottom: 20px;
       animation: pulse 2s infinite;
     }
-    .live-dot { width: 6px; height: 6px; background: #fff; border-radius: 50%; }
+    .live-dot { width:6px; height:6px; background:#fff; border-radius:50%; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.7} }
     .stream-hero h1 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-size: clamp(2.4rem,5vw,4rem);
       color: #fff;
       line-height: 1.05;
       letter-spacing: 1px;
@@ -101,209 +92,78 @@
       margin: 0 auto 32px;
       font-weight: 300;
     }
-    .stream-btns {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .btn-yt {
-      background: #ff0000;
-      color: #fff;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1rem;
-      letter-spacing: 1px;
-      padding: 12px 28px;
-      border-radius: 4px;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-    .btn-tw {
-      background: #6441a5;
-      color: #fff;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1rem;
-      letter-spacing: 1px;
-      padding: 12px 28px;
-      border-radius: 4px;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-    .btn-yt:hover, .btn-tw:hover { opacity: 0.85; transform: translateY(-2px); }
+    .stream-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .btn-yt { background:#ff0000; color:#fff; font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:1px; padding:12px 28px; border-radius:4px; transition:opacity 0.2s,transform 0.2s; }
+    .btn-tw { background:#6441a5; color:#fff; font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:1px; padding:12px 28px; border-radius:4px; transition:opacity 0.2s,transform 0.2s; }
+    .btn-yt:hover, .btn-tw:hover { opacity:0.85; transform:translateY(-2px); }
 
     /* HORARIOS */
-    .horarios {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 36px;
-      flex-wrap: wrap;
-    }
-    .horario-item {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(200,0,255,0.2);
-      border-radius: 8px;
-      padding: 14px 24px;
-      text-align: center;
-      min-width: 110px;
-    }
-    .horario-dia {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1rem;
-      color: #e066ff;
-      letter-spacing: 1px;
-      display: block;
-      margin-bottom: 4px;
-    }
-    .horario-hora {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #fff;
-      display: block;
-    }
-    .horario-tz {
-      font-size: 10px;
-      color: rgba(255,255,255,0.3);
-      margin-top: 3px;
-      display: block;
-    }
+    .horarios { display:flex; justify-content:center; gap:12px; margin-top:36px; flex-wrap:wrap; }
+    .horario-item { background:rgba(255,255,255,0.04); border:1px solid rgba(200,0,255,0.2); border-radius:8px; padding:14px 24px; text-align:center; min-width:110px; }
+    .horario-dia { font-family:'Bebas Neue',sans-serif; font-size:1rem; color:#e066ff; letter-spacing:1px; display:block; margin-bottom:4px; }
+    .horario-hora { font-size:1.4rem; font-weight:700; color:#fff; display:block; }
+    .horario-tz { font-size:10px; color:rgba(255,255,255,0.3); margin-top:3px; display:block; }
 
     /* VIDEOS */
-    .videos-section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 56px 24px 80px;
-    }
-    .videos-titulo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.4rem;
-      color: #c800ff;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    .videos-subtitulo {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 24px;
-    }
-    .videos-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .video-card {
-      display: block;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #12001f;
-      border: 1px solid rgba(200,0,255,0.15);
-      transition: transform 0.2s, border-color 0.2s;
-      text-decoration: none;
-    }
-    .video-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(200,0,255,0.4);
-    }
-    .video-thumb {
-      position: relative;
-    }
-    .video-thumb img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-    }
-    .video-play-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 56px;
-      height: 56px;
-      background: rgba(200,0,255,0.9);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .video-card:hover .video-play-btn {
-      background: #c800ff;
-      transform: translate(-50%, -50%) scale(1.1);
-    }
-    .video-play-btn span { color: #fff; font-size: 20px; padding-left: 4px; }
-    .video-info { padding: 16px 18px; }
-    .video-tag {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 10px;
-      letter-spacing: 2px;
-      color: #c800ff;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 6px;
-    }
-    .video-titulo {
-      font-size: 15px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.35;
-      margin: 0;
-    }
+    .videos-section { max-width:1100px; margin:0 auto; padding:56px 24px 80px; }
+    .videos-titulo { font-family:'Bebas Neue',sans-serif; font-size:1.4rem; color:#c800ff; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px; }
+    .videos-subtitulo { font-size:0.9rem; color:rgba(255,255,255,0.4); margin-bottom:24px; }
+    .videos-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .video-card { display:block; border-radius:12px; overflow:hidden; background:#12001f; border:1px solid rgba(200,0,255,0.15); transition:transform 0.2s,border-color 0.2s; }
+    .video-card:hover { transform:translateY(-4px); border-color:rgba(200,0,255,0.4); }
+    .video-thumb { position:relative; }
+    .video-thumb img { width:100%; height:200px; object-fit:cover; display:block; }
+    .video-play-btn { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(200,0,255,0.9); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s,transform 0.2s; }
+    .video-card:hover .video-play-btn { background:#c800ff; transform:translate(-50%,-50%) scale(1.1); }
+    .video-play-btn span { color:#fff; font-size:20px; padding-left:4px; }
+    .video-info { padding:16px 18px; }
+    .video-tag { font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#c800ff; text-transform:uppercase; display:block; margin-bottom:6px; }
+    .video-titulo { font-size:15px; font-weight:700; color:#fff; line-height:1.35; margin:0; }
 
-    @media(max-width:600px) {
-      .videos-grid { grid-template-columns: 1fr; }
-      .video-thumb img { height: 180px; }
-    }
-
-    /* FOOTER */
-    .footer {
-      background: #0a000f;
-      border-top: 2px solid #3d0066;
-      padding: 40px 24px 20px;
-    }
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      padding-bottom: 28px;
-    }
-    .footer-brand img { width: 36px; margin-bottom: 10px; }
-    .footer-brand p { color: rgba(255,255,255,0.4); font-size: 13px; line-height: 1.5; }
-    .footer-links h4 { font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 2px; color: #c800ff; text-transform: uppercase; margin-bottom: 10px; }
-    .footer-links a { display: block; color: rgba(255,255,255,0.45); font-size: 13px; margin-bottom: 7px; }
-    .footer-links a:hover { color: #fff; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px; text-align: center; max-width: 1100px; margin: 0 auto; }
-    .footer-bottom p { color: rgba(255,255,255,0.25); font-size: 12px; }
+    @media(max-width:600px) { .videos-grid{grid-template-columns:1fr} .video-thumb img{height:180px} }
   </style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-brand">
-      <img src="logo-nuevo.png" alt="femeninoinfo"/>
-      <span>femeninoinfo</span>
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo"/>
+      <span class="brand-name">femeninoinfo</span>
     </a>
-    <div class="nav-links">
-      <a href="index.html#apertura">Fútbol Argentino</a>
-      <a href="index.html#seleccion">Selección Argentina</a>
-      <a href="index.html#internacional">Internacional</a>
+    <nav class="nav">
+      <a href="futbol-argentino.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
+      <a href="mundial-2027.html">Mundial 2027</a>
       <a href="ligas.html">Ligas del mundo</a>
       <a href="streaming.html">Streaming</a>
       <a href="sobre.html">Sobre</a>
-    </div>
-    <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
+    </nav>
+    <button class="search-toggle" id="searchToggle" aria-label="Buscar noticias">&#128269;</button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </div>
-  <nav class="nav-mobile">
-    <a href="index.html#apertura">Fútbol Argentino</a>
-    <a href="index.html#seleccion">Selección Argentina</a>
-    <a href="index.html#internacional">Internacional</a>
-    <a href="ligas.html">Ligas del mundo</a>
-    <a href="streaming.html">Streaming</a>
-    <a href="sobre.html">Sobre</a>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="futbol-argentino.html" onclick="toggleMenu()">Fútbol Argentino</a>
+    <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
+    <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
+    <a href="mundial-2027.html" onclick="toggleMenu()">Mundial 2027</a>
+    <a href="ligas.html" onclick="toggleMenu()">Ligas del mundo</a>
+    <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
+    <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
   </nav>
-</nav>
+</header>
+
+<div class="search-bar" id="searchBar">
+  <div class="search-bar-inner">
+    <div class="search-input-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input class="search-input" id="searchInput" placeholder="Buscá una noticia, jugadora, equipo..." autocomplete="off"/>
+      <button class="search-clear" id="searchClear">&#10005;</button>
+    </div>
+    <div id="searchBody"><p class="search-hint">Escribí al menos 2 caracteres para buscar</p></div>
+  </div>
+</div>
 
 <div class="stream-hero">
   <div class="live-badge"><span class="live-dot"></span> En vivo</div>
@@ -314,21 +174,9 @@
     <a href="https://www.twitch.tv/femeninoinfo_" target="_blank" class="btn-tw">● Twitch</a>
   </div>
   <div class="horarios">
-    <div class="horario-item">
-      <span class="horario-dia">Martes</span>
-      <span class="horario-hora">18:00</span>
-      <span class="horario-tz">Argentina (UTC-3)</span>
-    </div>
-    <div class="horario-item">
-      <span class="horario-dia">Miércoles</span>
-      <span class="horario-hora">18:00</span>
-      <span class="horario-tz">Argentina (UTC-3)</span>
-    </div>
-    <div class="horario-item">
-      <span class="horario-dia">Jueves</span>
-      <span class="horario-hora">18:00</span>
-      <span class="horario-tz">Argentina (UTC-3)</span>
-    </div>
+    <div class="horario-item"><span class="horario-dia">Martes</span><span class="horario-hora">18:00</span><span class="horario-tz">Argentina (UTC-3)</span></div>
+    <div class="horario-item"><span class="horario-dia">Miércoles</span><span class="horario-hora">18:00</span><span class="horario-tz">Argentina (UTC-3)</span></div>
+    <div class="horario-item"><span class="horario-dia">Jueves</span><span class="horario-hora">18:00</span><span class="horario-tz">Argentina (UTC-3)</span></div>
   </div>
 </div>
 
@@ -336,8 +184,7 @@
   <p class="videos-titulo">Últimos videos</p>
   <p class="videos-subtitulo">Mirá lo que estuvimos haciendo</p>
   <div class="videos-grid">
-
-    <a href="https://youtu.be/ADWMxWgmeT8?si=8ILpi8oWE70NiL6g" target="_blank" class="video-card">
+    <a href="https://youtu.be/ADWMxWgmeT8" target="_blank" class="video-card">
       <div class="video-thumb">
         <img src="https://img.youtube.com/vi/ADWMxWgmeT8/mqdefault.jpg" alt="Streaming femeninoinfo"/>
         <div class="video-play-btn"><span>▶</span></div>
@@ -347,8 +194,7 @@
         <p class="video-titulo">Arrancamos con el streaming de fútbol femenino</p>
       </div>
     </a>
-
-    <a href="https://youtu.be/LjQjUGXyBn4?si=JBiips00hT5-oDR6" target="_blank" class="video-card">
+    <a href="https://youtu.be/LjQjUGXyBn4" target="_blank" class="video-card">
       <div class="video-thumb">
         <img src="https://img.youtube.com/vi/LjQjUGXyBn4/mqdefault.jpg" alt="Vlogs en las canchas"/>
         <div class="video-play-btn"><span>▶</span></div>
@@ -358,21 +204,20 @@
         <p class="video-titulo">Arrancamos con los vlogs en las canchas</p>
       </div>
     </a>
-
   </div>
 </div>
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="logo-nuevo.png" alt="femeninoinfo"/>
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="footer-logo"/>
       <p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p>
     </div>
     <div class="footer-links">
       <h4>Secciones</h4>
-      <a href="index.html#apertura">Fútbol Argentino</a>
-      <a href="index.html#seleccion">Selección Argentina</a>
-      <a href="index.html#internacional">Internacional</a>
+      <a href="futbol-argentino.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
     </div>
     <div class="footer-links">
       <h4>femeninoinfo</h4>
@@ -384,5 +229,8 @@
   <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
 </footer>
 
+<script src="noticias.js"></script>
+<script src="buscador.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
