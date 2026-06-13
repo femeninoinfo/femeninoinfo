@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 27,
+    titulo: "Aitana Bonmatí será comentarista del Mundial masculino 2026 en TUDN",
+    resumen: "La triple Balón de Oro y figura del FC Barcelona confirmó que debutará como comentarista en la Copa del Mundo 2026 junto a la cadena mexicana TUDN. Un hito para el fútbol femenino.",
+    imagen: "aitana-bonmati.png.png",
+    categoria: "internacional",
+    fecha: "12 jun 2026",
+    pagina: "aitana-bonmati.html"
+  },
+  {
     id: 26,
     titulo: "El fixture confirmado y el impacto histórico de jugar en casa para Sudamérica",
     resumen: "La FIFA ratificó las fechas: el Mundial de Brasil 2027 se jugará entre el 24 de junio y el 25 de julio. 32 selecciones, 64 partidos y el último torneo con este formato antes de la expansión a 48 equipos.",
