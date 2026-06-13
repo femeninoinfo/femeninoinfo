@@ -301,8 +301,8 @@
       <a href="ligas.html">Ligas del mundo</a>
       <a href="streaming.html">Streaming</a>
       <a href="sobre.html">Sobre</a>
-      <button class="search-toggle" id="searchToggle" aria-label="Buscar noticias">&#128269;</button>
     </nav>
+    <button class="search-toggle" id="searchToggle" aria-label="Buscar noticias">&#128269;</button>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </div>
   <nav class="nav-mobile" id="navMobile">
@@ -343,10 +343,9 @@
     <div class="nota-grilla" id="noticiasChicas"></div>
     <div class="tabla-panel">
       <div class="tabla-header-afa" style="padding:8px 12px;">
-        <img src="logo-afa.png" alt="AFA" class="tabla-afa-logo" id="liga-logo-actual" style="width:24px;height:24px;opacity:0.7;"/>
         <div class="tabla-afa-text">
           <span class="tabla-afa-tag" id="liga-tag-actual" style="font-size:8px;letter-spacing:1.5px;color:rgba(200,0,255,0.7);">Apertura 2026</span>
-          <p class="tabla-afa-titulo" id="liga-titulo-actual" style="font-size:10px;color:rgba(255,255,255,0.5);line-height:1.3;">Primera División Femenino ARG</p>
+          <p class="tabla-afa-titulo" id="liga-titulo-actual" style="font-size:9px;color:rgba(255,255,255,0.4);line-height:1.3;">Primera División Femenino ARG</p>
         </div>
         <div class="liga-selector">
           <button class="liga-sel-btn active" onclick="cambiarLiga('afa',this)" title="Apertura Femenino">
@@ -733,7 +732,6 @@ var LIGAS = {
 
 function cambiarLiga(liga, btn) {
   var l = LIGAS[liga];
-  document.getElementById('liga-logo-actual').src = l.logo;
   document.getElementById('liga-tag-actual').textContent = l.tag;
   document.getElementById('liga-titulo-actual').innerHTML = l.titulo;
   document.getElementById('tab-tabla').style.display = 'none';
