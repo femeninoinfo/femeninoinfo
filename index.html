@@ -342,23 +342,19 @@
     </div>
     <div class="nota-grilla" id="noticiasChicas"></div>
     <div class="tabla-panel">
-      <div class="tabla-header-afa" style="padding:8px 12px;">
-        <div class="tabla-afa-text">
-          <span class="tabla-afa-tag" id="liga-tag-actual" style="font-size:8px;letter-spacing:1.5px;color:rgba(200,0,255,0.7);">Apertura 2026</span>
-          <p class="tabla-afa-titulo" id="liga-titulo-actual" style="font-size:9px;color:rgba(255,255,255,0.4);line-height:1.3;">Primera División Femenino ARG</p>
-        </div>
+      <div class="tabla-header-afa" style="padding:8px 12px;justify-content:flex-end;">
         <div class="liga-selector">
-          <button class="liga-sel-btn active" onclick="cambiarLiga('afa',this)" title="Apertura Femenino">
-            <img src="logo-afa.png" alt="AFA"/><span class="liga-sel-text">ARG</span>
+          <button class="liga-sel-btn active" onclick="cambiarLiga('afa',this)" title="Apertura Femenino ARG">
+            <img src="logo-afa.png" alt="AFA" style="width:28px;height:28px;object-fit:contain;"/>
           </button>
-          <button class="liga-sel-btn" onclick="cambiarLiga('nwsl',this)" title="NWSL">
-            <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;color:#fff;">NWSL</span><span class="liga-sel-text">USA</span>
+          <button class="liga-sel-btn" onclick="cambiarLiga('nwsl',this)" title="NWSL USA">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/40px-NWSL_logo.svg.png" alt="NWSL" style="width:28px;height:28px;object-fit:contain;" onerror="this.outerHTML='<span style=\'font-family:Bebas Neue,sans-serif;font-size:13px;color:#fff;\'>NWSL</span>'"/>
           </button>
           <button class="liga-sel-btn" onclick="cambiarLiga('ligaf',this)" title="Liga F España">
-            <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;color:#fff;">Liga F</span><span class="liga-sel-text">ESP</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liga_F_logo.svg/40px-Liga_F_logo.svg.png" alt="Liga F" style="width:28px;height:28px;object-fit:contain;" onerror="this.outerHTML='<span style=\'font-family:Bebas Neue,sans-serif;font-size:13px;color:#fff;\'>Liga F</span>'"/>
           </button>
           <button class="liga-sel-btn" onclick="cambiarLiga('ligamx',this)" title="Liga MX Femenil">
-            <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;color:#fff;">LMX</span><span class="liga-sel-text">MEX</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Liga_MX_Femenil.png/40px-Liga_MX_Femenil.png" alt="LMX" style="width:28px;height:28px;object-fit:contain;" onerror="this.outerHTML='<span style=\'font-family:Bebas Neue,sans-serif;font-size:13px;color:#fff;\'>LMX</span>'"/>
           </button>
         </div>
       </div>
@@ -732,8 +728,6 @@ var LIGAS = {
 
 function cambiarLiga(liga, btn) {
   var l = LIGAS[liga];
-  document.getElementById('liga-tag-actual').textContent = l.tag;
-  document.getElementById('liga-titulo-actual').innerHTML = l.titulo;
   document.getElementById('tab-tabla').style.display = 'none';
   document.querySelectorAll('.tabla-liga-ext').forEach(function(t){ t.style.display='none'; });
   document.getElementById('tab-fixture').style.display = 'none';
