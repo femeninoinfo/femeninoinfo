@@ -9,59 +9,279 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .portal-hero { background:#0a000f; border-bottom:2px solid #3d0066; position:relative; overflow:hidden; }
-    .portal-hero::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 0%,rgba(200,0,255,0.03) 50%,transparent 100%); background-size:100% 200%; animation:sweepV 12s linear infinite; pointer-events:none; z-index:0; }
+    /* ===== PORTAL HERO ===== */
+    .portal-hero {
+      background: #0a000f;
+      border-bottom: 2px solid #3d0066;
+      position: relative;
+      overflow: hidden;
+    }
+    .portal-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(200,0,255,0.03) 50%, transparent 100%);
+      background-size: 100% 200%;
+      animation: sweepV 12s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
     @keyframes sweepV { 0%{background-position:0 200%} 100%{background-position:0 -200%} }
-    .portal-inner { max-width:1280px; margin:0 auto; padding:20px 24px; display:grid; grid-template-columns:1fr 260px 340px; gap:16px; align-items:start; position:relative; z-index:1; }
-    .nota-grande { position:relative; border-radius:12px; overflow:hidden; height:500px; cursor:pointer; }
-    .nota-grande:hover .nota-grande-img { transform:scale(1.03); }
-    .nota-grande-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
-    .nota-grande-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.93) 0%,rgba(0,0,0,0.45) 50%,rgba(0,0,0,0.05) 100%); }
-    .nota-grande-content { position:absolute; bottom:0; left:0; right:0; padding:24px; z-index:2; }
-    .nota-grande-badge { display:inline-flex; align-items:center; gap:5px; font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#c800ff; text-transform:uppercase; margin-bottom:8px; }
-    .nota-grande-dot { width:6px; height:6px; background:#c800ff; border-radius:50%; animation:pulseDot 1.5s infinite; }
+    .portal-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: 1fr 260px 340px;
+      gap: 16px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+    .nota-grande {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 500px;
+      cursor: pointer;
+    }
+    .nota-grande:hover .nota-grande-img { transform: scale(1.03); }
+    .nota-grande-img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .nota-grande-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.93) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.05) 100%);
+    }
+    .nota-grande-content {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 24px;
+      z-index: 2;
+    }
+    .nota-grande-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #c800ff;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .nota-grande-dot {
+      width: 6px; height: 6px;
+      background: #c800ff;
+      border-radius: 50%;
+      animation: pulseDot 1.5s infinite;
+    }
     @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.4)} }
-    .nota-grande-titulo { font-family:'DM Sans',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; line-height:1.3; margin-bottom:6px; }
-    .nota-grande-resumen { font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-    .nota-grilla { display:grid; grid-template-rows:1fr 1fr 1fr; gap:10px; height:500px; }
-    .nota-chica { position:relative; border-radius:10px; overflow:hidden; cursor:pointer; transition:transform 0.2s; min-height:0; border-top:4px solid #c800ff; }
-    .nota-chica:hover { transform:scale(1.02); }
-    .nota-chica-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
-    .nota-chica-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.4) 55%,rgba(0,0,0,0.05) 100%); }
-    .nota-chica-body { position:absolute; bottom:0; left:0; right:0; padding:10px 12px; z-index:2; }
-    .nota-chica-titulo { font-size:12px; font-weight:700; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-    .nota-chica-fecha { font-size:10px; color:rgba(255,255,255,0.4); margin-top:2px; display:block; }
-    .tabla-panel { height:500px; display:flex; flex-direction:column; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden; }
-    .tabla-panel .tab-content { flex:1; max-height:none !important; overflow-y:auto; }
-    .grid-ultimas { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
-    .grid-card { position:relative; border-radius:10px; overflow:hidden; height:220px; cursor:pointer; transition:transform 0.2s; }
-    .grid-card:hover { transform:translateY(-3px); }
-    .grid-card-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
-    .grid-card-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%); }
-    .grid-card-body { position:absolute; bottom:0; left:0; right:0; padding:10px 12px; z-index:2; }
-    .grid-card-titulo { font-size:12px; font-weight:700; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin:0 0 3px; }
-    .grid-card-fecha { font-size:10px; color:rgba(255,255,255,0.4); display:block; }
-    .badge-apertura { background:#3d0066; } .badge-seleccion { background:#005cbf; } .badge-internacional { background:#006644; }
+    .nota-grande-titulo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .nota-grande-resumen {
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .nota-grilla {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 10px;
+      height: 500px;
+    }
+    .nota-chica {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s;
+      min-height: 0;
+      border-top: 4px solid #c800ff;
+    }
+    .nota-chica:hover { transform: scale(1.02); }
+    .nota-chica-img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .nota-chica-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.05) 100%);
+    }
+    .nota-chica-body {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 10px 12px;
+      z-index: 2;
+    }
+    .nota-chica-cat {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 3px;
+      margin-bottom: 4px;
+      color: #fff;
+      background: #c800ff;
+      max-width: fit-content;
+    }
+    .nota-chica-cat.cat-apertura  { background: #3d0066; }
+    .nota-chica-cat.cat-seleccion { background: #005cbf; }
+    .nota-chica-cat.cat-internacional { background: #006644; }
+    .nota-chica-titulo {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .nota-chica-fecha {
+      font-size: 10px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 2px;
+      display: block;
+    }
+    .tabla-panel {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .tabla-panel .tab-content {
+      flex: 1;
+      max-height: none !important;
+      overflow-y: auto;
+    }
 
-    /* TICKER */
-    .ticker-wrap { background:#1a0035; border-bottom:2px solid #c800ff; position:sticky; top:0; z-index:98; overflow:hidden; height:36px; display:flex; align-items:center; }
-    .ticker-label { background:#c800ff; padding:0 14px; height:100%; display:flex; align-items:center; flex-shrink:0; z-index:2; }
-    .ticker-label span { font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:2px; color:#fff; white-space:nowrap; }
-    .ticker-body { overflow:hidden; flex:1; position:relative; height:100%; }
-    .ticker-track { display:flex; align-items:center; height:100%; white-space:nowrap; position:absolute; will-change:transform; }
-    .tick-item { font-family:'DM Sans',sans-serif; font-size:12px; color:rgba(255,255,255,0.85); padding:0 20px; white-space:nowrap; }
-    .tick-item strong { color:#e066ff; font-weight:700; }
-    .tick-sep { color:#c800ff; font-size:10px; flex-shrink:0; opacity:0.6; }
+    /* ===== GRILLA NOTICIAS (ultimas + secciones) ===== */
+    .grid-ultimas {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .grid-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 220px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .grid-card:hover { transform: translateY(-3px); }
+    .grid-card-img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .grid-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.05) 100%);
+    }
+    .grid-card-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      z-index: 2;
+      color: #fff;
+    }
+    .badge-apertura  { background: #3d0066; }
+    .badge-seleccion { background: #005cbf; }
+    .badge-internacional { background: #006644; }
+    .grid-card-body {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 10px 12px;
+      z-index: 2;
+    }
+    .grid-card-titulo {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin: 0 0 3px;
+    }
+    .grid-card-fecha {
+      font-size: 10px;
+      color: rgba(255,255,255,0.4);
+      display: block;
+    }
 
+    /* ===== MOBILE ===== */
     @media(max-width:768px) {
-      .portal-inner { grid-template-columns:1fr !important; padding:12px !important; gap:12px !important; }
-      .nota-grande { height:260px !important; }
-      .nota-grilla { display:none !important; }
-      .tabla-panel { height:auto !important; }
-      .tabla-panel .tab-content { max-height:380px !important; overflow-y:auto !important; }
-      .grid-ultimas { display:flex !important; flex-direction:row !important; flex-wrap:nowrap !important; gap:12px !important; overflow-x:auto !important; scroll-snap-type:x mandatory !important; scrollbar-width:none !important; padding-bottom:8px !important; grid-template-columns:unset !important; }
-      .grid-ultimas::-webkit-scrollbar { display:none !important; }
-      .grid-ultimas .grid-card { flex:0 0 75vw !important; width:75vw !important; min-width:75vw !important; max-width:75vw !important; height:200px !important; scroll-snap-align:start !important; }
+      .portal-inner {
+        grid-template-columns: 1fr !important;
+        padding: 12px !important;
+        gap: 12px !important;
+      }
+      .nota-grande { height: 260px !important; }
+      .nota-grilla { display: none !important; }
+      .tabla-panel { height: auto !important; }
+      .tabla-panel .tab-content { max-height: 380px !important; overflow-y: auto !important; }
+      .grid-ultimas {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        scrollbar-width: none !important;
+        padding-bottom: 8px !important;
+        grid-template-columns: unset !important;
+      }
+      .grid-ultimas::-webkit-scrollbar { display: none !important; }
+      .grid-ultimas .grid-card {
+        flex: 0 0 75vw !important;
+        flex-shrink: 0 !important;
+        width: 75vw !important;
+        min-width: 75vw !important;
+        max-width: 75vw !important;
+        height: 200px !important;
+        scroll-snap-align: start !important;
+        position: relative !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+      }
     }
   </style>
 </head>
@@ -70,7 +290,7 @@
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo"/>
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo" />
       <span class="brand-name">femeninoinfo</span>
     </a>
     <nav class="nav">
@@ -105,31 +325,6 @@
       <button class="search-clear" id="searchClear">&#10005;</button>
     </div>
     <div id="searchBody"><p class="search-hint">Escribí al menos 2 caracteres para buscar</p></div>
-  </div>
-</div>
-
-<!-- TICKER FECHA 9 -->
-<div class="ticker-wrap">
-  <div class="ticker-label"><span>FECHA 9</span></div>
-  <div class="ticker-body">
-    <div class="ticker-track" id="tickerTrack">
-      <span class="tick-item">&#128336; Sáb 13/6 · 11:00 — <strong>Unión</strong> vs <strong>Lanús</strong> · Est. 15 de Abril</span>
-      <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Sáb 13/6 · 14:00 — <strong>SAT</strong> vs <strong>San Luis FC</strong> · Est. 12 de Agosto</span>
-      <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Dom 14/6 · 12:30 — <strong>River</strong> vs <strong>San Lorenzo</strong> · River Camp</span>
-      <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Dom 14/6 · 13:00 — <strong>Gimnasia</strong> vs <strong>Newell's</strong> · Estancia Chica</span>
-      <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Dom 14/6 · 15:30 — <strong>Belgrano</strong> vs <strong>Talleres</strong> · Gigante de Alberdi</span>
-      <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Lun 15/6 · 15:00 — <strong>Independiente</strong> vs <strong>Boca</strong> · Predio Santo Domingo</span>
-      <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Lun 15/6 · 15:00 — <strong>Banfield</strong> vs <strong>Racing</strong> · Campo de Deportes</span>
-      <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Lun 15/6 · 15:00 — <strong>Huracán</strong> vs <strong>Ferro</strong> · La Quemita</span>
-      <span class="tick-sep">&#9670;</span>
-    </div>
   </div>
 </div>
 
@@ -199,14 +394,14 @@
         <table class="tabla-pos">
           <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead>
           <tbody>
-            <tr class="top3"><td>1</td><td>Utah Royals</td><td>11</td><td>+14</td><td><strong>25</strong></td></tr>
-            <tr class="top3"><td>2</td><td>Washington Spirit</td><td>12</td><td>+12</td><td><strong>24</strong></td></tr>
-            <tr class="top3"><td>3</td><td>NC Courage</td><td>12</td><td>+9</td><td><strong>22</strong></td></tr>
-            <tr><td>4</td><td>Orlando Pride</td><td>11</td><td>+11</td><td><strong>20</strong></td></tr>
-            <tr><td>5</td><td>San Diego Wave</td><td>11</td><td>+8</td><td><strong>19</strong></td></tr>
-            <tr><td>6</td><td>Portland Thorns</td><td>11</td><td>+5</td><td><strong>18</strong></td></tr>
-            <tr><td>7</td><td>Kansas City</td><td>12</td><td>+2</td><td><strong>16</strong></td></tr>
-            <tr><td>8</td><td>Gotham FC</td><td>12</td><td>-1</td><td><strong>15</strong></td></tr>
+            <tr class="top3"><td>1</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Utah_Royals_FC_logo.svg/20px-Utah_Royals_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Utah Royals</td><td>11</td><td>+14</td><td><strong>25</strong></td></tr>
+            <tr class="top3"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/Washington_Spirit_logo.svg/20px-Washington_Spirit_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Washington Spirit</td><td>12</td><td>+12</td><td><strong>24</strong></td></tr>
+            <tr class="top3"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/North_Carolina_Courage_logo.svg/20px-North_Carolina_Courage_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">NC Courage</td><td>12</td><td>+9</td><td><strong>22</strong></td></tr>
+            <tr><td>4</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Orlando_Pride_logo.svg/20px-Orlando_Pride_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Orlando Pride</td><td>11</td><td>+11</td><td><strong>20</strong></td></tr>
+            <tr><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/San_Diego_Wave_FC_logo.svg/20px-San_Diego_Wave_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">San Diego Wave</td><td>11</td><td>+8</td><td><strong>19</strong></td></tr>
+            <tr><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Portland_Thorns_FC_logo.svg/20px-Portland_Thorns_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Portland Thorns</td><td>11</td><td>+5</td><td><strong>18</strong></td></tr>
+            <tr><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Kansas_City_Current_logo.svg/20px-Kansas_City_Current_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Kansas City</td><td>12</td><td>+2</td><td><strong>16</strong></td></tr>
+            <tr><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Gotham_FC_logo.svg/20px-Gotham_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Gotham FC</td><td>12</td><td>-1</td><td><strong>15</strong></td></tr>
           </tbody>
         </table>
         <p class="tabla-fecha">Top 8 — Temporada 2026 en curso</p>
@@ -215,11 +410,14 @@
         <table class="tabla-pos">
           <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead>
           <tbody>
-            <tr class="top3"><td>&#127942;</td><td>Barcelona</td><td>30</td><td>+89</td><td><strong>85</strong></td></tr>
-            <tr class="top3"><td>2</td><td>Real Madrid</td><td>30</td><td>+42</td><td><strong>72</strong></td></tr>
-            <tr class="top3"><td>3</td><td>Real Sociedad</td><td>30</td><td>+18</td><td><strong>60</strong></td></tr>
+            <tr class="top3"><td>🏆</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/20px-FC_Barcelona_%28crest%29.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Barcelona</td><td>30</td><td>+89</td><td><strong>85</strong></td></tr>
+            <tr class="top3"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/20px-Real_Madrid_CF.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Real Madrid</td><td>30</td><td>+42</td><td><strong>72</strong></td></tr>
+            <tr class="top3"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Real_Sociedad_logo.svg/20px-Real_Sociedad_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Real Sociedad</td><td>30</td><td>+18</td><td><strong>60</strong></td></tr>
             <tr><td>4</td><td>Tenerife</td><td>30</td><td>+12</td><td><strong>52</strong></td></tr>
             <tr><td>5</td><td>Atlético Madrid</td><td>30</td><td>+10</td><td><strong>49</strong></td></tr>
+            <tr><td>6</td><td>Athletic Club</td><td>30</td><td>+8</td><td><strong>46</strong></td></tr>
+            <tr><td>7</td><td>Villarreal</td><td>30</td><td>+5</td><td><strong>42</strong></td></tr>
+            <tr><td>8</td><td>Sevilla</td><td>30</td><td>+3</td><td><strong>38</strong></td></tr>
           </tbody>
         </table>
         <p class="tabla-fecha">Temporada 2025-26 finalizada — Barcelona campeón</p>
@@ -228,10 +426,14 @@
         <table class="tabla-pos">
           <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead>
           <tbody>
-            <tr class="top3"><td>&#127942;</td><td>América</td><td>17</td><td>+35</td><td><strong>42</strong></td></tr>
-            <tr class="top3"><td>2</td><td>Monterrey</td><td>17</td><td>+28</td><td><strong>38</strong></td></tr>
-            <tr class="top3"><td>3</td><td>Tigres UANL</td><td>17</td><td>+24</td><td><strong>35</strong></td></tr>
+            <tr class="top3"><td>🏆</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Club_Am%C3%A9rica_crest.svg/20px-Club_Am%C3%A9rica_crest.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">América</td><td>17</td><td>+35</td><td><strong>42</strong></td></tr>
+            <tr class="top3"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/CF_Monterrey_logo.svg/20px-CF_Monterrey_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Monterrey</td><td>17</td><td>+28</td><td><strong>38</strong></td></tr>
+            <tr class="top3"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Tigres_UANL_logo.svg/20px-Tigres_UANL_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Tigres UANL</td><td>17</td><td>+24</td><td><strong>35</strong></td></tr>
             <tr><td>4</td><td>Chivas</td><td>17</td><td>+18</td><td><strong>32</strong></td></tr>
+            <tr><td>5</td><td>Cruz Azul</td><td>17</td><td>+10</td><td><strong>28</strong></td></tr>
+            <tr><td>6</td><td>Pachuca</td><td>17</td><td>+12</td><td><strong>27</strong></td></tr>
+            <tr><td>7</td><td>Toluca</td><td>17</td><td>+6</td><td><strong>25</strong></td></tr>
+            <tr><td>8</td><td>Atlas</td><td>17</td><td>+4</td><td><strong>24</strong></td></tr>
           </tbody>
         </table>
         <p class="tabla-fecha">Clausura 2026 finalizado — América campeona</p>
@@ -387,9 +589,9 @@
     </div>
     <div class="footer-links">
       <h4>Secciones</h4>
-      <a href="futbol-argentino.html">Fútbol Argentino</a>
-      <a href="seleccion-argentina.html">Selección Argentina</a>
-      <a href="internacional.html">Internacional</a>
+      <a href="#apertura">Fútbol Argentino</a>
+      <a href="#seleccion">Selección Argentina</a>
+      <a href="#internacional">Internacional</a>
     </div>
     <div class="footer-links">
       <h4>femeninoinfo</h4>
@@ -423,6 +625,7 @@
   .liga-sel-btn { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:8px; width:52px; height:48px; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; padding:4px; font-size:8px; color:rgba(255,255,255,0.6); font-weight:700; letter-spacing:0.5px; gap:2px; }
   .liga-sel-btn:hover { background:rgba(200,0,255,0.15); border-color:rgba(200,0,255,0.4); color:#fff; }
   .liga-sel-btn.active { background:rgba(200,0,255,0.25); border-color:#c800ff; box-shadow:0 0 10px rgba(200,0,255,0.3); color:#fff; }
+  .liga-sel-btn img { width:28px; height:28px; object-fit:contain; }
   .liga-sel-btn .liga-sel-text { font-size:8px; letter-spacing:0.5px; text-transform:uppercase; }
   .fixture-nuevo { padding:8px 4px; }
   .fx-dia-bloque { margin-bottom:12px; }
@@ -439,6 +642,9 @@
   .fx-card-nombre { font-size:11px; color:rgba(255,255,255,0.85); font-weight:500; white-space:nowrap; }
   .fx-card-vs { font-size:9px; color:rgba(255,255,255,0.3); font-weight:400; flex-shrink:0; }
   .fx-card-estadio { font-size:9px; color:rgba(255,255,255,0.3); text-align:right; white-space:nowrap; flex-shrink:0; }
+  @media(max-width:600px) { .streaming-videos{grid-template-columns:1fr} .redes-row{gap:10px} .red-item{padding:12px 16px} }
+
+  /* ===== BUSCADOR ===== */
   .search-toggle { background:rgba(200,0,255,0.15); border:1.5px solid rgba(200,0,255,0.4); border-radius:8px; width:38px; height:38px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; color:#c800ff; font-size:17px; flex-shrink:0; }
   .search-toggle:hover, .search-toggle.active { background:rgba(200,0,255,0.3); border-color:#c800ff; }
   .search-bar { background:#0d0020; border-bottom:2px solid #3d0066; overflow:hidden; max-height:0; transition:max-height 0.3s ease, padding 0.3s ease; padding:0 24px; position:relative; z-index:99; }
@@ -451,8 +657,10 @@
   .search-input::placeholder { color:rgba(255,255,255,0.3); }
   .search-clear { background:none; border:none; color:rgba(255,255,255,0.3); font-size:18px; cursor:pointer; padding:0; display:none; }
   .search-clear.visible { display:block; }
+  .search-clear:hover { color:rgba(255,255,255,0.7); }
   .search-hint { font-size:12px; color:rgba(255,255,255,0.25); text-align:center; padding:14px 0 4px; }
   .search-empty { font-size:13px; color:rgba(255,255,255,0.35); text-align:center; padding:20px 0; }
+  .search-more { font-size:11px; color:rgba(255,255,255,0.3); text-align:center; padding:8px 0; }
   .search-results-list { display:flex; flex-direction:column; gap:6px; margin-top:10px; max-height:360px; overflow-y:auto; }
   .search-result-item { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:8px; padding:10px 14px; cursor:pointer; transition:all 0.15s; text-decoration:none; }
   .search-result-item:hover { background:rgba(200,0,255,0.1); border-color:rgba(200,0,255,0.35); transform:translateX(2px); }
@@ -465,11 +673,13 @@
   .search-result-fecha { font-size:10px; color:rgba(255,255,255,0.35); }
   .search-arrow { color:rgba(200,0,255,0.5); font-size:16px; flex-shrink:0; }
   .search-mark { background:rgba(200,0,255,0.35); color:#fff; border-radius:2px; padding:0 2px; }
+
+  /* ===== SECCIONES CLARAS ===== */
   .sec-clara { background:#f5f0f8; padding:48px 0; border-top:5px solid transparent; }
   .sec-clara-inner { max-width:1280px; margin:0 auto; padding:0 24px; }
-  .sec-arg { border-top-color:#3d0066; }
-  .sec-sel { border-top-color:#005cbf; }
-  .sec-int { border-top-color:#006644; }
+  .sec-arg  { border-top-color:#3d0066; }
+  .sec-sel  { border-top-color:#005cbf; }
+  .sec-int  { border-top-color:#006644; }
   .sec-title-arg { color:#3d0066 !important; }
   .sec-title-sel { color:#005cbf !important; }
   .sec-title-int { color:#006644 !important; }
@@ -478,30 +688,46 @@
   .line-int { background:#006644 !important; }
   .sec-clara .grid-card { box-shadow:0 2px 12px rgba(0,0,0,0.12); }
   .sec-clara .grid-card:hover { box-shadow:0 6px 20px rgba(0,0,0,0.18); transform:translateY(-3px); }
-  .ver-mas-btn { display:inline-block; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:700; padding:8px 18px; border-radius:6px; border:1.5px solid currentColor; text-decoration:none; transition:all 0.2s; white-space:nowrap; margin-bottom:4px; }
-  .ver-mas-arg { color:#3d0066; }
-  .ver-mas-arg:hover { background:#3d0066; color:#fff; }
-  .ver-mas-sel { color:#005cbf; }
-  .ver-mas-sel:hover { background:#005cbf; color:#fff; }
-  .ver-mas-int { color:#006644; }
-  .ver-mas-int:hover { background:#006644; color:#fff; }
-  .ver-mas-mundial { color:#002776; }
-  .ver-mas-mundial:hover { background:#002776; color:#fff; }
-  .sec-mundial { border-top-color:#009c3b; }
-  .sec-title-mundial { color:#009c3b !important; }
-  .line-mundial { background:#002776 !important; }
-  .pill-mundial { background:#ffdf00 !important; color:#5a3d00 !important; }
-  @media(max-width:600px) { .streaming-videos{grid-template-columns:1fr} .redes-row{gap:10px} .red-item{padding:12px 16px} }
+
+  /* Botones Ver todas */
+  .ver-mas-btn {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 1.5px solid currentColor;
+    text-decoration: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+    margin-bottom: 4px;
+  }
+  .ver-mas-arg { color: #3d0066; }
+  .ver-mas-arg:hover { background: #3d0066; color: #fff; }
+  .ver-mas-sel { color: #005cbf; }
+  .ver-mas-sel:hover { background: #005cbf; color: #fff; }
+  .ver-mas-int { color: #006644; }
+  .ver-mas-int:hover { background: #006644; color: #fff; }
+  .ver-mas-mundial { color: #002776; }
+  .ver-mas-mundial:hover { background: #002776; color: #fff; }
+
+  /* Sección Mundial */
+  .sec-mundial { border-top-color: #009c3b; }
+  .sec-title-mundial { color: #009c3b !important; }
+  .line-mundial { background: #002776 !important; }
+  .pill-mundial { background: #ffdf00 !important; color: #5a3d00 !important; }
 </style>
 
-<script src="noticias.js"></script>
 <script>
+var BADGE_CLASES = { apertura:'badge-apertura', seleccion:'badge-seleccion', internacional:'badge-internacional', mundial2027:'badge-mundial' };
 var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027' };
+
 var LIGAS = {
-  afa:    { tabla:'tab-tabla', fixture:true },
-  nwsl:   { tabla:'tab-tabla-nwsl', fixture:false },
-  ligaf:  { tabla:'tab-tabla-ligaf', fixture:false },
-  ligamx: { tabla:'tab-tabla-ligamx', fixture:false }
+  afa:    { logo:'logo-afa.png', tag:'Apertura 2026', titulo:'Primera División Femenino ARG', tabla:'tab-tabla', fixture:true },
+  nwsl:   { logo:'https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/40px-NWSL_logo.svg.png', tag:'NWSL 2026', titulo:'National Women Soccer League', tabla:'tab-tabla-nwsl', fixture:false },
+  ligaf:  { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liga_F_logo.svg/40px-Liga_F_logo.svg.png', tag:'Liga F 2025-26', titulo:'Primera División Femenina de España', tabla:'tab-tabla-ligaf', fixture:false },
+  ligamx: { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Liga_MX_Femenil.png/40px-Liga_MX_Femenil.png', tag:'Liga MX Femenil', titulo:'Clausura 2026 Mexico', tabla:'tab-tabla-ligamx', fixture:false }
 };
 
 function cambiarLiga(liga, btn) {
@@ -548,6 +774,7 @@ function cargarUltimaNoticia() {
   document.getElementById('ultimaTitulo').textContent = n.titulo;
   var res = document.getElementById('ultimaResumen');
   if(res) res.textContent = n.resumen || '';
+
   var chicas = document.getElementById('noticiasChicas');
   if(chicas) {
     chicas.innerHTML = '';
@@ -568,91 +795,48 @@ function cargarUltimaNoticia() {
       chicas.appendChild(card);
     }
   }
+
   var gridU = document.getElementById('gridUltimas');
-  if(gridU) { gridU.innerHTML = ''; noticias.slice(0,8).forEach(function(n){ gridU.appendChild(makeGridCard(n)); }); }
+  if(gridU) {
+    gridU.innerHTML = '';
+    noticias.slice(0, 8).forEach(function(n){ gridU.appendChild(makeGridCard(n)); });
+  }
+
   var gridA = document.getElementById('gridApertura');
-  if(gridA) { gridA.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='apertura'; }).slice(0,8).forEach(function(n){ gridA.appendChild(makeGridCard(n)); }); }
+  if(gridA) {
+    gridA.innerHTML = '';
+    noticias.filter(function(n){ return n.categoria === 'apertura'; })
+      .slice(0, 8).forEach(function(n){ gridA.appendChild(makeGridCard(n)); });
+  }
+
   var gridS = document.getElementById('gridSeleccion');
-  if(gridS) { gridS.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='seleccion'; }).slice(0,8).forEach(function(n){ gridS.appendChild(makeGridCard(n)); }); }
+  if(gridS) {
+    gridS.innerHTML = '';
+    noticias.filter(function(n){ return n.categoria === 'seleccion'; })
+      .slice(0, 8).forEach(function(n){ gridS.appendChild(makeGridCard(n)); });
+  }
+
   var gridI = document.getElementById('gridInternacional');
-  if(gridI) { gridI.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='internacional'; }).slice(0,8).forEach(function(n){ gridI.appendChild(makeGridCard(n)); }); }
+  if(gridI) {
+    gridI.innerHTML = '';
+    noticias.filter(function(n){ return n.categoria === 'internacional'; })
+      .slice(0, 8).forEach(function(n){ gridI.appendChild(makeGridCard(n)); });
+  }
+
   var gridM = document.getElementById('gridMundial');
-  if(gridM) { gridM.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='mundial2027'; }).slice(0,8).forEach(function(n){ gridM.appendChild(makeGridCard(n)); }); }
+  if(gridM) {
+    gridM.innerHTML = '';
+    noticias.filter(function(n){ return n.categoria === 'mundial2027'; })
+      .slice(0, 8).forEach(function(n){ gridM.appendChild(makeGridCard(n)); });
+  }
 }
 
 function abrirUltima() {
   if(!noticias || noticias.length === 0) return;
   window.open(noticias[0].pagina, '_blank');
 }
-
-function cargarUltimaNoticia() {
-  if(typeof noticias === 'undefined' || noticias.length === 0) return;
-  var n = noticias[0];
-  var img = document.getElementById('ultimaImg');
-  if(img) { img.src = n.imagen; img.alt = n.titulo; }
-  var tit = document.getElementById('ultimaTitulo');
-  if(tit) tit.textContent = n.titulo;
-  var res = document.getElementById('ultimaResumen');
-  if(res) res.textContent = n.resumen || '';
-  var chicas = document.getElementById('noticiasChicas');
-  if(chicas) {
-    chicas.innerHTML = '';
-    var cats = {seleccion:'Selección', apertura:'Argentino', internacional:'Internacional'};
-    for(var i=1; i<=3 && i<noticias.length; i++) {
-      var m = noticias[i];
-      var cat = cats[m.categoria] || m.categoria;
-      var card = document.createElement('div');
-      card.className = 'nota-chica';
-      card.onclick = (function(p){ return function(){ window.open(p,'_blank'); }; })(m.pagina);
-      var chicaBorderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
-      var chicaBorder = chicaBorderColors[m.categoria] || '#c800ff';
-      card.style.borderTop = '3px solid ' + chicaBorder;
-      card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/>'+
-        '<div class="nota-chica-overlay"></div>'+
-        '<span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#fff;background:'+chicaBorder+';opacity:0.92;">'+cat+'</span>'+
-        '<div class="nota-chica-body"><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
-      chicas.appendChild(card);
-    }
-  }
-  var gridU = document.getElementById('gridUltimas');
-  if(gridU) { gridU.innerHTML = ''; noticias.slice(0,8).forEach(function(n){ gridU.appendChild(makeGridCard(n)); }); }
-  var gridA = document.getElementById('gridApertura');
-  if(gridA) { gridA.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='apertura'; }).slice(0,8).forEach(function(n){ gridA.appendChild(makeGridCard(n)); }); }
-  var gridS = document.getElementById('gridSeleccion');
-  if(gridS) { gridS.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='seleccion'; }).slice(0,8).forEach(function(n){ gridS.appendChild(makeGridCard(n)); }); }
-  var gridI = document.getElementById('gridInternacional');
-  if(gridI) { gridI.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='internacional'; }).slice(0,8).forEach(function(n){ gridI.appendChild(makeGridCard(n)); }); }
-  var gridM = document.getElementById('gridMundial');
-  if(gridM) { gridM.innerHTML = ''; noticias.filter(function(n){ return n.categoria==='mundial2027'; }).slice(0,8).forEach(function(n){ gridM.appendChild(makeGridCard(n)); }); }
-}
-
-/* TICKER */
-(function() {
-  function initTicker() {
-    var track = document.getElementById('tickerTrack');
-    if (!track) return;
-    var clone = track.cloneNode(true);
-    clone.id = 'tickerTrackClone';
-    track.parentNode.appendChild(clone);
-    var pos = 0;
-    var speed = 0.5;
-    function animate() {
-      pos -= speed;
-      var w = track.offsetWidth;
-      if (Math.abs(pos) >= w) pos = 0;
-      track.style.transform = 'translateX(' + pos + 'px)';
-      clone.style.transform = 'translateX(' + (pos + w) + 'px)';
-      requestAnimationFrame(animate);
-    }
-    requestAnimationFrame(animate);
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTicker);
-  } else {
-    initTicker();
-  }
-})();
 </script>
+<script src="noticias.js"></script>
 <script src="buscador.js"></script>
 <script src="main.js"></script>
 </body>
