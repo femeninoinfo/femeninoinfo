@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 29,
+    titulo: "Lanús venció 1-0 a Unión y sale momentáneamente de la zona de descenso",
+    resumen: "Las granates se impusieron en el Estadio 15 de Abril por la Fecha 9. Gol de Verón a los 20 minutos. Lanús llega a 7 puntos y supera a Newell's en la tabla.",
+    imagen: "lanus-union.png.png",
+    categoria: "apertura",
+    fecha: "13 jun 2026",
+    pagina: "lanus-union.html"
+  },
+  {
     id: 28,
     titulo: "Las 6 árbitras que van a hacer historia en el Mundial masculino 2026",
     resumen: "La FIFA designó seis mujeres en el equipo arbitral del Mundial de Estados Unidos, México y Canadá. Tori Penso y Katia Itzel García arbitran en cancha. Acá están sus nombres y sus historias.",
@@ -56,7 +65,7 @@ const noticias = [
   {
     id: 22,
     titulo: "Colombia ganó la Liga de Naciones y conquistó su primer título en la historia",
-    resumen: "Las cafeteras se consagraron campeonas de la primera edición de la CONMEBOL Liga de Naciones Femenina. Es el primer trofeo oficial de la selección colombiana.",
+    resumen: "Las cafeteras se consagraron campeonas de la primera edición de la CONMEBOL Liga de Naciones Femenina. Es el primer trofeo oficial de la selección colombiana y las convierte en el tercer combinado del continente con un título.",
     imagen: "colombia-liga-naciones.png.png",
     categoria: "internacional",
     fecha: "9 jun 2026",
@@ -110,7 +119,7 @@ const noticias = [
   {
     id: 15,
     titulo: "España, Alemania, Francia y Dinamarca se clasificaron al Mundial Femenino Brasil 2027",
-    resumen: "Las cuatro selecciones europeas sellaron su boleto directo en la última jornada de los clasificatorios de la UEFA.",
+    resumen: "Las cuatro selecciones europeas sellaron su boleto directo en la última jornada de los clasificatorios de la UEFA. España goleó a Islandia y defendió su título mundial.",
     imagen: "mundial-clasificadas.png",
     categoria: "internacional",
     fecha: "9 jun 2026",
@@ -235,6 +244,4 @@ const noticias = [
   }
 ];
 
-document.addEventListener('DOMContentLoaded', function() {
-  if(typeof cargarUltimaNoticia === "function") cargarUltimaNoticia();
-});
+if(typeof cargarUltimaNoticia === "function") cargarUltimaNoticia();
