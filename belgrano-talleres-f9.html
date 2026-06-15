@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Belgrano y Talleres empataron 0-0 en el clásico cordobés — femeninoinfo</title>
+  <meta name="description" content="Las Piratas jugaron con diez desde el primer tiempo tras la expulsión de Bulacio y sumaron un punto en el Gigante de Alberdi por la Fecha 9 del Apertura Femenino."/>
+  <link rel="icon" href="logo-nuevo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .header { background:#1a0035 !important; border-bottom:2px solid rgba(200,0,255,0.3) !important; position:relative !important; overflow:hidden !important; }
+    .header::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%); background-size:200% 100%; animation:barreSweep 3s linear infinite; pointer-events:none; z-index:0; }
+    @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+    .header-inner, .nav-mobile { position:relative; z-index:1; }
+    .search-toggle { background:rgba(200,0,255,0.15); border:1.5px solid rgba(200,0,255,0.4); border-radius:8px; width:38px; height:38px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; color:#c800ff; font-size:17px; flex-shrink:0; }
+    .search-toggle:hover, .search-toggle.active { background:rgba(200,0,255,0.3); border-color:#c800ff; }
+    .search-bar { background:#0d0020; border-bottom:2px solid #3d0066; overflow:hidden; max-height:0; transition:max-height 0.3s ease, padding 0.3s ease; padding:0 24px; position:relative; z-index:99; }
+    .search-bar.open { max-height:500px; padding:16px 24px; }
+    .search-bar-inner { max-width:1280px; margin:0 auto; }
+    .search-input-wrap { display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.06); border:1.5px solid rgba(200,0,255,0.35); border-radius:10px; padding:12px 18px; }
+    .search-input-wrap:focus-within { border-color:#c800ff; background:rgba(200,0,255,0.07); }
+    .search-icon { color:rgba(200,0,255,0.7); font-size:18px; flex-shrink:0; }
+    .search-input { background:none; border:none; outline:none; color:#fff; font-size:15px; font-family:'DM Sans',sans-serif; flex:1; caret-color:#c800ff; }
+    .search-input::placeholder { color:rgba(255,255,255,0.3); }
+    .search-clear { background:none; border:none; color:rgba(255,255,255,0.3); font-size:18px; cursor:pointer; padding:0; display:none; }
+    .search-clear.visible { display:block; }
+    .search-hint { font-size:12px; color:rgba(255,255,255,0.25); text-align:center; padding:14px 0 4px; }
+    .search-empty { font-size:13px; color:rgba(255,255,255,0.35); text-align:center; padding:20px 0; }
+    .search-more { font-size:11px; color:rgba(255,255,255,0.3); text-align:center; padding:8px 0; }
+    .search-results-list { display:flex; flex-direction:column; gap:6px; margin-top:10px; max-height:360px; overflow-y:auto; }
+    .search-result-item { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:8px; padding:10px 14px; cursor:pointer; transition:all 0.15s; text-decoration:none; }
+    .search-result-item:hover { background:rgba(200,0,255,0.1); border-color:rgba(200,0,255,0.35); transform:translateX(2px); }
+    .search-result-img { width:64px; height:42px; border-radius:5px; object-fit:cover; flex-shrink:0; background:#2a0044; display:block; }
+    .search-result-info { flex:1; min-width:0; }
+    .search-result-titulo { font-size:13px; font-weight:700; color:#fff; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:4px; }
+    .search-result-meta { display:flex; align-items:center; gap:8px; }
+    .search-badge { font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:2px 7px; border-radius:3px; color:#fff; }
+    .badge-apertura{background:#3d0066;}.badge-seleccion{background:#005cbf;}.badge-internacional{background:#006644;}.badge-mundial2027{background:#009c3b;}
+    .search-result-fecha { font-size:10px; color:rgba(255,255,255,0.35); }
+    .search-arrow { color:rgba(200,0,255,0.5); font-size:16px; flex-shrink:0; }
+    .search-mark { background:rgba(200,0,255,0.35); color:#fff; border-radius:2px; padding:0 2px; }
+
+    body { background:#f5f0f8; }
+    .art-wrap { max-width:860px; margin:0 auto; padding:40px 24px 64px; }
+    .art-volver { display:inline-flex; align-items:center; gap:6px; color:#3d0066; font-size:13px; font-weight:600; text-decoration:none; margin-bottom:24px; }
+    .art-volver:hover { text-decoration:underline; }
+    .art-categoria { display:inline-block; background:#3d0066; color:#fff; font-family:'DM Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 10px; border-radius:3px; margin-bottom:14px; }
+    .art-titulo { font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,5vw,48px); color:#1a001f; line-height:1.1; letter-spacing:1px; margin-bottom:10px; }
+    .art-fecha { font-size:12px; color:#aaa; margin-bottom:16px; display:block; }
+    .art-bajada { font-size:16px; color:#333; line-height:1.65; font-weight:400; margin-bottom:24px; border-left:3px solid #3d0066; padding-left:16px; }
+    .art-foto { width:100%; border-radius:10px; object-fit:cover; max-height:420px; margin-bottom:28px; display:block; }
+    .art-body { font-size:15px; color:#222; line-height:1.75; }
+    .art-body p { margin-bottom:18px; }
+    .art-body h3 { font-family:'Bebas Neue',sans-serif; font-size:22px; color:#3d0066; margin:28px 0 10px; letter-spacing:0.5px; }
+    .art-body strong { color:#3d0066; }
+    .art-fuente { font-size:12px; color:#aaa; margin-top:32px; padding-top:16px; border-top:1px solid #ddd; }
+    .art-separador { width:48px; height:3px; background:#3d0066; border-radius:2px; margin:28px 0; }
+
+    /* RESULTADO */
+    .resultado-box { background:#fff; border-radius:10px; padding:20px 24px; margin:24px 0; display:flex; align-items:center; justify-content:center; gap:20px; border-top:4px solid #3d0066; }
+    .resultado-equipo { display:flex; flex-direction:column; align-items:center; gap:6px; }
+    .resultado-equipo img { width:40px; height:40px; object-fit:contain; }
+    .resultado-nombre { font-family:'Bebas Neue',sans-serif; font-size:16px; color:#1a001f; letter-spacing:0.5px; }
+    .resultado-marcador { font-family:'Bebas Neue',sans-serif; font-size:48px; color:#3d0066; line-height:1; letter-spacing:4px; }
+    .resultado-info { font-size:11px; color:#aaa; text-align:center; margin-top:8px; }
+
+    /* FORMACIÓN */
+    .formacion-box { background:#fff; border-radius:10px; padding:18px 20px; margin:24px 0; border-left:4px solid #3d0066; }
+    .formacion-titulo { font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:1.5px; color:#3d0066; margin-bottom:10px; }
+    .formacion-texto { font-size:13px; color:#444; line-height:1.8; }
+
+    /* HOMENAJE */
+    .homenaje-box { background:#fff; border-radius:10px; padding:18px 20px; margin:24px 0; border-left:4px solid #c800ff; }
+    .homenaje-titulo { font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:1.5px; color:#c800ff; margin-bottom:8px; }
+    .homenaje-texto { font-size:13px; color:#444; line-height:1.7; }
+
+    /* SEGUIR LEYENDO */
+    .seguir-leyendo { background:#fff; border-top:4px solid #3d0066; padding:40px 24px; }
+    .seguir-inner { max-width:860px; margin:0 auto; }
+    .seguir-titulo { font-family:'Bebas Neue',sans-serif; font-size:20px; color:#3d0066; letter-spacing:1px; margin-bottom:20px; }
+    .seguir-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .seguir-card { position:relative; border-radius:10px; overflow:hidden; height:180px; cursor:pointer; transition:transform 0.2s; border-top:3px solid #3d0066; }
+    .seguir-card:hover { transform:translateY(-3px); }
+    .seguir-card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .seguir-card-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.2) 100%); }
+    .seguir-card-body { position:absolute; bottom:0; left:0; right:0; padding:10px 12px; z-index:2; }
+    .seguir-card-titulo { font-size:12px; font-weight:700; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; margin-bottom:3px; }
+    .seguir-card-fecha { font-size:10px; color:rgba(255,255,255,0.4); }
+    @media(max-width:600px) { .seguir-grid{grid-template-columns:repeat(2,1fr);} .resultado-marcador{font-size:36px;} }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo"/>
+      <span class="brand-name">femeninoinfo</span>
+    </a>
+    <nav class="nav">
+      <a href="futbol-argentino.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
+      <a href="mundial-2027.html">Mundial 2027</a>
+      <a href="ligas.html">Ligas del mundo</a>
+      <a href="streaming.html">Streaming</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <button class="search-toggle" id="searchToggle" aria-label="Buscar noticias">&#128269;</button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="futbol-argentino.html" onclick="toggleMenu()">Fútbol Argentino</a>
+    <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
+    <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
+    <a href="mundial-2027.html" onclick="toggleMenu()">Mundial 2027</a>
+    <a href="ligas.html" onclick="toggleMenu()">Ligas del mundo</a>
+    <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
+    <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
+  </nav>
+</header>
+
+<div class="search-bar" id="searchBar">
+  <div class="search-bar-inner">
+    <div class="search-input-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input class="search-input" id="searchInput" placeholder="Buscá una noticia, jugadora, equipo..." autocomplete="off"/>
+      <button class="search-clear" id="searchClear">&#10005;</button>
+    </div>
+    <div id="searchBody"><p class="search-hint">Escribí al menos 2 caracteres para buscar</p></div>
+  </div>
+</div>
+
+<div class="art-wrap">
+  <a href="futbol-argentino.html" class="art-volver">← Fútbol Argentino</a>
+  <span class="art-categoria">Argentino</span>
+  <h1 class="art-titulo">Belgrano y Talleres empataron 0-0 en el clásico cordobés femenino</h1>
+  <span class="art-fecha">14 de junio de 2026</span>
+  <p class="art-bajada">Las Piratas jugaron con diez desde el primer tiempo tras la expulsión de Bulacio y aun así sumaron un punto en el Gigante de Alberdi por la Fecha 9 del Apertura Femenino.</p>
+  <img src="belgranotalleres.png.png" alt="Belgrano vs Talleres clásico cordobés femenino Fecha 9" class="art-foto"/>
+
+  <div class="resultado-box">
+    <div class="resultado-equipo">
+      <img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" alt="Belgrano"/>
+      <span class="resultado-nombre">Belgrano</span>
+    </div>
+    <div>
+      <div class="resultado-marcador">0 — 0</div>
+      <div class="resultado-info">Fecha 9 · Gigante de Alberdi · 14 jun 2026</div>
+    </div>
+    <div class="resultado-equipo">
+      <img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" alt="Talleres"/>
+      <span class="resultado-nombre">Talleres</span>
+    </div>
+  </div>
+
+  <div class="art-separador"></div>
+
+  <div class="art-body">
+    <p>Belgrano y Talleres igualaron 0-0 en el Estadio Julio César Villagra por la Fecha 9 del Apertura Femenino. Las Piratas sumaron un punto en el segundo clásico cordobés femenino en Primera División, aunque lo hicieron con una jugadora menos durante gran parte del encuentro.</p>
+
+    <h3>Con diez desde el primer tiempo</h3>
+    <p>Sobre el final del primer tiempo, <strong>Micaela Bulacio</strong> fue expulsada tras recibir la tarjeta roja y Belgrano tuvo que terminar el partido con una jugadora menos. A pesar de la inferioridad numérica, las Piratas generaron situaciones de peligro pero no lograron convertir.</p>
+
+    <div class="formacion-box">
+      <div class="formacion-titulo">Formación de Belgrano — DT Mariana "Pomu" Sánchez</div>
+      <div class="formacion-texto">
+        Sánchez; Araya, Salas, Roggerone, Vargas; Arrietto; Paz, Mancilla, Rodríguez, Bulacio; Acevedo.<br/>
+        <br/>
+        <strong>Cambios:</strong> Loferski por Acevedo · Ceballos por Paz · Muñoz por Rodríguez · Galarza por Mancilla
+      </div>
+    </div>
+
+    <div class="homenaje-box">
+      <div class="homenaje-titulo">Homenaje a Sabrina Maldonado</div>
+      <div class="homenaje-texto">En el entretiempo se realizó un emotivo homenaje a <strong>Sabrina Maldonado</strong>, exjugadora y referente del fútbol femenino de Belgrano. Fue protagonista de una etapa histórica del club, conquistando títulos de Liga Cordobesa, Primera C, Primera B, Primera División y el Trofeo de Campeonas en 2025.</div>
+    </div>
+
+    <h3>Lo que viene</h3>
+    <p>El próximo partido de Belgrano será ante Banfield por la Fecha 10 del Torneo de Primera División.</p>
+  </div>
+  <p class="art-fuente">femeninoinfo</p>
+</div>
+
+<section class="seguir-leyendo">
+  <div class="seguir-inner">
+    <p class="seguir-titulo">Seguir leyendo</p>
+    <div class="seguir-grid" id="seguirGrid"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="footer-logo"/>
+      <p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Secciones</h4>
+      <a href="futbol-argentino.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
+    </div>
+    <div class="footer-links">
+      <h4>femeninoinfo</h4>
+      <a href="sobre.html">Sobre el medio</a>
+      <a href="streaming.html">Streaming</a>
+      <a href="sponsors.html">Sponsors</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
+</footer>
+
+<script>
+var PAGINA_ACTUAL = 'belgrano-talleres-f9.html';
+var CATEGORIA_ACTUAL = 'apertura';
+</script>
+<script src="noticias.js"></script>
+<script>
+(function() {
+  var grid = document.getElementById('seguirGrid');
+  if(!grid || typeof noticias === 'undefined') return;
+  var otras = noticias.filter(function(n) {
+    return n.categoria === CATEGORIA_ACTUAL && n.pagina !== PAGINA_ACTUAL;
+  }).slice(0, 4);
+  otras.forEach(function(n) {
+    var div = document.createElement('div');
+    div.className = 'seguir-card';
+    div.onclick = function(){ window.location.href = n.pagina; };
+    div.innerHTML =
+      '<img src="'+n.imagen+'" alt="'+n.titulo+'"/>'+
+      '<div class="seguir-card-overlay"></div>'+
+      '<div class="seguir-card-body">'+
+        '<p class="seguir-card-titulo">'+n.titulo+'</p>'+
+        '<span class="seguir-card-fecha">'+n.fecha+'</span>'+
+      '</div>';
+    grid.appendChild(div);
+  });
+})();
+</script>
+<script src="buscador.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

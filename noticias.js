@@ -1,9 +1,18 @@
 const noticias = [
   {
+    id: 30,
+    titulo: "Belgrano y Talleres empataron 0-0 en el clásico cordobés femenino",
+    resumen: "Las Piratas jugaron con diez desde el primer tiempo tras la expulsión de Bulacio y sumaron un punto en el Gigante de Alberdi por la Fecha 9 del Apertura Femenino.",
+    imagen: "belgranotalleres.png.png",
+    categoria: "apertura",
+    fecha: "14 jun 2026",
+    pagina: "belgrano-talleres-f9.html"
+  },
+  {
     id: 29,
     titulo: "Lanús venció 1-0 a Unión y sale momentáneamente de la zona de descenso",
     resumen: "Las granates se impusieron en el Estadio 15 de Abril por la Fecha 9. Gol de Verón a los 20 minutos. Lanús llega a 7 puntos y supera a Newell's en la tabla.",
-    imagen: "lanus-union.png.png",
+    imagen: "lanus.png.png",
     categoria: "apertura",
     fecha: "13 jun 2026",
     pagina: "lanus-union.html"
