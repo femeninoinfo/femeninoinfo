@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 33,
+    titulo: "Racing goleó 4-0 a Banfield y lidera el Apertura Femenino con 22 puntos",
+    resumen: "La Academia venció con goles de Bueno, doblete de Cossio y Maregatti. Comparte la cima con San Lorenzo pero la supera en diferencia de gol.",
+    imagen: "racing-tabla.png.png",
+    categoria: "apertura",
+    fecha: "15 jun 2026",
+    pagina: "racing-tabla-f9.html"
+  },
+  {
+    id: 32,
+    titulo: "Boca le ganó 1-0 a Independiente y suma tres puntos clave en el Apertura",
+    resumen: "Las xeneizes se impusieron en el Predio Santo Domingo por la Fecha 9 y llegaron a 11 puntos, metiéndose de lleno en la pelea por los puestos de arriba.",
+    imagen: "boca-independiente.png.png",
+    categoria: "apertura",
+    fecha: "15 jun 2026",
+    pagina: "boca-independiente-f9.html"
+  },
+  {
+    id: 31,
+    titulo: "San Lorenzo le rompió el invicto a River y comparte la cima del Apertura",
+    resumen: "Las Santitas ganaron 1-0 en el River Camp por la Fecha 9 y llegaron a 22 puntos. River perdió su imbatibilidad y quedó tercero en la tabla.",
+    imagen: "sanlorenzo-river.png.png",
+    categoria: "apertura",
+    fecha: "14 jun 2026",
+    pagina: "sanlorenzo-river-f9.html"
+  },
+  {
     id: 30,
     titulo: "Belgrano y Talleres empataron 0-0 en el clásico cordobés femenino",
     resumen: "Las Piratas jugaron con diez desde el primer tiempo tras la expulsión de Bulacio y sumaron un punto en el Gigante de Alberdi por la Fecha 9 del Apertura Femenino.",
