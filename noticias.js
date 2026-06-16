@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 34,
+    titulo: "Las jugadoras de Unión publicaron un comunicado por falta de pago tras el ascenso a Primera División",
+    resumen: "El plantel femenino visibilizó en sus redes una situación que atraviesan desde el ascenso. Aseguran que solo cobraron un mes completo y piden certezas a través del diálogo.",
+    imagen: "unionreclamo.png.png",
+    categoria: "apertura",
+    fecha: "15 jun 2026",
+    pagina: "union-reclamo.html"
+  },
+  {
     id: 33,
     titulo: "Racing goleó 4-0 a Banfield y lidera el Apertura Femenino con 22 puntos",
     resumen: "La Academia venció con goles de Bueno, doblete de Cossio y Maregatti. Comparte la cima con San Lorenzo pero la supera en diferencia de gol.",
