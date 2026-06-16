@@ -27,6 +27,65 @@
       z-index: 0;
     }
     @keyframes sweepV { 0%{background-position:0 200%} 100%{background-position:0 -200%} }
+
+    /* ===== TICKER FIXTURE ===== */
+    .ticker-wrap {
+      background: #1a0035;
+      border-bottom: 2px solid #c800ff;
+      position: relative;
+      z-index: 5;
+      overflow: hidden;
+      height: 38px;
+      display: flex;
+      align-items: stretch;
+    }
+    .ticker-label {
+      background: #c800ff;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      z-index: 2;
+    }
+    .ticker-label span {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .ticker-viewport {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .ticker-track {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      animation: tickerScroll 35s linear infinite;
+      will-change: transform;
+    }
+    @keyframes tickerScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .tick-item {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,0.85);
+      padding: 0 22px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tick-item strong { color: #e066ff; font-weight: 700; }
+    .tick-sep { color: #c800ff; font-size: 9px; flex-shrink: 0; opacity: 0.6; }
+    @media(max-width:700px) {
+      .ticker-label span { font-size: 10px; }
+      .tick-item { font-size: 11px; padding: 0 16px; }
+    }
     .portal-inner {
       max-width: 1280px;
       margin: 0 auto;
@@ -328,6 +387,48 @@
   </div>
 </div>
 
+<!-- TICKER FIXTURE -->
+<div class="ticker-wrap">
+  <div class="ticker-label"><span>FECHA 10</span></div>
+  <div class="ticker-viewport">
+    <div class="ticker-track" id="tickerTrack">
+      <span class="tick-item">&#128336; Vie 19/6 · 15:00 — <strong>San Luis FC</strong> vs <strong>SAT</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Vie 19/6 · 15:00 — <strong>San Lorenzo</strong> vs <strong>Belgrano</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Sáb 20/6 · 10:00 — <strong>Ferro</strong> vs <strong>San Luis FC</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Sáb 20/6 · 11:00 — <strong>Boca</strong> vs <strong>Unión</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Sáb 20/6 · 17:30 — <strong>Ferro</strong> vs <strong>Independiente</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Dom 21/6 · 11:00 — <strong>Racing</strong> vs <strong>River</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Dom 21/6 · 15:00 — <strong>Newell's</strong> vs <strong>Banfield</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Lun 22/6 · 19:00 — <strong>Talleres</strong> vs <strong>Huracán</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <!-- duplicado para loop infinito -->
+      <span class="tick-item">&#128336; Vie 19/6 · 15:00 — <strong>San Luis FC</strong> vs <strong>SAT</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Vie 19/6 · 15:00 — <strong>San Lorenzo</strong> vs <strong>Belgrano</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Sáb 20/6 · 10:00 — <strong>Ferro</strong> vs <strong>San Luis FC</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Sáb 20/6 · 11:00 — <strong>Boca</strong> vs <strong>Unión</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Sáb 20/6 · 17:30 — <strong>Ferro</strong> vs <strong>Independiente</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Dom 21/6 · 11:00 — <strong>Racing</strong> vs <strong>River</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Dom 21/6 · 15:00 — <strong>Newell's</strong> vs <strong>Banfield</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item">&#128336; Lun 22/6 · 19:00 — <strong>Talleres</strong> vs <strong>Huracán</strong></span>
+      <span class="tick-sep">&#9670;</span>
+    </div>
+  </div>
+</div>
+
 <!-- HERO PORTAL -->
 <section class="portal-hero">
   <div class="portal-inner">
@@ -364,7 +465,7 @@
       </div>
       <div class="tabs-header">
         <button class="tab-btn active" onclick="showTab('tabla',this)">Tabla</button>
-        <button class="tab-btn" id="tab-fixture-btn" onclick="showTab('fixture',this)">Fixture — Fecha 9</button>
+        <button class="tab-btn" id="tab-fixture-btn" onclick="showTab('fixture',this)">Fixture — Fecha 10</button>
       </div>
       <div class="tab-content" id="tab-tabla">
         <table class="tabla-pos">
@@ -441,26 +542,31 @@
       <div class="tab-content" id="tab-fixture" style="display:none;">
         <div class="fixture-nuevo">
           <div class="fx-dia-bloque">
-            <div class="fx-dia-tag"><span class="fx-dia-nombre">Sábado</span><span class="fx-dia-fecha">13/6</span></div>
+            <div class="fx-dia-tag"><span class="fx-dia-nombre">Viernes</span><span class="fx-dia-fecha">19/6</span></div>
             <div class="fx-partidos">
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="fx-escudo" alt="Unión"><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Unión</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">0 — 1</span><span class="fx-card-nombre">Lanús</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="fx-escudo" alt="Lanús"></div><span class="fx-card-estadio">Est. 15 de Abril</span></div>
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="fx-escudo" alt="SAT"><span class="fx-card-nombre">SAT</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">2 — 2</span><span class="fx-card-nombre">San Luis FC</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="fx-escudo" alt="San Luis FC"></div><span class="fx-card-estadio">Est. 12 de Agosto</span></div>
+              <div class="fx-card"><span class="fx-card-hora">15:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="fx-escudo" alt="Independiente" style="visibility:hidden;width:0;"><span class="fx-card-nombre">San Luis FC</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">SAT</span></div><span class="fx-card-estadio">Predio Estancia Chica</span></div>
+              <div class="fx-card"><span class="fx-card-hora">15:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="fx-escudo" alt="" style="visibility:hidden;width:0;"><span class="fx-card-nombre">San Lorenzo</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Belgrano</span></div><span class="fx-card-estadio">Ciudad Deportiva</span></div>
             </div>
           </div>
           <div class="fx-dia-bloque">
-            <div class="fx-dia-tag"><span class="fx-dia-nombre">Domingo</span><span class="fx-dia-fecha">14/6</span></div>
+            <div class="fx-dia-tag"><span class="fx-dia-nombre">Sábado</span><span class="fx-dia-fecha">20/6</span></div>
             <div class="fx-partidos">
-              <div class="fx-card fx-card-destacada"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="fx-escudo" alt="River"><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">River</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">0 — 1</span><span class="fx-card-nombre">San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="fx-escudo" alt="San Lorenzo"></div><span class="fx-card-estadio">River Camp</span></div>
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="fx-escudo" alt="Gimnasia"><span class="fx-card-nombre">Gimnasia</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">2 — 1</span><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Newell's</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="fx-escudo" alt="Newell's"></div><span class="fx-card-estadio">Estancia Chica</span></div>
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="fx-escudo" alt="Belgrano"><span class="fx-card-nombre">Belgrano</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">0 — 0</span><span class="fx-card-nombre">Talleres</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="fx-escudo" alt="Talleres"></div><span class="fx-card-estadio">Gigante de Alberdi</span></div>
+              <div class="fx-card"><span class="fx-card-hora">10:00</span><div class="fx-card-equipos"><span class="fx-card-nombre">Ferro</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">San Luis FC</span></div><span class="fx-card-estadio">Predio Valentín Alsina</span></div>
+              <div class="fx-card fx-card-destacada"><span class="fx-card-hora">11:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="fx-escudo" alt="Boca"><span class="fx-card-nombre">Boca</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Unión</span><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="fx-escudo" alt="Unión"></div><span class="fx-card-estadio">Casa Amarilla</span></div>
+              <div class="fx-card"><span class="fx-card-hora">17:30</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="fx-escudo" alt="Independiente"><span class="fx-card-nombre">Ferro</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Independiente</span></div><span class="fx-card-estadio">Sintético Caballito</span></div>
             </div>
           </div>
           <div class="fx-dia-bloque">
-            <div class="fx-dia-tag"><span class="fx-dia-nombre">Lunes</span><span class="fx-dia-fecha">15/6</span></div>
+            <div class="fx-dia-tag"><span class="fx-dia-nombre">Domingo</span><span class="fx-dia-fecha">21/6</span></div>
             <div class="fx-partidos">
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="fx-escudo" alt="Independiente"><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Independiente</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">0 — 1</span><span class="fx-card-nombre">Boca</span><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="fx-escudo" alt="Boca"></div><span class="fx-card-estadio">Predio Santo Domingo</span></div>
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="fx-escudo" alt="Banfield"><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Banfield</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">0 — 4</span><span class="fx-card-nombre">Racing</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="fx-escudo" alt="Racing"></div><span class="fx-card-estadio">Campo de Deportes</span></div>
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="fx-escudo" alt="Huracán"><span class="fx-card-nombre">Huracán</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">0 — 0</span><span class="fx-card-nombre">Ferro</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="fx-escudo" alt="Ferro"></div><span class="fx-card-estadio">La Quemita</span></div>
+              <div class="fx-card fx-card-destacada"><span class="fx-card-hora">11:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="fx-escudo" alt="Racing"><span class="fx-card-nombre">Racing</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">River</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="fx-escudo" alt="River"></div><span class="fx-card-estadio">Tita Matiussi</span></div>
+              <div class="fx-card"><span class="fx-card-hora">15:00</span><div class="fx-card-equipos"><span class="fx-card-nombre">Newell's</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Banfield</span></div><span class="fx-card-estadio">Predio Bella Vista</span></div>
+            </div>
+          </div>
+          <div class="fx-dia-bloque">
+            <div class="fx-dia-tag"><span class="fx-dia-nombre">Lunes</span><span class="fx-dia-fecha">22/6</span></div>
+            <div class="fx-partidos">
+              <div class="fx-card"><span class="fx-card-hora">19:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="fx-escudo" alt="Talleres"><span class="fx-card-nombre">Talleres</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Huracán</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="fx-escudo" alt="Huracán"></div><span class="fx-card-estadio">Estadio La Boutique</span></div>
             </div>
           </div>
         </div>
