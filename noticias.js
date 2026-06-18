@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 37,
+    titulo: "Pau Gasol propone invertir 55 millones de euros en la Liga F",
+    resumen: "Gasol16 Ventures lidera la propuesta junto a otros inversores. De concretarse, sería la mayor inversión privada en la historia del fútbol femenino. Los clubes votan el 29 de junio.",
+    imagen: "pau-gasol-ligaf.png.png",
+    categoria: "internacional",
+    fecha: "17 jun 2026",
+    pagina: "pau-gasol-ligaf.html"
+  },
+  {
     id: 36,
     titulo: "Marta sigue siendo la máxima goleadora histórica en Mundiales, por encima de Messi y Klose",
     resumen: "El hat trick de Messi en el Mundial 2026 lo igualó a Klose como máximo goleador masculino con 16 goles. El récord histórico, sin distinción de género, sigue en manos de Marta, con 17.",
