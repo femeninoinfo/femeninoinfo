@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 36,
+    titulo: "Marta sigue siendo la máxima goleadora histórica en Mundiales, por encima de Messi y Klose",
+    resumen: "El hat trick de Messi en el Mundial 2026 lo igualó a Klose como máximo goleador masculino con 16 goles. El récord histórico, sin distinción de género, sigue en manos de Marta, con 17.",
+    imagen: "marta.png.png",
+    categoria: "internacional",
+    fecha: "17 jun 2026",
+    pagina: "marta-record-mundiales.html"
+  },
+  {
+    id: 35,
+    titulo: "Talleres vs Huracán, el único partido a estadio abierto de la Fecha 10",
+    resumen: "De los ocho partidos que tiene la Fecha 10 del Apertura, solo uno se jugará en un estadio abierto. Las Matadoras reciben a Huracán este lunes desde las 19:00 en La Boutique.",
+    imagen: "talleres.png.png",
+    categoria: "apertura",
+    fecha: "17 jun 2026",
+    pagina: "talleres-huracan-f10.html"
+  },
+  {
     id: 34,
     titulo: "Las jugadoras de Unión publicaron un comunicado por falta de pago tras el ascenso a Primera División",
     resumen: "El plantel femenino visibilizó en sus redes una situación que atraviesan desde el ascenso. Aseguran que solo cobraron un mes completo y piden certezas a través del diálogo.",
