@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 39,
+    titulo: "Ferro goleó 6-1 a Independiente en el Sintético de Caballito",
+    resumen: "Con doblete de Rocío Correa y goles de Lezcano, Mirr, Abreu y Cisneros, el equipo de Juan Palermo venció con autoridad por la Fecha 10 del Apertura Femenino.",
+    imagen: "ferrogoleada.png.png",
+    categoria: "apertura",
+    fecha: "20 jun 2026",
+    pagina: "ferro-independiente-f10.html"
+  },
+  {
+    id: 38,
+    titulo: "Boca goleó 3-0 a Unión en la Fecha 10 del Apertura Femenino",
+    resumen: "Las xeneizes se impusieron con autoridad en Casa Amarilla y siguen escalando posiciones en la tabla del Apertura Femenino.",
+    imagen: "bocaunion.png.png",
+    categoria: "apertura",
+    fecha: "20 jun 2026",
+    pagina: "boca-union-f10.html"
+  },
+  {
     id: 37,
     titulo: "Pau Gasol propone invertir 55 millones de euros en la Liga F",
     resumen: "Gasol16 Ventures lidera la propuesta junto a otros inversores. De concretarse, sería la mayor inversión privada en la historia del fútbol femenino. Los clubes votan el 29 de junio.",
