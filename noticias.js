@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 40,
+    titulo: "San Lorenzo y Belgrano empataron 0-0 y dejaron abierta la pelea por la punta",
+    resumen: "Las Santitas no pudieron sacar ventaja en su casa pese a llegar como únicas líderes. Azul Muzio fue la figura del partido con varias atajadas clave.",
+    imagen: "belgranosanlo.png.png",
+    categoria: "apertura",
+    fecha: "19 jun 2026",
+    pagina: "sanlorenzo-belgrano-f10.html"
+  },
+  {
     id: 39,
     titulo: "Ferro goleó 6-1 a Independiente en el Sintético de Caballito",
     resumen: "Con doblete de Rocío Correa y goles de Lezcano, Mirr, Abreu y Cisneros, el equipo de Juan Palermo venció con autoridad por la Fecha 10 del Apertura Femenino.",
