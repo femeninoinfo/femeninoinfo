@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 43,
+    titulo: "Colo Colo goleó 4-0 a Universidad de Chile y se quedó con el Superclásico femenino",
+    resumen: "El equipo dirigido por Tatiele Silveira dominó en el Estadio Monumental con doblete de Mary Valencia ante una gran cantidad de público en las tribunas.",
+    imagen: "colocolo-uchile.png.png",
+    categoria: "internacional",
+    fecha: "21 jun 2026",
+    pagina: "colocolo-uchile.html"
+  },
+  {
+    id: 42,
+    titulo: "Banfield le ganó 2-0 a Newell's en Rosario",
+    resumen: "Newell's cayó como local ante Banfield en el Centro de Entrenamientos Griffa por la Fecha 10 del Apertura Femenino.",
+    imagen: "banfield-newells.png.png",
+    categoria: "apertura",
+    fecha: "21 jun 2026",
+    pagina: "banfield-newells-f10.html"
+  },
+  {
+    id: 41,
+    titulo: "Racing le ganó 3-1 a River y se puso solo en la punta del Apertura",
+    resumen: "La Academia remontó tras ir abajo en el arranque del segundo tiempo y se quedó con el triunfo en el Tita Matiussi, alcanzando el primer lugar en soledad.",
+    imagen: "racing-river.png.png",
+    categoria: "apertura",
+    fecha: "21 jun 2026",
+    pagina: "racing-river-f10.html"
+  },
+  {
     id: 40,
     titulo: "San Lorenzo y Belgrano empataron 0-0 y dejaron abierta la pelea por la punta",
     resumen: "Las Santitas no pudieron sacar ventaja en su casa pese a llegar como únicas líderes. Azul Muzio fue la figura del partido con varias atajadas clave.",
