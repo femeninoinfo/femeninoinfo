@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 45,
+    titulo: "Clásico confirmado en la Fecha 11: Huracán vs San Lorenzo el lunes a las 17:00",
+    resumen: "Salió la programación completa de la Fecha 11 del Apertura Femenino. Las Santitas visitan La Quemita el lunes 29 de junio desde las 17:00 hs.",
+    imagen: "huracansanlo.png.png",
+    categoria: "apertura",
+    fecha: "23 jun 2026",
+    pagina: "huracan-sanlorenzo-f11.html"
+  },
+  {
     id: 44,
     titulo: "Talleres goleó 4-0 a Huracán en el cierre de la Fecha 10",
     resumen: "Brisa Jara, Azul Ludueña, Agustina Vargas y Josefina Félix marcaron todos en el segundo tiempo. Las Matadoras sumaron tres puntos en La Boutique.",
