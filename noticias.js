@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 44,
+    titulo: "Talleres goleó 4-0 a Huracán en el cierre de la Fecha 10",
+    resumen: "Brisa Jara, Azul Ludueña, Agustina Vargas y Josefina Félix marcaron todos en el segundo tiempo. Las Matadoras sumaron tres puntos en La Boutique.",
+    imagen: "tallereshuracan.png.png",
+    categoria: "apertura",
+    fecha: "22 jun 2026",
+    pagina: "talleres-huracan-resultado-f10.html"
+  },
+  {
     id: 43,
     titulo: "Colo Colo goleó 4-0 a Universidad de Chile y se quedó con el Superclásico femenino",
     resumen: "El equipo dirigido por Tatiele Silveira dominó en el Estadio Monumental con doblete de Mary Valencia ante una gran cantidad de público en las tribunas.",
