@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 46,
+    titulo: "Las Selecciones Sub 17 y Sub 20 volvieron a entrenar en el Predio Messi",
+    resumen: "Las juveniles dirigidas por Christian Meloni se juntaron en Ezeiza para una nueva semana de trabajos rumbo a los Mundiales de Polonia y Marruecos.",
+    imagen: "juvenilesafa.png.png",
+    categoria: "seleccion",
+    fecha: "24 jun 2026",
+    pagina: "juveniles-afa-f11.html"
+  },
+  {
     id: 45,
     titulo: "Clásico confirmado en la Fecha 11: Huracán vs San Lorenzo el lunes a las 17:00",
     resumen: "Salió la programación completa de la Fecha 11 del Apertura Femenino. Las Santitas visitan La Quemita el lunes 29 de junio desde las 17:00 hs.",
