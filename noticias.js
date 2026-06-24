@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 48,
+    titulo: "Solana Pereyra fue operada con éxito de la rodilla derecha",
+    resumen: "La arquera titular de San Lorenzo y de la Selección Argentina fue intervenida quirúrgicamente por un síndrome meniscal. La operación resultó exitosa.",
+    imagen: "solana.png.png",
+    categoria: "seleccion",
+    fecha: "24 jun 2026",
+    pagina: "solana-pereyra-cirugia.html"
+  },
+  {
     id: 47,
     titulo: "Faltan exactamente 365 días para el Mundial Femenino Brasil 2027",
     resumen: "Hoy se cumple un año exacto para el partido inaugural en el Maracaná. El 24 de junio de 2027 arranca la décima edición, la primera en suelo sudamericano.",
