@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 47,
+    titulo: "Faltan exactamente 365 días para el Mundial Femenino Brasil 2027",
+    resumen: "Hoy se cumple un año exacto para el partido inaugural en el Maracaná. El 24 de junio de 2027 arranca la décima edición, la primera en suelo sudamericano.",
+    imagen: "faltan265.png.png",
+    categoria: "mundial2027",
+    fecha: "24 jun 2026",
+    pagina: "mundial-365-dias.html"
+  },
+  {
     id: 46,
     titulo: "Las Selecciones Sub 17 y Sub 20 volvieron a entrenar en el Predio Messi",
     resumen: "Las juveniles dirigidas por Christian Meloni se juntaron en Ezeiza para una nueva semana de trabajos rumbo a los Mundiales de Polonia y Marruecos.",
