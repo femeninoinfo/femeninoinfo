@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 49,
+    titulo: "Netflix transmitirá en exclusiva el Mundial Femenino Brasil 2027 en Estados Unidos y Canadá",
+    resumen: "La FIFA firmó un acuerdo histórico con Netflix para los derechos exclusivos del torneo en 2027 y 2031. Los 64 partidos en vivo en español, inglés y francés.",
+    imagen: "netflixmundial.png.png",
+    categoria: "mundial2027",
+    fecha: "24 jun 2026",
+    pagina: "netflix-mundial-2027.html"
+  },
+  {
     id: 48,
     titulo: "Solana Pereyra fue operada con éxito de la rodilla derecha",
     resumen: "La arquera titular de San Lorenzo y de la Selección Argentina fue intervenida quirúrgicamente por un síndrome meniscal. La operación resultó exitosa.",
