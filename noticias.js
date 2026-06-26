@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 50,
+    titulo: "Alexia Putellas deja el Barcelona y ficha por el London City Lionesses",
+    resumen: "La dos veces Balón de Oro pone fin a 14 años en el Barça y elige un proyecto emergente en Inglaterra. Firmará por dos temporadas.",
+    imagen: "alexia.png.png",
+    categoria: "internacional",
+    fecha: "26 jun 2026",
+    pagina: "alexia-london-city.html"
+  },
+  {
     id: 49,
     titulo: "Netflix transmitirá en exclusiva el Mundial Femenino Brasil 2027 en Estados Unidos y Canadá",
     resumen: "La FIFA firmó un acuerdo histórico con Netflix para los derechos exclusivos del torneo en 2027 y 2031. Los 64 partidos en vivo en español, inglés y francés.",
