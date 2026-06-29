@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 56,
+    titulo: "San Luis FC y Boca empataron 0-0 en la Villa Deportiva",
+    resumen: "Las Gladiadoras no pudieron imponerse de local y Boca se fue con un punto que no le alcanzó para acortar distancias con Racing, líder del torneo.",
+    imagen: "bocasanluis.png.png",
+    categoria: "apertura",
+    fecha: "28 jun 2026",
+    pagina: "sanluis-boca-f11.html"
+  },
+  {
+    id: 55,
+    titulo: "Banfield y Gimnasia empataron 2-2 en el Florencio Sola",
+    resumen: "Las Triperas rescataron un punto de visitante con goles de Lali Esquivel y Eliana Stabile en un encuentro intenso por la Fecha 11 del Apertura Femenino.",
+    imagen: "banfieldgimnasia.png.png",
+    categoria: "apertura",
+    fecha: "27 jun 2026",
+    pagina: "banfield-gimnasia-f11.html"
+  },
+  {
+    id: 54,
+    titulo: "Lanús venció 2-0 a SAT en el Estadio 12 de Agosto",
+    resumen: "Las Granates controlaron el partido de visitante con gol de Brenda Varela y la valla en cero sostenida por Macarena Ruiz Díaz.",
+    imagen: "lanussat.png.png",
+    categoria: "apertura",
+    fecha: "27 jun 2026",
+    pagina: "sat-lanus-f11.html"
+  },
+  {
     id: 53,
     titulo: "River venció 1-0 a Newell's con un penal de Kimberly Campos",
     resumen: "Las Millonarias abrieron la Fecha 11 con un triunfo en el River Camp. Campos convirtió desde los 12 pasos a los 35 minutos del segundo tiempo.",
