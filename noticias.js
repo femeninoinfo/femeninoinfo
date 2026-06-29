@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 57,
+    titulo: "San Lorenzo se quedó con el clásico ante Huracán y llegó a la cima del Apertura",
+    resumen: "Las Santitas ganaron 1-0 en La Quemita y alcanzaron a Racing en lo alto de la tabla con 26 puntos. La Fecha 11 cierra con la punta compartida.",
+    imagen: "SANLOHURACAN.PNG.png",
+    categoria: "apertura",
+    fecha: "29 jun 2026",
+    pagina: "huracan-sanlorenzo-resultado-f11.html"
+  },
+  {
     id: 56,
     titulo: "San Luis FC y Boca empataron 0-0 en la Villa Deportiva",
     resumen: "Las Gladiadoras no pudieron imponerse de local y Boca se fue con un punto que no le alcanzó para acortar distancias con Racing, líder del torneo.",
