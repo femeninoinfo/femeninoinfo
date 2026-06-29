@@ -9,352 +9,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* ===== PORTAL HERO ===== */
-    .portal-hero {
-      background: #0a000f;
-      border-bottom: 2px solid #3d0066;
-      position: relative;
-      overflow: hidden;
-    }
-    .portal-hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 0%, rgba(200,0,255,0.03) 50%, transparent 100%);
-      background-size: 100% 200%;
-      animation: sweepV 12s linear infinite;
-      pointer-events: none;
-      z-index: 0;
-    }
+    .portal-hero { background:#0a000f; border-bottom:2px solid #3d0066; position:relative; overflow:hidden; }
+    .portal-hero::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 0%,rgba(200,0,255,0.03) 50%,transparent 100%); background-size:100% 200%; animation:sweepV 12s linear infinite; pointer-events:none; z-index:0; }
     @keyframes sweepV { 0%{background-position:0 200%} 100%{background-position:0 -200%} }
 
     /* TABLA COLORES */
-    .tabla-pos tr.lider td { background: #1a5c2a; color: #fff; border: none; }
-    .tabla-pos tr.lider td strong { color: #7fffaa; background: none; font-size: 15px; }
-    .tabla-pos tr.descenso td { background: #6b1212; color: #ffaaaa; border: none; }
-    .tabla-pos tr.descenso td strong { color: #ffaaaa; background: none; font-size: 15px; }
-    .tabla-pos td strong {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 15px;
-      color: #e066ff;
-      background: rgba(200,0,255,0.15);
-      padding: 1px 5px;
-      border-radius: 4px;
-    }
+    .tabla-pos tr.lider td { background:#1a5c2a; color:#fff; border:none; }
+    .tabla-pos tr.lider td strong { color:#7fffaa; background:none; font-size:15px; }
+    .tabla-pos tr.descenso td { background:#6b1212; color:#ffaaaa; border:none; }
+    .tabla-pos tr.descenso td strong { color:#ffaaaa; background:none; font-size:15px; }
+    .tabla-pos td strong { font-family:'Bebas Neue',sans-serif; font-size:15px; color:#e066ff; background:rgba(200,0,255,0.15); padding:1px 5px; border-radius:4px; }
 
-    /* ===== TICKER FIXTURE ===== */
-    .ticker-wrap {
-      background: #1a0035;
-      border-bottom: 2px solid #c800ff;
-      position: relative;
-      z-index: 5;
-      overflow: hidden;
-      height: 38px;
-      display: flex;
-      align-items: stretch;
-    }
-    .ticker-label {
-      background: #c800ff;
-      padding: 0 16px;
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-      z-index: 2;
-    }
-    .ticker-label span {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 12px;
-      letter-spacing: 2px;
-      color: #fff;
-      white-space: nowrap;
-    }
-    .ticker-viewport {
-      flex: 1;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-    .ticker-track {
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-      animation: tickerScroll 35s linear infinite;
-      will-change: transform;
-    }
-    @keyframes tickerScroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .tick-item {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 12px;
-      color: rgba(255,255,255,0.85);
-      padding: 0 22px;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .tick-item strong { color: #e066ff; font-weight: 700; }
-    .tick-sep { color: #c800ff; font-size: 9px; flex-shrink: 0; opacity: 0.6; }
-    @media(max-width:700px) {
-      .ticker-label span { font-size: 10px; }
-      .tick-item { font-size: 11px; padding: 0 16px; }
-    }
-    .portal-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 20px 24px;
-      display: grid;
-      grid-template-columns: 1fr 260px 340px;
-      gap: 16px;
-      align-items: start;
-      position: relative;
-      z-index: 1;
-    }
-    .nota-grande {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      height: 500px;
-      cursor: pointer;
-    }
-    .nota-grande:hover .nota-grande-img { transform: scale(1.03); }
-    .nota-grande-img {
-      position: absolute;
-      inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s;
-    }
-    .nota-grande-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.93) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.05) 100%);
-    }
-    .nota-grande-content {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 24px;
-      z-index: 2;
-    }
-    .nota-grande-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 10px;
-      letter-spacing: 2px;
-      color: #c800ff;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .nota-grande-dot {
-      width: 6px; height: 6px;
-      background: #c800ff;
-      border-radius: 50%;
-      animation: pulseDot 1.5s infinite;
-    }
+    /* TICKER */
+    .ticker-wrap { background:#1a0035; border-bottom:2px solid #c800ff; position:relative; z-index:5; overflow:hidden; height:38px; display:flex; align-items:stretch; }
+    .ticker-label { background:#c800ff; padding:0 16px; display:flex; align-items:center; flex-shrink:0; z-index:2; }
+    .ticker-label span { font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:2px; color:#fff; white-space:nowrap; }
+    .ticker-viewport { flex:1; overflow:hidden; position:relative; display:flex; align-items:center; }
+    .ticker-track { display:flex; align-items:center; white-space:nowrap; animation:tickerScroll 40s linear infinite; will-change:transform; }
+    @keyframes tickerScroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    .tick-item { font-family:'DM Sans',sans-serif; font-size:12px; color:rgba(255,255,255,0.85); padding:0 22px; white-space:nowrap; flex-shrink:0; }
+    .tick-item strong { color:#e066ff; font-weight:700; }
+    .tick-sep { color:#c800ff; font-size:9px; flex-shrink:0; opacity:0.6; }
+    @media(max-width:700px){ .ticker-label span{font-size:10px} .tick-item{font-size:11px;padding:0 16px} }
+
+    .portal-inner { max-width:1280px; margin:0 auto; padding:20px 24px; display:grid; grid-template-columns:1fr 260px 340px; gap:16px; align-items:start; position:relative; z-index:1; }
+    .nota-grande { position:relative; border-radius:12px; overflow:hidden; height:500px; cursor:pointer; }
+    .nota-grande:hover .nota-grande-img { transform:scale(1.03); }
+    .nota-grande-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+    .nota-grande-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.93) 0%,rgba(0,0,0,0.45) 50%,rgba(0,0,0,0.05) 100%); }
+    .nota-grande-content { position:absolute; bottom:0; left:0; right:0; padding:24px; z-index:2; }
+    .nota-grande-badge { display:inline-flex; align-items:center; gap:5px; font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#c800ff; text-transform:uppercase; margin-bottom:8px; }
+    .nota-grande-dot { width:6px; height:6px; background:#c800ff; border-radius:50%; animation:pulseDot 1.5s infinite; }
     @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.4)} }
-    .nota-grande-titulo {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.3;
-      margin-bottom: 6px;
-    }
-    .nota-grande-resumen {
-      font-size: 12px;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.5;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .nota-grilla {
-      display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 10px;
-      height: 500px;
-    }
-    .nota-chica {
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.2s;
-      min-height: 0;
-      border-top: 4px solid #c800ff;
-    }
-    .nota-chica:hover { transform: scale(1.02); }
-    .nota-chica-img {
-      position: absolute;
-      inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .nota-chica-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.05) 100%);
-    }
-    .nota-chica-body {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 10px 12px;
-      z-index: 2;
-    }
-    .nota-chica-cat {
-      display: inline-block;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      padding: 2px 7px;
-      border-radius: 3px;
-      margin-bottom: 4px;
-      color: #fff;
-      background: #c800ff;
-      max-width: fit-content;
-    }
-    .nota-chica-cat.cat-apertura  { background: #3d0066; }
-    .nota-chica-cat.cat-seleccion { background: #005cbf; }
-    .nota-chica-cat.cat-internacional { background: #006644; }
-    .nota-chica-titulo {
-      font-size: 12px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.3;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .nota-chica-fecha {
-      font-size: 10px;
-      color: rgba(255,255,255,0.4);
-      margin-top: 2px;
-      display: block;
-    }
-    .tabla-panel {
-      height: 500px;
-      display: flex;
-      flex-direction: column;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .tabla-panel .tab-content {
-      flex: 1;
-      max-height: none !important;
-      overflow-y: auto;
-    }
-
-    /* ===== GRILLA NOTICIAS (ultimas + secciones) ===== */
-    .grid-ultimas {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-    .grid-card {
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 220px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .grid-card:hover { transform: translateY(-3px); }
-    .grid-card-img {
-      position: absolute;
-      inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .grid-card-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.05) 100%);
-    }
-    .grid-card-badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: 3px;
-      z-index: 2;
-      color: #fff;
-    }
-    .badge-apertura  { background: #3d0066; }
-    .badge-seleccion { background: #005cbf; }
-    .badge-internacional { background: #006644; }
-    .grid-card-body {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 10px 12px;
-      z-index: 2;
-    }
-    .grid-card-titulo {
-      font-size: 12px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.3;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      margin: 0 0 3px;
-    }
-    .grid-card-fecha {
-      font-size: 10px;
-      color: rgba(255,255,255,0.4);
-      display: block;
-    }
-
-    /* ===== MOBILE ===== */
-    @media(max-width:768px) {
-      .portal-inner {
-        grid-template-columns: 1fr !important;
-        padding: 12px !important;
-        gap: 12px !important;
-      }
-      .nota-grande { height: 260px !important; }
-      .nota-grilla { display: none !important; }
-      .tabla-panel { height: auto !important; }
-      .tabla-panel .tab-content { max-height: 380px !important; overflow-y: auto !important; }
-      .grid-ultimas {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        gap: 12px !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory !important;
-        scrollbar-width: none !important;
-        padding-bottom: 8px !important;
-        grid-template-columns: unset !important;
-      }
-      .grid-ultimas::-webkit-scrollbar { display: none !important; }
-      .grid-ultimas .grid-card {
-        flex: 0 0 75vw !important;
-        flex-shrink: 0 !important;
-        width: 75vw !important;
-        min-width: 75vw !important;
-        max-width: 75vw !important;
-        height: 200px !important;
-        scroll-snap-align: start !important;
-        position: relative !important;
-        border-radius: 10px !important;
-        overflow: hidden !important;
-      }
+    .nota-grande-titulo { font-family:'DM Sans',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; line-height:1.3; margin-bottom:6px; }
+    .nota-grande-resumen { font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    .nota-grilla { display:grid; grid-template-rows:1fr 1fr 1fr; gap:10px; height:500px; }
+    .nota-chica { position:relative; border-radius:10px; overflow:hidden; cursor:pointer; transition:transform 0.2s; min-height:0; border-top:4px solid #c800ff; }
+    .nota-chica:hover { transform:scale(1.02); }
+    .nota-chica-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+    .nota-chica-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.4) 55%,rgba(0,0,0,0.05) 100%); }
+    .nota-chica-body { position:absolute; bottom:0; left:0; right:0; padding:10px 12px; z-index:2; }
+    .nota-chica-titulo { font-size:12px; font-weight:700; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    .nota-chica-fecha { font-size:10px; color:rgba(255,255,255,0.4); margin-top:2px; display:block; }
+    .tabla-panel { height:500px; display:flex; flex-direction:column; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden; }
+    .tabla-panel .tab-content { flex:1; max-height:none !important; overflow-y:auto; }
+    .grid-ultimas { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .grid-card { position:relative; border-radius:10px; overflow:hidden; height:220px; cursor:pointer; transition:transform 0.2s; }
+    .grid-card:hover { transform:translateY(-3px); }
+    .badge-apertura { background:#3d0066; } .badge-seleccion { background:#005cbf; } .badge-internacional { background:#006644; }
+    @media(max-width:768px){
+      .portal-inner { grid-template-columns:1fr !important; padding:12px !important; gap:12px !important; }
+      .nota-grande { height:260px !important; }
+      .nota-grilla { display:none !important; }
+      .tabla-panel { height:auto !important; }
+      .tabla-panel .tab-content { max-height:380px !important; overflow-y:auto !important; }
+      .grid-ultimas { display:flex !important; flex-direction:row !important; flex-wrap:nowrap !important; gap:12px !important; overflow-x:auto !important; scroll-snap-type:x mandatory !important; scrollbar-width:none !important; padding-bottom:8px !important; grid-template-columns:unset !important; }
+      .grid-ultimas::-webkit-scrollbar { display:none !important; }
+      .grid-ultimas .grid-card { flex:0 0 75vw !important; width:75vw !important; min-width:75vw !important; max-width:75vw !important; height:200px !important; scroll-snap-align:start !important; }
     }
   </style>
 <!-- Google Analytics -->
@@ -371,14 +82,15 @@
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo" />
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo"/>
       <span class="brand-name">femeninoinfo</span>
     </a>
     <nav class="nav">
       <a href="futbol-argentino.html">Fútbol Argentino</a>
       <a href="seleccion-argentina.html">Selección Argentina</a>
       <a href="internacional.html">Internacional</a>
-      <a href="mundial-2027.html">Mundial 2027</a>      <a href="streaming.html">Streaming</a>
+      <a href="mundial-2027.html">Mundial 2027</a>
+      <a href="streaming.html">Streaming</a>
       <a href="sobre.html">Sobre</a>
     </nav>
     <button class="search-toggle" id="searchToggle" aria-label="Buscar noticias">&#128269;</button>
@@ -388,12 +100,12 @@
     <a href="futbol-argentino.html" onclick="toggleMenu()">Fútbol Argentino</a>
     <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
     <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
-    <a href="mundial-2027.html" onclick="toggleMenu()">Mundial 2027</a>    <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
+    <a href="mundial-2027.html" onclick="toggleMenu()">Mundial 2027</a>
+    <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
     <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
   </nav>
 </header>
 
-<!-- BUSCADOR -->
 <div class="search-bar" id="searchBar">
   <div class="search-bar-inner">
     <div class="search-input-wrap">
@@ -405,41 +117,41 @@
   </div>
 </div>
 
-<!-- TICKER FIXTURE -->
+<!-- TICKER FECHA 11 - RESULTADOS COMPLETOS -->
 <div class="ticker-wrap">
   <div class="ticker-label"><span>FECHA 11</span></div>
   <div class="ticker-viewport">
     <div class="ticker-track" id="tickerTrack">
       <span class="tick-item">&#9989; <strong>River</strong> 1 — 0 <strong>Newell's</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; 27' — <strong>Belgrano</strong> 0 — 0 <strong>Racing</strong></span>
+      <span class="tick-item">&#9989; <strong>Belgrano</strong> 0 — 0 <strong>Racing</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; 28' — <strong>Independiente</strong> 0 — 1 <strong>Talleres</strong></span>
+      <span class="tick-item">&#9989; <strong>Independiente</strong> 1 — 3 <strong>Talleres</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Sáb 27/6 · 11:00 — <strong>SAT</strong> vs <strong>Lanús</strong></span>
+      <span class="tick-item">&#9989; <strong>SAT</strong> 0 — 2 <strong>Lanús</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Sáb 27/6 · 15:00 — <strong>Banfield</strong> vs <strong>Gimnasia</strong></span>
+      <span class="tick-item">&#9989; <strong>Banfield</strong> 2 — 2 <strong>Gimnasia</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Dom 28/6 · 15:00 — <strong>Unión</strong> vs <strong>Ferro</strong></span>
+      <span class="tick-item">&#9989; <strong>Unión</strong> 1 — 2 <strong>Ferro</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Dom 28/6 · 18:00 — <strong>San Luis FC</strong> vs <strong>Boca</strong></span>
+      <span class="tick-item">&#9989; <strong>San Luis FC</strong> 0 — 0 <strong>Boca</strong></span>
       <span class="tick-sep">&#9670;</span>
       <span class="tick-item">&#9733; Lun 29/6 · 17:00 — <strong>Huracán</strong> vs <strong>San Lorenzo</strong> · Clásico</span>
       <span class="tick-sep">&#9670;</span>
       <!-- duplicado para loop infinito -->
       <span class="tick-item">&#9989; <strong>River</strong> 1 — 0 <strong>Newell's</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; 27' — <strong>Belgrano</strong> 0 — 0 <strong>Racing</strong></span>
+      <span class="tick-item">&#9989; <strong>Belgrano</strong> 0 — 0 <strong>Racing</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; 28' — <strong>Independiente</strong> 0 — 1 <strong>Talleres</strong></span>
+      <span class="tick-item">&#9989; <strong>Independiente</strong> 1 — 3 <strong>Talleres</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Sáb 27/6 · 11:00 — <strong>SAT</strong> vs <strong>Lanús</strong></span>
+      <span class="tick-item">&#9989; <strong>SAT</strong> 0 — 2 <strong>Lanús</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Sáb 27/6 · 15:00 — <strong>Banfield</strong> vs <strong>Gimnasia</strong></span>
+      <span class="tick-item">&#9989; <strong>Banfield</strong> 2 — 2 <strong>Gimnasia</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Dom 28/6 · 15:00 — <strong>Unión</strong> vs <strong>Ferro</strong></span>
+      <span class="tick-item">&#9989; <strong>Unión</strong> 1 — 2 <strong>Ferro</strong></span>
       <span class="tick-sep">&#9670;</span>
-      <span class="tick-item">&#128336; Dom 28/6 · 18:00 — <strong>San Luis FC</strong> vs <strong>Boca</strong></span>
+      <span class="tick-item">&#9989; <strong>San Luis FC</strong> 0 — 0 <strong>Boca</strong></span>
       <span class="tick-sep">&#9670;</span>
       <span class="tick-item">&#9733; Lun 29/6 · 17:00 — <strong>Huracán</strong> vs <strong>San Lorenzo</strong> · Clásico</span>
       <span class="tick-sep">&#9670;</span>
@@ -461,124 +173,56 @@
     </div>
     <div class="nota-grilla" id="noticiasChicas"></div>
     <div class="tabla-panel">
-      <div class="tabla-header-afa" style="padding:8px 12px;justify-content:flex-end;">
-        <div class="liga-selector">
-          <button class="liga-sel-btn active" onclick="cambiarLiga('afa',this)" title="Apertura Femenino ARG">
-            <img src="https://flagcdn.com/w40/ar.png" alt="ARG" style="width:28px;height:19px;object-fit:cover;border-radius:2px;"/>
-            <span class="liga-sel-text">ARG</span>
-          </button>
-          <button class="liga-sel-btn" onclick="cambiarLiga('nwsl',this)" title="NWSL USA">
-            <img src="https://flagcdn.com/w40/us.png" alt="USA" style="width:28px;height:19px;object-fit:cover;border-radius:2px;"/>
-            <span class="liga-sel-text">USA</span>
-          </button>
-          <button class="liga-sel-btn" onclick="cambiarLiga('ligaf',this)" title="Liga F España">
-            <img src="https://flagcdn.com/w40/es.png" alt="ESP" style="width:28px;height:19px;object-fit:cover;border-radius:2px;"/>
-            <span class="liga-sel-text">ESP</span>
-          </button>
-          <button class="liga-sel-btn" onclick="cambiarLiga('ligamx',this)" title="Liga MX Femenil">
-            <img src="https://flagcdn.com/w40/mx.png" alt="MEX" style="width:28px;height:19px;object-fit:cover;border-radius:2px;"/>
-            <span class="liga-sel-text">MEX</span>
-          </button>
-        </div>
-      </div>
       <div class="tabs-header">
-        <button class="tab-btn active" onclick="showTab('tabla',this)">Tabla</button>
-        <button class="tab-btn" id="tab-fixture-btn" onclick="showTab('fixture',this)">Fixture — Fecha 11</button>
+        <button class="tab-btn active" onclick="showTab('tabla',this)">Tabla — Fecha 11</button>
+        <button class="tab-btn" id="tab-fixture-btn" onclick="showTab('fixture',this)">Fixture</button>
       </div>
       <div class="tab-content" id="tab-tabla">
         <table class="tabla-pos">
           <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead>
           <tbody>
-            <tr class="lider"><td>1</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Racing">Racing</td><td>10</td><td>+19</td><td><strong>25</strong></td></tr>
-            <tr class="top3"><td>2</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="San Lorenzo">San Lorenzo</td><td>10</td><td>+17</td><td><strong>23</strong></td></tr>
-            <tr class="top3"><td>3</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="River">River</td><td>11</td><td>+12</td><td><strong>23</strong></td></tr>
-            <tr><td>5</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Banfield">Banfield</td><td>10</td><td>0</td><td><strong>18</strong></td></tr>
-            <tr><td>4</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Talleres">Talleres</td><td>11</td><td>+9</td><td><strong>20</strong></td></tr>
-            <tr><td>6</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Gimnasia">Gimnasia</td><td>10</td><td>-2</td><td><strong>15</strong></td></tr>
-            <tr><td>7</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="SAT">SAT</td><td>10</td><td>+4</td><td><strong>14</strong></td></tr>
-            <tr><td>8</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Boca">Boca</td><td>10</td><td>+2</td><td><strong>14</strong></td></tr>
-            <tr><td>9</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="San Luis FC">San Luis FC</td><td>10</td><td>+2</td><td><strong>12</strong></td></tr>
-            <tr><td>10</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Ferro">Ferro</td><td>10</td><td>+2</td><td><strong>12</strong></td></tr>
-            <tr><td>11</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Belgrano">Belgrano</td><td>10</td><td>-2</td><td><strong>12</strong></td></tr>
+            <tr class="lider"><td>1</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Racing">Racing</td><td>11</td><td>+19</td><td><strong>26</strong></td></tr>
+            <tr><td>2</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="San Lorenzo">San Lorenzo</td><td>10</td><td>+17</td><td><strong>23</strong></td></tr>
+            <tr><td>3</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="River">River</td><td>11</td><td>+12</td><td><strong>23</strong></td></tr>
+            <tr><td>4</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Talleres">Talleres</td><td>11</td><td>+10</td><td><strong>20</strong></td></tr>
+            <tr><td>5</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Banfield">Banfield</td><td>11</td><td>0</td><td><strong>19</strong></td></tr>
+            <tr><td>6</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Gimnasia">Gimnasia</td><td>11</td><td>-2</td><td><strong>16</strong></td></tr>
+            <tr><td>7</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Ferro">Ferro</td><td>11</td><td>+3</td><td><strong>15</strong></td></tr>
+            <tr><td>8</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Boca">Boca</td><td>11</td><td>+2</td><td><strong>15</strong></td></tr>
+            <tr><td>9</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="SAT">SAT</td><td>11</td><td>+4</td><td><strong>14</strong></td></tr>
+            <tr><td>10</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="San Luis FC">San Luis FC</td><td>11</td><td>+2</td><td><strong>13</strong></td></tr>
+            <tr><td>11</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Belgrano">Belgrano</td><td>11</td><td>-2</td><td><strong>13</strong></td></tr>
             <tr><td>12</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Huracán">Huracán</td><td>10</td><td>-5</td><td><strong>11</strong></td></tr>
-            <tr><td>13</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Independiente">Independiente</td><td>10</td><td>-8</td><td><strong>10</strong></td></tr>
-            <tr><td>14</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Lanús">Lanús</td><td>10</td><td>-14</td><td><strong>8</strong></td></tr>
+            <tr><td>13</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Lanús">Lanús</td><td>11</td><td>-12</td><td><strong>11</strong></td></tr>
+            <tr><td>14</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Independiente">Independiente</td><td>11</td><td>-10</td><td><strong>10</strong></td></tr>
             <tr class="descenso"><td>15</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Newells">Newell's</td><td>11</td><td>-15</td><td><strong>5</strong></td></tr>
-            <tr class="descenso"><td>16</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Unión">Unión</td><td>10</td><td>-20</td><td><strong>2</strong></td></tr>
+            <tr class="descenso"><td>16</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Unión">Unión</td><td>11</td><td>-21</td><td><strong>2</strong></td></tr>
           </tbody>
         </table>
-        <p class="tabla-fecha">Fecha 11 en curso — 26 jun 2026</p>
-      </div>
-      <div class="tab-content tabla-liga-ext" id="tab-tabla-nwsl" style="display:none;">
-        <table class="tabla-pos">
-          <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead>
-          <tbody>
-            <tr class="top3"><td>1</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Utah_Royals_FC_logo.svg/20px-Utah_Royals_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Utah Royals</td><td>11</td><td>+14</td><td><strong>25</strong></td></tr>
-            <tr class="top3"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/Washington_Spirit_logo.svg/20px-Washington_Spirit_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Washington Spirit</td><td>12</td><td>+12</td><td><strong>24</strong></td></tr>
-            <tr class="top3"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/North_Carolina_Courage_logo.svg/20px-North_Carolina_Courage_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">NC Courage</td><td>12</td><td>+9</td><td><strong>22</strong></td></tr>
-            <tr><td>4</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Orlando_Pride_logo.svg/20px-Orlando_Pride_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Orlando Pride</td><td>11</td><td>+11</td><td><strong>20</strong></td></tr>
-            <tr><td>5</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/San_Diego_Wave_FC_logo.svg/20px-San_Diego_Wave_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">San Diego Wave</td><td>11</td><td>+8</td><td><strong>19</strong></td></tr>
-            <tr><td>6</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Portland_Thorns_FC_logo.svg/20px-Portland_Thorns_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Portland Thorns</td><td>11</td><td>+5</td><td><strong>18</strong></td></tr>
-            <tr><td>7</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Kansas_City_Current_logo.svg/20px-Kansas_City_Current_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Kansas City</td><td>12</td><td>+2</td><td><strong>16</strong></td></tr>
-            <tr><td>8</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Gotham_FC_logo.svg/20px-Gotham_FC_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Gotham FC</td><td>12</td><td>-1</td><td><strong>15</strong></td></tr>
-          </tbody>
-        </table>
-        <p class="tabla-fecha">Top 8 — Temporada 2026 en curso</p>
-      </div>
-      <div class="tab-content tabla-liga-ext" id="tab-tabla-ligaf" style="display:none;">
-        <table class="tabla-pos">
-          <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead>
-          <tbody>
-            <tr class="top3"><td>🏆</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/20px-FC_Barcelona_%28crest%29.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Barcelona</td><td>30</td><td>+89</td><td><strong>85</strong></td></tr>
-            <tr class="top3"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/20px-Real_Madrid_CF.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Real Madrid</td><td>30</td><td>+42</td><td><strong>72</strong></td></tr>
-            <tr class="top3"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Real_Sociedad_logo.svg/20px-Real_Sociedad_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Real Sociedad</td><td>30</td><td>+18</td><td><strong>60</strong></td></tr>
-            <tr><td>4</td><td>Tenerife</td><td>30</td><td>+12</td><td><strong>52</strong></td></tr>
-            <tr><td>5</td><td>Atlético Madrid</td><td>30</td><td>+10</td><td><strong>49</strong></td></tr>
-            <tr><td>6</td><td>Athletic Club</td><td>30</td><td>+8</td><td><strong>46</strong></td></tr>
-            <tr><td>7</td><td>Villarreal</td><td>30</td><td>+5</td><td><strong>42</strong></td></tr>
-            <tr><td>8</td><td>Sevilla</td><td>30</td><td>+3</td><td><strong>38</strong></td></tr>
-          </tbody>
-        </table>
-        <p class="tabla-fecha">Temporada 2025-26 finalizada — Barcelona campeón</p>
-      </div>
-      <div class="tab-content tabla-liga-ext" id="tab-tabla-ligamx" style="display:none;">
-        <table class="tabla-pos">
-          <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead>
-          <tbody>
-            <tr class="top3"><td>🏆</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Club_Am%C3%A9rica_crest.svg/20px-Club_Am%C3%A9rica_crest.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">América</td><td>17</td><td>+35</td><td><strong>42</strong></td></tr>
-            <tr class="top3"><td>2</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/CF_Monterrey_logo.svg/20px-CF_Monterrey_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Monterrey</td><td>17</td><td>+28</td><td><strong>38</strong></td></tr>
-            <tr class="top3"><td>3</td><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Tigres_UANL_logo.svg/20px-Tigres_UANL_logo.svg.png" class="escudo-img" style="width:20px;height:20px;object-fit:contain;" onerror="this.style.display='none'" alt="">Tigres UANL</td><td>17</td><td>+24</td><td><strong>35</strong></td></tr>
-            <tr><td>4</td><td>Chivas</td><td>17</td><td>+18</td><td><strong>32</strong></td></tr>
-            <tr><td>5</td><td>Cruz Azul</td><td>17</td><td>+10</td><td><strong>28</strong></td></tr>
-            <tr><td>6</td><td>Pachuca</td><td>17</td><td>+12</td><td><strong>27</strong></td></tr>
-            <tr><td>7</td><td>Toluca</td><td>17</td><td>+6</td><td><strong>25</strong></td></tr>
-            <tr><td>8</td><td>Atlas</td><td>17</td><td>+4</td><td><strong>24</strong></td></tr>
-          </tbody>
-        </table>
-        <p class="tabla-fecha">Clausura 2026 finalizado — América campeona</p>
+        <p class="tabla-fecha">Fecha 11 en curso — falta Huracán vs San Lorenzo</p>
       </div>
       <div class="tab-content" id="tab-fixture" style="display:none;">
         <div class="fixture-nuevo">
           <div class="fx-dia-bloque">
             <div class="fx-dia-tag"><span class="fx-dia-nombre">Viernes</span><span class="fx-dia-fecha">26/6</span></div>
             <div class="fx-partidos">
-              <div class="fx-card"><span class="fx-card-hora">13:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="fx-escudo" alt="River"><span class="fx-card-nombre">River</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Newell's</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="fx-escudo" alt="Newell's"></div><span class="fx-card-estadio">River Camp</span></div>
-              <div class="fx-card"><span class="fx-card-hora">15:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="fx-escudo" alt="Belgrano"><span class="fx-card-nombre">Belgrano</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Racing</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="fx-escudo" alt="Racing"></div><span class="fx-card-estadio">P. Armando Pérez</span></div>
-              <div class="fx-card"><span class="fx-card-hora">15:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="fx-escudo" alt="Independiente"><span class="fx-card-nombre">Independiente</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Talleres</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="fx-escudo" alt="Talleres"></div><span class="fx-card-estadio">Predio Santo Domingo</span></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="fx-escudo" alt="River"><span class="fx-card-nombre">River</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">1 — 0</span><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Newell's</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="fx-escudo" alt="Newell's"></div><span class="fx-card-estadio">River Camp</span></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="fx-escudo" alt="Belgrano"><span class="fx-card-nombre">Belgrano</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">0 — 0</span><span class="fx-card-nombre">Racing</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="fx-escudo" alt="Racing"></div><span class="fx-card-estadio">P. Armando Pérez</span></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="fx-escudo" alt="Independiente"><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Independiente</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">1 — 3</span><span class="fx-card-nombre">Talleres</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="fx-escudo" alt="Talleres"></div><span class="fx-card-estadio">Predio Santo Domingo</span></div>
             </div>
           </div>
           <div class="fx-dia-bloque">
             <div class="fx-dia-tag"><span class="fx-dia-nombre">Sábado</span><span class="fx-dia-fecha">27/6</span></div>
             <div class="fx-partidos">
-              <div class="fx-card"><span class="fx-card-hora">11:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="fx-escudo" alt="SAT"><span class="fx-card-nombre">SAT</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Lanús</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="fx-escudo" alt="Lanús"></div><span class="fx-card-estadio">Est. 12 de Agosto</span></div>
-              <div class="fx-card"><span class="fx-card-hora">15:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="fx-escudo" alt="Banfield"><span class="fx-card-nombre">Banfield</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Gimnasia</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="fx-escudo" alt="Gimnasia"></div><span class="fx-card-estadio">Est. Florencio Sola</span></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="fx-escudo" alt="SAT"><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">SAT</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">0 — 2</span><span class="fx-card-nombre">Lanús</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="fx-escudo" alt="Lanús"></div><span class="fx-card-estadio">Est. 12 de Agosto</span></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="fx-escudo" alt="Banfield"><span class="fx-card-nombre">Banfield</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">2 — 2</span><span class="fx-card-nombre">Gimnasia</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="fx-escudo" alt="Gimnasia"></div><span class="fx-card-estadio">Est. Florencio Sola</span></div>
             </div>
           </div>
           <div class="fx-dia-bloque">
             <div class="fx-dia-tag"><span class="fx-dia-nombre">Domingo</span><span class="fx-dia-fecha">28/6</span></div>
             <div class="fx-partidos">
-              <div class="fx-card"><span class="fx-card-hora">15:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="fx-escudo" alt="Unión"><span class="fx-card-nombre">Unión</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Gimnasia</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="fx-escudo" alt="Gimnasia"></div><span class="fx-card-estadio">La Tatenguita</span></div>
-              <div class="fx-card"><span class="fx-card-hora">18:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="fx-escudo" alt="San Luis FC"><span class="fx-card-nombre">San Luis FC</span><span class="fx-card-vs">vs</span><span class="fx-card-nombre">Boca</span><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="fx-escudo" alt="Boca"></div><span class="fx-card-estadio">Villa Deportiva S.L.</span></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="fx-escudo" alt="Unión"><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Unión</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">1 — 2</span><span class="fx-card-nombre">Ferro</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="fx-escudo" alt="Ferro"></div><span class="fx-card-estadio">La Tatenguita</span></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="fx-escudo" alt="San Luis FC"><span class="fx-card-nombre">San Luis FC</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">0 — 0</span><span class="fx-card-nombre">Boca</span><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="fx-escudo" alt="Boca"></div><span class="fx-card-estadio">Villa Deportiva S.L.</span></div>
             </div>
           </div>
           <div class="fx-dia-bloque">
@@ -734,144 +378,92 @@
 </footer>
 
 <style>
-  .header { background:#1a0035 !important; border-bottom:2px solid rgba(200,0,255,0.3) !important; position:relative !important; overflow:hidden !important; }
-  .header::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%); background-size:200% 100%; animation:barreSweep 3s linear infinite; pointer-events:none; z-index:0; }
-  @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
-  .header-inner, .nav-mobile { position:relative; z-index:1; }
-  .streaming-videos { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; width:100%; }
-  .video-card { display:block; border-radius:8px; overflow:hidden; transition:transform 0.2s; }
-  .video-card:hover { transform:scale(1.02); }
-  .video-thumb { position:relative; }
-  .video-thumb img { width:100%; height:140px; object-fit:cover; display:block; }
-  .video-play { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(200,0,255,0.85); color:#fff; font-size:20px; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; padding-left:3px; }
-  .redes-section-nueva { background:#0a000f; padding:36px 24px; border-top:1px solid #1a003a; }
-  .redes-titulo { font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center; margin-bottom:20px; }
-  .redes-row { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; max-width:500px; margin:0 auto; }
-  .red-item { display:flex; flex-direction:column; align-items:center; gap:8px; text-decoration:none; padding:16px 24px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); transition:background 0.2s; }
-  .red-item:hover { background:rgba(200,0,255,0.1); border-color:rgba(200,0,255,0.3); }
-  .red-logo { width:28px; height:28px; object-fit:contain; }
-  .red-label { font-size:11px; color:rgba(255,255,255,0.45); letter-spacing:0.5px; }
-  .liga-selector { display:flex; gap:6px; margin-left:auto; align-items:center; flex-wrap:wrap; }
-  .liga-sel-btn { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:8px; width:52px; height:48px; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; padding:4px; font-size:8px; color:rgba(255,255,255,0.6); font-weight:700; letter-spacing:0.5px; gap:2px; }
-  .liga-sel-btn:hover { background:rgba(200,0,255,0.15); border-color:rgba(200,0,255,0.4); color:#fff; }
-  .liga-sel-btn.active { background:rgba(200,0,255,0.25); border-color:#c800ff; box-shadow:0 0 10px rgba(200,0,255,0.3); color:#fff; }
-  .liga-sel-btn img { width:28px; height:28px; object-fit:contain; }
-  .liga-sel-btn .liga-sel-text { font-size:8px; letter-spacing:0.5px; text-transform:uppercase; }
-  .fixture-nuevo { padding:8px 4px; }
-  .fx-dia-bloque { margin-bottom:12px; }
-  .fx-dia-tag { display:flex; align-items:center; gap:8px; margin-bottom:6px; padding:0 4px; }
-  .fx-dia-nombre { font-family:'Bebas Neue',sans-serif; font-size:11px; letter-spacing:2px; color:#c800ff; text-transform:uppercase; }
-  .fx-dia-fecha { background:rgba(200,0,255,0.2); color:#e066ff; font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:1px; padding:2px 7px; border-radius:4px; }
-  .fx-partidos { display:flex; flex-direction:column; gap:4px; }
-  .fx-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); border-radius:6px; padding:7px 10px; display:flex; align-items:center; gap:8px; transition:background 0.15s; }
-  .fx-card:hover { background:rgba(200,0,255,0.08); }
-  .fx-card-destacada { border-color:rgba(200,0,255,0.3); background:rgba(200,0,255,0.07); }
-  .fx-card-hora { font-family:'Bebas Neue',sans-serif; font-size:12px; color:#c800ff; min-width:36px; flex-shrink:0; }
-  .fx-card-equipos { display:flex; align-items:center; gap:6px; flex:1; }
-  .fx-escudo { width:18px; height:18px; object-fit:contain; flex-shrink:0; }
-  .fx-card-nombre { font-size:11px; color:rgba(255,255,255,0.85); font-weight:500; white-space:nowrap; }
-  .fx-card-vs { font-size:9px; color:rgba(255,255,255,0.3); font-weight:400; flex-shrink:0; }
-  .fx-card-estadio { font-size:9px; color:rgba(255,255,255,0.3); text-align:right; white-space:nowrap; flex-shrink:0; }
-  @media(max-width:600px) { .streaming-videos{grid-template-columns:1fr} .redes-row{gap:10px} .red-item{padding:12px 16px} }
-
-  /* ===== BUSCADOR ===== */
-  .search-toggle { background:rgba(200,0,255,0.15); border:1.5px solid rgba(200,0,255,0.4); border-radius:8px; width:38px; height:38px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; color:#c800ff; font-size:17px; flex-shrink:0; }
-  .search-toggle:hover, .search-toggle.active { background:rgba(200,0,255,0.3); border-color:#c800ff; }
-  .search-bar { background:#0d0020; border-bottom:2px solid #3d0066; overflow:hidden; max-height:0; transition:max-height 0.3s ease, padding 0.3s ease; padding:0 24px; position:relative; z-index:99; }
-  .search-bar.open { max-height:500px; padding:16px 24px; }
-  .search-bar-inner { max-width:1280px; margin:0 auto; }
-  .search-input-wrap { display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.06); border:1.5px solid rgba(200,0,255,0.35); border-radius:10px; padding:12px 18px; }
-  .search-input-wrap:focus-within { border-color:#c800ff; background:rgba(200,0,255,0.07); }
-  .search-icon { color:rgba(200,0,255,0.7); font-size:18px; flex-shrink:0; }
-  .search-input { background:none; border:none; outline:none; color:#fff; font-size:15px; font-family:'DM Sans',sans-serif; flex:1; caret-color:#c800ff; }
-  .search-input::placeholder { color:rgba(255,255,255,0.3); }
-  .search-clear { background:none; border:none; color:rgba(255,255,255,0.3); font-size:18px; cursor:pointer; padding:0; display:none; }
-  .search-clear.visible { display:block; }
-  .search-clear:hover { color:rgba(255,255,255,0.7); }
-  .search-hint { font-size:12px; color:rgba(255,255,255,0.25); text-align:center; padding:14px 0 4px; }
-  .search-empty { font-size:13px; color:rgba(255,255,255,0.35); text-align:center; padding:20px 0; }
-  .search-more { font-size:11px; color:rgba(255,255,255,0.3); text-align:center; padding:8px 0; }
-  .search-results-list { display:flex; flex-direction:column; gap:6px; margin-top:10px; max-height:360px; overflow-y:auto; }
-  .search-result-item { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:8px; padding:10px 14px; cursor:pointer; transition:all 0.15s; text-decoration:none; }
-  .search-result-item:hover { background:rgba(200,0,255,0.1); border-color:rgba(200,0,255,0.35); transform:translateX(2px); }
-  .search-result-img { width:64px; height:42px; border-radius:5px; object-fit:cover; flex-shrink:0; background:#2a0044; display:block; }
-  .search-result-info { flex:1; min-width:0; }
-  .search-result-titulo { font-size:13px; font-weight:700; color:#fff; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:4px; }
-  .search-result-meta { display:flex; align-items:center; gap:8px; }
-  .search-badge { font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:2px 7px; border-radius:3px; color:#fff; }
-  .badge-apertura { background:#3d0066; } .badge-seleccion { background:#005cbf; } .badge-internacional { background:#006644; } .badge-mundial2027 { background:#009c3b; }
-  .search-result-fecha { font-size:10px; color:rgba(255,255,255,0.35); }
-  .search-arrow { color:rgba(200,0,255,0.5); font-size:16px; flex-shrink:0; }
-  .search-mark { background:rgba(200,0,255,0.35); color:#fff; border-radius:2px; padding:0 2px; }
-
-  /* ===== SECCIONES CLARAS ===== */
-  .sec-clara { background:#f5f0f8; padding:48px 0; border-top:5px solid transparent; }
-  .sec-clara-inner { max-width:1280px; margin:0 auto; padding:0 24px; }
-  .sec-arg  { border-top-color:#3d0066; }
-  .sec-sel  { border-top-color:#005cbf; }
-  .sec-int  { border-top-color:#006644; }
-  .sec-title-arg { color:#3d0066 !important; }
-  .sec-title-sel { color:#005cbf !important; }
-  .sec-title-int { color:#006644 !important; }
-  .line-arg { background:#3d0066 !important; }
-  .line-sel { background:#005cbf !important; }
-  .line-int { background:#006644 !important; }
-  .sec-clara .grid-card { box-shadow:0 2px 12px rgba(0,0,0,0.12); }
-  .sec-clara .grid-card:hover { box-shadow:0 6px 20px rgba(0,0,0,0.18); transform:translateY(-3px); }
-
-  /* Botones Ver todas */
-  .ver-mas-btn {
-    display: inline-block;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 8px 18px;
-    border-radius: 6px;
-    border: 1.5px solid currentColor;
-    text-decoration: none;
-    transition: all 0.2s;
-    white-space: nowrap;
-    margin-bottom: 4px;
-  }
-  .ver-mas-arg { color: #3d0066; }
-  .ver-mas-arg:hover { background: #3d0066; color: #fff; }
-  .ver-mas-sel { color: #005cbf; }
-  .ver-mas-sel:hover { background: #005cbf; color: #fff; }
-  .ver-mas-int { color: #006644; }
-  .ver-mas-int:hover { background: #006644; color: #fff; }
-  .ver-mas-mundial { color: #002776; }
-  .ver-mas-mundial:hover { background: #002776; color: #fff; }
-
-  /* Sección Mundial */
-  .sec-mundial { border-top-color: #009c3b; }
-  .sec-title-mundial { color: #009c3b !important; }
-  .line-mundial { background: #002776 !important; }
-  .pill-mundial { background: #ffdf00 !important; color: #5a3d00 !important; }
+  .header{background:#1a0035!important;border-bottom:2px solid rgba(200,0,255,0.3)!important;position:relative!important;overflow:hidden!important}
+  .header::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(200,0,255,0.25) 40%,rgba(230,102,255,0.35) 50%,rgba(200,0,255,0.25) 60%,transparent 100%);background-size:200% 100%;animation:barreSweep 3s linear infinite;pointer-events:none;z-index:0}
+  @keyframes barreSweep{0%{background-position:200% 0}100%{background-position:-200% 0}}
+  .header-inner,.nav-mobile{position:relative;z-index:1}
+  .streaming-videos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;width:100%}
+  .video-card{display:block;border-radius:8px;overflow:hidden;transition:transform 0.2s}
+  .video-card:hover{transform:scale(1.02)}
+  .video-thumb{position:relative}
+  .video-thumb img{width:100%;height:140px;object-fit:cover;display:block}
+  .video-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(200,0,255,0.85);color:#fff;font-size:20px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;padding-left:3px}
+  .redes-section-nueva{background:#0a000f;padding:36px 24px;border-top:1px solid #1a003a}
+  .redes-titulo{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;margin-bottom:20px}
+  .redes-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;max-width:500px;margin:0 auto}
+  .red-item{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;padding:16px 24px;border-radius:10px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);transition:background 0.2s}
+  .red-item:hover{background:rgba(200,0,255,0.1);border-color:rgba(200,0,255,0.3)}
+  .red-logo{width:28px;height:28px;object-fit:contain}
+  .red-label{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:0.5px}
+  .fixture-nuevo{padding:8px 4px}
+  .fx-dia-bloque{margin-bottom:12px}
+  .fx-dia-tag{display:flex;align-items:center;gap:8px;margin-bottom:6px;padding:0 4px}
+  .fx-dia-nombre{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:#c800ff;text-transform:uppercase}
+  .fx-dia-fecha{background:rgba(200,0,255,0.2);color:#e066ff;font-family:'Bebas Neue',sans-serif;font-size:10px;letter-spacing:1px;padding:2px 7px;border-radius:4px}
+  .fx-partidos{display:flex;flex-direction:column;gap:4px}
+  .fx-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:7px 10px;display:flex;align-items:center;gap:8px;transition:background 0.15s}
+  .fx-card:hover{background:rgba(200,0,255,0.08)}
+  .fx-card-destacada{border-color:rgba(200,0,255,0.3);background:rgba(200,0,255,0.07)}
+  .fx-card-hora{font-family:'Bebas Neue',sans-serif;font-size:12px;color:#c800ff;min-width:36px;flex-shrink:0}
+  .fx-card-equipos{display:flex;align-items:center;gap:6px;flex:1}
+  .fx-escudo{width:18px;height:18px;object-fit:contain;flex-shrink:0}
+  .fx-card-nombre{font-size:11px;color:rgba(255,255,255,0.85);font-weight:500;white-space:nowrap}
+  .fx-card-vs{font-size:9px;color:rgba(255,255,255,0.3);font-weight:400;flex-shrink:0}
+  .fx-card-estadio{font-size:9px;color:rgba(255,255,255,0.3);text-align:right;white-space:nowrap;flex-shrink:0}
+  .search-toggle{background:rgba(200,0,255,0.15);border:1.5px solid rgba(200,0,255,0.4);border-radius:8px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;color:#c800ff;font-size:17px;flex-shrink:0}
+  .search-toggle:hover,.search-toggle.active{background:rgba(200,0,255,0.3);border-color:#c800ff}
+  .search-bar{background:#0d0020;border-bottom:2px solid #3d0066;overflow:hidden;max-height:0;transition:max-height 0.3s ease,padding 0.3s ease;padding:0 24px;position:relative;z-index:99}
+  .search-bar.open{max-height:500px;padding:16px 24px}
+  .search-bar-inner{max-width:1280px;margin:0 auto}
+  .search-input-wrap{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border:1.5px solid rgba(200,0,255,0.35);border-radius:10px;padding:12px 18px}
+  .search-input-wrap:focus-within{border-color:#c800ff;background:rgba(200,0,255,0.07)}
+  .search-icon{color:rgba(200,0,255,0.7);font-size:18px;flex-shrink:0}
+  .search-input{background:none;border:none;outline:none;color:#fff;font-size:15px;font-family:'DM Sans',sans-serif;flex:1;caret-color:#c800ff}
+  .search-input::placeholder{color:rgba(255,255,255,0.3)}
+  .search-clear{background:none;border:none;color:rgba(255,255,255,0.3);font-size:18px;cursor:pointer;padding:0;display:none}
+  .search-clear.visible{display:block}
+  .search-hint{font-size:12px;color:rgba(255,255,255,0.25);text-align:center;padding:14px 0 4px}
+  .search-empty{font-size:13px;color:rgba(255,255,255,0.35);text-align:center;padding:20px 0}
+  .search-results-list{display:flex;flex-direction:column;gap:6px;margin-top:10px;max-height:360px;overflow-y:auto}
+  .search-result-item{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:10px 14px;cursor:pointer;transition:all 0.15s;text-decoration:none}
+  .search-result-item:hover{background:rgba(200,0,255,0.1);border-color:rgba(200,0,255,0.35);transform:translateX(2px)}
+  .search-result-img{width:64px;height:42px;border-radius:5px;object-fit:cover;flex-shrink:0;background:#2a0044;display:block}
+  .search-result-info{flex:1;min-width:0}
+  .search-result-titulo{font-size:13px;font-weight:700;color:#fff;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:4px}
+  .search-result-meta{display:flex;align-items:center;gap:8px}
+  .search-badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;color:#fff}
+  .badge-apertura{background:#3d0066}.badge-seleccion{background:#005cbf}.badge-internacional{background:#006644}.badge-mundial2027{background:#009c3b}
+  .search-result-fecha{font-size:10px;color:rgba(255,255,255,0.35)}
+  .search-arrow{color:rgba(200,0,255,0.5);font-size:16px;flex-shrink:0}
+  .search-mark{background:rgba(200,0,255,0.35);color:#fff;border-radius:2px;padding:0 2px}
+  .sec-clara{background:#f5f0f8;padding:48px 0;border-top:5px solid transparent}
+  .sec-clara-inner{max-width:1280px;margin:0 auto;padding:0 24px}
+  .sec-arg{border-top-color:#3d0066}.sec-sel{border-top-color:#005cbf}.sec-int{border-top-color:#006644}
+  .sec-title-arg{color:#3d0066!important}.sec-title-sel{color:#005cbf!important}.sec-title-int{color:#006644!important}
+  .line-arg{background:#3d0066!important}.line-sel{background:#005cbf!important}.line-int{background:#006644!important}
+  .sec-clara .grid-card{box-shadow:0 2px 12px rgba(0,0,0,0.12)}
+  .sec-clara .grid-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.18);transform:translateY(-3px)}
+  .ver-mas-btn{display:inline-block;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;padding:8px 18px;border-radius:6px;border:1.5px solid currentColor;text-decoration:none;transition:all 0.2s;white-space:nowrap;margin-bottom:4px}
+  .ver-mas-arg{color:#3d0066}.ver-mas-arg:hover{background:#3d0066;color:#fff}
+  .ver-mas-sel{color:#005cbf}.ver-mas-sel:hover{background:#005cbf;color:#fff}
+  .ver-mas-int{color:#006644}.ver-mas-int:hover{background:#006644;color:#fff}
+  .ver-mas-mundial{color:#002776}.ver-mas-mundial:hover{background:#002776;color:#fff}
+  .sec-mundial{border-top-color:#009c3b}
+  .sec-title-mundial{color:#009c3b!important}
+  .line-mundial{background:#002776!important}
+  .pill-mundial{background:#ffdf00!important;color:#5a3d00!important}
+  @media(max-width:600px){.streaming-videos{grid-template-columns:1fr}.redes-row{gap:10px}.red-item{padding:12px 16px}}
 </style>
 
 <script>
-var BADGE_CLASES = { apertura:'badge-apertura', seleccion:'badge-seleccion', internacional:'badge-internacional', mundial2027:'badge-mundial' };
 var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027' };
 
-var LIGAS = {
-  afa:    { logo:'logo-afa.png', tag:'Apertura 2026', titulo:'Primera División Femenino ARG', tabla:'tab-tabla', fixture:true },
-  nwsl:   { logo:'https://upload.wikimedia.org/wikipedia/en/thumb/9/90/NWSL_logo.svg/40px-NWSL_logo.svg.png', tag:'NWSL 2026', titulo:'National Women Soccer League', tabla:'tab-tabla-nwsl', fixture:false },
-  ligaf:  { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liga_F_logo.svg/40px-Liga_F_logo.svg.png', tag:'Liga F 2025-26', titulo:'Primera División Femenina de España', tabla:'tab-tabla-ligaf', fixture:false },
-  ligamx: { logo:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Liga_MX_Femenil.png/40px-Liga_MX_Femenil.png', tag:'Liga MX Femenil', titulo:'Clausura 2026 Mexico', tabla:'tab-tabla-ligamx', fixture:false }
-};
-
-function cambiarLiga(liga, btn) {
-  var l = LIGAS[liga];
+function showTab(id, btn) {
   document.getElementById('tab-tabla').style.display = 'none';
-  document.querySelectorAll('.tabla-liga-ext').forEach(function(t){ t.style.display='none'; });
   document.getElementById('tab-fixture').style.display = 'none';
-  document.getElementById(l.tabla).style.display = 'block';
-  var fb = document.getElementById('tab-fixture-btn');
-  if(fb) fb.style.display = l.fixture ? '' : 'none';
+  document.getElementById(id === 'tabla' ? 'tab-tabla' : 'tab-fixture').style.display = 'block';
   document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
-  document.querySelectorAll('.tab-btn')[0].classList.add('active');
-  document.querySelectorAll('.liga-sel-btn').forEach(function(b){ b.classList.remove('active'); });
-  btn.classList.add('active');
+  if(btn) btn.classList.add('active');
 }
 
 function makeGridCard(n) {
@@ -884,7 +476,7 @@ function makeGridCard(n) {
   var div = document.createElement('div');
   div.className = 'grid-card';
   div.style.cssText = 'border-top:4px solid '+borderColor+';';
-  div.onclick = function(){ window.open(n.pagina, '_blank'); };
+  div.onclick = function(){ window.open(n.pagina,'_blank'); };
   div.innerHTML =
     '<img src="'+n.imagen+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>'+
     '<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>'+
@@ -917,7 +509,7 @@ function cargarUltimaNoticia() {
       card.onclick = (function(p){ return function(){ window.open(p,'_blank'); }; })(m.pagina);
       var chicaBorderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
       var chicaBorder = chicaBorderColors[m.categoria] || '#c800ff';
-      card.style.borderTop = '3px solid ' + chicaBorder;
+      card.style.borderTop = '3px solid '+chicaBorder;
       card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/>'+
         '<div class="nota-chica-overlay"></div>'+
         '<span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#fff;background:'+chicaBorder+';opacity:0.92;">'+cat+'</span>'+
@@ -926,44 +518,20 @@ function cargarUltimaNoticia() {
     }
   }
 
-  var gridU = document.getElementById('gridUltimas');
-  if(gridU) {
-    gridU.innerHTML = '';
-    noticias.slice(0, 8).forEach(function(n){ gridU.appendChild(makeGridCard(n)); });
-  }
-
-  var gridA = document.getElementById('gridApertura');
-  if(gridA) {
-    gridA.innerHTML = '';
-    noticias.filter(function(n){ return n.categoria === 'apertura'; })
-      .slice(0, 8).forEach(function(n){ gridA.appendChild(makeGridCard(n)); });
-  }
-
-  var gridS = document.getElementById('gridSeleccion');
-  if(gridS) {
-    gridS.innerHTML = '';
-    noticias.filter(function(n){ return n.categoria === 'seleccion'; })
-      .slice(0, 8).forEach(function(n){ gridS.appendChild(makeGridCard(n)); });
-  }
-
-  var gridI = document.getElementById('gridInternacional');
-  if(gridI) {
-    gridI.innerHTML = '';
-    noticias.filter(function(n){ return n.categoria === 'internacional'; })
-      .slice(0, 8).forEach(function(n){ gridI.appendChild(makeGridCard(n)); });
-  }
-
-  var gridM = document.getElementById('gridMundial');
-  if(gridM) {
-    gridM.innerHTML = '';
-    noticias.filter(function(n){ return n.categoria === 'mundial2027'; })
-      .slice(0, 8).forEach(function(n){ gridM.appendChild(makeGridCard(n)); });
-  }
+  ['gridUltimas','gridApertura','gridSeleccion','gridInternacional','gridMundial'].forEach(function(gid) {
+    var grid = document.getElementById(gid);
+    if(!grid) return;
+    grid.innerHTML = '';
+    var cat = gid === 'gridUltimas' ? null : gid.replace('grid','').toLowerCase();
+    if(cat === 'ultimas') cat = null;
+    var lista = cat ? noticias.filter(function(n){ return n.categoria === cat; }) : noticias;
+    lista.slice(0,8).forEach(function(n){ grid.appendChild(makeGridCard(n)); });
+  });
 }
 
 function abrirUltima() {
   if(!noticias || noticias.length === 0) return;
-  window.open(noticias[0].pagina, '_blank');
+  window.open(noticias[0].pagina,'_blank');
 }
 </script>
 <script src="noticias.js"></script>
