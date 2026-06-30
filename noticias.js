@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 59,
+    titulo: "El Real Madrid cerró el fichaje más caro de la historia del fútbol femenino",
+    resumen: "Felicia Schröder, delantera sueca de 19 años, llega procedente del Häcken por unos 1,5 millones de euros, superando al Chelsea en la puja.",
+    imagen: "fichajerealmadrid.png.png",
+    categoria: "internacional",
+    fecha: "28 jun 2026",
+    pagina: "real-madrid-fichaje-schroder.html"
+  },
+  {
+    id: 58,
+    titulo: "Leicy Santos y Linda Caicedo llevaron el balón oficial del Mundial en homenaje al fútbol femenino",
+    resumen: "La FIFA invitó a las campeonas de la Liga de Naciones a portar el Trionda antes del Colombia vs Portugal por la Copa del Mundo masculina.",
+    imagen: "linda.png.png",
+    categoria: "internacional",
+    fecha: "28 jun 2026",
+    pagina: "leicy-linda-balon-mundial.html"
+  },
+  {
     id: 57,
     titulo: "San Lorenzo se quedó con el clásico ante Huracán y llegó a la cima del Apertura",
     resumen: "Las Santitas ganaron 1-0 en La Quemita y alcanzaron a Racing en lo alto de la tabla con 26 puntos. La Fecha 11 cierra con la punta compartida.",
