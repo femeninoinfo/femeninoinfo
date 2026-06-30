@@ -517,12 +517,12 @@ function cargarUltimaNoticia() {
     }
   }
 
-  ['gridUltimas','gridApertura','gridSeleccion','gridInternacional','gridMundial'].forEach(function(gid) {
+  var GRID_CAT_MAP = { gridUltimas:null, gridApertura:'apertura', gridSeleccion:'seleccion', gridInternacional:'internacional', gridMundial:'mundial2027' };
+  Object.keys(GRID_CAT_MAP).forEach(function(gid) {
     var grid = document.getElementById(gid);
     if(!grid) return;
     grid.innerHTML = '';
-    var cat = gid === 'gridUltimas' ? null : gid.replace('grid','').toLowerCase();
-    if(cat === 'ultimas') cat = null;
+    var cat = GRID_CAT_MAP[gid];
     var lista = cat ? noticias.filter(function(n){ return n.categoria === cat; }) : noticias;
     lista.slice(0,8).forEach(function(n){ grid.appendChild(makeGridCard(n)); });
   });
