@@ -532,8 +532,19 @@ function abrirUltima() {
   if(!noticias || noticias.length === 0) return;
   window.open(noticias[0].pagina,'_blank');
 }
+
 </script>
 <script src="noticias.js"></script>
+<script>
+  // Respaldo: forzar carga de Mundial 2027 si por algún motivo quedó vacío
+  try {
+    var gridM = document.getElementById('gridMundial');
+    if(gridM && gridM.children.length === 0 && typeof noticias !== 'undefined' && Array.isArray(noticias)) {
+      var notasM = noticias.filter(function(n){ return n && n.categoria === 'mundial2027'; });
+      notasM.slice(0,8).forEach(function(n){ gridM.appendChild(makeGridCard(n)); });
+    }
+  } catch(e) {}
+</script>
 <script src="buscador.js"></script>
 <script src="main.js"></script>
 </body>
