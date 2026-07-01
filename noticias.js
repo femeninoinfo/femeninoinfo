@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 61,
+    titulo: "El CPKC Stadium del KC Current ampliará su capacidad de 11.500 a 18.000 espectadores",
+    resumen: "El primer estadio del mundo construido exclusivamente para un equipo femenino sumará 6.500 butacas en un proyecto de 1.400 millones de dólares con apoyo municipal.",
+    imagen: "nwsl.png.png",
+    categoria: "internacional",
+    fecha: "1 jul 2026",
+    pagina: "cpkc-stadium-expansion.html"
+  },
+  {
+    id: 60,
+    titulo: "El Real Madrid no participará en el acuerdo de inversión de Pau Gasol en la Liga F",
+    resumen: "El club presidido por Florentino Pérez comunicó que no se suma al acuerdo de 55 millones de euros de Gasol16 Ventures. Una cuarta parte de los clubes también rechazó la operación.",
+    imagen: "realmadrid.png.png",
+    categoria: "internacional",
+    fecha: "1 jul 2026",
+    pagina: "real-madrid-liga-f-gasol.html"
+  },
+  {
     id: 59,
     titulo: "El Real Madrid cerró el fichaje más caro de la historia del fútbol femenino",
     resumen: "Felicia Schröder, delantera sueca de 19 años, llega procedente del Häcken por unos 1,5 millones de euros, superando al Chelsea en la puja.",
