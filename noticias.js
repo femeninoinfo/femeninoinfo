@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 65,
+    titulo: "Clásico de Avellaneda femenino el jueves: Independiente recibe a Racing en el Predio Villa Domínico",
+    resumen: "Las Diablas reciben a la líder del Apertura el jueves 9 de julio a las 15:00 hs. Racing llega co-líder con 29 puntos y necesita ganar para mantener la ventaja en diferencia de gol sobre San Lorenzo.",
+    imagen: "independienteracing.png.png",
+    categoria: "apertura",
+    fecha: "7 jul 2026",
+    pagina: "independiente-racing-clasico-f13.html"
+  },
+  {
     id: 64,
     titulo: "All Boys goleó 21-0 a Claypole y la goleada abre el debate sobre la desigualdad en el fútbol femenino",
     resumen: "El resultado se dio en la fecha 9 de la Primera B Femenina. Valeria Leguizamón marcó cinco goles. El marcador expone la brecha estructural entre clubes de la misma categoría.",
