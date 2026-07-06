@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 64,
+    titulo: "All Boys goleó 21-0 a Claypole y la goleada abre el debate sobre la desigualdad en el fútbol femenino",
+    resumen: "El resultado se dio en la fecha 9 de la Primera B Femenina. Valeria Leguizamón marcó cinco goles. El marcador expone la brecha estructural entre clubes de la misma categoría.",
+    imagen: "allboys.png.png",
+    categoria: "apertura",
+    fecha: "5 jul 2026",
+    pagina: "allboys-claypole-21-0.html"
+  },
+  {
+    id: 63,
+    titulo: "Racing y San Lorenzo comparten la punta del Apertura con 29 puntos tras la fecha 12",
+    resumen: "La Academia goleó 2-0 a Huracán y las Santitas vencieron 2-0 a Independiente. Con el mismo puntaje, la pelea por el título sigue abierta a tres fechas del cierre.",
+    imagen: "racingsanlorenzo.png.png",
+    categoria: "apertura",
+    fecha: "5 jul 2026",
+    pagina: "racing-sanlorenzo-punta-f12.html"
+  },
+  {
+    id: 62,
+    titulo: "Belgrano cortó racha de empates y venció 1-0 a Newell's con gol de Luciana Gómez",
+    resumen: "Las Piratas ganaron de visitante en Rosario con un tiro libre en el segundo tiempo. Su próximo partido es ante Gimnasia La Plata el miércoles 8 de julio.",
+    imagen: "belgranonewell.png.png",
+    categoria: "apertura",
+    fecha: "4 jul 2026",
+    pagina: "belgrano-newells-f12.html"
+  },
+  {
     id: 61,
     titulo: "El CPKC Stadium del KC Current ampliará su capacidad de 11.500 a 18.000 espectadores",
     resumen: "El primer estadio del mundo construido exclusivamente para un equipo femenino sumará 6.500 butacas en un proyecto de 1.400 millones de dólares con apoyo municipal.",
