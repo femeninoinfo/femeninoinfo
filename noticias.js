@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 68,
+    titulo: "San Lorenzo y Racing se juegan el título del Apertura en la última fecha",
+    resumen: "Las Santitas y la Academia llegaron empatadas en 35 puntos tras la fecha 14. Si ambas ganan y terminan igualadas en 38, el título se definirá en un partido de desempate en cancha neutral.",
+    imagen: "san-lorenzo-racing-definicion.jpg",
+    categoria: "apertura",
+    fecha: "13 jul 2026",
+    pagina: "san-lorenzo-racing-definicion-titulo-f15.html"
+  },
+  {
+    id: 67,
+    titulo: "Claypole se dio de baja del fútbol femenino de ascenso por falta de recursos",
+    resumen: "El club de Almirante Brown no continuará compitiendo en la Primera C Femenina de AFA. La decisión reabre el debate sobre la desigualdad estructural en las categorías inferiores.",
+    imagen: "claypole-baja-ascenso.jpg",
+    categoria: "apertura",
+    fecha: "13 jul 2026",
+    pagina: "claypole-baja-ascenso-femenino.html"
+  },
+  {
+    id: 66,
+    titulo: "Racing se quedó con el clásico de Avellaneda tras golear 3-1 a Independiente",
+    resumen: "Goles de Cossio, Holzheier y Nardone liquidaron el partido en el primer tiempo. Con el triunfo, la Academia se mantuvo primera junto a San Lorenzo, con mejor diferencia de gol.",
+    imagen: "racing-clasico-avellaneda.jpg",
+    categoria: "apertura",
+    fecha: "9 jul 2026",
+    pagina: "racing-clasico-avellaneda-3-1.html"
+  },
+  {
     id: 65,
     titulo: "Clásico de Avellaneda femenino el jueves: Independiente recibe a Racing en el Predio Villa Domínico",
     resumen: "Las Diablas reciben a la líder del Apertura el jueves 9 de julio a las 15:00 hs. Racing llega co-líder con 29 puntos y necesita ganar para mantener la ventaja en diferencia de gol sobre San Lorenzo.",
