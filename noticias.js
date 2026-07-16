@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 69,
+    titulo: "Estefanía Banini se va a Colo-Colo",
+    resumen: "Colo-Colo Femenino oficializó el regreso de la mediocampista argentina, campeona de la Copa Libertadores 2012 con el club, doce años después de su primer paso por Macul.",
+    imagen: "baninicolocolo.png",
+    categoria: "internacional",
+    fecha: "15 jul 2026",
+    pagina: "banini-colo-colo.html"
+  },
+  {
     id: 68,
     titulo: "San Lorenzo y Racing se juegan el título del Apertura en la última fecha",
     resumen: "Las Santitas y la Academia llegaron empatadas en 35 puntos tras la fecha 14. Si ambas ganan y terminan igualadas en 38, el título se definirá en un partido de desempate en cancha neutral.",
