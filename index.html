@@ -54,6 +54,16 @@
     .tabla-panel { height:500px; display:flex; flex-direction:column; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden; }
     .tabla-panel .tab-content { flex:1; max-height:none !important; overflow-y:auto; }
     .grid-ultimas { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .grid-carrusel { display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding-bottom:8px; }
+    .grid-carrusel::-webkit-scrollbar { display:none; }
+    .carrusel-card { flex:0 0 230px; width:230px; scroll-snap-align:start; background:#fff; border:1px solid #ececec; border-radius:10px; overflow:hidden; cursor:pointer; transition:transform 0.2s,box-shadow 0.2s; }
+    .carrusel-card:hover { transform:translateY(-3px); box-shadow:0 6px 18px rgba(0,0,0,0.10); }
+    .carrusel-card img { width:100%; height:130px; object-fit:cover; display:block; }
+    .carrusel-card-body { padding:10px 12px; }
+    .carrusel-cat { display:inline-block; font-size:9px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; padding:2px 7px; border-radius:3px; color:#fff; margin-bottom:6px; }
+    .carrusel-titulo { font-size:13px; font-weight:700; color:#1a001f; line-height:1.35; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; margin:0 0 4px; }
+    .carrusel-fecha { font-size:10px; color:#999; }
+    @media(max-width:768px){ .carrusel-card{ flex:0 0 72vw; width:72vw; } }
     .grid-card { position:relative; border-radius:10px; overflow:hidden; height:220px; cursor:pointer; transition:transform 0.2s; }
     .grid-card:hover { transform:translateY(-3px); }
     .grid-card.featured { grid-column:span 2; grid-row:span 2; height:452px; }
@@ -229,14 +239,14 @@
 </section>
 
 <!-- ÚLTIMAS NOTICIAS -->
-<section id="noticias" style="background:#0a000f;padding:48px 24px;border-bottom:2px solid #3d0066;">
+<section id="noticias" style="background:#ffffff;padding:48px 24px;border-bottom:1px solid #ececec;">
   <div style="max-width:1280px;margin:0 auto;">
     <div class="section-header">
-      <span class="section-pill pill-ultimas">Últimas noticias</span>
-      <h2 class="section-title" style="color:#fff;">Últimas noticias</h2>
-      <span class="section-line"></span>
+      <span class="section-pill" style="background:#c800ff;color:#fff;">Últimas noticias</span>
+      <h2 class="section-title" style="color:#1a001f;">Últimas noticias</h2>
+      <span class="section-line" style="background:#c800ff;"></span>
     </div>
-    <div class="grid-ultimas" id="gridUltimas"></div>
+    <div class="grid-carrusel" id="gridUltimas"></div>
   </div>
 </section>
 
@@ -537,6 +547,24 @@ function makeGridCard(n, idx) {
   return div;
 }
 
+function makeCarruselCard(n) {
+  var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00' };
+  var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
+  var badgeBg = badgeColors[n.categoria] || '#c800ff';
+  var badgeTextColor = n.categoria === 'mundial2027' ? '#5a3d00' : '#fff';
+  var div = document.createElement('div');
+  div.className = 'carrusel-card';
+  div.onclick = function(){ window.open(n.pagina,'_blank'); };
+  div.innerHTML =
+    '<img src="'+n.imagen+'" alt=""/>'+
+    '<div class="carrusel-card-body">'+
+      '<span class="carrusel-cat" style="background:'+badgeBg+';color:'+badgeTextColor+';">'+badgeLabel+'</span>'+
+      '<p class="carrusel-titulo">'+n.titulo+'</p>'+
+      '<span class="carrusel-fecha">'+n.fecha+'</span>'+
+    '</div>';
+  return div;
+}
+
 function cargarUltimaNoticia() {
   if(!noticias || noticias.length === 0) return;
   var n = noticias[0];
@@ -567,15 +595,21 @@ function cargarUltimaNoticia() {
     }
   }
 
-  var GRID_CAT_MAP = { gridUltimas:null, gridApertura:'apertura', gridSeleccion:'seleccion', gridInternacional:'internacional' };
+  var GRID_CAT_MAP = { gridApertura:'apertura', gridSeleccion:'seleccion', gridInternacional:'internacional' };
   Object.keys(GRID_CAT_MAP).forEach(function(gid) {
     var grid = document.getElementById(gid);
     if(!grid) return;
     grid.innerHTML = '';
     var cat = GRID_CAT_MAP[gid];
-    var lista = cat ? noticias.filter(function(n){ return n.categoria === cat; }) : noticias;
+    var lista = noticias.filter(function(n){ return n.categoria === cat; });
     lista.slice(0,8).forEach(function(n, idx){ grid.appendChild(makeGridCard(n, idx)); });
   });
+
+  var gridUltimas = document.getElementById('gridUltimas');
+  if(gridUltimas) {
+    gridUltimas.innerHTML = '';
+    noticias.slice(0,10).forEach(function(n){ gridUltimas.appendChild(makeCarruselCard(n)); });
+  }
 }
 
 function abrirUltima() {
