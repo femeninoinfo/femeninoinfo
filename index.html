@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
+    html, body { background: repeating-linear-gradient(90deg,#0b1f15 0px,#0b1f15 42px,#0f271a 42px,#0f271a 84px) fixed; }
+    .site-boxed { max-width:1400px; margin:0 auto; background:transparent; box-shadow:0 0 60px rgba(0,0,0,0.4); }
     .portal-hero { background:#0a000f; border-bottom:2px solid #3d0066; position:relative; overflow:hidden; }
     .portal-hero::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 0%,rgba(200,0,255,0.03) 50%,transparent 100%); background-size:100% 200%; animation:sweepV 12s linear infinite; pointer-events:none; z-index:0; }
     @keyframes sweepV { 0%{background-position:0 200%} 100%{background-position:0 -200%} }
@@ -91,6 +93,7 @@
 </head>
 <body>
 
+<div class="site-boxed">
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="brand">
@@ -432,6 +435,7 @@
   </div>
   <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
 </footer>
+</div>
 
 <style>
   .header{background:#1a0035!important;border-bottom:2px solid rgba(200,0,255,0.3)!important;position:relative!important;overflow:hidden!important}
