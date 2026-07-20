@@ -10,20 +10,19 @@
   <link rel="stylesheet" href="style.css"/>
   <style>
     html, body {
-      background-color: #12281a;
+      background-color: #060010;
       background-image:
-        linear-gradient(45deg, #0d1f14 25%, transparent 25%),
-        linear-gradient(-45deg, #0d1f14 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #0d1f14 75%),
-        linear-gradient(-45deg, transparent 75%, #0d1f14 75%);
-      background-size: 90px 90px;
-      background-position: 0 0, 0 45px, 45px -45px, -45px 0px;
+        radial-gradient(circle at 20% 30%, rgba(200,0,255,0.20), transparent 42%),
+        radial-gradient(circle at 80% 70%, rgba(122,0,184,0.16), transparent 46%),
+        radial-gradient(circle at 50% 50%, rgba(200,0,255,0.08), transparent 60%);
+      background-size: 200% 200%;
       background-attachment: fixed;
-      animation: cespedFlow 34s linear infinite;
+      animation: violetGlow 22s ease-in-out infinite alternate;
     }
-    @keyframes cespedFlow {
-      0% { background-position: 0 0, 0 45px, 45px -45px, -45px 0px; }
-      100% { background-position: 360px 360px, 360px 405px, 405px 315px, 315px 360px; }
+    @keyframes violetGlow {
+      0%   { background-position: 0% 0%, 100% 100%, 50% 50%; }
+      50%  { background-position: 30% 40%, 70% 60%, 60% 40%; }
+      100% { background-position: 60% 20%, 40% 80%, 40% 60%; }
     }
     .site-boxed { max-width:1400px; margin:0 auto; background:transparent; }
     .portal-hero { background:#0a000f; border-bottom:2px solid #3d0066; position:relative; overflow:hidden; }
