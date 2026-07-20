@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>PREVIEW — fondo césped oscuro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    html,body{
+      background-color:#0d2717!important;
+      background-image:linear-gradient(rgba(6,20,11,0.6),rgba(6,20,11,0.6)), url("fondo-cesped.jpg")!important;
+      background-repeat:repeat!important;
+      background-size:420px, 420px!important;
+      background-attachment:fixed!important;
+    }
+    .site-boxed{max-width:1400px;margin:0 auto;background:#0a000f;overflow:hidden;}
+    .preview-tag{position:fixed;top:12px;right:12px;background:#111;color:#fff;font-size:11px;letter-spacing:1px;padding:6px 12px;border-radius:20px;z-index:999;font-family:'DM Sans',sans-serif;font-weight:700;}
+    .portal-hero { background:#0a000f; border-bottom:2px solid #3d0066; position:relative; overflow:hidden; }
+    .ticker-wrap { background:#1a0035; border-bottom:2px solid #c800ff; position:relative; z-index:5; overflow:hidden; height:38px; display:flex; align-items:stretch; }
+    .ticker-label { background:#c800ff; padding:0 16px; display:flex; align-items:center; flex-shrink:0; z-index:2; }
+    .ticker-label span { font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:2px; color:#fff; white-space:nowrap; }
+    .ticker-viewport { flex:1; overflow:hidden; position:relative; display:flex; align-items:center; }
+    .ticker-track { display:flex; align-items:center; white-space:nowrap; animation:tickerScroll 40s linear infinite; }
+    @keyframes tickerScroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    .tick-item { font-family:'DM Sans',sans-serif; font-size:12px; color:rgba(255,255,255,0.85); padding:0 22px; white-space:nowrap; flex-shrink:0; }
+    .tick-item strong { color:#e066ff; font-weight:700; }
+    .tick-sep { color:#c800ff; font-size:9px; flex-shrink:0; opacity:0.6; }
+    .portal-inner { max-width:1280px; margin:0 auto; padding:20px 24px; display:grid; grid-template-columns:1fr 260px 340px; gap:16px; align-items:start; position:relative; z-index:1; }
+    .nota-grande { position:relative; border-radius:12px; overflow:hidden; height:500px; cursor:pointer; }
+    .nota-grande-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .nota-grande-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.93) 0%,rgba(0,0,0,0.45) 50%,rgba(0,0,0,0.05) 100%); }
+    .nota-grande-content { position:absolute; bottom:0; left:0; right:0; padding:24px; z-index:2; }
+    .nota-grande-badge { display:inline-flex; align-items:center; gap:5px; font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#c800ff; text-transform:uppercase; margin-bottom:8px; }
+    .nota-grande-titulo { font-family:'DM Sans',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; line-height:1.3; margin-bottom:6px; }
+    .nota-grande-resumen { font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    .nota-grilla { display:grid; grid-template-rows:1fr 1fr 1fr; gap:10px; height:500px; }
+    .nota-chica { position:relative; border-radius:10px; overflow:hidden; cursor:pointer; min-height:0; border-top:4px solid #c800ff; }
+    .nota-chica-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+    .nota-chica-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.4) 55%,rgba(0,0,0,0.05) 100%); }
+    .nota-chica-body { position:absolute; bottom:0; left:0; right:0; padding:10px 12px; z-index:2; }
+    .nota-chica-titulo { font-size:12px; font-weight:700; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    .nota-chica-fecha { font-size:10px; color:rgba(255,255,255,0.4); margin-top:2px; display:block; }
+    .tabla-panel { height:500px; display:flex; flex-direction:column; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden; }
+    .tabla-panel .tab-content { flex:1; max-height:none !important; overflow-y:auto; }
+    .grid-carrusel { display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding-bottom:8px; }
+    .carrusel-card { flex:0 0 230px; width:230px; scroll-snap-align:start; background:#fff; border:1px solid #ececec; border-radius:10px; overflow:hidden; cursor:pointer; }
+    .carrusel-card img { width:100%; height:130px; object-fit:cover; display:block; }
+    .carrusel-card-body { padding:10px 12px; }
+    .carrusel-cat { display:inline-block; font-size:9px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; padding:2px 7px; border-radius:3px; color:#fff; margin-bottom:6px; }
+    .carrusel-titulo { font-size:13px; font-weight:700; color:#1a001f; line-height:1.35; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; margin:0 0 4px; }
+    .carrusel-fecha { font-size:10px; color:#999; }
+    .header{background:#1a0035!important;border-bottom:2px solid rgba(200,0,255,0.3)!important;position:relative!important;overflow:hidden!important}
+  </style>
+</head>
+<body>
+<div class="preview-tag">PREVIEW — no es el sitio en vivo</div>
+<div class="site-boxed">
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo"/>
+      <span class="brand-name">femeninoinfo</span>
+    </a>
+    <nav class="nav">
+      <a href="#">Fútbol Argentino</a>
+      <a href="#">Selección Argentina</a>
+      <a href="#">Internacional</a>
+      <a href="#">Mundial 2027</a>
+      <a href="#">Streaming</a>
+      <a href="#">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ticker-wrap">
+  <div class="ticker-label"><span>FECHA 14</span></div>
+  <div class="ticker-viewport">
+    <div class="ticker-track">
+      <span class="tick-item"><strong>Racing</strong> 2 — 1 <strong>Unión</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item"><strong>San Lorenzo</strong> 1 — 0 <strong>San Luis FC</strong></span>
+      <span class="tick-sep">&#9670;</span>
+      <span class="tick-item"><strong>River</strong> 3 — 0 <strong>SAT</strong></span>
+      <span class="tick-sep">&#9670;</span>
+    </div>
+  </div>
+</div>
+
+<section class="portal-hero">
+  <div class="portal-inner">
+    <div class="nota-grande" id="ultimaHero">
+      <img id="ultimaImg" src="" alt="" class="nota-grande-img"/>
+      <div class="nota-grande-overlay"></div>
+      <div class="nota-grande-content">
+        <div class="nota-grande-badge">Reciente</div>
+        <p class="nota-grande-titulo" id="ultimaTitulo">Cargando...</p>
+        <p class="nota-grande-resumen" id="ultimaResumen"></p>
+      </div>
+    </div>
+    <div class="nota-grilla" id="noticiasChicas"></div>
+    <div class="tabla-panel">
+      <div style="padding:14px;color:rgba(255,255,255,0.4);font-size:12px;font-family:'DM Sans',sans-serif;">Tabla de posiciones (igual que en el sitio real)</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#ffffff;padding:48px 24px;border-bottom:1px solid #ececec;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="section-header">
+      <span class="section-pill" style="background:#c800ff;color:#fff;">Últimas noticias</span>
+      <h2 class="section-title" style="color:#1a001f;">Últimas noticias</h2>
+      <span class="section-line" style="background:#c800ff;"></span>
+    </div>
+    <div class="grid-carrusel" id="gridUltimas"></div>
+  </div>
+</section>
+
+</div>
+
+<script src="noticias.js"></script>
+<script>
+var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027' };
+var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00' };
+
+function makeCarruselCard(n) {
+  var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
+  var badgeBg = badgeColors[n.categoria] || '#c800ff';
+  var badgeTextColor = n.categoria === 'mundial2027' ? '#5a3d00' : '#fff';
+  var div = document.createElement('div');
+  div.className = 'carrusel-card';
+  div.innerHTML =
+    '<img src="'+n.imagen+'" alt=""/>'+
+    '<div class="carrusel-card-body">'+
+      '<span class="carrusel-cat" style="background:'+badgeBg+';color:'+badgeTextColor+';">'+badgeLabel+'</span>'+
+      '<p class="carrusel-titulo">'+n.titulo+'</p>'+
+      '<span class="carrusel-fecha">'+n.fecha+'</span>'+
+    '</div>';
+  return div;
+}
+
+if(noticias && noticias.length){
+  var n = noticias[0];
+  document.getElementById('ultimaImg').src = n.imagen;
+  document.getElementById('ultimaTitulo').textContent = n.titulo;
+  document.getElementById('ultimaResumen').textContent = n.resumen || '';
+
+  var chicas = document.getElementById('noticiasChicas');
+  for(var i=1; i<=3 && i<noticias.length; i++) {
+    var m = noticias[i];
+    var chicaBorder = badgeColors[m.categoria] || '#c800ff';
+    var card = document.createElement('div');
+    card.className = 'nota-chica';
+    card.style.borderTop = '3px solid '+chicaBorder;
+    card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/>'+
+      '<div class="nota-chica-overlay"></div>'+
+      '<div class="nota-chica-body"><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
+    chicas.appendChild(card);
+  }
+
+  var gridUltimas = document.getElementById('gridUltimas');
+  noticias.slice(0,10).forEach(function(n){ gridUltimas.appendChild(makeCarruselCard(n)); });
+}
+</script>
+</body>
+</html>
