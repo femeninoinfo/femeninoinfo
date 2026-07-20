@@ -8,12 +8,20 @@
   <link rel="stylesheet" href="style.css"/>
   <style>
     html,body{
-      background-color:#0d2717!important;
-      background-image:linear-gradient(rgba(6,20,11,0.6),rgba(6,20,11,0.6)), url("fondo-cesped.jpg")!important;
-      background-repeat:no-repeat, no-repeat!important;
-      background-size:cover, cover!important;
-      background-position:center, center!important;
-      background-attachment:fixed, fixed!important;
+      background-color:#12281a!important;
+      background-image:
+        linear-gradient(45deg, #0d1f14 25%, transparent 25%),
+        linear-gradient(-45deg, #0d1f14 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #0d1f14 75%),
+        linear-gradient(-45deg, transparent 75%, #0d1f14 75%)!important;
+      background-size:90px 90px!important;
+      background-position:0 0, 0 45px, 45px -45px, -45px 0px!important;
+      background-attachment:fixed!important;
+      animation:cespedFlow 34s linear infinite!important;
+    }
+    @keyframes cespedFlow {
+      0% { background-position: 0 0, 0 45px, 45px -45px, -45px 0px; }
+      100% { background-position: 360px 360px, 360px 405px, 405px 315px, 315px 360px; }
     }
     .site-boxed{max-width:1400px;margin:0 auto;background:#0a000f;overflow:hidden;}
     .preview-tag{position:fixed;top:12px;right:12px;background:#111;color:#fff;font-size:11px;letter-spacing:1px;padding:6px 12px;border-radius:20px;z-index:999;font-family:'DM Sans',sans-serif;font-weight:700;}

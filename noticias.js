@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 70,
+    titulo: "Brasil ya promociona el Mundial Femenino 2027 en pleno Mundial masculino",
+    resumen: "Con el emblema y el lema \"Vai Ser Épico\" ya presentados en Copacabana, Brasil combina campaña turística, figuras históricas como Formiga y Cristiane, y la infraestructura del Mundial masculino 2026 para instalar su próximo gran evento.",
+    imagen: "brasil-mundial2027-promocion.jpg",
+    categoria: "mundial2027",
+    fecha: "20 jul 2026",
+    pagina: "brasil-promociona-mundial-2027.html"
+  },
+  {
     id: 69,
     titulo: "Estefanía Banini se va a Colo-Colo",
     resumen: "Colo-Colo Femenino oficializó el regreso de la mediocampista argentina, campeona de la Copa Libertadores 2012 con el club, doce años después de su primer paso por Macul.",
