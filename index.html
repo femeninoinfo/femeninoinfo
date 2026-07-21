@@ -91,7 +91,17 @@
     .tabla-panel .fx-card-nombre { color:#333 !important; }
     .tabla-panel .fx-card-vs { color:#1a001f !important; }
     .tabla-panel .fx-card-estadio { color:#999 !important; }
-    .grid-ultimas { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .sec-layout { display:grid; grid-template-columns:1fr 300px; gap:20px; align-items:start; }
+    .grid-ultimas { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+    .grid-ultimas .grid-card { height:150px; }
+    .grid-ultimas .grid-card.featured { grid-column:span 1; grid-row:span 2; height:312px; }
+    .lista-titulos { background:#fff; border-radius:12px; padding:6px 18px; box-shadow:0 2px 12px rgba(0,0,0,0.08); max-height:520px; overflow-y:auto; }
+    .lista-item { display:block; padding:11px 0; border-bottom:1px solid #f0f0f0; text-decoration:none; font-size:13px; font-weight:600; line-height:1.4; cursor:pointer; }
+    .lista-item:last-child { border-bottom:none; }
+    .lista-fecha { display:block; font-size:11px; color:#aaa; font-weight:400; margin-top:3px; }
+    .lista-leermas { display:block; text-align:center; margin-top:14px; padding:10px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:700; border:1.5px solid currentColor; border-radius:6px; text-decoration:none; transition:all 0.2s; }
+    @media(max-width:900px){ .sec-layout{ grid-template-columns:1fr; } }
+    @media(max-width:768px){ .grid-ultimas .grid-card.featured{ grid-column:span 1; height:200px; } .grid-ultimas{ display:flex; overflow-x:auto; } }
     .grid-carrusel { display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding-bottom:8px; }
     .grid-carrusel::-webkit-scrollbar { display:none; }
     .carrusel-card { flex:0 0 230px; width:230px; scroll-snap-align:start; background:#fff; border:1px solid #ececec; border-radius:10px; overflow:hidden; cursor:pointer; transition:transform 0.2s,box-shadow 0.2s; }
@@ -141,7 +151,6 @@
       <a href="seleccion-argentina.html">Selección Argentina</a>
       <a href="internacional.html">Internacional</a>
       <a href="mundial-2027.html">Mundial 2027</a>
-      <a href="streaming.html">Streaming</a>
       <a href="sobre.html">Sobre</a>
     </nav>
     <button class="search-toggle" id="searchToggle" aria-label="Buscar noticias">&#128269;</button>
@@ -152,7 +161,6 @@
     <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
     <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
     <a href="mundial-2027.html" onclick="toggleMenu()">Mundial 2027</a>
-    <a href="streaming.html" onclick="toggleMenu()">Streaming</a>
     <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
   </nav>
 </header>
@@ -284,7 +292,13 @@
       </div>
       <a href="futbol-argentino.html" class="ver-mas-btn ver-mas-arg">Ver todas →</a>
     </div>
-    <div class="grid-ultimas" id="gridApertura"></div>
+    <div class="sec-layout">
+      <div class="grid-ultimas" id="gridApertura"></div>
+      <div class="lista-titulos">
+        <div id="listaApertura"></div>
+        <a href="futbol-argentino.html" class="lista-leermas ver-mas-arg">Leer más →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -299,7 +313,13 @@
       </div>
       <a href="seleccion-argentina.html" class="ver-mas-btn ver-mas-sel">Ver todas →</a>
     </div>
-    <div class="grid-ultimas" id="gridSeleccion"></div>
+    <div class="sec-layout">
+      <div class="grid-ultimas" id="gridSeleccion"></div>
+      <div class="lista-titulos">
+        <div id="listaSeleccion"></div>
+        <a href="seleccion-argentina.html" class="lista-leermas ver-mas-sel">Leer más →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -314,7 +334,13 @@
       </div>
       <a href="internacional.html" class="ver-mas-btn ver-mas-int">Ver todas →</a>
     </div>
-    <div class="grid-ultimas" id="gridInternacional"></div>
+    <div class="sec-layout">
+      <div class="grid-ultimas" id="gridInternacional"></div>
+      <div class="lista-titulos">
+        <div id="listaInternacional"></div>
+        <a href="internacional.html" class="lista-leermas ver-mas-int">Leer más →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -329,96 +355,12 @@
       </div>
       <a href="mundial-2027.html" class="ver-mas-btn ver-mas-mundial">Ver todas →</a>
     </div>
-    <div class="grid-ultimas" id="gridMundial">
-      <div class="grid-card featured" style="border-top:4px solid #009c3b;" onclick="window.open('netflix-mundial-2027.html','_blank')">
-        <img src="netflixmundial.png.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>
-        <span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#5a3d00;background:#ffdf00;opacity:0.92;">Mundial 2027</span>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2;">
-          <p style="font-size:19px;font-weight:700;color:#fff;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;">Netflix transmitirá en exclusiva el Mundial Femenino Brasil 2027 en Estados Unidos y Canadá</p>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">24 jun 2026</span>
-        </div>
+    <div class="sec-layout">
+      <div class="grid-ultimas" id="gridMundial"></div>
+      <div class="lista-titulos">
+        <div id="listaMundial"></div>
+        <a href="mundial-2027.html" class="lista-leermas ver-mas-mundial">Leer más →</a>
       </div>
-      <div class="grid-card" style="border-top:4px solid #009c3b;" onclick="window.open('mundial-365-dias.html','_blank')">
-        <img src="faltan265.png.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>
-        <span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#5a3d00;background:#ffdf00;opacity:0.92;">Mundial 2027</span>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2;">
-          <p style="font-size:14px;font-weight:700;color:#fff;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">Faltan exactamente 365 días para el Mundial Femenino Brasil 2027</p>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">24 jun 2026</span>
-        </div>
-      </div>
-      <div class="grid-card" style="border-top:4px solid #009c3b;" onclick="window.open('mundial-fixture.html','_blank')">
-        <img src="mundial-fixture.png.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>
-        <span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#5a3d00;background:#ffdf00;opacity:0.92;">Mundial 2027</span>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2;">
-          <p style="font-size:14px;font-weight:700;color:#fff;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">El fixture confirmado y el impacto histórico de jugar en casa para Sudamérica</p>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">12 jun 2026</span>
-        </div>
-      </div>
-      <div class="grid-card" style="border-top:4px solid #009c3b;" onclick="window.open('mundial-sedes.html','_blank')">
-        <img src="mundial-sedes.png.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>
-        <span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#5a3d00;background:#ffdf00;opacity:0.92;">Mundial 2027</span>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2;">
-          <p style="font-size:14px;font-weight:700;color:#fff;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">Las 8 sedes donde se va a escribir la historia del Mundial Femenino Brasil 2027</p>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">12 jun 2026</span>
-        </div>
-      </div>
-      <div class="grid-card" style="border-top:4px solid #009c3b;" onclick="window.open('mundial-clasificacion.html','_blank')">
-        <img src="mundial-clasificacion.png.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>
-        <span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#5a3d00;background:#ffdf00;opacity:0.92;">Mundial 2027</span>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2;">
-          <p style="font-size:14px;font-weight:700;color:#fff;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">El mapa de la clasificación al Mundial 2027: quiénes ya tienen su lugar asegurado</p>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">10 jun 2026</span>
-        </div>
-      </div>
-      <div class="grid-card" style="border-top:4px solid #009c3b;" onclick="window.open('mundial-campamentos.html','_blank')">
-        <img src="mundial-campamentos.png.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt=""/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.05) 100%);"></div>
-        <span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#5a3d00;background:#ffdf00;opacity:0.92;">Mundial 2027</span>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2;">
-          <p style="font-size:14px;font-weight:700;color:#fff;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">Centros de entrenamiento y campamentos base: el Mundial se expande por todo Brasil</p>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;">10 jun 2026</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STREAMING -->
-<section class="section section-dark streaming-section">
-  <div class="streaming-inner">
-    <div class="streaming-text">
-      <span class="cat-badge cat-live">● EN VIVO</span>
-      <h2 class="streaming-title">Todos los días prendemos un ratito el streaming</h2>
-      <p>Mirá nuestro streaming en vivo y nuestros vlogs en las canchas. Estamos arrancando con lo lindo.</p>
-      <div class="streaming-links">
-        <a href="https://www.youtube.com/@femeninoinfoarg" target="_blank" class="stream-btn yt">YouTube</a>
-        <a href="https://www.twitch.tv/femeninoinfo_" target="_blank" class="stream-btn tw">Twitch</a>
-      </div>
-    </div>
-    <div class="streaming-videos">
-      <a href="https://youtu.be/C9_0xawp7EQ" target="_blank" class="video-card">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/C9_0xawp7EQ/mqdefault.jpg" alt="femeninoinfo streaming"/>
-          <span class="video-play">▶</span>
-        </div>
-      </a>
-      <a href="https://youtu.be/ADWMxWgmeT8" target="_blank" class="video-card">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/ADWMxWgmeT8/mqdefault.jpg" alt="femeninoinfo streaming"/>
-          <span class="video-play">▶</span>
-        </div>
-      </a>
-      <a href="https://youtu.be/LjQjUGXyBn4" target="_blank" class="video-card">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/LjQjUGXyBn4/mqdefault.jpg" alt="femeninoinfo vlog"/>
-          <span class="video-play">▶</span>
-        </div>
-      </a>
     </div>
   </div>
 </section>
@@ -449,7 +391,6 @@
     <div class="footer-links">
       <h4>femeninoinfo</h4>
       <a href="sobre.html">Sobre el medio</a>
-      <a href="streaming.html">Streaming</a>
       <a href="sponsors.html">Sponsors</a>
     </div>
   </div>
@@ -619,7 +560,9 @@ function cargarUltimaNoticia() {
     }
   }
 
-  var GRID_CAT_MAP = { gridApertura:'apertura', gridSeleccion:'seleccion', gridInternacional:'internacional' };
+  var GRID_CAT_MAP = { gridApertura:'apertura', gridSeleccion:'seleccion', gridInternacional:'internacional', gridMundial:'mundial2027' };
+  var LIST_ID_MAP = { gridApertura:'listaApertura', gridSeleccion:'listaSeleccion', gridInternacional:'listaInternacional', gridMundial:'listaMundial' };
+  var LIST_COLORS = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b' };
   Object.keys(GRID_CAT_MAP).forEach(function(gid) {
     var grid = document.getElementById(gid);
     if(!grid) return;
@@ -627,6 +570,19 @@ function cargarUltimaNoticia() {
     var cat = GRID_CAT_MAP[gid];
     var lista = noticias.filter(function(n){ return n.categoria === cat; });
     lista.slice(0,8).forEach(function(n, idx){ grid.appendChild(makeGridCard(n, idx)); });
+
+    var listaEl = document.getElementById(LIST_ID_MAP[gid]);
+    if(listaEl) {
+      listaEl.innerHTML = '';
+      lista.slice(8,18).forEach(function(n) {
+        var a = document.createElement('a');
+        a.className = 'lista-item';
+        a.href = n.pagina;
+        a.style.color = LIST_COLORS[cat] || '#3d0066';
+        a.innerHTML = n.titulo + '<span class="lista-fecha">'+n.fecha+'</span>';
+        listaEl.appendChild(a);
+      });
+    }
   });
 
   var gridUltimas = document.getElementById('gridUltimas');
@@ -647,4 +603,3 @@ function abrirUltima() {
 <script src="main.js"></script>
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                         
