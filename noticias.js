@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 71,
+    titulo: "Alexia Putellas y Mapi León vuelven a compartir club en el London City Lionesses",
+    resumen: "Las dos ex Barcelona se reencuentran en Inglaterra: Putellas se sumó al proyecto del London City Lionesses a comienzos de julio y días después llegó Mapi León, tras casi una década juntas en el club catalán.",
+    imagen: "putellas-mapileon-londoncity.jpg",
+    categoria: "internacional",
+    fecha: "22 jul 2026",
+    pagina: "putellas-mapileon-londoncity.html"
+  },
+  {
     id: 70,
     titulo: "Brasil ya promociona el Mundial Femenino 2027 en pleno Mundial masculino",
     resumen: "Con el emblema y el lema \"Vai Ser Épico\" ya presentados en Copacabana, Brasil combina campaña turística, figuras históricas como Formiga y Cristiane, y la infraestructura del Mundial masculino 2026 para instalar su próximo gran evento.",
