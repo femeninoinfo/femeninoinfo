@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 73,
+    titulo: "Racing es el nuevo campeón del fútbol femenino argentino",
+    resumen: "La Academia venció 2-0 a San Luis FC como visitante en la última fecha del Apertura y, con la caída de San Lorenzo ante Lanús, se consagró campeón por primera vez en la historia del club.",
+    imagen: "racing-campeon.jpg",
+    categoria: "apertura",
+    fecha: "22 jul 2026",
+    pagina: "racing-campeon-apertura-2026.html"
+  },
+  {
+    id: 72,
+    titulo: "La Sub-17 empató con Chile en el primer amistoso rumbo al Mundial de Marruecos",
+    resumen: "La Selección femenina Sub-17, dirigida por Christian Meloni, igualó 1-1 ante Chile en Santiago con gol de Agustina Maldonado, en el primero de dos amistosos de preparación para el Mundial.",
+    imagen: "seleccion-sub17-chile.jpg",
+    categoria: "seleccion",
+    fecha: "22 jul 2026",
+    pagina: "seleccion-sub17-amistoso-chile.html"
+  },
+  {
     id: 71,
     titulo: "Alexia Putellas y Mapi León vuelven a compartir club en el London City Lionesses",
     resumen: "Las dos ex Barcelona se reencuentran en Inglaterra: Putellas se sumó al proyecto del London City Lionesses a comienzos de julio y días después llegó Mapi León, tras casi una década juntas en el club catalán.",
