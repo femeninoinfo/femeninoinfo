@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 77,
+    titulo: "América Femenil cerró una temporada histórica: Clausura, Concachampions y Campeón de Campeonas",
+    resumen: "Las Águilas se reafirmaron como uno de los mejores clubes femeninos del mundo tras un 2025/2026 de triplete: campeonas de Liga MX Femenil, de la Concacaf W Champions Cup y del Campeón de Campeonas.",
+    imagen: "america-femenil-triplete.jpg",
+    categoria: "internacional",
+    fecha: "26 jul 2026",
+    pagina: "america-femenil-triplete-2026.html"
+  },
+  {
+    id: 76,
+    titulo: "Agostina Holzheier dejaría Racing rumbo al Bay FC de la NWSL",
+    resumen: "Según trascendió en redes, la volante que acaba de salir campeona con Racing sería nuevo refuerzo del Bay FC, donde compartiría plantel con Aldana Cometti, capitana de la Selección argentina.",
+    imagen: "holzheier-bayfc.jpg",
+    categoria: "internacional",
+    fecha: "26 jul 2026",
+    pagina: "holzheier-bay-fc-nwsl.html"
+  },
+  {
+    id: 75,
+    titulo: "Beti Soriano volvió a jugar en Belgrano tras superar una rotura de ligamento cruzado",
+    resumen: "Una de las figuras claves de Las Piratas se reincorporó a las canchas después de casi diez meses, tras recuperarse de una lesión de ligamento cruzado que la había marginado desde septiembre de 2025.",
+    imagen: "soriano-belgrano.jpg",
+    categoria: "apertura",
+    fecha: "26 jul 2026",
+    pagina: "soriano-vuelve-belgrano.html"
+  },
+  {
+    id: 74,
+    titulo: "Francisca Altgelt deja River Plate y se va al Logroño United de España",
+    resumen: "La delantera, formada en las inferiores de River, comunicó en sus redes que continuará su carrera en España. El club de Núñez se despidió con un mensaje afectuoso en sus cuentas oficiales.",
+    imagen: "altgelt-logrono.jpg",
+    categoria: "apertura",
+    fecha: "25 jul 2026",
+    pagina: "altgelt-logrono-united.html"
+  },
+  {
     id: 73,
     titulo: "Racing es el nuevo campeón del fútbol femenino argentino",
     resumen: "La Academia venció 2-0 a San Luis FC como visitante en la última fecha del Apertura y, con la caída de San Lorenzo ante Lanús, se consagró campeón por primera vez en la historia del club.",
