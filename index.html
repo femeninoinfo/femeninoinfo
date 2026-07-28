@@ -1,5 +1,5 @@
-<!DOCTYPE html> 
-<html lang="es"> 
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -28,14 +28,12 @@
     .portal-hero { background:#0a000f; border-bottom:2px solid #3d0066; position:relative; overflow:hidden; }
     .portal-hero::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 0%,rgba(200,0,255,0.03) 50%,transparent 100%); background-size:100% 200%; animation:sweepV 12s linear infinite; pointer-events:none; z-index:0; }
     @keyframes sweepV { 0%{background-position:0 200%} 100%{background-position:0 -200%} }
-
     /* TABLA COLORES */
     .tabla-pos tr.lider td { background:rgba(26,92,42,0.10) !important; color:#0a3d18 !important; border:none; font-family:'DM Sans',sans-serif; }
     .tabla-pos tr.lider td strong { color:#0a3d18 !important; background:rgba(26,92,42,0.22) !important; font-family:'DM Sans',sans-serif; font-weight:700; font-size:14px; padding:2px 8px; border-radius:4px; }
     .tabla-pos tr.descenso td { background:rgba(139,20,20,0.08) !important; color:#7a1414 !important; border:none; font-family:'DM Sans',sans-serif; }
     .tabla-pos tr.descenso td strong { color:#7a1414 !important; background:rgba(139,20,20,0.18) !important; font-family:'DM Sans',sans-serif; font-weight:700; font-size:14px; padding:2px 8px; border-radius:4px; }
     .tabla-pos td strong { font-family:'Bebas Neue',sans-serif; font-size:15px; color:#e066ff; background:rgba(200,0,255,0.15); padding:1px 5px; border-radius:4px; }
-
     /* TICKER */
     .ticker-wrap { background:#1a0035; border-bottom:2px solid #c800ff; position:relative; z-index:5; overflow:hidden; height:46px; display:flex; align-items:stretch; }
     .ticker-label { background:#c800ff; padding:0 16px; display:flex; align-items:center; flex-shrink:0; z-index:2; }
@@ -50,7 +48,6 @@
     .tick-card .tick-pendiente { font-family:'DM Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.8px; text-transform:uppercase; color:rgba(255,255,255,0.4); padding:0 6px; }
     @media(max-width:700px){ .tick-card{ padding:4px 9px; gap:5px; margin:0 5px; } .tick-escudo{ width:15px; height:15px; } .tick-card .tick-nombre{ font-size:10.5px; } .tick-card .tick-score{ font-size:12px; } }
     @media(max-width:700px){ .ticker-label span{font-size:10px} }
-
     .portal-inner { max-width:1280px; margin:0 auto; padding:20px 24px; display:grid; grid-template-columns:1fr 260px 340px; gap:16px; align-items:start; position:relative; z-index:1; }
     .nota-grande { position:relative; border-radius:12px; overflow:hidden; height:500px; cursor:pointer; }
     .nota-grande:hover .nota-grande-img { transform:scale(1.03); }
@@ -144,7 +141,6 @@
 </script>
 </head>
 <body>
-
 <div class="site-boxed">
 <header class="header">
   <div class="header-inner">
@@ -170,7 +166,6 @@
     <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
   </nav>
 </header>
-
 <div class="search-bar" id="searchBar">
   <div class="search-bar-inner">
     <div class="search-input-wrap">
@@ -181,7 +176,6 @@
     <div id="searchBody"><p class="search-hint">Escribí al menos 2 caracteres para buscar</p></div>
   </div>
 </div>
-
 <!-- TICKER FECHA 1 CLAUSURA - TODOS LOS PARTIDOS -->
 <div class="ticker-wrap">
   <div class="ticker-label"><span>CLAUSURA · FECHA 1</span></div>
@@ -190,21 +184,20 @@
       <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="tick-escudo" alt="Independiente"><span class="tick-nombre">Independiente</span><span class="tick-score">0 — 3</span><span class="tick-nombre">Banfield</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="tick-escudo" alt="Banfield"></span>
       <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="tick-escudo" alt="Belgrano"><span class="tick-nombre">Belgrano</span><span class="tick-score">0 — 1</span><span class="tick-nombre">SAT</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="tick-escudo" alt="SAT"></span>
       <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="tick-escudo" alt="Ferro"><span class="tick-nombre">Ferro</span><span class="tick-score">1 — 0</span><span class="tick-nombre">Talleres</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="tick-escudo" alt="Talleres"></span>
-      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="tick-escudo" alt="Unión"><span class="tick-nombre">Unión</span><span class="tick-pendiente">Por jugarse</span><span class="tick-nombre">Gimnasia</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="tick-escudo" alt="Gimnasia"></span>
-      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="tick-escudo" alt="Boca"><span class="tick-nombre">Boca</span><span class="tick-pendiente">Por jugarse</span><span class="tick-nombre">San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="tick-escudo" alt="San Lorenzo"></span>
-      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="tick-escudo" alt="San Luis FC"><span class="tick-nombre">San Luis FC</span><span class="tick-pendiente">Por jugarse</span><span class="tick-nombre">Newell's</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="tick-escudo" alt="Newell's"></span>
-      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="tick-escudo" alt="Huracán"><span class="tick-nombre">Huracán</span><span class="tick-pendiente">Por jugarse</span><span class="tick-nombre">River</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="tick-escudo" alt="River"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="tick-escudo" alt="Unión"><span class="tick-nombre">Unión</span><span class="tick-score">2 — 0</span><span class="tick-nombre">Gimnasia</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="tick-escudo" alt="Gimnasia"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="tick-escudo" alt="Boca"><span class="tick-nombre">Boca</span><span class="tick-score">1 — 2</span><span class="tick-nombre">San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="tick-escudo" alt="San Lorenzo"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="tick-escudo" alt="San Luis FC"><span class="tick-nombre">San Luis FC</span><span class="tick-score">4 — 1</span><span class="tick-nombre">Newell's</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="tick-escudo" alt="Newell's"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="tick-escudo" alt="Huracán"><span class="tick-nombre">Huracán</span><span class="tick-score">1 — 0</span><span class="tick-nombre">River</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="tick-escudo" alt="River"></span>
       <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="tick-escudo" alt="Independiente"><span class="tick-nombre">Independiente</span><span class="tick-score">0 — 3</span><span class="tick-nombre">Banfield</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="tick-escudo" alt="Banfield"></span>
       <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="tick-escudo" alt="Belgrano"><span class="tick-nombre">Belgrano</span><span class="tick-score">0 — 1</span><span class="tick-nombre">SAT</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="tick-escudo" alt="SAT"></span>
       <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="tick-escudo" alt="Ferro"><span class="tick-nombre">Ferro</span><span class="tick-score">1 — 0</span><span class="tick-nombre">Talleres</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="tick-escudo" alt="Talleres"></span>
-      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="tick-escudo" alt="Unión"><span class="tick-nombre">Unión</span><span class="tick-pendiente">Por jugarse</span><span class="tick-nombre">Gimnasia</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="tick-escudo" alt="Gimnasia"></span>
-      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="tick-escudo" alt="Boca"><span class="tick-nombre">Boca</span><span class="tick-pendiente">Por jugarse</span><span class="tick-nombre">San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="tick-escudo" alt="San Lorenzo"></span>
-      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="tick-escudo" alt="San Luis FC"><span class="tick-nombre">San Luis FC</span><span class="tick-pendiente">Por jugarse</span><span class="tick-nombre">Newell's</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="tick-escudo" alt="Newell's"></span>
-      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="tick-escudo" alt="Huracán"><span class="tick-nombre">Huracán</span><span class="tick-pendiente">Por jugarse</span><span class="tick-nombre">River</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="tick-escudo" alt="River"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="tick-escudo" alt="Unión"><span class="tick-nombre">Unión</span><span class="tick-score">2 — 0</span><span class="tick-nombre">Gimnasia</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="tick-escudo" alt="Gimnasia"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="tick-escudo" alt="Boca"><span class="tick-nombre">Boca</span><span class="tick-score">1 — 2</span><span class="tick-nombre">San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="tick-escudo" alt="San Lorenzo"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="tick-escudo" alt="San Luis FC"><span class="tick-nombre">San Luis FC</span><span class="tick-score">4 — 1</span><span class="tick-nombre">Newell's</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="tick-escudo" alt="Newell's"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="tick-escudo" alt="Huracán"><span class="tick-nombre">Huracán</span><span class="tick-score">1 — 0</span><span class="tick-nombre">River</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="tick-escudo" alt="River"></span>
     </div>
   </div>
 </div>
-
 <!-- HERO PORTAL -->
 <section class="portal-hero">
   <div class="portal-inner">
@@ -277,25 +270,25 @@
         <table class="tabla-pos">
           <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead>
           <tbody>
-            <tr><td>1</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Racing">Racing</td><td>15</td><td>+26</td><td><strong>38</strong></td></tr>
-            <tr><td>2</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="San Lorenzo">San Lorenzo</td><td>15</td><td>+21</td><td><strong>35</strong></td></tr>
-            <tr><td>3</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="River">River</td><td>15</td><td>+15</td><td><strong>29</strong></td></tr>
-            <tr><td>4</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Talleres">Talleres</td><td>16</td><td>+10</td><td><strong>26</strong></td></tr>
-            <tr><td>5</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Gimnasia">Gimnasia</td><td>15</td><td>+2</td><td><strong>25</strong></td></tr>
-            <tr><td>6</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Belgrano">Belgrano</td><td>15</td><td>+2</td><td><strong>25</strong></td></tr>
-            <tr><td>7</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Boca">Boca</td><td>15</td><td>+4</td><td><strong>23</strong></td></tr>
-            <tr><td>8</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Ferro">Ferro</td><td>16</td><td>+1</td><td><strong>22</strong></td></tr>
-            <tr><td>9</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Banfield">Banfield</td><td>15</td><td>-4</td><td><strong>22</strong></td></tr>
-            <tr><td>10</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="SAT">SAT</td><td>15</td><td>+1</td><td><strong>20</strong></td></tr>
-            <tr><td>11</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="San Luis FC">San Luis FC</td><td>15</td><td>0</td><td><strong>16</strong></td></tr>
-            <tr><td>12</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Lanús">Lanús</td><td>15</td><td>-13</td><td><strong>15</strong></td></tr>
-            <tr><td>13</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Huracán">Huracán</td><td>15</td><td>-8</td><td><strong>14</strong></td></tr>
-            <tr><td>14</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Independiente">Independiente</td><td>15</td><td>-15</td><td><strong>13</strong></td></tr>
-            <tr><td>15</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Newells">Newell's</td><td>15</td><td>-17</td><td><strong>8</strong></td></tr>
-            <tr><td>16</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Unión">Unión</td><td>15</td><td>-25</td><td><strong>3</strong></td></tr>
+            <tr class="lider"><td>1</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="San Luis FC">San Luis FC</td><td>1</td><td>+3</td><td><strong>3</strong></td></tr>
+            <tr class="lider"><td>2</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Banfield">Banfield</td><td>1</td><td>+3</td><td><strong>3</strong></td></tr>
+            <tr class="lider"><td>3</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Unión">Unión de Santa Fe</td><td>1</td><td>+2</td><td><strong>3</strong></td></tr>
+            <tr><td>4</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="San Lorenzo">San Lorenzo</td><td>1</td><td>+1</td><td><strong>3</strong></td></tr>
+            <tr><td>5</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="SAT">SAT</td><td>1</td><td>+1</td><td><strong>3</strong></td></tr>
+            <tr><td>6</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Ferro">Ferro</td><td>1</td><td>+1</td><td><strong>3</strong></td></tr>
+            <tr><td>7</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Huracán">Huracán</td><td>1</td><td>+1</td><td><strong>3</strong></td></tr>
+            <tr><td>8</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Racing">Racing</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+            <tr><td>9</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Lanús">Lanús</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+            <tr><td>10</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Boca">Boca</td><td>1</td><td>-1</td><td><strong>0</strong></td></tr>
+            <tr><td>11</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="River">River</td><td>1</td><td>-1</td><td><strong>0</strong></td></tr>
+            <tr><td>12</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Belgrano">Belgrano</td><td>1</td><td>-1</td><td><strong>0</strong></td></tr>
+            <tr><td>13</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Talleres">Talleres</td><td>1</td><td>-1</td><td><strong>0</strong></td></tr>
+            <tr class="descenso"><td>14</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Gimnasia">Gimnasia</td><td>1</td><td>-2</td><td><strong>0</strong></td></tr>
+            <tr class="descenso"><td>15</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Newells">Newell's</td><td>1</td><td>-3</td><td><strong>0</strong></td></tr>
+            <tr class="descenso"><td>16</td><td><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="escudo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;" alt="Independiente">Independiente</td><td>1</td><td>-3</td><td><strong>0</strong></td></tr>
           </tbody>
         </table>
-        <p class="tabla-fecha">Torneo Clausura — fecha 1 en curso, 26 jul 2026</p>
+        <p class="tabla-fecha">Torneo Clausura — fecha 1 finalizada, 28 jul 2026</p>
       </div>
       <div class="tab-content" id="tab-fixture-clausura" style="display:none;">
         <div class="fixture-nuevo">
@@ -315,15 +308,15 @@
             <div class="fx-dia-tag"><span class="fx-dia-nombre">Lunes</span><span class="fx-dia-fecha">27/7</span></div>
             <div class="fx-partidos">
               <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="fx-escudo" alt="Ferro"><span class="fx-card-nombre">Ferro</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">1 — 0</span><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Talleres</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="fx-escudo" alt="Talleres"></div></div>
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">15:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="fx-escudo" alt="Unión"><span class="fx-card-nombre">Unión</span><span class="fx-card-vs" style="color:rgba(255,255,255,0.4);font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:1px;">vs</span><span class="fx-card-nombre">Gimnasia</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="fx-escudo" alt="Gimnasia"></div></div>
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">15:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="fx-escudo" alt="Boca"><span class="fx-card-nombre">Boca</span><span class="fx-card-vs" style="color:rgba(255,255,255,0.4);font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:1px;">vs</span><span class="fx-card-nombre">San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="fx-escudo" alt="San Lorenzo"></div></div>
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">15:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="fx-escudo" alt="San Luis FC"><span class="fx-card-nombre">San Luis FC</span><span class="fx-card-vs" style="color:rgba(255,255,255,0.4);font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:1px;">vs</span><span class="fx-card-nombre">Newell's</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="fx-escudo" alt="Newell's"></div></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="fx-escudo" alt="Unión"><span class="fx-card-nombre">Unión</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">2 — 0</span><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Gimnasia</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="fx-escudo" alt="Gimnasia"></div></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="fx-escudo" alt="Boca"><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Boca</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">1 — 2</span><span class="fx-card-nombre">San Lorenzo</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="fx-escudo" alt="San Lorenzo"></div></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="fx-escudo" alt="San Luis FC"><span class="fx-card-nombre">San Luis FC</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">4 — 1</span><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">Newell's</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="fx-escudo" alt="Newell's"></div></div>
             </div>
           </div>
           <div class="fx-dia-bloque">
             <div class="fx-dia-tag"><span class="fx-dia-nombre">Martes</span><span class="fx-dia-fecha">28/7</span></div>
             <div class="fx-partidos">
-              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">11:00</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="fx-escudo" alt="Huracán"><span class="fx-card-nombre">Huracán</span><span class="fx-card-vs" style="color:rgba(255,255,255,0.4);font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:1px;">vs</span><span class="fx-card-nombre">River</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="fx-escudo" alt="River"></div></div>
+              <div class="fx-card"><span class="fx-card-hora" style="color:#aaa;font-size:10px;">Final</span><div class="fx-card-equipos"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="fx-escudo" alt="Huracán"><span class="fx-card-nombre">Huracán</span><span class="fx-card-vs" style="color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1px;">1 — 0</span><span class="fx-card-nombre" style="color:rgba(255,255,255,0.5);">River</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="fx-escudo" alt="River"></div></div>
             </div>
           </div>
         </div>
@@ -331,7 +324,6 @@
     </div>
   </div>
 </section>
-
 <!-- ÚLTIMAS NOTICIAS -->
 <section id="noticias" style="background:#ffffff;padding:48px 24px;border-bottom:1px solid #ececec;">
   <div style="max-width:1280px;margin:0 auto;">
@@ -343,7 +335,6 @@
     <div class="grid-carrusel" id="gridUltimas"></div>
   </div>
 </section>
-
 <!-- FÚTBOL ARGENTINO -->
 <section class="sec-clara sec-arg" id="apertura">
   <div class="sec-clara-inner">
@@ -364,7 +355,6 @@
     </div>
   </div>
 </section>
-
 <!-- SELECCIÓN ARGENTINA -->
 <section class="sec-clara sec-sel" id="seleccion">
   <div class="sec-clara-inner">
@@ -385,7 +375,6 @@
     </div>
   </div>
 </section>
-
 <!-- INTERNACIONAL -->
 <section class="sec-clara sec-int" id="internacional">
   <div class="sec-clara-inner">
@@ -406,7 +395,6 @@
     </div>
   </div>
 </section>
-
 <!-- MUNDIAL BRASIL 2027 -->
 <section class="sec-clara sec-mundial" id="mundial">
   <div class="sec-clara-inner">
@@ -427,7 +415,6 @@
     </div>
   </div>
 </section>
-
 <!-- REDES -->
 <section class="redes-section-nueva">
   <p class="redes-titulo">Seguinos en redes</p>
@@ -438,7 +425,6 @@
     <a href="https://www.youtube.com/@femeninoinfoarg" target="_blank" class="red-item"><img src="https://cdn.simpleicons.org/youtube/ffffff" class="red-logo" alt="YouTube"/><span class="red-label">YouTube</span></a>
   </div>
 </section>
-
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -460,7 +446,6 @@
   <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
 </footer>
 </div>
-
 <style>
   .header{background:#1a0035!important;border-bottom:2px solid rgba(200,0,255,0.3)!important;position:relative!important;overflow:hidden!important}
   .header::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(200,0,255,0.25) 40%,rgba(230,102,255,0.35) 50%,rgba(200,0,255,0.25) 60%,transparent 100%);background-size:200% 100%;animation:barreSweep 3s linear infinite;pointer-events:none;z-index:0}
@@ -538,33 +523,27 @@
   .pill-mundial{background:#ffdf00!important;color:#5a3d00!important}
   @media(max-width:600px){.streaming-videos{grid-template-columns:1fr}.redes-row{gap:10px}.red-item{padding:12px 16px}}
 </style>
-
 <script>
 var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027' };
-
 var currentTorneo = 'apertura';
 var currentSubTab = 'tabla';
-
 function showTorneo(torneo, btn) {
   currentTorneo = torneo;
   document.querySelectorAll('.tabla-panel .torneo-btn').forEach(function(b){ b.classList.remove('active'); });
   if(btn) btn.classList.add('active');
   renderTablaPanel();
 }
-
 function showSubTab(tipo, btn) {
   currentSubTab = tipo;
   document.querySelectorAll('.tabla-panel .sub-btn').forEach(function(b){ b.classList.remove('active'); });
   if(btn) btn.classList.add('active');
   renderTablaPanel();
 }
-
 function renderTablaPanel() {
   document.querySelectorAll('.tabla-panel .tab-content').forEach(function(el){ el.style.display = 'none'; });
   var target = document.getElementById('tab-' + currentSubTab + '-' + currentTorneo);
   if(target) target.style.display = 'block';
 }
-
 function makeGridCard(n, idx) {
   var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00' };
   var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
@@ -589,7 +568,6 @@ function makeGridCard(n, idx) {
     '</div>';
   return div;
 }
-
 function makeCarruselCard(n) {
   var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00' };
   var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
@@ -607,7 +585,6 @@ function makeCarruselCard(n) {
     '</div>';
   return div;
 }
-
 function cargarUltimaNoticia() {
   if(!noticias || noticias.length === 0) return;
   var n = noticias[0];
@@ -616,7 +593,6 @@ function cargarUltimaNoticia() {
   document.getElementById('ultimaTitulo').textContent = n.titulo;
   var res = document.getElementById('ultimaResumen');
   if(res) res.textContent = n.resumen || '';
-
   var chicas = document.getElementById('noticiasChicas');
   if(chicas) {
     chicas.innerHTML = '';
@@ -637,7 +613,6 @@ function cargarUltimaNoticia() {
       chicas.appendChild(card);
     }
   }
-
   var GRID_CAT_MAP = { gridApertura:'apertura', gridSeleccion:'seleccion', gridInternacional:'internacional', gridMundial:'mundial2027' };
   var LIST_ID_MAP = { gridApertura:'listaApertura', gridSeleccion:'listaSeleccion', gridInternacional:'listaInternacional', gridMundial:'listaMundial' };
   var LIST_COLORS = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b' };
@@ -648,7 +623,6 @@ function cargarUltimaNoticia() {
     var cat = GRID_CAT_MAP[gid];
     var lista = noticias.filter(function(n){ return n.categoria === cat; });
     lista.slice(0,8).forEach(function(n, idx){ grid.appendChild(makeGridCard(n, idx)); });
-
     var listaEl = document.getElementById(LIST_ID_MAP[gid]);
     if(listaEl) {
       listaEl.innerHTML = '';
@@ -662,19 +636,16 @@ function cargarUltimaNoticia() {
       });
     }
   });
-
   var gridUltimas = document.getElementById('gridUltimas');
   if(gridUltimas) {
     gridUltimas.innerHTML = '';
     noticias.slice(0,10).forEach(function(n){ gridUltimas.appendChild(makeCarruselCard(n)); });
   }
 }
-
 function abrirUltima() {
   if(!noticias || noticias.length === 0) return;
   window.open(noticias[0].pagina,'_blank');
 }
-
 </script>
 <script src="noticias.js"></script>
 <script src="buscador.js"></script>

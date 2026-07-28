@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 79,
+    titulo: "Yamila Rodríguez se iría a Talleres de Córdoba",
+    resumen: "Trascendió que la delantera de la Selección argentina, que milita en Grêmio de Brasil, podría sumarse a Talleres de cara al Torneo Clausura. femeninoinfo no pudo confirmar esta información de forma independiente.",
+    imagen: "rodriguez-talleres.jpg",
+    categoria: "apertura",
+    fecha: "28 jul 2026",
+    pagina: "rodriguez-talleres-cordoba.html"
+  },
+  {
+    id: 78,
+    titulo: "Julieta Lema es el nuevo refuerzo de Boca Juniors",
+    resumen: "La delantera fue presentada en el fútbol femenino de Boca. Llega procedente del Club León de México, tras un semestre en el que salió campeona dos veces con Newell's Old Boys.",
+    imagen: "lema-boca.jpg",
+    categoria: "apertura",
+    fecha: "28 jul 2026",
+    pagina: "lema-refuerzo-boca.html"
+  },
+  {
     id: 77,
     titulo: "América Femenil cerró una temporada histórica: Clausura, Concachampions y Campeón de Campeonas",
     resumen: "Las Águilas se reafirmaron como uno de los mejores clubes femeninos del mundo tras un 2025/2026 de triplete: campeonas de Liga MX Femenil, de la Concacaf W Champions Cup y del Campeón de Campeonas.",
@@ -675,5 +693,4 @@ const noticias = [
     pagina: "argentina-mundial.html"
   }
 ];
-
 if(typeof cargarUltimaNoticia === "function") cargarUltimaNoticia();
