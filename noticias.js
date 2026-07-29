@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 83,
+    titulo: "Paloma Fagiano y Carolina Ceniza presentaron la nueva camiseta de River",
+    resumen: "Las jugadoras del plantel femenino fueron parte de la campaña oficial de la nueva camiseta de River, inspirada en uno de los primeros escudos del club por los 125 años de la institución.",
+    imagen: "fagiano-ceniza-camiseta-river.jpg",
+    categoria: "apertura",
+    fecha: "29 jul 2026",
+    pagina: "fagiano-ceniza-camiseta-river.html"
+  },
+  {
+    id: 82,
+    titulo: "River Sub-14 y Sub-16 femenino viajan a Paraguay por la Fiesta Conmebol Evolución",
+    resumen: "Las formativas femeninas del Millonario competirán en el torneo internacional que se disputa en Paraguay entre el 30 de julio y el 8 de agosto, con más de 700 juveniles de toda Sudamérica.",
+    imagen: "river-sub14-sub16-conmebol.jpg",
+    categoria: "apertura",
+    fecha: "29 jul 2026",
+    pagina: "river-sub14-sub16-conmebol.html"
+  },
+  {
+    id: 81,
+    titulo: "Eliana Stabile deja Gimnasia de La Plata y se va a Talleres de Córdoba",
+    resumen: "La lateral zurda, convocada a la Selección argentina, se incorpora a Las Matadoras de cara al Torneo Clausura tras un buen primer semestre en Gimnasia.",
+    imagen: "stabile-talleres.jpg",
+    categoria: "apertura",
+    fecha: "29 jul 2026",
+    pagina: "stabile-talleres-cordoba.html"
+  },
+  {
+    id: 80,
+    titulo: "Miércoles de entrenamiento para las juveniles: Sub-17 y Sub-20 se preparan para sus Mundiales",
+    resumen: "La Sub 20 jugará su Copa del Mundo en Polonia del 5 al 27 de septiembre, y la Sub 17, en su primera clasificación histórica, competirá en Marruecos del 17 de octubre al 7 de noviembre.",
+    imagen: "seleccion-sub17-sub20-entrenamiento.jpg",
+    categoria: "seleccion",
+    fecha: "29 jul 2026",
+    pagina: "seleccion-sub17-sub20-mundiales.html"
+  },
+  {
     id: 79,
     titulo: "Yamila Rodríguez se iría a Talleres de Córdoba",
     resumen: "Trascendió que la delantera de la Selección argentina, que milita en Grêmio de Brasil, podría sumarse a Talleres de cara al Torneo Clausura. femeninoinfo no pudo confirmar esta información de forma independiente.",
