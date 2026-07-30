@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 85,
+    titulo: "Ya salió la Fecha 2 del Torneo Clausura",
+    resumen: "Racing, el último campeón, vuelve a competir y se enfrenta a Boca el lunes en el predio Tita Mattiussi. Días, horarios y sedes de los ocho partidos, que se podrán ver en vivo por LPF Play.",
+    imagen: "clausura-fixture-fecha2.jpg",
+    categoria: "apertura",
+    fecha: "29 jul 2026",
+    pagina: "clausura-fixture-fecha2.html"
+  },
+  {
+    id: 84,
+    titulo: "Belgrano lanzó su propio documental sobre el fútbol femenino",
+    resumen: "\"Cómo pasó ese momento\" reconstruye la historia de Las Piratas, desde sus primeros pasos hasta el bicampeonato 2025 y la clasificación a la Copa Libertadores 2026. La avant premiere fue en los Cines Dino de Alto Verde.",
+    imagen: "belgrano-documental.jpg",
+    categoria: "apertura",
+    fecha: "29 jul 2026",
+    pagina: "belgrano-documental-piratas.html"
+  },
+  {
     id: 83,
     titulo: "Paloma Fagiano y Carolina Ceniza presentaron la nueva camiseta de River",
     resumen: "Las jugadoras del plantel femenino fueron parte de la campaña oficial de la nueva camiseta de River, inspirada en uno de los primeros escudos del club por los 125 años de la institución.",
@@ -21,7 +39,7 @@ const noticias = [
     id: 81,
     titulo: "Eliana Stabile deja Gimnasia de La Plata y se va a Talleres de Córdoba",
     resumen: "La lateral zurda, convocada a la Selección argentina, se incorpora a Las Matadoras de cara al Torneo Clausura tras un buen primer semestre en Gimnasia.",
-    imagen: "stabile-talleres.jpg",
+    imagen: "stabile-talleres-2026.jpg",
     categoria: "apertura",
     fecha: "29 jul 2026",
     pagina: "stabile-talleres-cordoba.html"
