@@ -213,15 +213,15 @@
     <div class="nota-grilla" id="noticiasChicas"></div>
     <div class="tabla-panel">
       <div class="torneo-header">
-        <button class="torneo-btn active" onclick="showTorneo('apertura',this)">Apertura</button>
-        <button class="torneo-btn" onclick="showTorneo('clausura',this)">Clausura</button>
+        <button class="torneo-btn active" onclick="showTorneo('clausura',this)">Clausura</button>
+        <button class="torneo-btn" onclick="showTorneo('apertura',this)">Apertura</button>
         <button class="torneo-btn" onclick="showTorneo('anual',this)">Tabla Anual</button>
       </div>
       <div class="sub-header">
         <button class="sub-btn active" onclick="showSubTab('tabla',this)">Tabla</button>
         <button class="sub-btn" onclick="showSubTab('fixture',this)">Fixture</button>
       </div>
-      <div class="tab-content" id="tab-tabla-apertura">
+      <div class="tab-content" id="tab-tabla-apertura" style="display:none;">
         <table class="tabla-pos">
           <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead>
           <tbody>
@@ -267,7 +267,7 @@
           </div>
         </div>
       </div>
-      <div class="tab-content" id="tab-tabla-clausura" style="display:none;">
+      <div class="tab-content" id="tab-tabla-clausura">
         <table class="tabla-pos">
           <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead>
           <tbody>
@@ -567,7 +567,7 @@
 </style>
 <script>
 var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027' };
-var currentTorneo = 'apertura';
+var currentTorneo = 'clausura';
 var currentSubTab = 'tabla';
 function showTorneo(torneo, btn) {
   currentTorneo = torneo;
