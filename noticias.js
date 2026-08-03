@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 88,
+    titulo: "Ana Insfrán debutó en River ante Independiente",
+    resumen: "La futbolista de la categoría 2010, formada en las inferiores del club, tuvo sus primeros minutos en Primera en el triunfo de River ante Independiente en el River Camp.",
+    imagen: "ana-insfran-debut-river.jpg",
+    categoria: "apertura",
+    fecha: "3 ago 2026",
+    pagina: "ana-insfran-debut-river.html"
+  },
+  {
+    id: 87,
+    titulo: "Unión ganó de visitante ante Banfield y sigue invicto en el Clausura",
+    resumen: "Con goles de Camila Acevedo y Emilse Albornoz, Unión de Santa Fe venció 2-1 a Banfield y consiguió su primera victoria como visitante, tras no haber podido ganar ni un partido en todo el Apertura.",
+    imagen: "union-banfield-invicto.jpg",
+    categoria: "apertura",
+    fecha: "2 ago 2026",
+    pagina: "union-invicto-clausura-banfield.html"
+  },
+  {
+    id: 86,
+    titulo: "River venció 1-0 a Independiente en el River Camp",
+    resumen: "Las Millonarias sumaron su primer triunfo del Torneo Clausura ante Independiente, por la Fecha 2, en un partido disputado en el River Camp.",
+    imagen: "river-independiente-clausura-f2.jpg",
+    categoria: "apertura",
+    fecha: "3 ago 2026",
+    pagina: "river-independiente-clausura-f2.html"
+  },
+  {
     id: 85,
     titulo: "Ya salió la Fecha 2 del Torneo Clausura",
     resumen: "Racing, el último campeón, vuelve a competir y se enfrenta a Boca el lunes en el predio Tita Mattiussi. Días, horarios y sedes de los ocho partidos, que se podrán ver en vivo por LPF Play.",
