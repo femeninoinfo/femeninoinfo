@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 90,
+    titulo: "Se abre el registro de voluntarios para la Copa Mundial Femenina de la FIFA",
+    resumen: "A menos de un año del partido inaugural, la FIFA abrió el registro de voluntarios para el Mundial Femenino Brasil 2027. Se buscan 6.000 personas para las ocho ciudades sede del torneo.",
+    imagen: "voluntarios-mundial-femenino-2027.jpg",
+    categoria: "mundial2027",
+    fecha: "4 ago 2026",
+    pagina: "voluntarios-mundial-femenino-2027.html"
+  },
+  {
+    id: 89,
+    titulo: "Lo dieron vuelta: Boca venció a Racing como visitante",
+    resumen: "Las Gladiadoras se pusieron en desventaja pero lo dieron vuelta ante Racing por la Fecha 2 del Torneo Clausura y sumaron su primera victoria en el certamen.",
+    imagen: "boca-racing-clausura-f2.jpg",
+    categoria: "apertura",
+    fecha: "3 ago 2026",
+    pagina: "boca-racing-clausura-f2.html"
+  },
+  {
     id: 88,
     titulo: "Ana Insfrán debutó en River ante Independiente",
     resumen: "La futbolista de la categoría 2010, formada en las inferiores del club, tuvo sus primeros minutos en Primera en el triunfo de River ante Independiente en el River Camp.",
