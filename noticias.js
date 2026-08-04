@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 91,
+    titulo: "Así quedó la tabla del Clausura tras la Fecha 2",
+    resumen: "San Luis FC y Unión de Santa Fe son los únicos punteros con puntaje ideal tras dos fechas, mientras que Racing debutó en el torneo con derrota ante Boca.",
+    imagen: "clausura-tabla-fecha2-final.jpg",
+    categoria: "apertura",
+    fecha: "4 ago 2026",
+    pagina: "clausura-tabla-fecha2-final.html"
+  },
+  {
     id: 90,
     titulo: "Se abre el registro de voluntarios para la Copa Mundial Femenina de la FIFA",
     resumen: "A menos de un año del partido inaugural, la FIFA abrió el registro de voluntarios para el Mundial Femenino Brasil 2027. Se buscan 6.000 personas para las ocho ciudades sede del torneo.",
