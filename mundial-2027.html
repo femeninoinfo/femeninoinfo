@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Mundial Femenino Brasil 2027 — femeninoinfo</title>
   <meta name="description" content="Toda la cobertura del Mundial Femenino Brasil 2027. Fixture, sedes, clasificadas y más."/>
-  <link rel="icon" href="logo-nuevo.png"/>
+  <link rel="icon" href="logo-fondo.png"/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
@@ -13,11 +13,11 @@
     .header::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent 0%, rgba(200,0,255,0.25) 40%, rgba(230,102,255,0.35) 50%, rgba(200,0,255,0.25) 60%, transparent 100%); background-size:200% 100%; animation:barreSweep 3s linear infinite; pointer-events:none; z-index:0; }
     @keyframes barreSweep { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
     .header-inner, .nav-mobile { position:relative; z-index:1; }
-    body { background:#f5f0f8; }
+    body { background:#f6f6f8; }
 
     /* HERO */
     .archivo-hero {
-      background: #f5f0f8;
+      background: #f6f6f8;
       border-top: 5px solid #009c3b;
       padding: 32px 24px 24px;
     }
@@ -104,7 +104,7 @@
     .countdown-bloques { display: flex; gap: 12px; }
     .countdown-bloque {
       text-align: center;
-      background: #f5f0f8;
+      background: #f6f6f8;
       border-radius: 8px;
       padding: 8px 16px;
       min-width: 64px;
@@ -129,7 +129,7 @@
     .countdown-fecha strong { color: #002776; }
 
     /* LISTA */
-    .lista-wrap { background: #f5f0f8; padding: 20px 24px 48px; }
+    .lista-wrap { background: #f6f6f8; padding: 20px 24px 48px; }
     .lista-inner { max-width: 1280px; margin: 0 auto; }
     .nota-row {
       display: flex;
@@ -306,27 +306,16 @@
   </div>
 </div>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="logo-nuevo.png" alt="femeninoinfo" class="footer-logo"/>
-      <p>Cobertura independiente del fútbol femenino.<br>Argentina y el mundo.</p>
-    </div>
-    <div class="footer-links">
-      <h4>Secciones</h4>
-      <a href="futbol-argentino.html">Fútbol Argentino</a>
-      <a href="seleccion-argentina.html">Selección Argentina</a>
-      <a href="internacional.html">Internacional</a>
-    </div>
-    <div class="footer-links">
-      <h4>femeninoinfo</h4>
-      <a href="sobre.html">Sobre el medio</a>
-      <a href="streaming.html">Streaming</a>
-      <a href="sponsors.html">Sponsors</a>
-    </div>
+<section class="redes-section-nueva">
+  <p class="redes-titulo">Seguinos en redes</p>
+  <div class="redes-row">
+    <a href="https://www.instagram.com/femeninoinfo" target="_blank" class="red-item"><img src="https://cdn.simpleicons.org/instagram/ffffff" class="red-logo" alt="Instagram"/><span class="red-label">Instagram</span></a>
+    <a href="https://www.tiktok.com/@femeninoinfo" target="_blank" class="red-item"><img src="https://cdn.simpleicons.org/tiktok/ffffff" class="red-logo" alt="TikTok"/><span class="red-label">TikTok</span></a>
+    <a href="https://twitter.com/femeninoinfo" target="_blank" class="red-item"><img src="https://cdn.simpleicons.org/x/ffffff" class="red-logo" alt="X / Twitter"/><span class="red-label">X / Twitter</span></a>
+    <a href="https://www.youtube.com/@femeninoinfoarg" target="_blank" class="red-item"><img src="https://cdn.simpleicons.org/youtube/ffffff" class="red-logo" alt="YouTube"/><span class="red-label">YouTube</span></a>
   </div>
-  <div class="footer-bottom"><p>© 2026 femeninoinfo — Todos los derechos reservados</p></div>
-</footer>
+  <p class="redes-mail"><a href="mailto:femeninoinfo.marketing@gmail.com">femeninoinfo.marketing@gmail.com</a></p>
+</section>
 
 <script>
 var POR_PAGINA = 12;
