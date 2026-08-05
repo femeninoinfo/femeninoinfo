@@ -51,7 +51,10 @@
     .portal-inner { max-width:1280px; margin:0 auto; padding:20px 24px; display:grid; grid-template-columns:1fr 260px 340px; gap:16px; align-items:start; position:relative; z-index:1; }
     .nota-grande { position:relative; border-radius:12px; overflow:hidden; height:500px; cursor:pointer; }
     .nota-grande:hover .nota-grande-img { transform:scale(1.03); }
-    .nota-grande-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+    .nota-grande-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform 0.4s,opacity 0.35s ease; }
+    .hero-dots { display:flex; gap:6px; margin-top:12px; }
+    .hero-dot { width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,0.35); cursor:pointer; transition:all 0.25s; }
+    .hero-dot.active { background:#c800ff; width:20px; border-radius:3px; }
     .nota-grande-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.93) 0%,rgba(0,0,0,0.45) 50%,rgba(0,0,0,0.05) 100%); }
     .nota-grande-content { position:absolute; bottom:0; left:0; right:0; padding:24px; z-index:2; }
     .nota-grande-badge { display:inline-flex; align-items:center; gap:5px; font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#c800ff; text-transform:uppercase; margin-bottom:8px; }
@@ -209,6 +212,7 @@
         <div class="nota-grande-badge"><span class="nota-grande-dot"></span> Reciente</div>
         <p class="nota-grande-titulo" id="ultimaTitulo">Cargando...</p>
         <p class="nota-grande-resumen" id="ultimaResumen"></p>
+        <div class="hero-dots" id="heroDots"></div>
       </div>
     </div>
     <div class="nota-grilla" id="noticiasChicas"></div>
@@ -369,11 +373,11 @@
   </div>
 </section>
 <!-- ÚLTIMAS NOTICIAS -->
-<section id="noticias" style="background:#ffffff;padding:48px 24px;border-bottom:1px solid #ececec;">
+<section id="noticias" style="background:#1a0035;padding:48px 24px;border-bottom:1px solid #3d0066;">
   <div style="max-width:1280px;margin:0 auto;">
     <div class="section-header">
       <span class="section-pill" style="background:#c800ff;color:#fff;">Últimas noticias</span>
-      <h2 class="section-title" style="color:#1a001f;">Últimas noticias</h2>
+      <h2 class="section-title" style="color:#ffffff;">Últimas noticias</h2>
       <span class="section-line" style="background:#c800ff;"></span>
     </div>
     <div class="grid-carrusel" id="gridUltimas"></div>
@@ -390,13 +394,7 @@
       </div>
       <a href="futbol-argentino.html" class="ver-mas-btn ver-mas-arg">Ver todas →</a>
     </div>
-    <div class="sec-layout">
-      <div class="grid-ultimas" id="gridApertura"></div>
-      <div class="lista-titulos">
-        <div id="listaApertura"></div>
-        <a href="futbol-argentino.html" class="lista-leermas ver-mas-arg">Leer más →</a>
-      </div>
-    </div>
+    <div class="grid-carrusel" id="gridApertura"></div>
   </div>
 </section>
 <!-- SELECCIÓN ARGENTINA -->
@@ -410,13 +408,7 @@
       </div>
       <a href="seleccion-argentina.html" class="ver-mas-btn ver-mas-sel">Ver todas →</a>
     </div>
-    <div class="sec-layout">
-      <div class="grid-ultimas" id="gridSeleccion"></div>
-      <div class="lista-titulos">
-        <div id="listaSeleccion"></div>
-        <a href="seleccion-argentina.html" class="lista-leermas ver-mas-sel">Leer más →</a>
-      </div>
-    </div>
+    <div class="grid-carrusel" id="gridSeleccion"></div>
   </div>
 </section>
 <!-- INTERNACIONAL -->
@@ -430,13 +422,7 @@
       </div>
       <a href="internacional.html" class="ver-mas-btn ver-mas-int">Ver todas →</a>
     </div>
-    <div class="sec-layout">
-      <div class="grid-ultimas" id="gridInternacional"></div>
-      <div class="lista-titulos">
-        <div id="listaInternacional"></div>
-        <a href="internacional.html" class="lista-leermas ver-mas-int">Leer más →</a>
-      </div>
-    </div>
+    <div class="grid-carrusel" id="gridInternacional"></div>
   </div>
 </section>
 <!-- MUNDIAL BRASIL 2027 -->
@@ -450,13 +436,7 @@
       </div>
       <a href="mundial-2027.html" class="ver-mas-btn ver-mas-mundial">Ver todas →</a>
     </div>
-    <div class="sec-layout">
-      <div class="grid-ultimas" id="gridMundial"></div>
-      <div class="lista-titulos">
-        <div id="listaMundial"></div>
-        <a href="mundial-2027.html" class="lista-leermas ver-mas-mundial">Leer más →</a>
-      </div>
-    </div>
+    <div class="grid-carrusel" id="gridMundial"></div>
   </div>
 </section>
 <!-- REDES -->
@@ -632,14 +612,48 @@ function makeCarruselCard(n) {
     '</div>';
   return div;
 }
+var heroSlides = [];
+var heroIndex = 0;
+var heroTimer = null;
+function renderHeroSlide(i) {
+  var n = heroSlides[i];
+  if(!n) return;
+  var img = document.getElementById('ultimaImg');
+  img.style.opacity = '0';
+  setTimeout(function(){
+    img.src = n.imagen;
+    img.alt = n.titulo;
+    document.getElementById('ultimaTitulo').textContent = n.titulo;
+    var res = document.getElementById('ultimaResumen');
+    if(res) res.textContent = n.resumen || '';
+    img.style.opacity = '1';
+  }, 250);
+  var dots = document.getElementById('heroDots');
+  if(dots) {
+    dots.innerHTML = '';
+    heroSlides.forEach(function(_, idx){
+      var d = document.createElement('span');
+      d.className = 'hero-dot' + (idx === i ? ' active' : '');
+      d.onclick = function(e){ e.stopPropagation(); heroIndex = idx; renderHeroSlide(idx); resetHeroTimer(); };
+      dots.appendChild(d);
+    });
+  }
+}
+function resetHeroTimer() {
+  if(heroTimer) clearInterval(heroTimer);
+  if(heroSlides.length > 1) {
+    heroTimer = setInterval(function(){
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      renderHeroSlide(heroIndex);
+    }, 5000);
+  }
+}
 function cargarUltimaNoticia() {
   if(!noticias || noticias.length === 0) return;
-  var n = noticias[0];
-  document.getElementById('ultimaImg').src = n.imagen;
-  document.getElementById('ultimaImg').alt = n.titulo;
-  document.getElementById('ultimaTitulo').textContent = n.titulo;
-  var res = document.getElementById('ultimaResumen');
-  if(res) res.textContent = n.resumen || '';
+  heroSlides = noticias.slice(0,5);
+  heroIndex = 0;
+  renderHeroSlide(0);
+  resetHeroTimer();
   var chicas = document.getElementById('noticiasChicas');
   if(chicas) {
     chicas.innerHTML = '';
@@ -661,27 +675,13 @@ function cargarUltimaNoticia() {
     }
   }
   var GRID_CAT_MAP = { gridApertura:'apertura', gridSeleccion:'seleccion', gridInternacional:'internacional', gridMundial:'mundial2027' };
-  var LIST_ID_MAP = { gridApertura:'listaApertura', gridSeleccion:'listaSeleccion', gridInternacional:'listaInternacional', gridMundial:'listaMundial' };
-  var LIST_COLORS = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b' };
   Object.keys(GRID_CAT_MAP).forEach(function(gid) {
     var grid = document.getElementById(gid);
     if(!grid) return;
     grid.innerHTML = '';
     var cat = GRID_CAT_MAP[gid];
     var lista = noticias.filter(function(n){ return n.categoria === cat; });
-    lista.slice(0,8).forEach(function(n, idx){ grid.appendChild(makeGridCard(n, idx)); });
-    var listaEl = document.getElementById(LIST_ID_MAP[gid]);
-    if(listaEl) {
-      listaEl.innerHTML = '';
-      lista.slice(8,18).forEach(function(n) {
-        var a = document.createElement('a');
-        a.className = 'lista-item';
-        a.href = n.pagina;
-        a.style.color = LIST_COLORS[cat] || '#3d0066';
-        a.innerHTML = n.titulo + '<span class="lista-fecha">'+n.fecha+'</span>';
-        listaEl.appendChild(a);
-      });
-    }
+    lista.slice(0,10).forEach(function(n){ grid.appendChild(makeCarruselCard(n)); });
   });
   var gridUltimas = document.getElementById('gridUltimas');
   if(gridUltimas) {
@@ -690,8 +690,8 @@ function cargarUltimaNoticia() {
   }
 }
 function abrirUltima() {
-  if(!noticias || noticias.length === 0) return;
-  window.open(noticias[0].pagina,'_blank');
+  if(!heroSlides || heroSlides.length === 0) return;
+  window.open(heroSlides[heroIndex].pagina,'_blank');
 }
 </script>
 <script src="noticias.js"></script>
