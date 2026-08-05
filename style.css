@@ -186,6 +186,18 @@ img { max-width: 100%; display: block; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; text-align: center; max-width: 1200px; margin: 0 auto; }
 .footer-bottom p { color: rgba(255,255,255,0.3); font-size: 12px; }
 
+/* FOOTER SIMPLE: SOLO REDES + MAIL */
+.redes-section-nueva { background: #0a000f; padding: 36px 24px; border-top: 1px solid #1a003a; }
+.redes-titulo { font-family: var(--font-display); font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); text-align: center; margin-bottom: 20px; }
+.redes-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; max-width: 500px; margin: 0 auto; }
+.red-item { display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; padding: 16px 24px; border-radius: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); transition: background 0.2s; }
+.red-item:hover { background: rgba(200,0,255,0.1); border-color: rgba(200,0,255,0.3); }
+.red-logo { width: 28px; height: 28px; object-fit: contain; }
+.red-label { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.5px; }
+.redes-mail { text-align: center; margin-top: 22px; font-size: 12px; color: rgba(255,255,255,0.4); }
+.redes-mail a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.redes-mail a:hover { color: #c800ff; }
+
 /* CAT BADGES */
 .cat-badge { display: inline-block; font-family: var(--font-display); font-size: 12px; letter-spacing: 2px; padding: 4px 12px; border-radius: 2px; text-transform: uppercase; margin-bottom: 6px; }
 .cat-live { background: #cc0000; color: var(--white); animation: pulse 2s infinite; }
