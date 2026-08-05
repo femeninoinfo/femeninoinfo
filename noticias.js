@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 95,
+    titulo: "\"Tengo la necesidad imperiosa de frenar una Ley que está fundada en una mentira\": Luana Muñoz habló en el Senado",
+    resumen: "Luana Muñoz, una de las futbolistas que denunció al exentrenador Diego Guacci, apuntó contra el proyecto de Ley de Falsas Denuncias en una exposición ante el Senado.",
+    imagen: "luana-munoz-senado-ley-falsas-denuncias.jpg",
+    categoria: "apertura",
+    fecha: "5 ago 2026",
+    pagina: "luana-munoz-senado-ley-falsas-denuncias.html"
+  },
+  {
+    id: 94,
+    titulo: "Las jugadoras de Boca presentaron la nueva camiseta",
+    resumen: "El plantel femenino de Boca Juniors presentó la nueva camiseta con la que buscará seguir sumando en el Torneo Clausura.",
+    imagen: "boca-nueva-camiseta-jugadoras.jpg",
+    categoria: "apertura",
+    fecha: "5 ago 2026",
+    pagina: "boca-nueva-camiseta-jugadoras.html"
+  },
+  {
+    id: 93,
+    titulo: "OFICIAL: Kerolin Nicoli es nueva jugadora del Barça Femení",
+    resumen: "La atacante brasileña llega traspasada desde el Manchester City a cambio de 1.500.000 de euros, según información de Sport.",
+    imagen: "kerolin-nicoli-barcelona-femeni.jpg",
+    categoria: "internacional",
+    fecha: "5 ago 2026",
+    pagina: "kerolin-nicoli-barcelona-femeni.html"
+  },
+  {
+    id: 92,
+    titulo: "Florencia Bonsegundo brilló en la goleada del Sporting CP en la Champions",
+    resumen: "La delantera argentina hizo 2 goles y dio una asistencia en la victoria 5-0 ante el FC Seasters Odessa, por la Champions League femenina.",
+    imagen: "bonsegundo-sporting-cp-champions.jpg",
+    categoria: "internacional",
+    fecha: "5 ago 2026",
+    pagina: "bonsegundo-sporting-cp-champions.html"
+  },
+  {
     id: 91,
     titulo: "Así quedó la tabla del Clausura tras la Fecha 2",
     resumen: "San Luis FC y Unión de Santa Fe son los únicos punteros con puntaje ideal tras dos fechas, mientras que Racing debutó en el torneo con derrota ante Boca.",
