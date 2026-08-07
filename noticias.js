@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 99,
+    titulo: "Brasil paralizará el fútbol durante la Copa Mundial Femenina",
+    resumen: "La CBF confirmó una pausa obligatoria para las competencias femeninas y masculinas del país entre el 24 de junio y el 25 de julio de 2027.",
+    imagen: "brasil-pausa-futbol-mundial-femenino-2027.jpg",
+    categoria: "mundial2027",
+    fecha: "7 ago 2026",
+    pagina: "brasil-pausa-futbol-mundial-femenino-2027.html"
+  },
+  {
+    id: 98,
+    titulo: "River Sub-16 eliminó por penales a Independiente del Valle y jugará la final de la Fiesta Conmebol Evolución",
+    resumen: "Las Millonarias superaron al equipo ecuatoriano en la semifinal disputada en Paraguay y el sábado buscarán el título del torneo.",
+    imagen: "river-sub16-final-conmebol-evolucion.jpg",
+    categoria: "apertura",
+    fecha: "7 ago 2026",
+    pagina: "river-sub16-final-conmebol-evolucion.html"
+  },
+  {
+    id: 97,
+    titulo: "AFA creó la categoría Sub-12 del fútbol femenino, con 11 equipos",
+    resumen: "La nueva división formativa arranca el 11 de agosto, para futbolistas de 10 a 12 años, con canchas reducidas y partidos de 50 minutos.",
+    imagen: "sub12-femenino-afa-nueva-categoria.jpg",
+    categoria: "apertura",
+    fecha: "7 ago 2026",
+    pagina: "sub12-femenino-afa-nueva-categoria.html"
+  },
+  {
     id: 96,
     titulo: "¿Juega Banini el finde? La gran duda antes del Superclásico femenino chileno",
     resumen: "Universidad de Chile recibe a Colo Colo este sábado, con la incógnita de si Estefanía Banini hará su debut tras su regreso al club.",
