@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 96,
+    titulo: "¿Juega Banini el finde? La gran duda antes del Superclásico femenino chileno",
+    resumen: "Universidad de Chile recibe a Colo Colo este sábado, con la incógnita de si Estefanía Banini hará su debut tras su regreso al club.",
+    imagen: "banini-superclasico-chileno-agosto.jpg",
+    categoria: "internacional",
+    fecha: "6 ago 2026",
+    pagina: "banini-superclasico-chileno-agosto.html"
+  },
+  {
     id: 95,
     titulo: "\"Tengo la necesidad imperiosa de frenar una Ley que está fundada en una mentira\": Luana Muñoz habló en el Senado",
     resumen: "Luana Muñoz, una de las futbolistas que denunció al exentrenador Diego Guacci, apuntó contra el proyecto de Ley de Falsas Denuncias en una exposición ante el Senado.",
