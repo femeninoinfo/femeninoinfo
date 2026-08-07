@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 100,
+    titulo: "Ya salió la programación de la Fecha 3 del Torneo Clausura: día, horario y sede de cada partido",
+    resumen: "La Liga Profesional confirmó los ocho partidos de la próxima fecha, que se jugarán entre el sábado 8 y el martes 11 de agosto.",
+    imagen: "fixture-fecha-3-clausura-dia-horario-sede.jpg",
+    categoria: "apertura",
+    fecha: "7 ago 2026",
+    pagina: "fixture-fecha-3-clausura-dia-horario-sede.html"
+  },
+  {
     id: 99,
     titulo: "Brasil paralizará el fútbol durante la Copa Mundial Femenina",
     resumen: "La CBF confirmó una pausa obligatoria para las competencias femeninas y masculinas del país entre el 24 de junio y el 25 de julio de 2027.",
