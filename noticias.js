@@ -1,10 +1,19 @@
 const noticias = [
   {
+    id: 107,
+    titulo: "Así quedó la tabla del Torneo Clausura tras la Fecha 3",
+    resumen: "Belgrano quedó como líder por diferencia de gol en un Clausura apretadísimo, con ocho equipos empatados en 6 puntos tras la tercera fecha.",
+    imagen: "asi-quedo-tabla-clausura-fecha-3.jpg",
+    categoria: "apertura",
+    fecha: "11 ago 2026",
+    pagina: "asi-quedo-tabla-clausura-fecha-3.html"
+  },
+  {
     id: 106,
     titulo: "Histórico: la Sub-16 de River se consagró campeona de la Fiesta Conmebol Evolución",
     resumen: "River goleó 4-0 a Inter Stars Rush de Bolivia en la final y se convirtió en el primer club argentino en ganar el torneo continental.",
     imagen: "river-sub16-campeon-conmebol-evolucion.jpg",
-    categoria: "apertura",
+    categoria: "internacional",
     fecha: "8 ago 2026",
     pagina: "river-sub16-campeon-conmebol-evolucion.html"
   },
