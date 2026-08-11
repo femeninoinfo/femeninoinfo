@@ -1,5 +1,59 @@
 const noticias = [
   {
+    id: 106,
+    titulo: "Histórico: la Sub-16 de River se consagró campeona de la Fiesta Conmebol Evolución",
+    resumen: "River goleó 4-0 a Inter Stars Rush de Bolivia en la final y se convirtió en el primer club argentino en ganar el torneo continental.",
+    imagen: "river-sub16-campeon-conmebol-evolucion.jpg",
+    categoria: "apertura",
+    fecha: "8 ago 2026",
+    pagina: "river-sub16-campeon-conmebol-evolucion.html"
+  },
+  {
+    id: 105,
+    titulo: "Boca le ganó a Newell's en Casa Amarilla",
+    resumen: "Las Gladiadoras sumaron una nueva victoria como local, por la Fecha 3 del Torneo Clausura.",
+    imagen: "boca-le-gano-a-newells-casa-amarilla.jpg",
+    categoria: "apertura",
+    fecha: "8 ago 2026",
+    pagina: "boca-le-gano-a-newells-casa-amarilla.html"
+  },
+  {
+    id: 104,
+    titulo: "Las Millonarias le ganaron 3-1 a Unión como visitante",
+    resumen: "River se impuso con dos goles de Mercedes Diz y uno de Aldana Barrionuevo, por la Fecha 3 del Torneo Clausura.",
+    imagen: "river-le-gano-a-union-visitante.jpg",
+    categoria: "apertura",
+    fecha: "9 ago 2026",
+    pagina: "river-le-gano-a-union-visitante.html"
+  },
+  {
+    id: 103,
+    titulo: "Stábile y Yamila Rodríguez, los dos refuerzos de Talleres, metieron gol en su debut como local",
+    resumen: "Las Matadoras le dieron vuelta el partido a San Lorenzo 2-1 en La Boutique.",
+    imagen: "talleres-stabile-yamila-rodriguez-gol-debut-local.jpg",
+    categoria: "apertura",
+    fecha: "10 ago 2026",
+    pagina: "talleres-stabile-yamila-rodriguez-gol-debut-local.html"
+  },
+  {
+    id: 102,
+    titulo: "Belgrano goleó 6-0 a Independiente y Bulacio es la nueva goleadora del torneo",
+    resumen: "Las Piratas aplastaron a Independiente con un hat-trick de Micaela Bulacio, por la Fecha 3 del Clausura.",
+    imagen: "belgrano-goleada-independiente-bulacio-goleadora.jpg",
+    categoria: "apertura",
+    fecha: "10 ago 2026",
+    pagina: "belgrano-goleada-independiente-bulacio-goleadora.html"
+  },
+  {
+    id: 101,
+    titulo: "Volvió a jugar: Estefanía Banini debutó con Colo Colo en el Superclásico chileno",
+    resumen: "La mendocina ingresó a los 73 minutos en el 1-0 de Colo Colo sobre Universidad de Chile, marcando su regreso al club tras 12 años afuera.",
+    imagen: "banini-debut-colo-colo-superclasico.jpg",
+    categoria: "internacional",
+    fecha: "9 ago 2026",
+    pagina: "banini-debut-colo-colo-superclasico.html"
+  },
+  {
     id: 100,
     titulo: "Ya salió la programación de la Fecha 3 del Torneo Clausura: día, horario y sede de cada partido",
     resumen: "La Liga Profesional confirmó los ocho partidos de la próxima fecha, que se jugarán entre el sábado 8 y el martes 11 de agosto.",
