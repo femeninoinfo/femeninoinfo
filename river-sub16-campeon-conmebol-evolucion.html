@@ -29,23 +29,23 @@
     .search-hint{font-size:12px;color:rgba(255,255,255,0.25);text-align:center;padding:14px 0 4px}
     body{background:#f6f6f8}
     .art-wrap{max-width:860px;margin:0 auto;padding:40px 24px 64px}
-    .art-volver{display:inline-flex;align-items:center;gap:6px;color:#3d0066;font-size:13px;font-weight:600;text-decoration:none;margin-bottom:24px}
+    .art-volver{display:inline-flex;align-items:center;gap:6px;color:#006644;font-size:13px;font-weight:600;text-decoration:none;margin-bottom:24px}
     .art-volver:hover{text-decoration:underline}
-    .art-categoria{display:inline-block;background:#3d0066;color:#fff;font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:3px;margin-bottom:14px}
+    .art-categoria{display:inline-block;background:#006644;color:#fff;font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:3px;margin-bottom:14px}
     .art-titulo{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,48px);color:#1a001f;line-height:1.1;letter-spacing:1px;margin-bottom:10px}
     .art-fecha{font-size:12px;color:#aaa;margin-bottom:16px;display:block}
-    .art-bajada{font-size:16px;color:#333;line-height:1.65;font-weight:400;margin-bottom:24px;border-left:3px solid #3d0066;padding-left:16px}
+    .art-bajada{font-size:16px;color:#333;line-height:1.65;font-weight:400;margin-bottom:24px;border-left:3px solid #006644;padding-left:16px}
     .art-foto{width:100%;border-radius:10px;object-fit:cover;max-height:420px;margin-bottom:28px;display:block}
     .art-body{font-size:15px;color:#222;line-height:1.75}
     .art-body p{margin-bottom:18px}
-    .art-body h3{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#3d0066;margin:28px 0 10px;letter-spacing:0.5px}
-    .art-body strong{color:#3d0066}
-    .art-separador{width:48px;height:3px;background:#3d0066;border-radius:2px;margin:28px 0}
-    .seguir-leyendo{background:#fff;border-top:4px solid #3d0066;padding:40px 24px}
+    .art-body h3{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#006644;margin:28px 0 10px;letter-spacing:0.5px}
+    .art-body strong{color:#006644}
+    .art-separador{width:48px;height:3px;background:#006644;border-radius:2px;margin:28px 0}
+    .seguir-leyendo{background:#fff;border-top:4px solid #006644;padding:40px 24px}
     .seguir-inner{max-width:860px;margin:0 auto}
-    .seguir-titulo{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#3d0066;letter-spacing:1px;margin-bottom:20px}
+    .seguir-titulo{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#006644;letter-spacing:1px;margin-bottom:20px}
     .seguir-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .seguir-card{position:relative;border-radius:10px;overflow:hidden;height:180px;cursor:pointer;transition:transform 0.2s;border-top:3px solid #3d0066}
+    .seguir-card{position:relative;border-radius:10px;overflow:hidden;height:180px;cursor:pointer;transition:transform 0.2s;border-top:3px solid #006644}
     .seguir-card:hover{transform:translateY(-3px)}
     .seguir-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
     .seguir-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.2) 100%)}
@@ -89,8 +89,8 @@
 </div>
 
 <div class="art-wrap">
-  <a href="futbol-argentino.html" class="art-volver">← Fútbol Argentino</a>
-  <span class="art-categoria">Argentino</span>
+  <a href="internacional.html" class="art-volver">← Internacional</a>
+  <span class="art-categoria">Internacional</span>
   <h1 class="art-titulo">Histórico: la Sub-16 de River se consagró campeona de la Fiesta Conmebol Evolución</h1>
   <span class="art-fecha">8 de agosto de 2026</span>
   <p class="art-bajada">River goleó 4-0 a Inter Stars Rush de Bolivia en la final disputada en Paraguay y se convirtió en el primer club argentino en ganar el torneo continental.</p>
@@ -125,7 +125,7 @@
   </div>
   <p class="redes-mail"><a href="mailto:femeninoinfo.marketing@gmail.com">femeninoinfo.marketing@gmail.com</a></p>
 </section>
-<script>var PAGINA_ACTUAL='river-sub16-campeon-conmebol-evolucion.html';var CATEGORIA_ACTUAL='apertura';</script>
+<script>var PAGINA_ACTUAL='river-sub16-campeon-conmebol-evolucion.html';var CATEGORIA_ACTUAL='internacional';</script>
 <script src="noticias.js"></script>
 <script>(function(){var grid=document.getElementById('seguirGrid');if(!grid||typeof noticias==='undefined')return;noticias.filter(function(n){return n.categoria===CATEGORIA_ACTUAL&&n.pagina!==PAGINA_ACTUAL}).slice(0,4).forEach(function(n){var div=document.createElement('div');div.className='seguir-card';div.onclick=function(){window.location.href=n.pagina};div.innerHTML='<img src="'+n.imagen+'" alt="'+n.titulo+'"/><div class="seguir-card-overlay"></div><div class="seguir-card-body"><p class="seguir-card-titulo">'+n.titulo+'</p><span class="seguir-card-fecha">'+n.fecha+'</span></div>';grid.appendChild(div)})})();</script>
 <script src="buscador.js"></script>
