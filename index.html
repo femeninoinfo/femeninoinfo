@@ -721,6 +721,30 @@ function cargarUltimaNoticia() {
     gridUltimas.innerHTML = '';
     noticias.slice(0,10).forEach(function(n){ gridUltimas.appendChild(makeCarruselCard(n)); });
   }
+  initAutoScrollCarruseles();
+}
+function initAutoScrollCarruseles() {
+  document.querySelectorAll('.grid-carrusel').forEach(function(track) {
+    if(track.dataset.autoScrollInit) return;
+    track.dataset.autoScrollInit = '1';
+    var paused = false;
+    track.addEventListener('mouseenter', function(){ paused = true; });
+    track.addEventListener('mouseleave', function(){ paused = false; });
+    track.addEventListener('touchstart', function(){ paused = true; }, {passive:true});
+    track.addEventListener('touchend', function(){ setTimeout(function(){ paused = false; }, 2800); }, {passive:true});
+    setInterval(function(){
+      if(paused) return;
+      var maxScroll = track.scrollWidth - track.clientWidth;
+      if(maxScroll <= 4) return;
+      var card = track.querySelector('.carrusel-card');
+      var step = card ? (card.getBoundingClientRect().width + 14) : 244;
+      if(track.scrollLeft >= maxScroll - 4) {
+        track.scrollTo({ left:0, behavior:'smooth' });
+      } else {
+        track.scrollTo({ left:track.scrollLeft + step, behavior:'smooth' });
+      }
+    }, 3200);
+  });
 }
 function abrirUltima() {
   if(!heroSlides || heroSlides.length === 0) return;
