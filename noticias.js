@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 108,
+    titulo: "Arrancó el primer Campeonato Sub-12 de fútbol femenino organizado por AFA",
+    resumen: "Se jugó la primera fecha del torneo formativo que reúne a 11 clubes del AMBA, pensado para que las futbolistas empiecen a competir de forma oficial desde los 10 años.",
+    imagen: "sub12-femenino-arranco-primera-fecha.jpg",
+    categoria: "apertura",
+    fecha: "12 ago 2026",
+    pagina: "sub12-femenino-arranco-primera-fecha.html"
+  },
+  {
     id: 107,
     titulo: "Así quedó la tabla del Torneo Clausura tras la Fecha 3",
     resumen: "Belgrano quedó como líder por diferencia de gol en un Clausura apretadísimo, con ocho equipos empatados en 6 puntos tras la tercera fecha.",
