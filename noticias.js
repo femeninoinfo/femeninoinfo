@@ -1,5 +1,50 @@
 const noticias = [
   {
+    id: 113,
+    titulo: "Se jugó la primera Copa Raíces en homenaje al Día de la Futbolista Argentina",
+    resumen: "Banfield fue sede de un torneo +35 y +50 organizado junto a El Femenino y Mónica Santino, con la presencia de Vanina Correa.",
+    imagen: "copa-raices-torneo-mas35-banfield.jpg",
+    categoria: "apertura",
+    fecha: "18 ago 2026",
+    pagina: "copa-raices-torneo-mas35-banfield.html"
+  },
+  {
+    id: 112,
+    titulo: "River, Banfield y Boca son los nuevos punteros del Clausura",
+    resumen: "Los tres equipos llegaron a 9 puntos tras la Fecha 4 y comparten la cima de la tabla, con River al frente por diferencia de gol.",
+    imagen: "river-banfield-boca-punteros-clausura-fecha-4.jpg",
+    categoria: "apertura",
+    fecha: "17 ago 2026",
+    pagina: "river-banfield-boca-punteros-clausura-fecha-4.html"
+  },
+  {
+    id: 111,
+    titulo: "Banfield le ganó el clásico del sur a Lanús",
+    resumen: "El Taladro se impuso 3-2 en el Florencio Sola por la Fecha 4 del Clausura, en un partido intenso que Lanús peleó hasta el final.",
+    imagen: "banfield-lanus-clasico-del-sur-clausura-f4.jpg",
+    categoria: "apertura",
+    fecha: "17 ago 2026",
+    pagina: "banfield-lanus-clasico-del-sur-clausura-f4.html"
+  },
+  {
+    id: 110,
+    titulo: "Sophia Braun debutó con Dallas Trinity en la USL Super League",
+    resumen: "La mediocampista argentina fue titular como capitana en el empate 1-1 ante Tampa Bay Sun, en el partido inaugural de Dallas Trinity en la temporada.",
+    imagen: "sophia-braun-debut-dallas-trinity-usl.jpg",
+    categoria: "internacional",
+    fecha: "16 ago 2026",
+    pagina: "sophia-braun-debut-dallas-trinity-usl.html"
+  },
+  {
+    id: 109,
+    titulo: "Agostina Holzheier debutó con Bay FC en la NWSL",
+    resumen: "La entrerriana ingresó a los 82 minutos en la derrota 3-2 ante Utah Royals y jugó sus primeros minutos oficiales con la camiseta de Bay FC.",
+    imagen: "holzheier-debut-bay-fc-nwsl.jpg",
+    categoria: "internacional",
+    fecha: "15 ago 2026",
+    pagina: "holzheier-debut-bay-fc-nwsl.html"
+  },
+  {
     id: 108,
     titulo: "Arrancó el primer Campeonato Sub-12 de fútbol femenino organizado por AFA",
     resumen: "Se jugó la primera fecha del torneo formativo que reúne a 11 clubes del AMBA, pensado para que las futbolistas empiecen a competir de forma oficial desde los 10 años.",
