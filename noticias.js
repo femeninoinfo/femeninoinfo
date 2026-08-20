@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 116,
+    titulo: "Kishi Núñez se despidió de Boca para cuidar su salud mental",
+    resumen: "La delantera de 18 años, pieza clave en la campaña de Boca en la última Copa Libertadores Femenina, anunció en sus redes sociales que da un paso al costado del club para priorizar su bienestar.",
+    imagen: "kishi-nunez-se-despide-de-boca-salud-mental.jpg",
+    categoria: "apertura",
+    fecha: "19 ago 2026",
+    pagina: "kishi-nunez-se-despide-de-boca-salud-mental.html"
+  },
+  {
+    id: 115,
+    titulo: "Chiqui Tapia estuvo presente en el Sub-12 de Boca ante Vélez, que se transmitió por LPF Play",
+    resumen: "El presidente de AFA visitó Casa Amarilla para el partido de la fecha 2 del Torneo Sub-12, que además tuvo transmisión oficial de LPF Play.",
+    imagen: "tapia-presente-sub12-boca-velez-lpf-play.jpg",
+    categoria: "apertura",
+    fecha: "19 ago 2026",
+    pagina: "tapia-presente-sub12-boca-velez-lpf-play.html"
+  },
+  {
+    id: 114,
+    titulo: "Dolores Delgado sumó sus primeros minutos con el primer equipo del Real Madrid",
+    resumen: "La delantera argentina, goleadora del Juvenil merengue, fue parte del banco en el amistoso ante el Deportivo y disputó minutos con el plantel superior.",
+    imagen: "dolores-delgado-debut-real-madrid.jpg",
+    categoria: "internacional",
+    fecha: "18 ago 2026",
+    pagina: "dolores-delgado-debut-real-madrid.html"
+  },
+  {
     id: 113,
     titulo: "Se jugó la primera Copa Raíces en homenaje al Día de la Futbolista Argentina",
     resumen: "Banfield fue sede de un torneo +35 y +50 organizado junto a El Femenino y Mónica Santino, con la presencia de Vanina Correa.",
