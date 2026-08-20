@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 117,
+    titulo: "Ema Modric, hija de Luka Modric, se sumó al Cadete Femenino del Real Madrid",
+    resumen: "La futbolista de 13 años dejó las inferiores del AC Milan, donde había sido campeona de la Copa Garino, para sumarse a la cantera femenina del club en el que juega su padre.",
+    imagen: "ema-modric-real-madrid-cadete-femenino.jpg",
+    categoria: "internacional",
+    fecha: "20 ago 2026",
+    pagina: "ema-modric-real-madrid-cadete-femenino.html"
+  },
+  {
     id: 116,
     titulo: "Kishi Núñez se despidió de Boca para cuidar su salud mental",
     resumen: "La delantera de 18 años, pieza clave en la campaña de Boca en la última Copa Libertadores Femenina, anunció en sus redes sociales que da un paso al costado del club para priorizar su bienestar.",
