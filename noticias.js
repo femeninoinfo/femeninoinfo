@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 119,
+    titulo: "La Liga F resolvió a último momento su crisis de televisión antes de arrancar la temporada",
+    resumen: "DAZN seguirá con los ocho partidos de cada fecha en modalidad paga, mientras que TVE y TV3 transmitirán cuatro encuentros por jornada en abierto, tras semanas sin operador confirmado.",
+    imagen: "liga-f-resuelve-crisis-television-dazn-tve-tv3.jpg",
+    categoria: "internacional",
+    fecha: "20 ago 2026",
+    pagina: "liga-f-resuelve-crisis-television-dazn-tve-tv3.html"
+  },
+  {
     id: 118,
     titulo: "El Maracaná será sede del partido inaugural y la final del Mundial Femenino Brasil 2027",
     resumen: "FIFA presentó el calendario completo del torneo, que se disputará entre el 24 de junio y el 25 de julio de 2027 con 32 selecciones en ocho ciudades brasileñas.",
