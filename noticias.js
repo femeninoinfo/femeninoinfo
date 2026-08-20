@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 118,
+    titulo: "El Maracaná será sede del partido inaugural y la final del Mundial Femenino Brasil 2027",
+    resumen: "FIFA presentó el calendario completo del torneo, que se disputará entre el 24 de junio y el 25 de julio de 2027 con 32 selecciones en ocho ciudades brasileñas.",
+    imagen: "maracana-sede-inaugural-final-mundial-2027.jpg",
+    categoria: "mundial2027",
+    fecha: "20 ago 2026",
+    pagina: "maracana-sede-inaugural-final-mundial-2027.html"
+  },
+  {
     id: 117,
     titulo: "Ema Modric, hija de Luka Modric, se sumó al Cadete Femenino del Real Madrid",
     resumen: "La futbolista de 13 años dejó las inferiores del AC Milan, donde había sido campeona de la Copa Garino, para sumarse a la cantera femenina del club en el que juega su padre.",
