@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 121,
+    titulo: "Así se juega la fecha 5 del Torneo Clausura del fútbol femenino",
+    resumen: "Ocho partidos entre el sábado y el lunes, con Boca-Banfield abriendo la jornada en Casa Amarilla y el clásico entre San Lorenzo y Racing como uno de los platos fuertes.",
+    imagen: "fixture-fecha-5-torneo-clausura-femenino.jpg",
+    categoria: "apertura",
+    fecha: "21 ago 2026",
+    pagina: "fixture-fecha-5-torneo-clausura.html"
+  },
+  {
+    id: 120,
+    titulo: "Hoy se celebra el Día de la Futbolista Argentina, a 55 años de la hazaña de Las Pioneras",
+    resumen: "Cada 21 de agosto se homenajea a las futbolistas argentinas en conmemoración del 4-1 histórico ante Inglaterra en el Mundial no oficial de 1971, con los cuatro goles de Elba Selva.",
+    imagen: "dia-de-la-futbolista-argentina-las-pioneras-1971.jpg",
+    categoria: "seleccion",
+    fecha: "21 ago 2026",
+    pagina: "dia-de-la-futbolista-argentina.html"
+  },
+  {
     id: 119,
     titulo: "La Liga F resolvió a último momento su crisis de televisión antes de arrancar la temporada",
     resumen: "DAZN seguirá con los ocho partidos de cada fecha en modalidad paga, mientras que TVE y TV3 transmitirán cuatro encuentros por jornada en abierto, tras semanas sin operador confirmado.",
