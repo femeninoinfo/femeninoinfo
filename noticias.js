@@ -1,11 +1,11 @@
 const noticias = [
   {
     id: 125,
-    titulo: "Así quedó la tabla del Clausura tras los primeros resultados de la fecha 5",
-    resumen: "Boca y Banfield no se sacaron ventaja en la cima, Unión igualó con Huracán y hubo triunfos de San Luis FC y Talleres. La fecha se completa el lunes, con el Lanús-River aplazado.",
+    titulo: "Banfield, Boca y Ferro lideran el Clausura tras completarse (casi) toda la fecha 5",
+    resumen: "Los tres quedaron empatados en la cima con 10 puntos, tras el 0 a 0 entre Boca y Banfield y los triunfos de Ferro y San Lorenzo el lunes. El Lanús-River sigue sin jugarse.",
     imagen: "tabla-clausura-resultados-fecha-5.jpg",
     categoria: "apertura",
-    fecha: "23 ago 2026",
+    fecha: "24 ago 2026",
     pagina: "tabla-clausura-resultados-fecha-5.html"
   },
   {
