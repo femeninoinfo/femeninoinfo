@@ -12,7 +12,7 @@ const noticias = [
     id: 124,
     titulo: "Katharina Kiel fue elegida presidenta de la nueva Frauen-Bundesliga FBL",
     resumen: "La directora de fútbol femenino del Eintracht Frankfurt encabezará la asociación creada por los clubes, que asumirá la organización y comercialización de la liga a partir de julio de 2027.",
-    imagen: "katharina-kiel-presidenta-frauen-bundesliga-fbl.jpg",
+    imagen: "katharina-kiel-presidenta-frauen-bundesliga-fbl.jpg.jpg",
     categoria: "internacional",
     fecha: "22 ago 2026",
     pagina: "katharina-kiel-presidenta-frauen-bundesliga-fbl.html"
@@ -21,7 +21,7 @@ const noticias = [
     id: 123,
     titulo: "Independiente definió su nuevo cuerpo técnico para lo que resta del Apertura",
     resumen: "Leandro Capuccio y Hernán Herrera quedaron a cargo de las Diablas. Además, Matías Nicolás Arias se suma como preparador físico en reemplazo de Juan Manuel Campos.",
-    imagen: "independiente-diablas-nuevo-cuerpo-tecnico.jpg",
+    imagen: "independiente-diablas-nuevo-cuerpo-tecnico.jpg.jpg",
     categoria: "apertura",
     fecha: "22 ago 2026",
     pagina: "independiente-diablas-nuevo-cuerpo-tecnico.html"
@@ -30,7 +30,7 @@ const noticias = [
     id: 122,
     titulo: "El Bayern Munich arrancó la Bundesliga femenina con un contundente 4-1 ante el Unión Berlín",
     resumen: "Klara Bühl, Pernille Harder, Glódís Perla Viggósdóttir y Sophie Proost marcaron los goles del campeón alemán, que jugó ante 17.083 espectadores en el Alte Försterei.",
-    imagen: "bayern-munich-4-1-union-berlin-apertura-bundesliga.jpg",
+    imagen: "bayern-munich-4-1-union-berlin-apertura-bundesliga.jpg.jpg",
     categoria: "internacional",
     fecha: "21 ago 2026",
     pagina: "bayern-munich-4-1-union-berlin-apertura-bundesliga.html"
