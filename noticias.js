@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 126,
+    titulo: "Lucy Bronze, Verón y otras leyendas de la FIFA firman un comunicado contra Gianni Infantino",
+    resumen: "Un grupo de exjugadores y jugadoras, entre ellos Lucy Bronze, Briana Scurry, Juan Sebastián Verón y Emmanuel Petit, denunció que el poder cegó al liderazgo de la FIFA y advirtió que ya no van a callarse.",
+    imagen: "leyendas-fifa-comunicado-infantino.jpg",
+    categoria: "internacional",
+    fecha: "24 ago 2026",
+    pagina: "leyendas-fifa-comunicado-infantino.html"
+  },
+  {
     id: 125,
     titulo: "Banfield, Boca y Ferro lideran el Clausura tras completarse (casi) toda la fecha 5",
     resumen: "Los tres quedaron empatados en la cima con 10 puntos, tras el 0 a 0 entre Boca y Banfield y los triunfos de Ferro y San Lorenzo el lunes. El Lanús-River sigue sin jugarse.",
