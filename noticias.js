@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 125,
+    titulo: "Así quedó la tabla del Clausura tras los primeros resultados de la fecha 5",
+    resumen: "Boca y Banfield no se sacaron ventaja en la cima, Unión igualó con Huracán y hubo triunfos de San Luis FC y Talleres. La fecha se completa el lunes, con el Lanús-River aplazado.",
+    imagen: "tabla-clausura-resultados-fecha-5.jpg",
+    categoria: "apertura",
+    fecha: "23 ago 2026",
+    pagina: "tabla-clausura-resultados-fecha-5.html"
+  },
+  {
+    id: 124,
+    titulo: "Katharina Kiel fue elegida presidenta de la nueva Frauen-Bundesliga FBL",
+    resumen: "La directora de fútbol femenino del Eintracht Frankfurt encabezará la asociación creada por los clubes, que asumirá la organización y comercialización de la liga a partir de julio de 2027.",
+    imagen: "katharina-kiel-presidenta-frauen-bundesliga-fbl.jpg",
+    categoria: "internacional",
+    fecha: "22 ago 2026",
+    pagina: "katharina-kiel-presidenta-frauen-bundesliga-fbl.html"
+  },
+  {
+    id: 123,
+    titulo: "Independiente definió su nuevo cuerpo técnico para lo que resta del Apertura",
+    resumen: "Leandro Capuccio y Hernán Herrera quedaron a cargo de las Diablas. Además, Matías Nicolás Arias se suma como preparador físico en reemplazo de Juan Manuel Campos.",
+    imagen: "independiente-diablas-nuevo-cuerpo-tecnico.jpg",
+    categoria: "apertura",
+    fecha: "22 ago 2026",
+    pagina: "independiente-diablas-nuevo-cuerpo-tecnico.html"
+  },
+  {
+    id: 122,
+    titulo: "El Bayern Munich arrancó la Bundesliga femenina con un contundente 4-1 ante el Unión Berlín",
+    resumen: "Klara Bühl, Pernille Harder, Glódís Perla Viggósdóttir y Sophie Proost marcaron los goles del campeón alemán, que jugó ante 17.083 espectadores en el Alte Försterei.",
+    imagen: "bayern-munich-4-1-union-berlin-apertura-bundesliga.jpg",
+    categoria: "internacional",
+    fecha: "21 ago 2026",
+    pagina: "bayern-munich-4-1-union-berlin-apertura-bundesliga.html"
+  },
+  {
     id: 121,
     titulo: "Así se juega la fecha 5 del Torneo Clausura del fútbol femenino",
     resumen: "Ocho partidos entre el sábado y el lunes, con Boca-Banfield abriendo la jornada en Casa Amarilla y el clásico entre San Lorenzo y Racing como uno de los platos fuertes.",
