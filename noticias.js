@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 133,
+    titulo: "El Clásico femenino Barcelona-Real Madrid se jugará en el Spotify Camp Nou",
+    resumen: "La Liga F confirmó que el partido de la jornada 6, el domingo 4 de octubre, será el primero entre ambos equipos en el estadio azulgrana. Las entradas ya están a la venta desde 25 euros.",
+    imagen: "clasico-barcelona-real-madrid-camp-nou.jpg",
+    categoria: "internacional",
+    fecha: "26 ago 2026",
+    pagina: "clasico-barcelona-real-madrid-camp-nou.html"
+  },
+  {
+    id: 132,
+    titulo: "Siete de los 14 equipos de la WSL serán dirigidos por mujeres en la 2026/27",
+    resumen: "Arsenal, Chelsea, Manchester United, West Ham, Birmingham City, Crystal Palace y Charlton Athletic arrancan la temporada con entrenadoras al mando, en una de las ligas más importantes del mundo.",
+    imagen: "wsl-dt-mujeres-2026-27.jpg",
+    categoria: "internacional",
+    fecha: "26 ago 2026",
+    pagina: "wsl-siete-entrenadoras-2026-27.html"
+  },
+  {
+    id: 131,
+    titulo: "El sorteo del Mundial Femenino 2027 será el 11 de diciembre en Río de Janeiro",
+    resumen: "La FIFA confirmó que el Museo de Arte Moderno de Río albergará el sorteo de grupos, con más de 1000 invitados esperados. La cita definirá los cruces de la fase de grupos rumbo al torneo.",
+    imagen: "sorteo-mundial-2027-diciembre-rio.jpg",
+    categoria: "mundial2027",
+    fecha: "26 ago 2026",
+    pagina: "sorteo-mundial-2027-rio.html"
+  },
+  {
     id: 130,
     titulo: "Ya se palpita: la Sub 20 debuta ante Polonia el 5 de septiembre en el Mundial",
     resumen: "La Selección argentina Sub 20 conoció el fixture completo de su grupo en Polonia 2026: debuta ante las anfitrionas, sigue ante Benín y cierra la fase de grupos frente a México, todo en Katowice.",
