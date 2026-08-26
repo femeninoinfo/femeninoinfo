@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 130,
+    titulo: "Ya se palpita: la Sub 20 debuta ante Polonia el 5 de septiembre en el Mundial",
+    resumen: "La Selección argentina Sub 20 conoció el fixture completo de su grupo en Polonia 2026: debuta ante las anfitrionas, sigue ante Benín y cierra la fase de grupos frente a México, todo en Katowice.",
+    imagen: "https://assets1.afa.com.ar/2026/DSC_3517.JPG",
+    categoria: "seleccion",
+    fecha: "25 ago 2026",
+    pagina: "sub20-debut-polonia-mundial-2026.html"
+  },
+  {
+    id: 129,
+    titulo: "La Sub 17 ya sabe con quién se juega el Mundial: Marruecos, Nueva Zelanda y Alemania",
+    resumen: "En su primera clasificación histórica a un Mundial de la categoría, la Selección argentina Sub 17 integrará el Grupo A del Mundial de Marruecos 2026 junto al anfitrión, a Nueva Zelanda y a Alemania.",
+    imagen: "https://assets1.afa.com.ar/2026/Lau/Web-clasificadas.jpg",
+    categoria: "seleccion",
+    fecha: "25 ago 2026",
+    pagina: "sub17-grupo-marruecos-mundial-2026.html"
+  },
+  {
+    id: 128,
+    titulo: "Ecuador ya sabe con quién se juega el repechaje sudamericano rumbo a Brasil 2027",
+    resumen: "En el sorteo realizado en Zúrich, Ecuador quedó emparejado con Ghana, Sudáfrica y China Taipéi en la fase preliminar del repechaje que reparte los últimos tres boletos para el Mundial.",
+    imagen: "https://images.copaamerica.com/editions/copa-america-femenina-2025/teams/covers/ecuador.webp",
+    categoria: "mundial2027",
+    fecha: "25 ago 2026",
+    pagina: "ecuador-repechaje-brasil-2027.html"
+  },
+  {
+    id: 127,
+    titulo: "Ya son más de 730 mil los interesados en entradas para el Mundial de Brasil 2027",
+    resumen: "A menos de un año del partido inaugural, la organización reveló que la mitad de los registrados son extranjeros. Argentina aparece entre los países con mayor demanda, junto a México, Estados Unidos y Colombia.",
+    imagen: "https://elfemenino.com.ar/wp-content/uploads/2026/08/17859536926a737d9c6e956_1785953692_3x2_lg-e1786297360273-400x250.jpg",
+    categoria: "mundial2027",
+    fecha: "25 ago 2026",
+    pagina: "entradas-mundial-brasil-2027.html"
+  },
+  {
     id: 126,
     titulo: "Lucy Bronze, Verón y otras leyendas de la FIFA firman un comunicado contra Gianni Infantino",
     resumen: "Un grupo de exjugadores y jugadoras, entre ellos Lucy Bronze, Briana Scurry, Juan Sebastián Verón y Emmanuel Petit, denunció que el poder cegó al liderazgo de la FIFA y advirtió que ya no van a callarse.",
