@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 134,
+    titulo: "Real Madrid, Chelsea y Wolfsburg juegan hoy la ida de la última ronda clasificatoria a la Champions femenina",
+    resumen: "Nueve series definen los últimos boletos a la fase de liga 2026/27 de la Women's Champions League. Real Madrid visita a Ajax, Chelsea recibe a Real Sociedad y Wolfsburg se mide con Inter, todas con la ida programada para este miércoles.",
+    imagen: "https://assets.realmadrid.com/is/image/realmadrid/ND-AMISTOSO-FEMENINO-DEPORTIVO-ALEGRIA-GRUPO_MJ25422?wid=1200&hei=675",
+    categoria: "internacional",
+    fecha: "26 ago 2026",
+    pagina: "real-madrid-ajax-champions-league-femenina.html"
+  },
+  {
     id: 133,
     titulo: "El Clásico femenino Barcelona-Real Madrid se jugará en el Spotify Camp Nou",
     resumen: "La Liga F confirmó que el partido de la jornada 6, el domingo 4 de octubre, será el primero entre ambos equipos en el estadio azulgrana. Las entradas ya están a la venta desde 25 euros.",
