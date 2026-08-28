@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 135,
+    titulo: "El Superclásico femenino de la fecha 6 entre River y Boca quedó postergado",
+    resumen: "AFA confirmó que el partido entre River Plate y Boca Juniors no se disputará en la fecha prevista. Todavía no hay nueva fecha ni motivo oficial confirmados.",
+    imagen: "river-boca-superclasico.png",
+    categoria: "apertura",
+    fecha: "28 ago 2026",
+    pagina: "superclasico-femenino-postergado.html"
+  },
+  {
     id: 134,
     titulo: "Real Madrid, Chelsea y Wolfsburg juegan hoy la ida de la última ronda clasificatoria a la Champions femenina",
     resumen: "Nueve series definen los últimos boletos a la fase de liga 2026/27 de la Women's Champions League. Real Madrid visita a Ajax, Chelsea recibe a Real Sociedad y Wolfsburg se mide con Inter, todas con la ida programada para este miércoles.",
