@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 136,
+    titulo: "Ya salió la programación de la Fecha 6 del Torneo Clausura",
+    resumen: "LPF Play confirmó los ocho partidos, que se juegan entre el sábado 29 de agosto y el martes 1 de septiembre. El Superclásico entre River y Boca sigue postergado.",
+    imagen: "river-boca-superclasico.png",
+    categoria: "apertura",
+    fecha: "28 ago 2026",
+    pagina: "fixture-fecha-6-clausura.html"
+  },
+  {
     id: 135,
     titulo: "El Superclásico femenino de la fecha 6 entre River y Boca quedó postergado",
     resumen: "AFA confirmó que el partido entre River Plate y Boca Juniors no se disputará en la fecha prevista. Todavía no hay nueva fecha ni motivo oficial confirmados.",
