@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 139,
+    titulo: "Arrancó la Liga F: el Barcelona goleó 5-0 y es el primer líder",
+    resumen: "El vigente campeón goleó al Costa Adeje Tenerife en el Johan Cruyff en la Jornada 1. El Real Madrid ganó el derbi madrileño 3-2 y el recién ascendido Logroño United dio la sorpresa al vencer a la Real Sociedad.",
+    imagen: "https://ligaf.es/media/images/img_news/3996.jpg",
+    categoria: "internacional",
+    fecha: "31 ago 2026",
+    pagina: "liga-f-arranco-jornada-1-2026-27.html"
+  },
+  {
+    id: 138,
+    titulo: "Independiente, puntero del histórico Sub-12 tras la fecha 3",
+    resumen: "El primer torneo oficial de AFA para nacidas entre 2014 y 2016 tuvo su tercera fecha. Independiente le ganó a UAI Urquiza y quedó puntero con 9 puntos, escoltado por Platense y Banfield.",
+    imagen: "https://elfemenino.com.ar/wp-content/uploads/2026/08/Screenshot_20260826_213611_Instagram-400x250.jpg",
+    categoria: "apertura",
+    fecha: "28 ago 2026",
+    pagina: "independiente-puntero-sub12-fecha3.html"
+  },
+  {
+    id: 137,
+    titulo: "Rosario Central, a un paso del ascenso a la Primera A",
+    resumen: "Goleó 4-0 a Defensores de Belgrano con gol de la estadounidense Zoey Kuhn y lidera la Zona B de la Primera B con nueve puntos de ventaja. Podría sellar el ascenso ante All Boys en la próxima fecha.",
+    imagen: "https://www.conclusion.com.ar/wp-content/uploads/2026/08/HQ_dbSPWcAEjmcc.jpg",
+    categoria: "apertura",
+    fecha: "31 ago 2026",
+    pagina: "rosario-central-al-borde-ascenso-primera-b.html"
+  },
+  {
     id: 136,
     titulo: "Ya salió la programación de la Fecha 6 del Torneo Clausura",
     resumen: "LPF Play confirmó los ocho partidos, que se juegan entre el sábado 29 de agosto y el martes 1 de septiembre. El Superclásico entre River y Boca sigue postergado.",
