@@ -1,9 +1,18 @@
 const noticias = [
   {
+    id: 141,
+    titulo: "La RFEF ultima un acuerdo para que las jugadoras de la selección puedan congelar óvulos",
+    resumen: "La federación firmará en las próximas semanas un convenio con una clínica de fertilidad para facilitar que las futbolistas encajen la maternidad con su carrera. Alexia Putellas trasladó la inquietud como una de las capitanas.",
+    imagen: "https://theobjective.com/wp-content/uploads/2026/08/alexia-putellas-seleccion.jpg",
+    categoria: "internacional",
+    fecha: "1 sep 2026",
+    pagina: "rfef-congelacion-ovulos-jugadoras.html"
+  },
+  {
     id: 140,
     titulo: "Quito, confirmada como sede de la Copa Libertadores Femenina 2026",
     resumen: "La CONMEBOL ratificó a la capital ecuatoriana como escenario del torneo, que se juega del 15 al 31 de octubre. Belgrano, campeón del Trofeo de Campeonas 2025, será el único representante argentino.",
-    imagen: "https://lostraveleros.com/wp-content/uploads/2023/02/Basilica.jpg",
+    imagen: "https://imagenes.primicias.ec/files/og_thumbnail/files/fp/uploads/2025/10/06/68e426452d949.r_d.1324-1603-0.jpeg",
     categoria: "internacional",
     fecha: "1 sep 2026",
     pagina: "libertadores-femenina-2026-sede-quito.html"
