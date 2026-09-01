@@ -21,7 +21,7 @@ const noticias = [
     id: 137,
     titulo: "Rosario Central, a un paso del ascenso a la Primera A",
     resumen: "Goleó 4-0 a Defensores de Belgrano con gol de la estadounidense Zoey Kuhn y lidera la Zona B de la Primera B con nueve puntos de ventaja. Podría sellar el ascenso ante All Boys en la próxima fecha.",
-    imagen: "https://www.canal26.com/resizer/v2/TCQ6QOQIWZADBHPLEEHXL53MOA.jpg?auth=5e7ccc15f2ea3e525d288a533d9ee96b3692709ad921b6beb8e1eaa179269bba&height=630&width=1200&quality=70&focal=601,340",
+    imagen: "https://media.lacapital.com.ar/p/06b5bf1fadb353a75fce4225c08c6c7a/adjuntos/203/imagenes/103/294/0103294180/642x0/smart/image-2026-07-26t155910727.jpg",
     categoria: "apertura",
     fecha: "31 ago 2026",
     pagina: "rosario-central-al-borde-ascenso-primera-b.html"
