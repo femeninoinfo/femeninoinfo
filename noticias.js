@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 140,
+    titulo: "Quito, confirmada como sede de la Copa Libertadores Femenina 2026",
+    resumen: "La CONMEBOL ratificó a la capital ecuatoriana como escenario del torneo, que se juega del 15 al 31 de octubre. Belgrano, campeón del Trofeo de Campeonas 2025, será el único representante argentino.",
+    imagen: "https://lostraveleros.com/wp-content/uploads/2023/02/Basilica.jpg",
+    categoria: "internacional",
+    fecha: "1 sep 2026",
+    pagina: "libertadores-femenina-2026-sede-quito.html"
+  },
+  {
     id: 139,
     titulo: "Arrancó la Liga F: el Barcelona goleó 5-0 y es el primer líder",
     resumen: "El vigente campeón goleó al Costa Adeje Tenerife en el Johan Cruyff en la Jornada 1. El Real Madrid ganó el derbi madrileño 3-2 y el recién ascendido Logroño United dio la sorpresa al vencer a la Real Sociedad.",
@@ -21,7 +30,7 @@ const noticias = [
     id: 137,
     titulo: "Rosario Central, a un paso del ascenso a la Primera A",
     resumen: "Goleó 4-0 a Defensores de Belgrano con gol de la estadounidense Zoey Kuhn y lidera la Zona B de la Primera B con nueve puntos de ventaja. Podría sellar el ascenso ante All Boys en la próxima fecha.",
-    imagen: "https://media.lacapital.com.ar/p/06b5bf1fadb353a75fce4225c08c6c7a/adjuntos/203/imagenes/103/294/0103294180/642x0/smart/image-2026-07-26t155910727.jpg",
+    imagen: "https://www.infobae.com/resizer/v2/IW6WVHJ5RBF4LIGKPTMEKU6RRM.jpg?auth=102a6b793ad9f1f11e15b3603d421c72300bef9b0f06ca71b93b52aae48e7f04&smart=true&width=1200&height=1500&quality=95",
     categoria: "apertura",
     fecha: "31 ago 2026",
     pagina: "rosario-central-al-borde-ascenso-primera-b.html"
