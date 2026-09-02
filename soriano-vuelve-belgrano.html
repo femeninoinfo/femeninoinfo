@@ -44,15 +44,27 @@
     .seguir-leyendo{background:#fff;border-top:4px solid #3d0066;padding:40px 24px}
     .seguir-inner{max-width:860px;margin:0 auto}
     .seguir-titulo{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#3d0066;letter-spacing:1px;margin-bottom:20px}
-    .seguir-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .seguir-card{position:relative;border-radius:10px;overflow:hidden;height:180px;cursor:pointer;transition:transform 0.2s;border-top:3px solid #3d0066}
+    .seguir-grid{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}
+    .seguir-card{flex:0 0 220px;position:relative;border-radius:10px;overflow:hidden;height:180px;cursor:pointer;transition:transform 0.2s;border-top:3px solid #3d0066}
     .seguir-card:hover{transform:translateY(-3px)}
     .seguir-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
     .seguir-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.2) 100%)}
     .seguir-card-body{position:absolute;bottom:0;left:0;right:0;padding:10px 12px;z-index:2}
     .seguir-card-titulo{font-size:12px;font-weight:700;color:#fff;line-height:1.3;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:3px}
     .seguir-card-fecha{font-size:10px;color:rgba(255,255,255,0.4)}
-    @media(max-width:600px){.seguir-grid{grid-template-columns:repeat(2,1fr)}}
+    .ticker-wrap{background:#1a0035;border-bottom:2px solid #c800ff;position:relative;z-index:5;overflow:hidden;height:76px;display:flex;align-items:stretch}
+    .ticker-label{background:#3d0066;padding:0 18px;display:flex;align-items:center;gap:10px;flex-shrink:0;z-index:2}
+    .ticker-logo{width:24px;height:24px;object-fit:contain;filter:brightness(1.3)}
+    .ticker-label span{font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.5px;color:#fff;white-space:nowrap}
+    .ticker-viewport{flex:1;overflow:hidden;position:relative;display:flex;align-items:center}
+    .ticker-track{display:flex;align-items:center;white-space:nowrap;animation:tickerScroll 40s linear infinite;will-change:transform}
+    @keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .tick-card{display:inline-flex;align-items:center;gap:14px;padding:8px 22px;margin:0;white-space:nowrap;flex-shrink:0;border-right:1px solid rgba(255,255,255,0.15)}
+    .tick-escudo{width:44px;height:44px;object-fit:contain;flex-shrink:0}
+    .tick-card .tick-score{font-family:'DM Sans',sans-serif;font-weight:700;font-size:26px;color:#fff;padding:0 4px;min-width:56px;text-align:center;display:inline-flex;align-items:center;gap:5px}
+    .tick-card .tick-sep{font-size:13px;font-weight:400;color:rgba(255,255,255,0.25)}
+    .tick-card .tick-pendiente{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:0 8px;min-width:60px;text-align:center}
+    @media(max-width:700px){.tick-card{padding:6px 14px;gap:10px}.tick-escudo{width:32px;height:32px}.tick-card .tick-score{font-size:20px;min-width:44px}.ticker-wrap{height:60px}}
   </style>
 </head>
 <body>
@@ -64,7 +76,6 @@
       <a href="seleccion-argentina.html">Selección Argentina</a>
       <a href="internacional.html">Internacional</a>
       <a href="mundial-2027.html">Mundial 2027</a>
-      <a href="sobre.html">Sobre</a>
     </nav>
     <button class="search-toggle" id="searchToggle" aria-label="Buscar noticias">&#128269;</button>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -74,7 +85,6 @@
     <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
     <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
     <a href="mundial-2027.html" onclick="toggleMenu()">Mundial 2027</a>
-    <a href="sobre.html" onclick="toggleMenu()">Sobre</a>
   </nav>
 </header>
 <div class="search-bar" id="searchBar">
@@ -85,6 +95,30 @@
       <button class="search-clear" id="searchClear">&#10005;</button>
     </div>
     <div id="searchBody"><p class="search-hint">Escribí al menos 2 caracteres para buscar</p></div>
+  </div>
+</div>
+
+<div class="ticker-wrap">
+  <div class="ticker-label"><img src="logo-nuevo.png" class="ticker-logo"/><span>CLAUSURA · FECHA 6</span></div>
+  <div class="ticker-viewport">
+    <div class="ticker-track">
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="tick-escudo" alt="Huracán"><span class="tick-score">0<span class="tick-sep">-</span>2</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="tick-escudo" alt="San Luis FC"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="tick-escudo" alt="Newell's"><span class="tick-score">0<span class="tick-sep">-</span>4</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="tick-escudo" alt="San Lorenzo"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="tick-escudo" alt="Belgrano"><span class="tick-score">3<span class="tick-sep">-</span>1</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="tick-escudo" alt="Lanús"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="tick-escudo" alt="Gimnasia"><span class="tick-score">1<span class="tick-sep">-</span>2</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="tick-escudo" alt="Talleres"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="tick-escudo" alt="Independiente"><span class="tick-score">3<span class="tick-sep">-</span>1</span><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="tick-escudo" alt="Unión"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="tick-escudo" alt="SAT"><span class="tick-score">1<span class="tick-sep">-</span>0</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="tick-escudo" alt="Racing"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="tick-escudo" alt="Banfield"><span class="tick-pendiente">1/9</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="tick-escudo" alt="Ferro"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="tick-escudo" alt="River"><span class="tick-pendiente">Aplazado</span><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="tick-escudo" alt="Boca"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Club_huracan_logo-79x128.png" class="tick-escudo" alt="Huracán"><span class="tick-score">0<span class="tick-sep">-</span>2</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png" class="tick-escudo" alt="San Luis FC"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="tick-escudo" alt="Newell's"><span class="tick-score">0<span class="tick-sep">-</span>4</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo-San-Lorenzo-113x128.png" class="tick-escudo" alt="San Lorenzo"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png" class="tick-escudo" alt="Belgrano"><span class="tick-score">3<span class="tick-sep">-</span>1</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/lanus-128x128.png" class="tick-escudo" alt="Lanús"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/CGELP-83x128.png" class="tick-escudo" alt="Gimnasia"><span class="tick-score">1<span class="tick-sep">-</span>2</span><img src="https://elfemenino.com.ar/wp-content/uploads/2022/04/talleres-128x128.png" class="tick-escudo" alt="Talleres"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Independiente-123x128.png" class="tick-escudo" alt="Independiente"><span class="tick-score">3<span class="tick-sep">-</span>1</span><img src="https://elfemenino.com.ar/wp-content/uploads/2023/02/Union_de_Santa_Fe-111x128.png" class="tick-escudo" alt="Unión"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/CLUB-SAT-PNG-128x128.png" class="tick-escudo" alt="SAT"><span class="tick-score">1<span class="tick-sep">-</span>0</span><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="tick-escudo" alt="Racing"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2018/08/Banfield_2022-128x128.png" class="tick-escudo" alt="Banfield"><span class="tick-pendiente">1/9</span><img src="https://elfemenino.com.ar/wp-content/uploads/2018/09/ferro-105x128.png" class="tick-escudo" alt="Ferro"></span>
+      <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png" class="tick-escudo" alt="River"><span class="tick-pendiente">Aplazado</span><img src="https://elfemenino.com.ar/wp-content/uploads/2016/05/Boc.png" class="tick-escudo" alt="Boca"></span>
+    </div>
   </div>
 </div>
 
@@ -127,7 +161,7 @@
 </section>
 <script>var PAGINA_ACTUAL='soriano-vuelve-belgrano.html';var CATEGORIA_ACTUAL='apertura';</script>
 <script src="noticias.js"></script>
-<script>(function(){var grid=document.getElementById('seguirGrid');if(!grid||typeof noticias==='undefined')return;noticias.filter(function(n){return n.categoria===CATEGORIA_ACTUAL&&n.pagina!==PAGINA_ACTUAL}).slice(0,4).forEach(function(n){var div=document.createElement('div');div.className='seguir-card';div.onclick=function(){window.location.href=n.pagina};div.innerHTML='<img src="'+n.imagen+'" alt="'+n.titulo+'"/><div class="seguir-card-overlay"></div><div class="seguir-card-body"><p class="seguir-card-titulo">'+n.titulo+'</p><span class="seguir-card-fecha">'+n.fecha+'</span></div>';grid.appendChild(div)})})();</script>
+<script>(function(){var grid=document.getElementById('seguirGrid');if(!grid||typeof noticias==='undefined')return;noticias.filter(function(n){return n.categoria===CATEGORIA_ACTUAL&&n.pagina!==PAGINA_ACTUAL}).slice(0,10).forEach(function(n){var div=document.createElement('div');div.className='seguir-card';div.onclick=function(){window.location.href=n.pagina};div.innerHTML='<img src="'+n.imagen+'" alt="'+n.titulo+'"/><div class="seguir-card-overlay"></div><div class="seguir-card-body"><p class="seguir-card-titulo">'+n.titulo+'</p><span class="seguir-card-fecha">'+n.fecha+'</span></div>';grid.appendChild(div)})})();</script>
 <script src="buscador.js"></script>
 <script src="main.js"></script>
 </body>
