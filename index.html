@@ -85,12 +85,14 @@
     .tabla-panel .tabla-pos tbody td:nth-child(2) { color:#1a001f; }
     .tabla-panel .tabla-pos td strong { color:#7a00a8; background:rgba(200,0,255,0.12); font-family:'DM Sans',sans-serif; font-weight:700; font-size:14px; }
     .tabla-panel .tabla-fecha { color:#999; }
-    .tabla-panel .torneo-header { display:none !important; }
-    .tabla-panel .sub-header { display:flex; gap:0; padding:0; border-bottom:1px solid #eee; }
-    .tabla-panel .sub-btn { flex:1; padding:12px; border-radius:0; border:none; background:#f3eef8; color:#7a5a91; font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.5px; text-transform:uppercase; cursor:pointer; transition:all 0.2s; }
-    .tabla-panel .sub-btn:hover:not(.active) { background:#e9dff3; }
+    .tabla-panel .torneo-header { display:flex; gap:8px; padding:14px 14px 0; }
+    .tabla-panel .torneo-btn { flex:1; padding:11px 10px; border-radius:8px; border:none; background:#f3eef8; color:#7a5a91; font-family:'DM Sans',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.2px; cursor:pointer; transition:all 0.2s; }
+    .tabla-panel .torneo-btn:hover:not(.active) { background:#e9dff3; }
+    .tabla-panel .torneo-btn.active { background:#3d0066; color:#fff; }
+    .tabla-panel .sub-header { display:flex; gap:8px; padding:12px 14px; border-bottom:1px solid #eee; }
+    .tabla-panel .sub-btn { padding:6px 16px; border-radius:20px; border:1.5px solid #e2d9ec; background:#fff; color:#7a5a91; font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.3px; cursor:pointer; transition:all 0.2s; }
+    .tabla-panel .sub-btn:hover:not(.active) { background:#f7f2fb; }
     .tabla-panel .sub-btn.active { background:#3d0066; border-color:#3d0066; color:#fff; }
-    .tabla-panel table.tabla-pos th:nth-child(3), .tabla-panel table.tabla-pos td:nth-child(3), .tabla-panel table.tabla-pos th:nth-child(4), .tabla-panel table.tabla-pos td:nth-child(4) { display:none; }
     .tabla-panel .fx-dia-nombre { color:#3d0066; }
     .tabla-panel .fx-dia-fecha { background:#f3eef8; color:#3d0066; }
     .tabla-panel .fx-card { background:#f9f8fb; border:1px solid #eee; }
