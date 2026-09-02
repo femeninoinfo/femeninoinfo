@@ -85,14 +85,12 @@
     .tabla-panel .tabla-pos tbody td:nth-child(2) { color:#1a001f; }
     .tabla-panel .tabla-pos td strong { color:#7a00a8; background:rgba(200,0,255,0.12); font-family:'DM Sans',sans-serif; font-weight:700; font-size:14px; }
     .tabla-panel .tabla-fecha { color:#999; }
-    .tabla-panel .torneo-header { display:flex; gap:8px; padding:14px 14px 0; }
-    .tabla-panel .torneo-btn { flex:1; padding:11px 10px; border-radius:8px; border:none; background:#f3eef8; color:#7a5a91; font-family:'DM Sans',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.2px; cursor:pointer; transition:all 0.2s; }
-    .tabla-panel .torneo-btn:hover:not(.active) { background:#e9dff3; }
-    .tabla-panel .torneo-btn.active { background:#3d0066; color:#fff; }
-    .tabla-panel .sub-header { display:flex; gap:8px; padding:12px 14px; border-bottom:1px solid #eee; }
-    .tabla-panel .sub-btn { padding:6px 16px; border-radius:20px; border:1.5px solid #e2d9ec; background:#fff; color:#7a5a91; font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.3px; cursor:pointer; transition:all 0.2s; }
-    .tabla-panel .sub-btn:hover:not(.active) { background:#f7f2fb; }
+    .tabla-panel .torneo-header { display:none !important; }
+    .tabla-panel .sub-header { display:flex; gap:0; padding:0; border-bottom:1px solid #eee; }
+    .tabla-panel .sub-btn { flex:1; padding:12px; border-radius:0; border:none; background:#f3eef8; color:#7a5a91; font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.5px; text-transform:uppercase; cursor:pointer; transition:all 0.2s; }
+    .tabla-panel .sub-btn:hover:not(.active) { background:#e9dff3; }
     .tabla-panel .sub-btn.active { background:#3d0066; border-color:#3d0066; color:#fff; }
+    .tabla-panel table.tabla-pos th:nth-child(3), .tabla-panel table.tabla-pos td:nth-child(3), .tabla-panel table.tabla-pos th:nth-child(4), .tabla-panel table.tabla-pos td:nth-child(4) { display:none; }
     .tabla-panel .fx-dia-nombre { color:#3d0066; }
     .tabla-panel .fx-dia-fecha { background:#f3eef8; color:#3d0066; }
     .tabla-panel .fx-card { background:#f9f8fb; border:1px solid #eee; }
@@ -115,13 +113,24 @@
     @media(max-width:768px){ .grid-ultimas .grid-card.featured{ grid-column:span 1; height:200px; } .grid-ultimas{ display:flex; overflow-x:auto; } }
     .grid-carrusel { display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding-bottom:8px; }
     .grid-carrusel::-webkit-scrollbar { display:none; }
-    .carrusel-card { flex:0 0 230px; width:230px; scroll-snap-align:start; background:#fff; border:1px solid #ececec; border-radius:10px; overflow:hidden; cursor:pointer; transition:transform 0.2s,box-shadow 0.2s; }
-    .carrusel-card:hover { transform:translateY(-3px); box-shadow:0 6px 18px rgba(0,0,0,0.10); }
+    .carrusel-card { flex:0 0 230px; width:230px; scroll-snap-align:start; background:#1e0033; border:1px solid rgba(200,0,255,0.15); border-radius:10px; overflow:hidden; cursor:pointer; transition:transform 0.2s,box-shadow 0.2s; }
+    .carrusel-card:hover { transform:translateY(-3px); box-shadow:0 6px 18px rgba(200,0,255,0.15); }
     .carrusel-card img { width:100%; height:130px; object-fit:cover; display:block; }
     .carrusel-card-body { padding:10px 12px; }
-    .carrusel-cat { display:inline-block; font-size:9px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; padding:2px 7px; border-radius:3px; color:#fff; margin-bottom:6px; }
-    .carrusel-titulo { font-size:13px; font-weight:700; color:#1a001f; line-height:1.35; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; margin:0 0 4px; }
-    .carrusel-fecha { font-size:10px; color:#999; }
+    .carrusel-cat { display:inline-block; font-family:'Bebas Neue',sans-serif; font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:2px 7px; border-radius:3px; color:#fff; margin-bottom:6px; }
+    .carrusel-titulo { font-size:13px; font-weight:700; color:#fff; line-height:1.35; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; margin:0 0 4px; }
+    .carrusel-fecha { font-size:10px; color:rgba(255,255,255,0.35); }
+    .ultimas-dark-titulo { font-family:'Bebas Neue',sans-serif; color:#c800ff; font-size:13px; letter-spacing:3px; text-transform:uppercase; margin-bottom:16px; display:block; }
+    .home-cat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .home-cat-card { display:block; text-decoration:none; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 4px 24px rgba(61,0,102,0.1); cursor:pointer; transition:transform 0.2s; }
+    .home-cat-card:hover { transform:translateY(-3px); }
+    .home-cat-card img { width:100%; height:170px; object-fit:cover; display:block; }
+    .home-cat-card-body { padding:18px; }
+    .home-cat-tag { display:inline-block; font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; padding:3px 9px; border-radius:3px; margin-bottom:8px; }
+    .home-cat-card-body h3 { font-size:15px; font-weight:700; line-height:1.4; margin:0 0 8px; color:#1a001f; }
+    .home-cat-fecha { font-size:11px; color:#999; }
+    @media(max-width:768px){ .home-cat-grid{ grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:480px){ .home-cat-grid{ grid-template-columns:1fr; } }
     @media(max-width:768px){ .carrusel-card{ flex:0 0 72vw; width:72vw; } }
     .grid-card { position:relative; border-radius:10px; overflow:hidden; height:220px; cursor:pointer; transition:transform 0.2s; }
     .grid-card:hover { transform:translateY(-3px); }
@@ -483,17 +492,10 @@
   </div>
 </section>
 <!-- ÚLTIMAS NOTICIAS -->
-<section id="noticias" style="background:#1a0035;padding:48px 24px;border-bottom:1px solid #3d0066;">
+<section id="noticias" style="background:#1a0035;padding:8px 24px 48px;border-bottom:1px solid #3d0066;">
   <div style="max-width:1280px;margin:0 auto;">
-    <div class="section-header">
-      <span class="section-pill" style="background:#c800ff;color:#fff;">Últimas noticias</span>
-      <h2 class="section-title" style="color:#ffffff;">Últimas noticias</h2>
-      <span class="section-line" style="background:#c800ff;"></span>
-    </div>
-    <div class="ultimas-split">
-      <div id="featUltimasBig"></div>
-      <div class="ultimas-ranking" id="rankingUltimas"></div>
-    </div>
+    <span class="ultimas-dark-titulo">Últimas 10 noticias · desplazate para ver más →</span>
+    <div class="grid-carrusel" id="carruselUltimas"></div>
   </div>
 </section>
 <!-- FÚTBOL ARGENTINO -->
@@ -507,9 +509,7 @@
       </div>
       <a href="futbol-argentino.html" class="ver-mas-btn ver-mas-arg">Ver todas →</a>
     </div>
-    <div id="featApertura"></div>
-    <div class="home-grid" id="gridAperturaSec"></div>
-    <div class="home-editorial" id="listApertura"></div>
+    <div class="home-cat-grid" id="gridAperturaSec"></div>
     <a href="futbol-argentino.html" class="ver-mas-btn ver-mas-arg ver-mas-bottom">VER TODAS →</a>
   </div>
 </section>
@@ -524,9 +524,7 @@
       </div>
       <a href="seleccion-argentina.html" class="ver-mas-btn ver-mas-sel">Ver todas →</a>
     </div>
-    <div id="featSeleccion"></div>
-    <div class="home-grid" id="gridSeleccionSec"></div>
-    <div class="home-editorial" id="listSeleccion"></div>
+    <div class="home-cat-grid" id="gridSeleccionSec"></div>
     <a href="seleccion-argentina.html" class="ver-mas-btn ver-mas-sel ver-mas-bottom">VER TODAS →</a>
   </div>
 </section>
@@ -541,9 +539,7 @@
       </div>
       <a href="internacional.html" class="ver-mas-btn ver-mas-int">Ver todas →</a>
     </div>
-    <div id="featInternacional"></div>
-    <div class="home-grid" id="gridInternacionalSec"></div>
-    <div class="home-editorial" id="listInternacional"></div>
+    <div class="home-cat-grid" id="gridInternacionalSec"></div>
     <a href="internacional.html" class="ver-mas-btn ver-mas-int ver-mas-bottom">VER TODAS →</a>
   </div>
 </section>
@@ -558,9 +554,7 @@
       </div>
       <a href="mundial-2027.html" class="ver-mas-btn ver-mas-mundial">Ver todas →</a>
     </div>
-    <div id="featMundial"></div>
-    <div class="home-grid" id="gridMundialSec"></div>
-    <div class="home-editorial" id="listMundial"></div>
+    <div class="home-cat-grid" id="gridMundialSec"></div>
     <a href="mundial-2027.html" class="ver-mas-btn ver-mas-mundial ver-mas-bottom">VER TODAS →</a>
   </div>
 </section>
@@ -830,7 +824,7 @@ function cargarUltimaNoticia() {
       chicas.appendChild(card);
     }
   }
-  renderUltimasSplit(noticias.slice(0,5));
+  renderCarruselUltimas(noticias.slice(0,10));
   var CAT_SECTIONS = [
     {cat:'apertura', feat:'featApertura', grid:'gridAperturaSec', list:'listApertura'},
     {cat:'seleccion', feat:'featSeleccion', grid:'gridSeleccionSec', list:'listSeleccion'},
@@ -842,29 +836,36 @@ function cargarUltimaNoticia() {
     renderHomeSection(lista, s.feat, s.grid, s.list);
   });
 }
-function renderUltimasSplit(lista) {
-  renderHomeFeatured('featUltimasBig', lista[0]);
-  var el = document.getElementById('rankingUltimas');
+function renderCarruselUltimas(lista) {
+  var el = document.getElementById('carruselUltimas');
   if(!el) return;
   el.innerHTML = '';
-  lista.slice(1,5).forEach(function(n) {
-    var a = document.createElement('a');
-    a.className = 'ultimas-rank-row';
-    a.href = n.pagina;
-    a.target = '_blank';
-    a.innerHTML =
-      '<img class="ultimas-rank-thumb" src="'+n.imagen+'" alt=""/>'+
-      '<div>'+
-        '<p class="ultimas-rank-titulo">'+n.titulo+'</p>'+
-        '<p class="ultimas-rank-resumen">'+(n.resumen||'')+'</p>'+
-      '</div>';
-    el.appendChild(a);
-  });
+  lista.forEach(function(n) { el.appendChild(makeCarruselCard(n)); });
+}
+var HOME_CAT_BG = { apertura:'rgba(61,0,102,0.1)', seleccion:'rgba(0,92,191,0.1)', internacional:'rgba(0,102,68,0.1)', mundial2027:'rgba(0,156,59,0.1)' };
+var HOME_CAT_COLOR = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b' };
+function makeHomeCatCard(n) {
+  var label = BADGE_LABELS[n.categoria] || n.categoria;
+  var bg = HOME_CAT_BG[n.categoria] || 'rgba(200,0,255,0.1)';
+  var color = HOME_CAT_COLOR[n.categoria] || '#c800ff';
+  var a = document.createElement('a');
+  a.className = 'home-cat-card';
+  a.href = n.pagina;
+  a.target = '_blank';
+  a.innerHTML =
+    '<img src="'+n.imagen+'" alt=""/>'+
+    '<div class="home-cat-card-body">'+
+      '<span class="home-cat-tag" style="background:'+bg+';color:'+color+';">'+label+'</span>'+
+      '<h3>'+n.titulo+'</h3>'+
+      '<span class="home-cat-fecha">'+n.fecha+'</span>'+
+    '</div>';
+  return a;
 }
 function renderHomeSection(lista, featId, gridId, listId) {
-  renderHomeFeatured(featId, lista[0]);
-  renderHomeGrid(gridId, lista.slice(1,4));
-  renderHomeEditorial(listId, lista.slice(4,14));
+  var el = document.getElementById(gridId);
+  if(!el) return;
+  el.innerHTML = '';
+  lista.slice(0,3).forEach(function(n) { el.appendChild(makeHomeCatCard(n)); });
 }
 function renderHomeFeatured(containerId, n) {
   var el = document.getElementById(containerId);
