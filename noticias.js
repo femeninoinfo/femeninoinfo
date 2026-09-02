@@ -46,11 +46,11 @@ const noticias = [
   },
   {
     id: 136,
-    titulo: "Ya salió la programación de la Fecha 6 del Torneo Clausura",
-    resumen: "LPF Play confirmó los ocho partidos, que se juegan entre el sábado 29 de agosto y el martes 1 de septiembre. El Superclásico entre River y Boca sigue postergado.",
+    titulo: "Banfield venció a Ferro y es el nuevo puntero tras completarse la Fecha 6 del Clausura",
+    resumen: "Se jugaron siete de los ocho partidos de la fecha. El Superclásico entre River y Boca sigue postergado.",
     imagen: "river-boca-superclasico.png",
     categoria: "apertura",
-    fecha: "28 ago 2026",
+    fecha: "1 sep 2026",
     pagina: "fixture-fecha-6-clausura.html"
   },
   {
