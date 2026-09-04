@@ -39,6 +39,7 @@
     .ticker-label { background:#3d0066; padding:0 18px; display:flex; align-items:center; gap:10px; flex-shrink:0; z-index:2; }
     .ticker-logo { width:24px; height:24px; object-fit:contain; filter:brightness(1.3); }
     .ticker-label span { font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.5px; color:#fff; white-space:nowrap; }
+    .ticker-label-short { display:none; }
     .ticker-viewport { flex:1; overflow:hidden; position:relative; display:flex; align-items:center; }
     .ticker-track { display:flex; align-items:center; white-space:nowrap; animation:tickerScroll 40s linear infinite; will-change:transform; }
     @keyframes tickerScroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
@@ -49,6 +50,7 @@
     .tick-card .tick-pendiente { font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.8px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:0 8px; min-width:60px; text-align:center; }
     @media(max-width:700px){ .tick-card{ padding:6px 14px; gap:10px; } .tick-escudo{ width:32px; height:32px; } .tick-card .tick-score{ font-size:20px; min-width:44px; } .ticker-wrap{ height:60px; } }
     @media(max-width:700px){ .ticker-label span{font-size:10px} }
+    @media(max-width:480px){ .ticker-label{ padding:0 10px; gap:4px; } .ticker-logo{ display:none; } .ticker-label-full{ display:none; } .ticker-label-short{ display:inline; } }
     .portal-inner { max-width:1280px; margin:0 auto; padding:20px 24px; display:grid; grid-template-columns:1fr 260px 340px; gap:16px; align-items:start; position:relative; z-index:1; }
     .nota-grande { position:relative; border-radius:12px; overflow:hidden; height:560px; cursor:pointer; }
     .hero-nav { position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:36px; height:36px; border-radius:50%; background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.25); color:#fff; font-size:15px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background 0.2s; }
@@ -199,7 +201,7 @@
 </div>
 <!-- TICKER FECHA 7 CLAUSURA - TODOS LOS PARTIDOS -->
 <div class="ticker-wrap">
-  <div class="ticker-label"><img src="logo-nuevo.png" class="ticker-logo"/><span>CLAUSURA · FECHA 7</span></div>
+  <div class="ticker-label"><img src="logo-nuevo.png" class="ticker-logo"/><span class="ticker-label-full">CLAUSURA · FECHA 7</span><span class="ticker-label-short">F7</span></div>
   <div class="ticker-viewport">
     <div class="ticker-track" id="tickerTrack">
       <span class="tick-card"><img src="https://elfemenino.com.ar/wp-content/uploads/2017/08/racing-club.png" class="tick-escudo" alt="Racing"><span class="tick-score">4<span class="tick-sep">-</span>1</span><img src="https://elfemenino.com.ar/wp-content/uploads/2021/08/Newells-104x128.png" class="tick-escudo" alt="Newell's"></span>
