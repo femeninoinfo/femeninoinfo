@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 147,
+    titulo: "Así es el fixture completo de la Selección Argentina Sub 20 en el Mundial de Polonia",
+    resumen: "La Albiceleste debuta este sábado ante Polonia y luego enfrenta a Benín y México en la fase de grupos. Con la clasificación a octavos de 2024 como antecedente, así es el camino completo del equipo de Christian Meloni.",
+    imagen: "https://www.infobae.com/resizer/v2/LDBXSA4UFFC7XCF737K3V36KM4.jpg?auth=db3fda33c5b95b5990d2c0b3522acaf10a81afdeec2dddde7234e17f2bd967eb&smart=true&width=1200&height=675&quality=90",
+    categoria: "seleccion",
+    fecha: "4 sep 2026",
+    pagina: "sub20-fixture-mundial-argentina.html"
+  },
+  {
+    id: 146,
+    titulo: "El fútbol femenino bate récord: los clubes gastaron 29 millones de dólares en fichajes en 2026",
+    resumen: "Según la FIFA se registraron 1.406 traspasos internacionales en el fútbol profesional femenino, un 19,2% más que el récord anterior. Fichajes como los de Alexia Putellas y Kadidiatou Diani impulsaron la cifra.",
+    imagen: "https://editorial.aristeguinoticias.com/wp-content/uploads/2026/09/Futbol-femneil-fifa-030926-720x450.jpg",
+    categoria: "internacional",
+    fecha: "4 sep 2026",
+    pagina: "futbol-femenino-record-fichajes-2026.html"
+  },
+  {
+    id: 145,
+    titulo: "Alexia Putellas lanza Eleven TV para transmitir la Women's Super League gratis en España",
+    resumen: "El nuevo canal de YouTube de la capitana catalana ofrecerá un partido de la WSL por jornada, en alianza con Mundo Maldini. El estreno fue este viernes con el debut de Putellas ante el Manchester United.",
+    imagen: "https://lasfutbolistas.com/wp-content/uploads/2026/08/Eleven-TV-by-Alexia-1024x567.jpg",
+    categoria: "internacional",
+    fecha: "4 sep 2026",
+    pagina: "alexia-putellas-eleven-tv-wsl.html"
+  },
+  {
     id: 144,
     titulo: "La TV Pública transmitirá todos los partidos de la Selección en el Mundial Sub-20",
     resumen: "La cobertura arranca este sábado 5 de septiembre con el debut de Argentina frente a Polonia desde las 10:00. Los partidos también se podrán ver por DirecTV.",
