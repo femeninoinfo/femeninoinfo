@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 150,
+    titulo: "Primera B: Platense y Rosario Central, a un paso del ascenso",
+    resumen: "Tras la fecha 15, Platense sigue puntero en la Zona A y está a dos puntos de subir. En la Zona B, Rosario Central llegó a 41 puntos y puede ascender este fin de semana con solo sumar un punto.",
+    imagen: "https://rosariocentral.com/wp-content/uploads/2026/08/IMG_6464.jpg-1024x683.jpeg",
+    categoria: "apertura",
+    fecha: "4 sep 2026",
+    pagina: "primera-b-platense-central-ascenso.html"
+  },
+  {
+    id: 149,
+    titulo: "Mercedes Diz y Dolores Delgado, las hijas de futbolistas que ilusionan en el Mundial Sub 20",
+    resumen: "La delantera de River y la de Real Madrid, ambas de 17 años, son hijas de exfutbolistas profesionales y se consolidaron como dos de las figuras de la Selección Sub 20 en Polonia.",
+    imagen: "https://www.infobae.com/resizer/v2/RCLMCM62LJBHJALFISDQ35KPWQ.jpg?auth=b59fcb3f6e78f6e6bc2bef17e7dbe52777cf268a18a0f654f3bcec4ee787e9b3&smart=true&width=1200&height=630&quality=85",
+    categoria: "seleccion",
+    fecha: "4 sep 2026",
+    pagina: "mercedes-diz-dolores-delgado-hijas-futbolistas.html"
+  },
+  {
+    id: 148,
+    titulo: "Gimnasia y Newell's, las únicas sin sumar en seis fechas del Clausura",
+    resumen: "Ambos equipos perdieron sus seis partidos y comparten el último lugar de la tabla con cero puntos. Este viernes buscan su primer punto ante San Lorenzo y Racing.",
+    imagen: "https://elfemenino.com.ar/wp-content/uploads/2022/02/PORTADAS_MICROSITIO_GIMNASIALP_PAGINAWEB_EF.jpg",
+    categoria: "apertura",
+    fecha: "4 sep 2026",
+    pagina: "gimnasia-newells-sin-sumar-puntos-clausura.html"
+  },
+  {
     id: 147,
     titulo: "Así es el fixture completo de la Selección Argentina Sub 20 en el Mundial de Polonia",
     resumen: "La Albiceleste debuta este sábado ante Polonia y luego enfrenta a Benín y México en la fase de grupos. Con la clasificación a octavos de 2024 como antecedente, así es el camino completo del equipo de Christian Meloni.",
