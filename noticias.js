@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 144,
+    titulo: "La TV Pública transmitirá todos los partidos de la Selección en el Mundial Sub-20",
+    resumen: "La cobertura arranca este sábado 5 de septiembre con el debut de Argentina frente a Polonia desde las 10:00. Los partidos también se podrán ver por DirecTV.",
+    imagen: "IMG_1532.jpg",
+    categoria: "seleccion",
+    fecha: "4 sep 2026",
+    pagina: "sub20-tv-publica-transmision.html"
+  },
+  {
+    id: 143,
+    titulo: "Agustina Maldonado, la capitana de 17 años de la Sub 20 en el Mundial de Polonia",
+    resumen: "La defensora de River Plate, formada en All Boys de Santa Rosa, llevará la cinta de la Selección Argentina Sub-20 en la Copa Mundial Femenina de Polonia 2026.",
+    imagen: "46234394-995E-44E4-A058-3EEE3B33ACB2.jpg",
+    categoria: "seleccion",
+    fecha: "4 sep 2026",
+    pagina: "sub20-agustina-maldonado-capitana.html"
+  },
+  {
+    id: 142,
+    titulo: "La Sub 20 ya entrena en Katowice a días del debut ante Polonia",
+    resumen: "El plantel argentino llegó a suelo europeo y realizó su primer entrenamiento, con trabajos tácticos y preparación específica para las arqueras, a días del debut en la Copa Mundial Femenina Sub 20.",
+    imagen: "F8CEC829-CA19-477C-986C-7E07E65BB847.jpg",
+    categoria: "seleccion",
+    fecha: "4 sep 2026",
+    pagina: "sub20-katowice-entrenamiento.html"
+  },
+  {
     id: 141,
     titulo: "La RFEF ultima un acuerdo para que las jugadoras de la selección puedan congelar óvulos",
     resumen: "La federación firmará en las próximas semanas un convenio con una clínica de fertilidad para facilitar que las futbolistas encajen la maternidad con su carrera. Alexia Putellas trasladó la inquietud como una de las capitanas.",
