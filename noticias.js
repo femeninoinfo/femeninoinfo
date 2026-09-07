@@ -3,7 +3,7 @@ const noticias = [
     id: 153,
     titulo: "San Luis FC es el nuevo puntero del Clausura tras la fecha 7",
     resumen: "Las 'Puntanas' vencieron 3-1 a Independiente y llegaron a los 15 puntos para meterse solas en la cima, escoltadas de cerca por San Lorenzo, Banfield y SAT, que llegan igualadas a 14.",
-    imagen: "https://www.afa.com.ar/upload/torneo/widgets/avatar_usuarios/femsanluis.jpg",
+    imagen: "https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC.png",
     categoria: "apertura",
     fecha: "7 sep 2026",
     pagina: "san-luis-fc-puntero-clausura-fecha7.html"
@@ -12,7 +12,7 @@ const noticias = [
     id: 152,
     titulo: "La Selección cayó 3-0 ante Polonia en el debut del Mundial Sub 20",
     resumen: "El equipo de Christian Meloni no pudo ante la anfitriona en el partido inaugural, disputado en el Arena Katowice. La Albiceleste deberá recuperarse ante Benín y México.",
-    imagen: "https://adnsur-app.tadevel-cdn.com/hostname/www.adnsur.com.ar/api/v1/image/article/6a9c48e2b148f9d71e4bf775/facebook?v=549027e757c1c61b0829d5f50bb044b4&smart=true",
+    imagen: "https://www.infobae.com/resizer/v2/AN5SLHSZQFA73IEIJ5AKR5UXZ4.jpg?auth=e00bac4cded6d0658d382d3618d6124e923b7e41bc70fc80f0035994a0faea33&smart=true&width=1200&height=675&quality=85",
     categoria: "seleccion",
     fecha: "7 sep 2026",
     pagina: "seleccion-cayo-3-0-polonia-mundial-sub20.html"
@@ -21,7 +21,7 @@ const noticias = [
     id: 151,
     titulo: "Colo Colo Femenino viaja a Buenos Aires para jugar amistosos ante Lanús y San Lorenzo",
     resumen: "Las chilenas, líderes invictas de su torneo local, se preparan para los playoffs y la Copa Libertadores Femenina con dos pruebas internacionales en Argentina.",
-    imagen: "https://www.somoschile.cl/wp-content/uploads/2026/08/tatii.webp",
+    imagen: "https://media.dalealbo.cl/wp-content/uploads/sites/14/2026/08/29151556/HQ6C9LAXUAAmdyI-e1788030988511-1200x740.webp",
     categoria: "internacional",
     fecha: "7 sep 2026",
     pagina: "colo-colo-viaja-buenos-aires-amistosos.html"
