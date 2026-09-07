@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 153,
+    titulo: "San Luis FC es el nuevo puntero del Clausura tras la fecha 7",
+    resumen: "Las 'Puntanas' vencieron 3-1 a Independiente y llegaron a los 15 puntos para meterse solas en la cima, escoltadas de cerca por San Lorenzo, Banfield y SAT, que llegan igualadas a 14.",
+    imagen: "https://www.afa.com.ar/upload/torneo/widgets/avatar_usuarios/femsanluis.jpg",
+    categoria: "apertura",
+    fecha: "7 sep 2026",
+    pagina: "san-luis-fc-puntero-clausura-fecha7.html"
+  },
+  {
+    id: 152,
+    titulo: "La Selección cayó 3-0 ante Polonia en el debut del Mundial Sub 20",
+    resumen: "El equipo de Christian Meloni no pudo ante la anfitriona en el partido inaugural, disputado en el Arena Katowice. La Albiceleste deberá recuperarse ante Benín y México.",
+    imagen: "https://adnsur-app.tadevel-cdn.com/hostname/www.adnsur.com.ar/api/v1/image/article/6a9c48e2b148f9d71e4bf775/facebook?v=549027e757c1c61b0829d5f50bb044b4&smart=true",
+    categoria: "seleccion",
+    fecha: "7 sep 2026",
+    pagina: "seleccion-cayo-3-0-polonia-mundial-sub20.html"
+  },
+  {
+    id: 151,
+    titulo: "Colo Colo Femenino viaja a Buenos Aires para jugar amistosos ante Lanús y San Lorenzo",
+    resumen: "Las chilenas, líderes invictas de su torneo local, se preparan para los playoffs y la Copa Libertadores Femenina con dos pruebas internacionales en Argentina.",
+    imagen: "https://www.somoschile.cl/wp-content/uploads/2026/08/tatii.webp",
+    categoria: "internacional",
+    fecha: "7 sep 2026",
+    pagina: "colo-colo-viaja-buenos-aires-amistosos.html"
+  },
+  {
     id: 150,
     titulo: "Primera B: Platense y Rosario Central, a un paso del ascenso",
     resumen: "Tras la fecha 15, Platense sigue puntero en la Zona A y está a dos puntos de subir. En la Zona B, Rosario Central llegó a 41 puntos y puede ascender este fin de semana con solo sumar un punto.",
