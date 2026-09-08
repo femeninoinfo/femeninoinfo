@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 157,
+    titulo: "La Selección Sub 20 goleó 8-0 a Benín y quedó a un paso de los octavos de final",
+    resumen: "Con cuatro goles de Annika Paz y un doblete de Mercedes Diz, el equipo de Christian Meloni firmó la goleada más contundente de su historia en un Mundial de la categoría. Ahora depende de sí mismo ante México.",
+    imagen: "https://www.lanacion.com.ar/resizer/v2/julia-vinhas-argentina-futbol-femenino-deportes-ME4P4M46KVBZPIAWY5NBSQAONA.JPG?auth=d63ee0d1f1d5437050f9ecbf46f0938e95cdbbacabbeb6e90f095f8f43da3752&width=1200&height=800&quality=70&smart=true",
+    categoria: "seleccion",
+    fecha: "8 sep 2026",
+    pagina: "seleccion-goleo-8-0-benin-mundial-sub20.html"
+  },
+  {
+    id: 156,
+    titulo: "Quién es Annika Paz, la figura de 17 años que hizo 4 goles y fue elegida mejor jugadora ante Benín",
+    resumen: "La delantera surgida en las inferiores de River Plate y hoy en el Inter de Milán encabezó la goleada 8-0 sobre Benín con un póker de goles y fue distinguida como la mejor jugadora del partido.",
+    imagen: "https://www.infobae.com/resizer/v2/SGWEWN4JF5BSJFD3X4ZXLZFD6M.jpg?auth=31d7a4d62ebda90f3cf20299f78d833b12861efa3fbbd2f8b335941de8126f25&smart=true&width=1200&height=630&quality=85",
+    categoria: "seleccion",
+    fecha: "8 sep 2026",
+    pagina: "annika-paz-mejor-jugadora-mundial-sub20.html"
+  },
+  {
+    id: 155,
+    titulo: "Platense y Rosario Central ascendieron a la Primera División femenina",
+    resumen: "Platense lo cerró con un triunfo ante Camioneros y lidera la Zona A con 43 puntos. Central subió pese a caer ante All Boys, gracias al empate entre Estrella del Sur y Defensa y Justicia.",
+    imagen: "https://www.infobae.com/resizer/v2/FAE7ADZJVVEMTBGGQBSSWEQ42A.jpg?auth=db1e0e6d5a4b016ea39c3c6f597a1b08a5ec5175d15ca3c8d177e82a5e0e1ddb&smart=true&width=1200&height=630&quality=85",
+    categoria: "apertura",
+    fecha: "8 sep 2026",
+    pagina: "platense-central-ascenso-confirmado.html"
+  },
+  {
+    id: 154,
+    titulo: "Colo Colo Femenino debuta su gira en Argentina ante San Lorenzo en el Nuevo Gasómetro",
+    resumen: "Las chilenas juegan hoy en Boedo el primero de los dos amistosos de preparación que confirmó Tatiele Silveira, antes de enfrentar a Lanús, pensando en los playoffs y la Copa Libertadores Femenina.",
+    imagen: "https://media.dalealbo.cl/wp-content/uploads/sites/14/2026/08/29144724/HQ6G9WbXYAAP-iP-1200x740.webp",
+    categoria: "internacional",
+    fecha: "8 sep 2026",
+    pagina: "colo-colo-san-lorenzo-amistoso-gasometro.html"
+  },
+  {
     id: 153,
     titulo: "San Luis FC es el nuevo puntero del Clausura tras la fecha 7",
     resumen: "Las 'Puntanas' vencieron 3-1 a Independiente y llegaron a los 15 puntos para meterse solas en la cima, escoltadas de cerca por San Lorenzo, Banfield y SAT, que llegan igualadas a 14.",
