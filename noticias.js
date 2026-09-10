@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 161,
+    titulo: "Se conoció el fixture de la fecha 8 del Torneo Clausura femenino",
+    resumen: "San Luis FC, puntero tras la fecha 7, visita a Unión de Santa Fe. Belgrano, flamante clasificado a la Copa Libertadores Femenina, recibe a Ferro. Repasá los siete partidos de la fecha.",
+    imagen: "https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png",
+    categoria: "apertura",
+    fecha: "10 sep 2026",
+    pagina: "fixture-fecha-8-clausura-femenino.html"
+  },
+  {
+    id: 160,
+    titulo: "Belgrano, el único representante argentino en la Copa Libertadores Femenina 2026",
+    resumen: "El Celeste se ganó el lugar al quedarse con el Trofeo de Campeonas 2025 ante Newell's y es el primer equipo del interior en jugar la Libertadores. Por el bolillero, no se cruzará con Colo Colo ni con Olimpia.",
+    imagen: "https://images-tools.cadena3.com/tools/r/1f8a7061-5405-44ae-9232-6ad5177cd62c.jpg?width=1200&height=798",
+    categoria: "apertura",
+    fecha: "10 sep 2026",
+    pagina: "belgrano-clasificado-copa-libertadores-femenina.html"
+  },
+  {
+    id: 159,
+    titulo: "La Selección Sub 20 se juega el pase a octavos ante México en el cierre del Grupo A",
+    resumen: "Este viernes a las 13 (hora argentina), Argentina cierra la fase de grupos del Mundial de Polonia. Con la diferencia de gol que dejó la goleada a Benín, le alcanza con un empate para clasificar.",
+    imagen: "https://www.infobae.com/resizer/v2/OOXU2GUHVNHWBAUH7FHRYKWGC4.JPG?auth=e93504f3c90960b957727d3c4f7015af2c0141323e7454e15baf5930f152c369&smart=true&width=1200&height=807&quality=85",
+    categoria: "seleccion",
+    fecha: "10 sep 2026",
+    pagina: "seleccion-vs-mexico-mundial-sub20.html"
+  },
+  {
+    id: 158,
+    titulo: "Colo Colo Femenino cerró con campaña perfecta su gira por Argentina: le ganó a San Lorenzo y a Lanús",
+    resumen: "Las chilenas vencieron 3-1 a las Santitas en el Nuevo Gasómetro y 2-0 a las Granates. Ya conocen su bolillero para la Copa Libertadores Femenina: comparte pozo con Belgrano, así que no se cruzarán en la fase de grupos.",
+    imagen: "https://media.dalealbo.cl/wp-content/uploads/sites/14/2026/09/09193748/colo-colo-femenino-lanus-amistoso-e1788993481841-1200x740.webp",
+    categoria: "internacional",
+    fecha: "10 sep 2026",
+    pagina: "colo-colo-gano-amistosos-lanus-san-lorenzo.html"
+  },
+  {
     id: 157,
     titulo: "La Selección Sub 20 goleó 8-0 a Benín y quedó a un paso de los octavos de final",
     resumen: "Con cuatro goles de Annika Paz y un doblete de Mercedes Diz, el equipo de Christian Meloni firmó la goleada más contundente de su historia en un Mundial de la categoría. Ahora depende de sí mismo ante México.",
