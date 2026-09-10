@@ -3,7 +3,7 @@ const noticias = [
     id: 161,
     titulo: "Se conoció el fixture de la fecha 8 del Torneo Clausura femenino",
     resumen: "San Luis FC, puntero tras la fecha 7, visita a Unión de Santa Fe. Belgrano, flamante clasificado a la Copa Libertadores Femenina, recibe a Ferro. Repasá los siete partidos de la fecha.",
-    imagen: "https://elfemenino.com.ar/wp-content/uploads/2022/04/SLFC-104x128.png",
+    imagen: "https://www.ladiez.com.ar/wp-content/uploads/2026/07/Union-Fem-AFA.jpeg",
     categoria: "apertura",
     fecha: "10 sep 2026",
     pagina: "fixture-fecha-8-clausura-femenino.html"
@@ -12,7 +12,7 @@ const noticias = [
     id: 160,
     titulo: "Belgrano, el único representante argentino en la Copa Libertadores Femenina 2026",
     resumen: "El Celeste se ganó el lugar al quedarse con el Trofeo de Campeonas 2025 ante Newell's y es el primer equipo del interior en jugar la Libertadores. Por el bolillero, no se cruzará con Colo Colo ni con Olimpia.",
-    imagen: "https://images-tools.cadena3.com/tools/r/1f8a7061-5405-44ae-9232-6ad5177cd62c.jpg?width=1200&height=798",
+    imagen: "https://canalshowsport.com.ar/wp-content/uploads/2026/09/FOTO-PRINCIPAL-WEB-24.png",
     categoria: "apertura",
     fecha: "10 sep 2026",
     pagina: "belgrano-clasificado-copa-libertadores-femenina.html"
