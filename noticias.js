@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 164,
+    titulo: "La AFA ratificó el triunfo de Belgrano sobre Lanús tras la polémica por el sexto cambio",
+    resumen: "El Tribunal de Disciplina descartó la quita de puntos que pedía Lanús por \"alineación indebida\" y confirmó el 3-1 a favor de Belgrano. El club cordobés deberá pagar una multa y un ayudante de campo presentó su renuncia.",
+    imagen: "https://canalshowsport.com.ar/wp-content/uploads/2026/09/FOTO-PRINCIPAL-WEB-33.jpg",
+    categoria: "apertura",
+    fecha: "13 sep 2026",
+    pagina: "afa-ratifico-triunfo-belgrano-lanus-polemica-cambios.html"
+  },
+  {
+    id: 163,
+    titulo: "Ya tiene rival: la Selección Sub 20 juega los octavos ante Corea del Sur el miércoles",
+    resumen: "Argentina enfrentará a Corea del Sur el miércoles 16 de septiembre a las 10 (hora argentina) en el Arena Sosnowiec, por los octavos de final del Mundial Sub 20 femenino.",
+    imagen: "https://www.infobae.com/resizer/v2/4GBRSJDNNBAD3K3D5QB4ZDYGWM.jpg?auth=722df26e268e08fc55254f0b5fac113f3895a648fd2d3425732660bf014b0efd&smart=true&width=1200&height=630&quality=85",
+    categoria: "seleccion",
+    fecha: "12 sep 2026",
+    pagina: "seleccion-vs-corea-del-sur-octavos-mundial-sub20.html"
+  },
+  {
+    id: 162,
+    titulo: "La Selección Sub 20 remontó ante México y clasificó a octavos del Mundial de Polonia",
+    resumen: "Argentina ganó 3-2 en el cierre del Grupo A con un gol sobre la hora de María Delgado, tras ir abajo en el marcador ante las mexicanas. Es la segunda vez que la Albiceleste llega a octavos en un Mundial Sub 20.",
+    imagen: "https://www.infobae.com/resizer/v2/PM52DOBWHNCABATF4SCNPMYRUE.jfif?auth=a2f864054f7f7fdce418e2b98429cb18b46418d800f39caeb5272ea86858280e&smart=true&width=1200&height=675&quality=85",
+    categoria: "seleccion",
+    fecha: "11 sep 2026",
+    pagina: "seleccion-vencio-mexico-octavos-mundial-sub20.html"
+  },
+  {
     id: 161,
     titulo: "Se conoció el fixture de la fecha 8 del Torneo Clausura femenino",
     resumen: "San Luis FC, puntero tras la fecha 7, visita a Unión de Santa Fe. Belgrano, flamante clasificado a la Copa Libertadores Femenina, recibe a Ferro. Repasá los siete partidos de la fecha.",
