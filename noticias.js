@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 168,
+    titulo: "La Sub 20 sigue su preparación en Polonia de cara a Corea del Sur",
+    resumen: "Tras clasificar a octavos por segunda vez consecutiva, el equipo de Christian Meloni entrenó pensando en el cruce ante República de Corea, que se juega este miércoles a las 10 por TV Pública y DSports.",
+    imagen: "https://assets1.afa.com.ar/2026/DSC_2852.JPG",
+    categoria: "seleccion",
+    fecha: "14 sep 2026",
+    pagina: "seleccion-sub20-entrenamiento-polonia-corea-del-sur.html"
+  },
+  {
+    id: 167,
+    titulo: "Belgrano ya conoce a sus rivales en la Copa Libertadores Femenina",
+    resumen: "El sorteo ubicó al equipo cordobés en el Grupo B junto a Palmeiras, Independiente del Valle y Universitario. El torneo se disputará en Quito entre el 15 y el 31 de octubre.",
+    imagen: "https://www.infobae.com/resizer/v2/ST7WUJHNJVCEDGY7ARYFIVGL2Y.jpg?auth=c189069d70deb2d88da9e3523d3c066caabb30159602451abb1e196317359191&smart=true&width=1200&height=800&quality=85",
+    categoria: "apertura",
+    fecha: "14 sep 2026",
+    pagina: "belgrano-rivales-copa-libertadores-femenina-2026.html"
+  },
+  {
+    id: 166,
+    titulo: "Se conoció la programación de la fecha 9 del Clausura: hay clásico cordobés",
+    resumen: "La AFA confirmó los ocho partidos de la novena fecha. El plato fuerte es Talleres-Belgrano, el sábado en La Boutique de Barrio Jardín.",
+    imagen: "https://canalshowsport.com.ar/wp-content/uploads/2026/09/y7j.png",
+    categoria: "apertura",
+    fecha: "14 sep 2026",
+    pagina: "fixture-fecha-9-clausura-femenino.html"
+  },
+  {
+    id: 165,
+    titulo: "Arrancó la CONMEBOL Evolución: la Sub 15 empató ante Bolivia",
+    resumen: "La Selección Sub 15 femenina igualó 1-1 con Bolivia en la tercera fecha de la Liga Evolución, que se disputa en el CARFEM de Ypané, Paraguay.",
+    imagen: "https://assets1.afa.com.ar/2026/sub15fem.jpg",
+    categoria: "seleccion",
+    fecha: "13 sep 2026",
+    pagina: "seleccion-sub15-empato-bolivia-liga-evolucion.html"
+  },
+  {
     id: 164,
     titulo: "La AFA ratificó el triunfo de Belgrano sobre Lanús tras la polémica por el sexto cambio",
     resumen: "El Tribunal de Disciplina descartó la quita de puntos que pedía Lanús por \"alineación indebida\" y confirmó el 3-1 a favor de Belgrano. El club cordobés deberá pagar una multa y un ayudante de campo presentó su renuncia.",
