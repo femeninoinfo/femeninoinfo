@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 169,
+    titulo: "Se sortearon los grupos de la Copa Libertadores Femenina 2026",
+    resumen: "Corinthians, vigente campeón, quedó en el Grupo A junto a Colo Colo y Caracas. Belgrano, único argentino, integrará el Grupo B con Palmeiras, Independiente del Valle y Universitario. El torneo se juega en Quito del 15 al 31 de octubre.",
+    imagen: "https://cdn.conmebol.com/wp-content/uploads/2025/10/000_79AB34T-1-scaled.jpg",
+    categoria: "internacional",
+    fecha: "14 sep 2026",
+    pagina: "sorteo-grupos-copa-libertadores-femenina-2026.html"
+  },
+  {
     id: 168,
     titulo: "La Sub 20 sigue su preparación en Polonia de cara a Corea del Sur",
     resumen: "Tras clasificar a octavos por segunda vez consecutiva, el equipo de Christian Meloni entrenó pensando en el cruce ante República de Corea, que se juega este miércoles a las 10 por TV Pública y DSports.",
