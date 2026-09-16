@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 170,
+    titulo: "La Selección femenina reabrirá el Estadio Único de La Plata ante Alemania",
+    resumen: "Chiqui Tapia recorrió las obras del Estadio Único Diego Armando Maradona y confirmó que la reinauguración será a fines de noviembre, con un amistoso entre la Selección Argentina femenina y Alemania, antes de la final del Torneo Clausura.",
+    imagen: "https://media.0221.com.ar/p/34c1bb7faccb56f6396c09292edf5666/adjuntos/357/imagenes/100/289/0100289949/1400x0/smart/estadio-unico.jpg",
+    categoria: "seleccion",
+    fecha: "16 sep 2026",
+    pagina: "seleccion-femenina-estadio-unico-la-plata-alemania.html"
+  },
+  {
     id: 169,
     titulo: "Se sortearon los grupos de la Copa Libertadores Femenina 2026",
     resumen: "Corinthians, vigente campeón, quedó en el Grupo A junto a Colo Colo y Caracas. Belgrano, único argentino, integrará el Grupo B con Palmeiras, Independiente del Valle y Universitario. El torneo se juega en Quito del 15 al 31 de octubre.",
