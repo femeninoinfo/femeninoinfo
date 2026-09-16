@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 172,
+    titulo: "Histórico: Brasil eliminó a Estados Unidos por penales en el Mundial Sub 20",
+    resumen: "Brasil empató 1-1 con Estados Unidos en los octavos de final del Mundial Sub 20 femenino de Polonia y se impuso 5-4 en los penales, en uno de los resultados más resonantes de la instancia.",
+    imagen: "https://www.semana.com/resizer/v2/AKF6LSBAEVBVLLWPH2G4FWNCFM.jpg?auth=ccddf871bafdef3080270eaace1f96b7de75256b2d535b19e1b647fd56eb1a19&width=1600&height=1200",
+    categoria: "internacional",
+    fecha: "16 sep 2026",
+    pagina: "brasil-elimino-estados-unidos-penales-mundial-sub20-2026.html"
+  },
+  {
+    id: 171,
+    titulo: "La Sub 20 cayó 1-0 ante Corea del Sur y se despidió del Mundial",
+    resumen: "La Selección Sub 20 perdió en los octavos de final del Mundial de Polonia ante Corea del Sur, con un solo gol de Beom Yeju. El equipo de Christian Meloni dominó gran parte del complemento pero no logró el empate.",
+    imagen: "https://www.infobae.com/resizer/v2/F25647SQZNF7PLOIC7HIX3LNSI.jpg?auth=9557c8e128220dd7b270ddc5bf33d28fc4544acf05e06b6dc134b2dfe5db0a9a&smart=true&width=1200&height=630&quality=85",
+    categoria: "seleccion",
+    fecha: "16 sep 2026",
+    pagina: "seleccion-sub20-corea-del-sur-octavos-mundial-2026.html"
+  },
+  {
     id: 170,
     titulo: "La Selección femenina reabrirá el Estadio Único de La Plata ante Alemania",
     resumen: "Chiqui Tapia recorrió las obras del Estadio Único Diego Armando Maradona y confirmó que la reinauguración será a fines de noviembre, con un amistoso entre la Selección Argentina femenina y Alemania, antes de la final del Torneo Clausura.",
