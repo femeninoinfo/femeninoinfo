@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 174,
+    titulo: "La Selección femenina jugará dos amistosos ante Brasil en octubre",
+    resumen: "La CBF confirmó los partidos para el 10 de octubre en el Beira-Rio de Porto Alegre y el 13 en la Arena Pernambuco de Recife, dos sedes del Mundial 2027. El DT brasileño Arthur Elias destacó la evolución del equipo argentino.",
+    imagen: "https://fotos.perfil.com/2025/07/02/trim/1140/641/seleccion-argentina-2053955.jpg",
+    categoria: "seleccion",
+    fecha: "17 sep 2026",
+    pagina: "seleccion-femenina-amistosos-brasil-octubre-2026.html"
+  },
+  {
+    id: 173,
+    titulo: "Talleres, el único equipo que abre su estadio principal este fin de semana",
+    resumen: "De los ocho partidos de la fecha 9 del Clausura femenino, Talleres-Belgrano es el único que se juega en el estadio principal de un club: este sábado, La Boutique será por primera vez sede del clásico cordobés.",
+    imagen: "https://canalshowsport.com.ar/wp-content/uploads/2026/09/FOTO-PRINCIPAL-WEB-17-1.png",
+    categoria: "apertura",
+    fecha: "17 sep 2026",
+    pagina: "talleres-abre-boutique-clasico-cordobes-belgrano.html"
+  },
+  {
     id: 172,
     titulo: "Histórico: Brasil eliminó a Estados Unidos por penales en el Mundial Sub 20",
     resumen: "Brasil empató 1-1 con Estados Unidos en los octavos de final del Mundial Sub 20 femenino de Polonia y se impuso 5-4 en los penales, en uno de los resultados más resonantes de la instancia.",
