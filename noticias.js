@@ -1,5 +1,50 @@
 const noticias = [
   {
+    id: 179,
+    titulo: "Argentinos Juniors descendió por primera vez a la Primera C femenina",
+    resumen: "Las Bichas empataron 1-1 con San Miguel bajo el diluvio en Los Polvorines y la victoria de Luján en Gerli terminó de condenarlas. Por primera vez en su historia, el club jugará en la tercera división.",
+    imagen: "https://tribunero.com/wp-content/uploads/2026/09/Descendio-Argentinos.webp",
+    categoria: "apertura",
+    fecha: "21 sep 2026",
+    pagina: "argentinos-juniors-descendio-primera-c-femenina.html"
+  },
+  {
+    id: 178,
+    titulo: "La Copa de Campeones Femenina de la FIFA 2027 se jugará en el estadio del Inter Miami",
+    resumen: "Las semifinales, el partido por el tercer puesto y la final del 31 de enero se disputarán en el Nu Stadium de Miami. Club América Femenil y FC Barcelona Femení ya están clasificados.",
+    imagen: "https://assets1.afa.com.ar/2026/D/AGO26/image.png",
+    categoria: "internacional",
+    fecha: "21 sep 2026",
+    pagina: "copa-campeones-femenina-fifa-2027-inter-miami.html"
+  },
+  {
+    id: 177,
+    titulo: "Gimnasia ganó su primer partido del Clausura ante Newell's",
+    resumen: "El Lobo se impuso 1-0 como visitante en el Predio Griffa de Rosario, con gol de Lali Esquivel en el complemento, por la fecha 9 del Torneo Clausura.",
+    imagen: "https://www.gimnasia.org.ar/wp-content/uploads/2026/09/gimnasia-esgrima-fem-port_150926-2-800x400.jpg",
+    categoria: "apertura",
+    fecha: "21 sep 2026",
+    pagina: "gimnasia-primera-victoria-clausura-newells.html"
+  },
+  {
+    id: 176,
+    titulo: "San Luis FC se aferró a la punta del Clausura tras vencer a SAT",
+    resumen: "Con goles de Victoria Vásquez y María Miranda, las puntanas ganaron 2-0 en Villa Deportiva y llegaron a 21 puntos como único líder, a seis fechas del final.",
+    imagen: "https://pxbcdn.eldiariodelarepublica.com/republica/092026/1789851941028.jpeg",
+    categoria: "apertura",
+    fecha: "21 sep 2026",
+    pagina: "san-luis-fc-puntero-clausura-vencio-sat.html"
+  },
+  {
+    id: 175,
+    titulo: "Talleres goleó a Belgrano en su estreno como local en La Boutique",
+    resumen: "Las Matadoras vencieron 3-0 al Pirata, con goles de Fonseca, Rodríguez y Primo, y se quedaron con el primer clásico cordobés femenino disputado en La Boutique.",
+    imagen: "https://www.clubtalleres.com.ar/wp-content/uploads/2026/09/Festejo-vs-Belgrano-Clausura-2026-1024x682.jpg",
+    categoria: "apertura",
+    fecha: "21 sep 2026",
+    pagina: "talleres-goleo-belgrano-la-boutique-resultado.html"
+  },
+  {
     id: 174,
     titulo: "La Selección femenina jugará dos amistosos ante Brasil en octubre",
     resumen: "La CBF confirmó los partidos para el 10 de octubre en el Beira-Rio de Porto Alegre y el 13 en la Arena Pernambuco de Recife, dos sedes del Mundial 2027. El DT brasileño Arthur Elias destacó la evolución del equipo argentino.",
