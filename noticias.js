@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 183,
+    titulo: "Juan Alonso dejó de ser el DT de Huracán femenino",
+    resumen: "El club comunicó que, de común acuerdo, finalizó el vínculo con Alonso y su cuerpo técnico tras la derrota ante Ferro. Guido Speranza asumirá como entrenador interino junto a Lucas Miracca.",
+    imagen: "https://i.headtopics.com/images/2026/9/18/tycsports/resultado-y-goles-del-partido-ferro-vs-hurac-n-en--resultado-y-goles-del-partido-ferro-vs-hurac-n-en--753ACF930886D9AC2030F433A7DB6A7D.webp",
+    categoria: "apertura",
+    fecha: "21 sep 2026",
+    pagina: "huracan-juan-alonso-dejo-de-ser-dt.html"
+  },
+  {
+    id: 182,
+    titulo: "Fuerte comunicado del plantel femenino de San Lorenzo por deudas e irregularidades",
+    resumen: "Las jugadoras de Primera División denunciaron premios adeudados, más de un año sin cobertura médica y que viajaron a Banfield en autos particulares por falta de micro.",
+    imagen: "https://mundoazulgrana.com.ar/wp-content/uploads/2026/09/Santitas.jpg",
+    categoria: "apertura",
+    fecha: "21 sep 2026",
+    pagina: "san-lorenzo-comunicado-plantel-femenino-deudas.html"
+  },
+  {
+    id: 181,
+    titulo: "Lali Esquivel se va de Gimnasia: la capitana se declaró libre por falta de pago",
+    resumen: "La histórica capitana del Lobo, que había renovado contrato a comienzos de año, intimó a la dirigencia por salarios adeudados. Sofía Olivera, la arquera, seguiría sus pasos.",
+    imagen: "https://www.infocielo.com/wp-content/uploads/2026/01/LAli-Esquivel-1-1068x712.jpg",
+    categoria: "apertura",
+    fecha: "21 sep 2026",
+    pagina: "lali-esquivel-se-va-libre-gimnasia.html"
+  },
+  {
+    id: 180,
+    titulo: "Annika Paz es nueva jugadora del Sassuolo",
+    resumen: "La delantera argentina, figura del Mundial Sub-20, llega a préstamo desde el Inter hasta 2027 y renovó su contrato con el club italiano hasta el 30 de junio de 2029.",
+    imagen: "https://www.sassuolocalcio.it/wp-content/uploads/images/femminile/26-27/Calciomercato/Paz/benvenuto-1400x933-1-copia.webp",
+    categoria: "internacional",
+    fecha: "21 sep 2026",
+    pagina: "annika-paz-nueva-jugadora-sassuolo.html"
+  },
+  {
     id: 179,
     titulo: "Argentinos Juniors descendió por primera vez a la Primera C femenina",
     resumen: "Las Bichas empataron 1-1 con San Miguel bajo el diluvio en Los Polvorines y la victoria de Luján en Gerli terminó de condenarlas. Por primera vez en su historia, el club jugará en la tercera división.",
@@ -21,7 +57,7 @@ const noticias = [
     id: 177,
     titulo: "Gimnasia ganó su primer partido del Clausura ante Newell's",
     resumen: "El Lobo se impuso 1-0 como visitante en el Predio Griffa de Rosario, con gol de Lali Esquivel en el complemento, por la fecha 9 del Torneo Clausura.",
-    imagen: "https://www.gimnasia.org.ar/wp-content/uploads/2026/09/gimnasia-esgrima-fem-port_150926-2-800x400.jpg",
+    imagen: "https://www.gimnasia.org.ar/wp-content/uploads/2026/09/gimnasia-esgrima-fem-port_150926-2.jpg",
     categoria: "apertura",
     fecha: "21 sep 2026",
     pagina: "gimnasia-primera-victoria-clausura-newells.html"
@@ -39,7 +75,7 @@ const noticias = [
     id: 175,
     titulo: "Talleres goleó a Belgrano en su estreno como local en La Boutique",
     resumen: "Las Matadoras vencieron 3-0 al Pirata, con goles de Fonseca, Rodríguez y Primo, y se quedaron con el primer clásico cordobés femenino disputado en La Boutique.",
-    imagen: "https://www.clubtalleres.com.ar/wp-content/uploads/2026/09/Festejo-vs-Belgrano-Clausura-2026-1024x682.jpg",
+    imagen: "https://www.clubtalleres.com.ar/wp-content/uploads/2026/09/Festejo-vs-Belgrano-Clausura-2026.jpg",
     categoria: "apertura",
     fecha: "21 sep 2026",
     pagina: "talleres-goleo-belgrano-la-boutique-resultado.html"
