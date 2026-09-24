@@ -3,7 +3,7 @@ const noticias = [
     id: 183,
     titulo: "Juan Alonso dejó de ser el DT de Huracán femenino",
     resumen: "El club comunicó que, de común acuerdo, finalizó el vínculo con Alonso y su cuerpo técnico tras la derrota ante Ferro. Guido Speranza asumirá como entrenador interino junto a Lucas Miracca.",
-    imagen: "https://i.headtopics.com/images/2026/9/18/tycsports/resultado-y-goles-del-partido-ferro-vs-hurac-n-en--resultado-y-goles-del-partido-ferro-vs-hurac-n-en--753ACF930886D9AC2030F433A7DB6A7D.webp",
+    imagen: "https://pbs.twimg.com/media/HSxGl2QWUAAMyQt.jpg",
     categoria: "apertura",
     fecha: "21 sep 2026",
     pagina: "huracan-juan-alonso-dejo-de-ser-dt.html"
@@ -30,7 +30,7 @@ const noticias = [
     id: 180,
     titulo: "Annika Paz es nueva jugadora del Sassuolo",
     resumen: "La delantera argentina, figura del Mundial Sub-20, llega a préstamo desde el Inter hasta 2027 y renovó su contrato con el club italiano hasta el 30 de junio de 2029.",
-    imagen: "https://www.sassuolocalcio.it/wp-content/uploads/images/femminile/26-27/Calciomercato/Paz/benvenuto-1400x933-1-copia.webp",
+    imagen: "https://pbs.twimg.com/media/HS02HEbWkAAZ7a5.jpg",
     categoria: "internacional",
     fecha: "21 sep 2026",
     pagina: "annika-paz-nueva-jugadora-sassuolo.html"
