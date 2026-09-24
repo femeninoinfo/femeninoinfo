@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 184,
+    titulo: "Ya salió la programación de la Fecha 10 del Torneo Clausura",
+    resumen: "La Liga Profesional confirmó los ocho partidos de la décima fecha, entre el viernes 25 y el lunes 28 de septiembre. Huracán, con Speranza al mando, recibe a Talleres.",
+    imagen: "apertura-fecha10.png",
+    categoria: "apertura",
+    fecha: "23 sep 2026",
+    pagina: "fixture-fecha-10-clausura-femenino.html"
+  },
+  {
     id: 183,
     titulo: "Juan Alonso dejó de ser el DT de Huracán femenino",
     resumen: "El club comunicó que, de común acuerdo, finalizó el vínculo con Alonso y su cuerpo técnico tras la derrota ante Ferro. Guido Speranza asumirá como entrenador interino junto a Lucas Miracca.",
