@@ -3,7 +3,7 @@ const noticias = [
     id: 188,
     titulo: "San Luis FC le ganó a Lanús y sigue puntero del Clausura",
     resumen: "Venció 1-0 con gol de Victoria Vázquez y se mantiene primero, con tres puntos de ventaja, a cinco fechas del final.",
-    imagen: "https://elfemenino.com.ar/wp-content/uploads/2026/09/HSheeGeW4AE8yni.jpg",
+    imagen: "https://pxbcdn.eldiariodelarepublica.com/republica/092026/1790593449677.jpg",
     categoria: "apertura",
     fecha: "28 sep 2026",
     pagina: "san-luis-puntero-le-gano-a-lanus.html"
@@ -12,7 +12,7 @@ const noticias = [
     id: 187,
     titulo: "El superclásico femenino se juega este miércoles",
     resumen: "River Plate y Boca Juniors disputan el superclásico reprogramado de la fecha 6 este miércoles a las 15 horas en River Camp.",
-    imagen: "https://img.vavel.com/whatsapp-image-2026-05-21-at-8-38-49-pm-1779408344184.jpg",
+    imagen: "https://img.vavel.com/b/whatsapp-image-2026-05-21-at-8-37-41-pm-1779407262390.jpg",
     categoria: "apertura",
     fecha: "28 sep 2026",
     pagina: "superclasico-river-boca-reprogramado.html"
@@ -21,7 +21,7 @@ const noticias = [
     id: 186,
     titulo: "Linda Caicedo sorprendió a Shakira en su show de Madrid",
     resumen: "La delantera del Real Madrid acompañó a la cantante en la 'Caminata de la Loba' y le regaló una camiseta de la Selección Colombia.",
-    imagen: "https://www.infobae.com/resizer/v2/YN7NMPFL6VDCNKQ6DJPYZJL5MA.png",
+    imagen: "https://www.publimetro.co/resizer/v2/4HG22NQNYNGN5KMGW43MSKEWBE.jpg?smart=true&auth=f43d8f74a77f3f884c92aabfe7bfb15de8672349d5f7d0b201f91630b7c5a39d&width=1920&height=1080",
     categoria: "internacional",
     fecha: "28 sep 2026",
     pagina: "linda-caicedo-shakira-madrid.html"
