@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 188,
+    titulo: "San Luis FC le ganó a Lanús y sigue puntero del Clausura",
+    resumen: "Venció 1-0 con gol de Victoria Vázquez y se mantiene primero, con tres puntos de ventaja, a cinco fechas del final.",
+    imagen: "https://elfemenino.com.ar/wp-content/uploads/2026/09/HSheeGeW4AE8yni.jpg",
+    categoria: "apertura",
+    fecha: "28 sep 2026",
+    pagina: "san-luis-puntero-le-gano-a-lanus.html"
+  },
+  {
+    id: 187,
+    titulo: "El superclásico femenino se juega este miércoles",
+    resumen: "River Plate y Boca Juniors disputan el superclásico reprogramado de la fecha 6 este miércoles a las 15 horas en River Camp.",
+    imagen: "https://img.vavel.com/whatsapp-image-2026-05-21-at-8-38-49-pm-1779408344184.jpg",
+    categoria: "apertura",
+    fecha: "28 sep 2026",
+    pagina: "superclasico-river-boca-reprogramado.html"
+  },
+  {
+    id: 186,
+    titulo: "Linda Caicedo sorprendió a Shakira en su show de Madrid",
+    resumen: "La delantera del Real Madrid acompañó a la cantante en la 'Caminata de la Loba' y le regaló una camiseta de la Selección Colombia.",
+    imagen: "https://www.infobae.com/resizer/v2/YN7NMPFL6VDCNKQ6DJPYZJL5MA.png",
+    categoria: "internacional",
+    fecha: "28 sep 2026",
+    pagina: "linda-caicedo-shakira-madrid.html"
+  },
+  {
+    id: 185,
+    titulo: "España es campeón del Mundial Sub-20 tras vencer a Corea del Norte",
+    resumen: "La Roja empató 0-0 tras 120 minutos y se impuso 4-3 en los penales, con dos atajadas de Laia López. Es su segundo título en la categoría.",
+    imagen: "https://theobjective.com/wp-content/uploads/2026/09/copia-de-copia-de-copia-de-copia-de-imagen-redes-7-10.jpg",
+    categoria: "internacional",
+    fecha: "28 sep 2026",
+    pagina: "espana-campeona-mundial-sub20-corea-del-norte.html"
+  },
+  {
     id: 184,
     titulo: "Ya salió la programación de la Fecha 10 del Torneo Clausura",
     resumen: "La Liga Profesional confirmó los ocho partidos de la décima fecha, entre el viernes 25 y el lunes 28 de septiembre. Huracán, con Speranza al mando, recibe a Talleres.",
