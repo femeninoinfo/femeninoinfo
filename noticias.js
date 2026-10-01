@@ -21,7 +21,7 @@ const noticias = [
     id: 189,
     titulo: "El gol agónico de Andrea Ojeda que decidió el superclásico",
     resumen: "La goleadora histórica de Boca, de 41 años, entró desde el banco y marcó a los 47 minutos del segundo tiempo el 2-1 final ante River.",
-    imagen: "https://media.diariodecuyo.com.ar/p/d699439d85b8985aef3fcb8a944a9e81/adjuntos/380/imagenes/100/338/0100338166/1000x0/smart/image.png",
+    imagen: "andrea-ojeda-festejo.png",
     categoria: "apertura",
     fecha: "1 oct 2026",
     pagina: "andrea-ojeda-gol-agonico-superclasico.html"
