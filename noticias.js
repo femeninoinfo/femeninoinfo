@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 192,
+    titulo: "Argentina confirmó sus convocadas para los amistosos ante Brasil",
+    resumen: "Germán Portanova citó a 22 futbolistas, con dos jugadoras de Talleres, para la doble fecha FIFA del 10 y 13 de octubre en Brasil, de cara al Mundial 2027.",
+    imagen: "https://canalshowsport.com.ar/wp-content/uploads/2026/10/FOTO-PRINCIPAL-WEB-1.png",
+    categoria: "seleccion",
+    fecha: "1 oct 2026",
+    pagina: "convocatoria-argentina-amistosos-brasil-octubre.html"
+  },
+  {
     id: 191,
     titulo: "Lula sancionó una ley que impulsa la profesionalización del fútbol femenino en Brasil",
     resumen: "El presidente brasileño firmó la norma a menos de un año del Mundial 2027. Busca reducir las futbolistas no profesionales y obliga a los clubes a tener equipo femenino.",
@@ -12,7 +21,7 @@ const noticias = [
     id: 190,
     titulo: "Boca se quedó con el superclásico femenino y venció 2-1 a River",
     resumen: "Goles de Julieta Lema, Mercedes Diz y un tanto agónico de Andrea Ojeda en tiempo de descuento, por la sexta fecha reprogramada del Clausura.",
-    imagen: "https://cdn.sanity.io/images/wp253i6j/production/c0e853121a6e5686cce2b15e3c1599b109a326be-1600x677.jpg",
+    imagen: "superclasico.jpg",
     categoria: "apertura",
     fecha: "1 oct 2026",
     pagina: "boca-gano-superclasico-femenino.html"
