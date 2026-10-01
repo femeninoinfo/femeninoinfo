@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 191,
+    titulo: "Lula sancionó una ley que impulsa la profesionalización del fútbol femenino en Brasil",
+    resumen: "El presidente brasileño firmó la norma a menos de un año del Mundial 2027. Busca reducir las futbolistas no profesionales y obliga a los clubes a tener equipo femenino.",
+    imagen: "https://efeminista.com/wp-content/uploads/2026/09/ley-brasil-profesionalizacion-futbol-femenino.jpg",
+    categoria: "internacional",
+    fecha: "1 oct 2026",
+    pagina: "lula-ley-futbol-femenino-brasil.html"
+  },
+  {
+    id: 190,
+    titulo: "Boca se quedó con el superclásico femenino y venció 2-1 a River",
+    resumen: "Goles de Julieta Lema, Mercedes Diz y un tanto agónico de Andrea Ojeda en tiempo de descuento, por la sexta fecha reprogramada del Clausura.",
+    imagen: "https://cdn.sanity.io/images/wp253i6j/production/c0e853121a6e5686cce2b15e3c1599b109a326be-1600x677.jpg",
+    categoria: "apertura",
+    fecha: "1 oct 2026",
+    pagina: "boca-gano-superclasico-femenino.html"
+  },
+  {
+    id: 189,
+    titulo: "El gol agónico de Andrea Ojeda que decidió el superclásico",
+    resumen: "La goleadora histórica de Boca, de 41 años, entró desde el banco y marcó a los 47 minutos del segundo tiempo el 2-1 final ante River.",
+    imagen: "https://media.diariodecuyo.com.ar/p/d699439d85b8985aef3fcb8a944a9e81/adjuntos/380/imagenes/100/338/0100338166/1000x0/smart/image.png",
+    categoria: "apertura",
+    fecha: "1 oct 2026",
+    pagina: "andrea-ojeda-gol-agonico-superclasico.html"
+  },
+  {
     id: 188,
     titulo: "San Luis FC le ganó a Lanús y sigue puntero del Clausura",
     resumen: "Venció 1-0 con gol de Victoria Vázquez y se mantiene primero, con tres puntos de ventaja, a cinco fechas del final.",
