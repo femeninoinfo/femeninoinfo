@@ -1,5 +1,50 @@
 const noticias = [
   {
+    id: 197,
+    titulo: "Boca le ganó 2-0 a San Luis FC en Casa Amarilla y es el único líder del Clausura",
+    resumen: "Doblete de Agustina Arias en el segundo tiempo: Boca llegó a 25 puntos y desplazó a San Luis FC (24) de la cima a falta de cuatro fechas.",
+    imagen: "https://pxbcdn.eldiariodelarepublica.com/republica/102026/1791065146887.jpg",
+    categoria: "apertura",
+    fecha: "5 oct 2026",
+    pagina: "boca-lider-clausura-vencio-san-luis-casa-amarilla.html"
+  },
+  {
+    id: 196,
+    titulo: "Récord de asistencia en el fútbol femenino: 49.405 personas en la final del Brasileirão",
+    resumen: "La definición entre São Paulo y Corinthians en el MorumBIS superó la marca de 44.529 espectadores y es la mayor asistencia entre clubes de Sudamérica.",
+    imagen: "https://elciudadanoweb.com/wp-content/uploads/2026/10/49.405-hinchas-en-la-final-del-Brasileirao-entre-Sao-Paulo-y-Corinthians.webp",
+    categoria: "internacional",
+    fecha: "5 oct 2026",
+    pagina: "record-asistencia-final-brasileirao-femenino-morumbis.html"
+  },
+  {
+    id: 195,
+    titulo: "Maricel Pereyra y Vanina Preininger, campeonas del Brasileirão femenino con São Paulo",
+    resumen: "São Paulo igualó 1-1 con Corinthians en el MorumBIS y se consagró campeón con un global de 3-2. Las dos argentinas integraron el plantel campeón.",
+    imagen: "https://cdn.saopaulofc.net/2026/10/r5_4408.jpg",
+    categoria: "internacional",
+    fecha: "5 oct 2026",
+    pagina: "sao-paulo-campeon-brasileirao-femenino-pereyra-preininger.html"
+  },
+  {
+    id: 194,
+    titulo: "San Lorenzo se quedó con el clásico: venció 3-1 a Huracán en el Clausura femenino",
+    resumen: "Goles de Florencia Coronel, Katherine Castillo y Luciana Zacmon en el primer tiempo para que las Santitas lleguen a los 19 puntos.",
+    imagen: "https://vamosciclon.com/wp-content/uploads/2026/10/las-santitas-san-lorenzo-gano-clasico-huracan-1536x864.webp",
+    categoria: "apertura",
+    fecha: "5 oct 2026",
+    pagina: "san-lorenzo-clasico-huracan-femenino-fecha-11.html"
+  },
+  {
+    id: 193,
+    titulo: "Rosario Central es campeón de la Primera B femenina: venció 5-4 por penales a Platense",
+    resumen: "Las Guerreras igualaron la serie en el Gigante de Arroyito y ganaron la definición desde los doce pasos. El equipo de Giugno ya había ascendido a Primera.",
+    imagen: "https://www.rosario3.com/__export/1791194158143/sites/rosario3/img/2026/10/05/image_-13-.jpg_2106848869.jpg",
+    categoria: "apertura",
+    fecha: "5 oct 2026",
+    pagina: "central-campeon-primera-b-femenino-platense-penales.html"
+  },
+  {
     id: 192,
     titulo: "Argentina confirmó sus convocadas para los amistosos ante Brasil",
     resumen: "Germán Portanova citó a 22 futbolistas, con dos jugadoras de Talleres, para la doble fecha FIFA del 10 y 13 de octubre en Brasil, de cara al Mundial 2027.",
