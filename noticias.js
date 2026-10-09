@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 201,
+    titulo: "LPF Play dejará de ser gratuita: el fútbol femenino de Primera pasa al plan pago desde el 16 de octubre",
+    resumen: "El Plan Plus costará $15.000 por mes e incluye la Primera División femenina. Seguirán gratis el Federal A, el futsal femenino, los resúmenes y los partidos destacados de las selecciones.",
+    imagen: "superclasico.jpg",
+    categoria: "apertura",
+    fecha: "8 oct 2026",
+    pagina: "lpf-play-sera-paga-15000-futbol-femenino-16-octubre.html"
+  },
+  {
+    id: 200,
+    titulo: "Ariadna Palacios será la primera mujer en dirigir un partido de la Primera B Metropolitana",
+    resumen: "La árbitra de 29 años dirigirá Ituzaingó vs. Argentino de Quilmes este sábado 10 de octubre en el estadio Carlos Sacaan.",
+    imagen: "https://lvdsjcdn.eleco.com.ar/media/2026/10/ariadna_palacios.webp",
+    categoria: "apertura",
+    fecha: "8 oct 2026",
+    pagina: "ariadna-palacios-primera-arbitra-primera-b-metropolitana.html"
+  },
+  {
+    id: 199,
+    titulo: "Jugadoras de River fueron alcanzapelotas en la despedida de Messi en el Monumental",
+    resumen: "Seis futbolistas de las formativas del club vivieron de cerca la noche del 3-0 de Argentina ante Benín, el último partido de Messi con la Selección.",
+    imagen: "https://noticiasnet-s3.cdn.net.ar/s3i233/2026/10/noticiasnet/images/02/80/45/2804597_ad31be52ec913e97d565149f93e7494ea918ccf01da2a6d7a3025937cde07d04/lg.webp?_v=v3-1240",
+    categoria: "apertura",
+    fecha: "8 oct 2026",
+    pagina: "alcanzapelotas-river-despedida-messi-monumental.html"
+  },
+  {
+    id: 198,
+    titulo: "LPF Play transmitirá en vivo los dos amistosos de la Selección femenina ante Brasil",
+    resumen: "Argentina juega el sábado 10 (16.30, Beira-Rio) y el martes 13 de octubre (20.30, Arena Pernambuco) en la preparación para el Mundial 2027.",
+    imagen: "https://prefeitura.poa.br/sites/default/files/usu_img/noticias/2026/10/05/all%20p005%20out%202026%20Alex%20Rocha_selecao%20Argentina%20feminina%20de%20futebol_-2.jpg.jpeg",
+    categoria: "seleccion",
+    fecha: "8 oct 2026",
+    pagina: "lpf-play-transmite-amistosos-argentina-brasil-femenino.html"
+  },
+  {
     id: 197,
     titulo: "Boca le ganó 2-0 a San Luis FC en Casa Amarilla y es el único líder del Clausura",
     resumen: "Doblete de Agustina Arias en el segundo tiempo: Boca llegó a 25 puntos y desplazó a San Luis FC (24) de la cima a falta de cuatro fechas.",
