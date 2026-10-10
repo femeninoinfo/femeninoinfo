@@ -3,7 +3,7 @@ const noticias = [
     id: 201,
     titulo: "LPF Play dejará de ser gratuita: el fútbol femenino de Primera pasa al plan pago desde el 16 de octubre",
     resumen: "El Plan Plus costará $15.000 por mes e incluye la Primera División femenina. Seguirán gratis el Federal A, el futsal femenino, los resúmenes y los partidos destacados de las selecciones.",
-    imagen: "superclasico.jpg",
+    imagen: "lpfplay.jpg",
     categoria: "apertura",
     fecha: "8 oct 2026",
     pagina: "lpf-play-sera-paga-15000-futbol-femenino-16-octubre.html"
@@ -21,7 +21,7 @@ const noticias = [
     id: 199,
     titulo: "Jugadoras de River fueron alcanzapelotas en la despedida de Messi en el Monumental",
     resumen: "Seis futbolistas de las formativas del club vivieron de cerca la noche del 3-0 de Argentina ante Benín, el último partido de Messi con la Selección.",
-    imagen: "https://noticiasnet-s3.cdn.net.ar/s3i233/2026/10/noticiasnet/images/02/80/45/2804597_ad31be52ec913e97d565149f93e7494ea918ccf01da2a6d7a3025937cde07d04/lg.webp?_v=v3-1240",
+    imagen: "riverseleccion.jpg",
     categoria: "apertura",
     fecha: "8 oct 2026",
     pagina: "alcanzapelotas-river-despedida-messi-monumental.html"
