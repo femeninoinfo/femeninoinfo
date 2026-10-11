@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 202,
+    titulo: "Brasil goleó 3-1 a la Selección femenina en Porto Alegre y Argentina buscará la revancha el martes",
+    resumen: "Luany, Geyse y Angelina marcaron en el primer tiempo en el Beira-Rio. Maricel Pereyra descontó y Agustina Vargas fue expulsada. El segundo amistoso es el martes 13 en Recife.",
+    imagen: "https://static.gazetaesportiva.com/uploads/2026/10/Brasil_x_Argentina_Jogo_1_a430ba3825.webp",
+    categoria: "seleccion",
+    fecha: "10 oct 2026",
+    pagina: "brasil-vencio-3-1-argentina-amistoso-porto-alegre-femenino.html"
+  },
+  {
     id: 201,
     titulo: "LPF Play dejará de ser gratuita: el fútbol femenino de Primera pasa al plan pago desde el 16 de octubre",
     resumen: "El Plan Plus costará $15.000 por mes e incluye la Primera División femenina. Seguirán gratis el Federal A, el futsal femenino, los resúmenes y los partidos destacados de las selecciones.",
