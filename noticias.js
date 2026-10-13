@@ -1,5 +1,68 @@
 const noticias = [
   {
+    id: 209,
+    titulo: "Argentina y Brasil se vuelven a ver las caras hoy en el Arena Pernambuco",
+    resumen: "La Selección femenina busca la revancha tras el 3-1 de Porto Alegre. El segundo amistoso arranca a las 20.30 en Recife y se transmite por LPF Play.",
+    imagen: "https://images.metroimg.com/2026/10/selecao-brasileira-feminina.jpg",
+    categoria: "seleccion",
+    fecha: "13 oct 2026",
+    pagina: "argentina-brasil-segundo-amistoso-arena-pernambuco-recife.html"
+  },
+  {
+    id: 208,
+    titulo: "Las Piratas de Belgrano debutan el jueves en la Libertadores ante Independiente del Valle",
+    resumen: "El único representante argentino estrena la Copa Libertadores Femenina el 15 de octubre, a las 17 (hora argentina), en Guayaquil. Después enfrentará a Palmeiras y a Universitario.",
+    imagen: "https://viapais.com.ar/images/2026/10/13/EncrgJTYgF_1200x675.jpg",
+    categoria: "apertura",
+    fecha: "13 oct 2026",
+    pagina: "belgrano-debuta-libertadores-femenina-independiente-del-valle.html"
+  },
+  {
+    id: 207,
+    titulo: "Belgrano presentó a las jugadoras que viajan a la Copa Libertadores Femenina",
+    resumen: "El club dio a conocer la lista de Mariana Sánchez para su primera participación continental. Artime despidió al plantel con una arenga antes de partir hacia Ecuador.",
+    imagen: "https://images-tools.cadena3.com/tools/r/3c27eaf4-273f-4321-990c-564c112b729b.jpg?width=1200&height=798",
+    categoria: "apertura",
+    fecha: "13 oct 2026",
+    pagina: "belgrano-presento-lista-copa-libertadores-femenina-ecuador.html"
+  },
+  {
+    id: 206,
+    titulo: "La Selección femenina llegó a Recife en avión para preparar la revancha ante Brasil",
+    resumen: "Tras el 3-1 de Porto Alegre, el plantel de Portanova entrenó el domingo y el lunes antes del segundo amistoso en el Arena Pernambuco.",
+    imagen: "https://elfemenino.com.ar/wp-content/uploads/2026/10/DSC_4517.jpg",
+    categoria: "seleccion",
+    fecha: "13 oct 2026",
+    pagina: "seleccion-femenina-viajo-recife-segundo-amistoso-brasil.html"
+  },
+  {
+    id: 205,
+    titulo: "Más de 28 mil personas presenciaron el Argentina-Brasil en el Beira-Rio",
+    resumen: "El primer amistoso entre las selecciones femeninas tuvo una gran concurrencia en un estadio que será sede del Mundial 2027.",
+    imagen: "https://static.gazetaesportiva.com/uploads/2026/10/Brasil_x_Argentina_Jogo_1_a430ba3825.webp",
+    categoria: "seleccion",
+    fecha: "13 oct 2026",
+    pagina: "mas-de-28-mil-espectadores-argentina-brasil-beira-rio-femenino.html"
+  },
+  {
+    id: 204,
+    titulo: "Las 21 convocadas de la Selección Sub 17 para el Mundial de Marruecos",
+    resumen: "Christian Meloni confirmó la nómina para la primera Copa del Mundo Sub 17 de Argentina. River aporta seis futbolistas, Boca cuatro y Belgrano dos.",
+    imagen: "https://canalshowsport.com.ar/wp-content/uploads/2026/10/seleccion.jpg",
+    categoria: "seleccion",
+    fecha: "13 oct 2026",
+    pagina: "lista-21-convocadas-sub-17-mundial-marruecos.html"
+  },
+  {
+    id: 203,
+    titulo: "La Selección Sub 17 viajó a Marruecos para disputar por primera vez un Mundial",
+    resumen: "La delegación de Christian Meloni partió el 5 de octubre rumbo a Rabat. Argentina integra el Grupo A y debuta el sábado 17 ante Alemania.",
+    imagen: "https://assets1.afa.com.ar/2026/DSC_3153.JPG",
+    categoria: "seleccion",
+    fecha: "13 oct 2026",
+    pagina: "seleccion-sub-17-viajo-marruecos-primer-mundial.html"
+  },
+  {
     id: 202,
     titulo: "Brasil goleó 3-1 a la Selección femenina en Porto Alegre y Argentina buscará la revancha el martes",
     resumen: "Luany, Geyse y Angelina marcaron en el primer tiempo en el Beira-Rio. Maricel Pereyra descontó y Agustina Vargas fue expulsada. El segundo amistoso es el martes 13 en Recife.",
