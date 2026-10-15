@@ -1,5 +1,6 @@
 (function() {
-  var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027' };
+  var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027', libertadores:'Libertadores' };
+  (function(){ var st = document.createElement('style'); st.textContent = '.badge-libertadores{background:#a8741a}'; document.head.appendChild(st); })();
 
   function escapar(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

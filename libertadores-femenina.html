@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Libertadores Femenina 2026 — femeninoinfo</title>
+  <meta name="description" content="Calendario, grupos, próximos partidos y noticias de la Copa Libertadores Femenina 2026, que se juega en Quito del 15 al 31 de octubre."/>
+  <link rel="icon" href="logo-fondo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    :root{--lib-navy:#0b1f3f;--lib-gold:#c9a227;--lib-gold-d:#a8741a;--lib-cream:#fbf4e3}
+    .header{background:#0b1f3f!important;border-bottom:2px solid rgba(201,162,39,0.4)!important;position:relative!important;overflow:hidden!important}
+    .header::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(201,162,39,0.18) 40%,rgba(240,208,112,0.3) 50%,rgba(201,162,39,0.18) 60%,transparent 100%);background-size:200% 100%;animation:barreSweep 3s linear infinite;pointer-events:none;z-index:0}
+    @keyframes barreSweep{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    .header-inner,.nav-mobile{position:relative;z-index:1}
+    body{background:#f6f6f8}
+    /* buscador */
+    .search-toggle{background:rgba(201,162,39,0.15);border:1.5px solid rgba(201,162,39,0.45);border-radius:8px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;color:#c9a227;font-size:17px;flex-shrink:0}
+    .search-toggle:hover,.search-toggle.active{background:rgba(201,162,39,0.3);border-color:#c9a227}
+    .search-bar{background:#06142b;border-bottom:2px solid #a8741a;overflow:hidden;max-height:0;transition:max-height .3s ease,padding .3s ease;padding:0 24px;position:relative;z-index:99}
+    .search-bar.open{max-height:500px;padding:16px 24px}
+    .search-bar-inner{max-width:1280px;margin:0 auto}
+    .search-input-wrap{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border:1.5px solid rgba(201,162,39,0.4);border-radius:10px;padding:12px 18px}
+    .search-input-wrap:focus-within{border-color:#c9a227}
+    .search-icon{color:rgba(201,162,39,0.8);font-size:18px;flex-shrink:0}
+    .search-input{background:none;border:none;outline:none;color:#fff;font-size:15px;font-family:"DM Sans",sans-serif;flex:1;caret-color:#c9a227}
+    .search-input::placeholder{color:rgba(255,255,255,0.3)}
+    .search-clear{background:none;border:none;color:rgba(255,255,255,0.3);font-size:18px;cursor:pointer;padding:0;display:none}
+    .search-clear.visible{display:block}
+    .search-hint{font-size:12px;color:rgba(255,255,255,0.25);text-align:center;padding:14px 0 4px}
+    .search-empty{font-size:13px;color:rgba(255,255,255,0.35);text-align:center;padding:20px 0}
+    .search-more{font-size:11px;color:rgba(255,255,255,0.3);text-align:center;padding:8px 0}
+    .search-results-list{display:flex;flex-direction:column;gap:6px;margin-top:10px;max-height:360px;overflow-y:auto}
+    .search-result-item{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:10px 14px;cursor:pointer;text-decoration:none}
+    .search-result-item:hover{background:rgba(201,162,39,0.12)}
+    .search-result-img{width:64px;height:42px;border-radius:5px;object-fit:cover;flex-shrink:0;background:#14305c;display:block}
+    .search-result-info{flex:1;min-width:0}
+    .search-result-titulo{font-size:13px;font-weight:700;color:#fff;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:4px}
+    .search-result-meta{display:flex;align-items:center;gap:8px}
+    .search-badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;color:#fff}
+    .badge-apertura{background:#3d0066}.badge-seleccion{background:#005cbf}.badge-internacional{background:#006644}.badge-mundial2027{background:#009c3b}.badge-libertadores{background:#a8741a}
+    .search-result-fecha{font-size:10px;color:rgba(255,255,255,0.35)}
+    .search-arrow{color:rgba(201,162,39,0.6);font-size:16px;flex-shrink:0}
+    .search-mark{background:rgba(201,162,39,0.4);color:#fff;border-radius:2px;padding:0 2px}
+    /* hero */
+    .lib-hero{background:linear-gradient(135deg,#0b1f3f 0%,#123468 55%,#0b1f3f 100%);border-top:5px solid #c9a227;padding:38px 24px 34px;color:#fff;position:relative;overflow:hidden}
+    .lib-hero::after{content:'';position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,0.28),transparent 70%)}
+    .lib-hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:1}
+    .lib-pill{display:inline-block;background:#c9a227;color:#0b1f3f;font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:3px 12px;border-radius:20px;margin-bottom:10px}
+    .lib-titulo{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,6vw,62px);letter-spacing:1px;line-height:1;margin-bottom:8px}
+    .lib-titulo span{color:#e8c552}
+    .lib-sub{font-size:14px;color:rgba(255,255,255,0.78);max-width:720px;line-height:1.55}
+    .lib-datos{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .lib-dato{background:rgba(255,255,255,0.09);border:1px solid rgba(201,162,39,0.4);border-radius:8px;padding:8px 14px;font-size:12px;line-height:1.35}
+    .lib-dato b{display:block;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:#e8c552;font-weight:400}
+    /* secciones */
+    .lib-sec{max-width:1280px;margin:0 auto;padding:34px 24px 4px}
+    .lib-sec-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+    .lib-sec-titulo{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:1px;color:#0b1f3f;display:flex;align-items:center;gap:10px}
+    .lib-sec-titulo::before{content:'';width:6px;height:26px;background:#c9a227;border-radius:3px}
+    .lib-arrows{display:flex;gap:8px}
+    .lib-arrow{width:36px;height:36px;border-radius:50%;border:1.5px solid #0b1f3f;background:#fff;color:#0b1f3f;font-size:16px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+    .lib-arrow:hover{background:#0b1f3f;color:#fff}
+    /* tarjetas de partidos */
+    .lib-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;scrollbar-width:thin}
+    .pcard{flex:0 0 330px;scroll-snap-align:start;background:linear-gradient(180deg,#fffaf0 0%,#f7ecd0 100%);border:1px solid #e6d6a6;border-radius:16px;padding:16px 16px 18px;box-shadow:0 4px 16px rgba(11,31,63,0.08);text-align:center}
+    .pcard-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .pcard-estado{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0b1f3f;background:#fff;border-radius:4px;padding:3px 9px}
+    .pcard-estado.vivo{background:#d32f2f;color:#fff}
+    .pcard-grupo{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1.5px;color:#a8741a}
+    .pcard-main{display:flex;align-items:center;justify-content:space-between;gap:6px}
+    .pteam{flex:0 0 84px;display:flex;flex-direction:column;align-items:center;gap:6px}
+    .pteam-n{font-size:11px;font-weight:700;color:#0b1f3f;line-height:1.2;min-height:26px;display:flex;align-items:center}
+    .esc{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;border:2px solid #fff;box-shadow:0 0 0 2px rgba(11,31,63,0.18);overflow:hidden;background:#fff}
+    .esc img{width:100%;height:100%;object-fit:contain;padding:4px}
+    .pcenter{flex:1;font-size:12px;color:#333;line-height:1.5}
+    .pcenter .pf{font-weight:700;color:#0b1f3f;font-size:12px}
+    .pcenter .ph{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:1px;color:#0b1f3f;line-height:1.1}
+    .pcenter .ph small{font-size:12px;letter-spacing:.5px;color:#777;font-family:'DM Sans',sans-serif}
+    .pcenter .pe{font-size:10px;color:#888}
+    .pscore{font-family:'Bebas Neue',sans-serif;font-size:38px;color:#0b1f3f;letter-spacing:2px;line-height:1}
+    .pest{margin-top:12px;font-size:11px;color:#6b5a1f;border-top:1px dashed #d9c27a;padding-top:9px}
+    .lib-btn-wrap{text-align:center;margin:8px 0 6px}
+    .lib-btn{display:inline-flex;align-items:center;gap:10px;background:#c9a227;color:#0b1f3f;font-family:'DM Sans',sans-serif;font-weight:700;font-size:18px;border:none;border-radius:40px;padding:13px 34px;cursor:pointer;box-shadow:0 4px 14px rgba(168,116,26,0.35);transition:transform .15s}
+    .lib-btn:hover{transform:translateY(-2px)}
+    /* calendario completo */
+    #calCompleto{display:none;margin-top:18px}
+    #calCompleto.open{display:block}
+    .cal-dia{background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:14px;overflow:hidden}
+    .cal-dia-h{background:#0b1f3f;color:#fff;font-family:'Bebas Neue',sans-serif;letter-spacing:1.5px;font-size:18px;padding:8px 16px;display:flex;justify-content:space-between}
+    .cal-dia-h span{color:#e8c552;font-size:13px;font-family:'DM Sans',sans-serif;letter-spacing:.3px}
+    .cal-row{display:grid;grid-template-columns:62px 1fr 150px;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid #f0f0f0;font-size:13px}
+    .cal-row:last-child{border-bottom:none}
+    .cal-h{font-weight:700;color:#a8741a;font-size:15px}
+    .cal-h small{display:block;font-weight:400;color:#999;font-size:10px}
+    .cal-vs{display:flex;align-items:center;gap:8px;color:#0b1f3f;font-weight:600}
+    .cal-vs .mini{width:26px;height:26px;border-radius:50%;font-size:10px;display:inline-flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;letter-spacing:.5px;flex-shrink:0;overflow:hidden}
+    .cal-vs .mini img{width:100%;height:100%;object-fit:contain;background:#fff}
+    .cal-vs .vs{color:#aaa;font-weight:400;font-size:11px}
+    .cal-vs b.sc{background:#0b1f3f;color:#fff;border-radius:4px;padding:1px 8px;font-size:13px}
+    .cal-est{font-size:11px;color:#777;text-align:right}
+    .cal-grupo{font-size:10px;font-weight:700;color:#a8741a;letter-spacing:.8px;text-transform:uppercase;display:block}
+    .cal-nota{font-size:11px;color:#888;margin:4px 2px 0}
+    /* grupos */
+    .grupos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .gcard{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.07)}
+    .gcard-h{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1.5px;color:#fff;padding:10px 16px}
+    .gA .gcard-h{background:#d6a92f}.gB .gcard-h{background:#a8741a}.gC .gcard-h{background:#7a5326}.gD .gcard-h{background:#3e2c14}
+    .gcard-body{padding:6px 14px 10px}
+    .grow{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f1f1f1;font-size:13px;font-weight:600;color:#0b1f3f}
+    .grow:last-child{border-bottom:none}
+    .grow .mini{width:28px;height:28px;border-radius:50%;font-size:10px;display:inline-flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;letter-spacing:.5px;flex-shrink:0;overflow:hidden}
+    .grow .mini img{width:100%;height:100%;object-fit:contain;background:#fff}
+    .grow small{color:#999;font-weight:400;margin-left:auto;font-size:11px}
+    .grow.arg{background:linear-gradient(90deg,rgba(116,172,223,0.18),transparent);margin:0 -14px;padding-left:14px;padding-right:14px}
+    /* noticias */
+    .lib-noticias{max-width:1280px;margin:0 auto;padding:34px 24px 56px}
+    .archivo-featured{position:relative;display:block;border-radius:14px;overflow:hidden;height:400px;cursor:pointer;margin-bottom:22px;text-decoration:none}
+    .archivo-featured img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .archivo-featured-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.25) 55%,rgba(0,0,0,0.05) 100%)}
+    .archivo-featured-body{position:absolute;bottom:0;left:0;right:0;padding:28px;z-index:2}
+    .archivo-featured-badge{display:inline-block;background:#a8741a;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px}
+    .archivo-featured-titulo{font-family:'DM Sans',sans-serif;font-size:26px;font-weight:700;color:#fff;line-height:1.25;margin-bottom:8px;max-width:760px}
+    .archivo-featured-resumen{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.5;max-width:640px;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .archivo-featured-fecha{font-size:12px;color:rgba(255,255,255,0.5)}
+    .archivo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .archivo-grid-card{display:block;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,0.08);cursor:pointer;text-decoration:none;transition:transform .2s}
+    .archivo-grid-card:hover{transform:translateY(-4px)}
+    .archivo-grid-card img{width:100%;height:190px;object-fit:cover;display:block}
+    .archivo-grid-body{padding:16px 18px 18px}
+    .archivo-grid-tag{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:3px;background:rgba(168,116,26,0.12);color:#a8741a;margin-bottom:10px}
+    .archivo-grid-titulo{font-size:15px;font-weight:700;color:#0b1f3f;line-height:1.4;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .archivo-grid-fecha{font-size:12px;color:#999}
+    @media(max-width:1000px){.grupos-grid{grid-template-columns:repeat(2,1fr)}.archivo-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:700px){.grupos-grid{grid-template-columns:1fr}.archivo-grid{grid-template-columns:1fr}.archivo-featured{height:260px}.archivo-featured-titulo{font-size:19px}.archivo-featured-body{padding:18px}.archivo-featured-resumen{display:none}.pcard{flex-basis:84vw}.cal-row{grid-template-columns:54px 1fr}.cal-est{grid-column:1/-1;text-align:left}.lib-btn{font-size:16px;padding:12px 26px}}
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MFZ13PSXM"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7MFZ13PSXM');</script>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand"><img src="logo-nuevo.png" alt="femeninoinfo" class="brand-logo"/><span class="brand-name">femeninoinfo</span></a>
+    <nav class="nav">
+      <a href="libertadores-femenina.html" style="color:#e8c552">Libertadores</a>
+      <a href="futbol-argentino.html">Fútbol Argentino</a>
+      <a href="seleccion-argentina.html">Selección Argentina</a>
+      <a href="internacional.html">Internacional</a>
+      <a href="mundial-2027.html">Mundial 2027</a>
+    </nav>
+    <button class="search-toggle" id="searchToggle" aria-label="Buscar noticias">&#128269;</button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="libertadores-femenina.html" onclick="toggleMenu()">Libertadores</a>
+    <a href="futbol-argentino.html" onclick="toggleMenu()">Fútbol Argentino</a>
+    <a href="seleccion-argentina.html" onclick="toggleMenu()">Selección Argentina</a>
+    <a href="internacional.html" onclick="toggleMenu()">Internacional</a>
+    <a href="mundial-2027.html" onclick="toggleMenu()">Mundial 2027</a>
+  </nav>
+</header>
+<div class="search-bar" id="searchBar">
+  <div class="search-bar-inner">
+    <div class="search-input-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input class="search-input" id="searchInput" placeholder="Buscá una noticia, jugadora, equipo..." autocomplete="off"/>
+      <button class="search-clear" id="searchClear">&#10005;</button>
+    </div>
+    <div id="searchBody"><p class="search-hint">Escribí al menos 2 caracteres para buscar</p></div>
+  </div>
+</div>
+
+<section class="lib-hero">
+  <div class="lib-hero-inner">
+    <span class="lib-pill">Sección</span>
+    <h1 class="lib-titulo">CONMEBOL Libertadores <span>Femenina 2026</span></h1>
+    <p class="lib-sub">Quito, Ecuador, del 15 al 31 de octubre. Dieciséis clubes de diez federaciones, cuatro grupos y una sola representante argentina: Belgrano. Acá van los próximos partidos, el calendario completo, los grupos y todas las noticias del torneo.</p>
+    <div class="lib-datos">
+      <div class="lib-dato"><b>15 AL 31 OCT</b>Quito, Ecuador</div>
+      <div class="lib-dato"><b>16 EQUIPOS</b>10 federaciones</div>
+      <div class="lib-dato"><b>2 ESTADIOS</b>Rodrigo Paz Delgado y Banco Guayaquil</div>
+      <div class="lib-dato"><b>CAMPEÓN VIGENTE</b>Corinthians (6 títulos)</div>
+    </div>
+  </div>
+</section>
+
+<section class="lib-sec">
+  <div class="lib-sec-head">
+    <div class="lib-sec-titulo">Próximos partidos</div>
+    <div class="lib-arrows">
+      <button class="lib-arrow" onclick="scrollPart(-1)" aria-label="Anteriores">&#8249;</button>
+      <button class="lib-arrow" onclick="scrollPart(1)" aria-label="Siguientes">&#8250;</button>
+    </div>
+  </div>
+  <div class="lib-track" id="proximos"></div>
+  <p class="cal-nota">Horarios en hora argentina. Los partidos se juegan en Quito (hora local de Ecuador: dos horas menos). Calendario sujeto a cambios, según la CONMEBOL.</p>
+  <div class="lib-btn-wrap"><button class="lib-btn" id="btnCal" onclick="toggleCal()">Calendario completo &#9660;</button></div>
+  <div id="calCompleto"></div>
+</section>
+
+<section class="lib-sec">
+  <div class="lib-sec-head"><div class="lib-sec-titulo">Los grupos</div></div>
+  <div class="grupos-grid" id="grupos"></div>
+</section>
+
+<section class="lib-noticias">
+  <div class="lib-sec-head"><div class="lib-sec-titulo">Noticias de la Libertadores</div></div>
+  <div id="featuredNota"></div>
+  <div class="archivo-grid" id="gridNotas"></div>
+</section>
+
+<section class="redes-section-nueva">
+  <p class="redes-titulo">Seguinos en redes</p>
+  <div class="redes-row">
+    <a href="https://www.instagram.com/femeninoinfo" target="_blank" class="red-item"><img src="https://cdn.simpleicons.org/instagram/ffffff" class="red-logo" alt="Instagram"/><span class="red-label">Instagram</span></a>
+    <a href="https://www.tiktok.com/@femeninoinfo" target="_blank" class="red-item"><img src="https://cdn.simpleicons.org/tiktok/ffffff" class="red-logo" alt="TikTok"/><span class="red-label">TikTok</span></a>
+    <a href="https://twitter.com/femeninoinfo" target="_blank" class="red-item"><img src="https://cdn.simpleicons.org/x/ffffff" class="red-logo" alt="X / Twitter"/><span class="red-label">X / Twitter</span></a>
+    <a href="https://www.youtube.com/@femeninoinfoarg" target="_blank" class="red-item"><img src="https://cdn.simpleicons.org/youtube/ffffff" class="red-logo" alt="YouTube"/><span class="red-label">YouTube</span></a>
+  </div>
+  <p class="redes-mail"><a href="mailto:femeninoinfo.marketing@gmail.com">femeninoinfo.marketing@gmail.com</a></p>
+</section>
+
+<script>
+/* ============================================================
+   DATOS DEL TORNEO — para cargar un resultado, agregá  res:[goles_local, goles_visitante]
+   al partido (ej.: res:[2,1]). Las horas están en hora de Ecuador (UTC-5);
+   la página las muestra en hora argentina (+2 h).
+   ============================================================ */
+var EQ = {
+  COR:{n:'Corinthians',p:'Brasil',bg:'#111111',tx:'#ffffff'},
+  CCO:{n:'Colo-Colo',p:'Chile',bg:'#f2f2f2',tx:'#111111'},
+  CAR:{n:'Caracas FC',p:'Venezuela',bg:'#a01212',tx:'#ffffff'},
+  SFE:{n:'Independiente Santa Fe',p:'Colombia',bg:'#c8102e',tx:'#ffffff'},
+  IDV:{n:'Independiente del Valle',p:'Ecuador',bg:'#161616',tx:'#ffffff'},
+  BEL:{n:'Belgrano',p:'Argentina',img:'https://elfemenino.com.ar/wp-content/uploads/2021/08/Belgrano-128x128.png',bg:'#74acdf',tx:'#ffffff'},
+  UNI:{n:'Universitario',p:'Perú',bg:'#7a1620',tx:'#ffffff'},
+  PAL:{n:'Palmeiras',p:'Brasil',bg:'#0a6b34',tx:'#ffffff'},
+  CRU:{n:'Cruzeiro',p:'Brasil',bg:'#1d4fb4',tx:'#ffffff'},
+  LDU:{n:'LDU Quito',p:'Ecuador',bg:'#d9d9d9',tx:'#111111'},
+  BOL:{n:'Bolívar',p:'Bolivia',bg:'#1c4fa3',tx:'#ffffff'},
+  OLI:{n:'Olimpia',p:'Paraguay',bg:'#2a2a2a',tx:'#ffffff'},
+  DCA:{n:'Deportivo Cali',p:'Colombia',bg:'#1a8a3a',tx:'#ffffff'},
+  LIB:{n:'Libertad',p:'Paraguay',bg:'#4a4a4a',tx:'#ffffff'},
+  NAC:{n:'Nacional',p:'Uruguay',bg:'#1e3a8a',tx:'#ffffff'},
+  UCH:{n:'Universidad de Chile',p:'Chile',bg:'#1d3d91',tx:'#ffffff'}
+};
+var GRUPOS = {A:['COR','CCO','CAR','SFE'],B:['IDV','BEL','UNI','PAL'],C:['CRU','LDU','BOL','OLI'],D:['DCA','LIB','NAC','UCH']};
+var RPD='Estadio Rodrigo Paz Delgado', BG='Estadio Banco Guayaquil';
+// [n, grupo/fase, dia (octubre), hora Ecuador, local, visitante, estadio, resultado opcional]
+var PARTIDOS = [
+ {n:1,g:'A',d:15,h:15,a:'COR',b:'CCO',e:RPD},
+ {n:2,g:'A',d:15,h:19,a:'CAR',b:'SFE',e:RPD},
+ {n:3,g:'B',d:15,h:15,a:'IDV',b:'BEL',e:BG},
+ {n:4,g:'B',d:15,h:19,a:'UNI',b:'PAL',e:BG},
+ {n:6,g:'C',d:16,h:15,a:'BOL',b:'OLI',e:RPD},
+ {n:7,g:'D',d:16,h:15,a:'DCA',b:'LIB',e:BG},
+ {n:5,g:'C',d:16,h:19,a:'CRU',b:'LDU',e:RPD},
+ {n:8,g:'D',d:16,h:19,a:'NAC',b:'UCH',e:BG},
+ {n:9,g:'A',d:18,h:15,a:'CCO',b:'SFE',e:RPD},
+ {n:11,g:'B',d:18,h:15,a:'BEL',b:'PAL',e:BG},
+ {n:10,g:'A',d:18,h:19,a:'COR',b:'CAR',e:RPD},
+ {n:12,g:'B',d:18,h:19,a:'IDV',b:'UNI',e:BG},
+ {n:14,g:'C',d:19,h:15,a:'CRU',b:'BOL',e:RPD},
+ {n:15,g:'D',d:19,h:15,a:'DCA',b:'NAC',e:BG},
+ {n:13,g:'C',d:19,h:19,a:'LDU',b:'OLI',e:RPD},
+ {n:16,g:'D',d:19,h:19,a:'LIB',b:'UCH',e:BG},
+ {n:17,g:'A',d:21,h:15,a:'SFE',b:'COR',e:BG},
+ {n:18,g:'A',d:21,h:15,a:'CCO',b:'CAR',e:RPD},
+ {n:19,g:'B',d:21,h:19,a:'PAL',b:'IDV',e:BG},
+ {n:20,g:'B',d:21,h:19,a:'BEL',b:'UNI',e:RPD},
+ {n:23,g:'D',d:22,h:15,a:'UCH',b:'DCA',e:BG},
+ {n:24,g:'D',d:22,h:15,a:'LIB',b:'NAC',e:RPD},
+ {n:21,g:'C',d:22,h:19,a:'OLI',b:'CRU',e:BG},
+ {n:22,g:'C',d:22,h:19,a:'LDU',b:'BOL',e:RPD},
+ {n:25,g:'Cuartos de final',d:24,h:null,ta:'1.º Grupo A',tb:'2.º Grupo B',e:BG},
+ {n:26,g:'Cuartos de final',d:24,h:null,ta:'1.º Grupo B',tb:'2.º Grupo A',e:BG},
+ {n:27,g:'Cuartos de final',d:25,h:null,ta:'1.º Grupo C',tb:'2.º Grupo D',e:BG},
+ {n:28,g:'Cuartos de final',d:25,h:null,ta:'1.º Grupo D',tb:'2.º Grupo C',e:BG},
+ {n:30,g:'Semifinal',d:28,h:null,ta:'Ganador 25',tb:'Ganador 26',e:RPD},
+ {n:29,g:'Semifinal',d:28,h:null,ta:'Ganador 27',tb:'Ganador 28',e:RPD},
+ {n:31,g:'Tercer puesto',d:31,h:null,ta:'Perdedor 29',tb:'Perdedor 30',e:RPD},
+ {n:32,g:'Final',d:31,h:null,ta:'Ganador 29',tb:'Ganador 30',e:RPD}
+];
+var DIAS = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+function kick(p){ return Date.UTC(2026,9,p.d,(p.h||15)+5,0); } // hora Ecuador -> UTC
+function horaAR(p){ return p.h==null ? 'A definir' : (p.h+2)+':00'; }
+function fechaTxt(d){ var dt=new Date(Date.UTC(2026,9,d)); return DIAS[dt.getUTCDay()]+' '+d+' de octubre'; }
+function esc(c, grande){
+  var t=EQ[c];
+  var inner = t.img ? '<img src="'+t.img+'" alt="'+t.n+'"/>' : c;
+  return '<span class="'+(grande?'esc':'mini')+'" style="background:'+t.bg+';color:'+t.tx+'">'+inner+'</span>';
+}
+function nombre(p,lado){ return lado==='a' ? (p.a?EQ[p.a].n:p.ta) : (p.b?EQ[p.b].n:p.tb); }
+function crest(p,lado,grande){
+  var c = lado==='a'?p.a:p.b;
+  return c ? esc(c,grande) : '<span class="'+(grande?'esc':'mini')+'" style="background:#e5e5e5;color:#777;font-size:'+(grande?'16':'10')+'px">?</span>';
+}
+
+/* Tarjetas "próximos partidos" */
+function renderProximos(){
+  var ahora = Date.now();
+  var lista = PARTIDOS.filter(function(p){ return !p.res && kick(p)+2*3600*1000 > ahora && p.h!=null; })
+    .sort(function(x,y){ return kick(x)-kick(y) || x.n-y.n; }).slice(0,8);
+  var cont = document.getElementById('proximos');
+  if(!lista.length){
+    cont.innerHTML = '<p style="padding:20px;color:#777">No hay partidos próximos por mostrar. Mirá el calendario completo.</p>';
+    return;
+  }
+  cont.innerHTML = lista.map(function(p){
+    var vivo = ahora >= kick(p) && ahora < kick(p)+2*3600*1000;
+    return '<div class="pcard">'+
+      '<div class="pcard-top"><span class="pcard-estado'+(vivo?' vivo':'')+'">'+(vivo?'En juego':'Por jugar')+'</span><span class="pcard-grupo">GRUPO '+p.g+'</span></div>'+
+      '<div class="pcard-main">'+
+        '<div class="pteam">'+crest(p,'a',true)+'<span class="pteam-n">'+nombre(p,'a')+'</span></div>'+
+        '<div class="pcenter"><div class="pf">'+fechaTxt(p.d)+'</div><div class="ph">'+horaAR(p)+' <small>ARG</small></div><div class="pe">'+p.h+':00 hora de Ecuador</div></div>'+
+        '<div class="pteam">'+crest(p,'b',true)+'<span class="pteam-n">'+nombre(p,'b')+'</span></div>'+
+      '</div>'+
+      '<div class="pest">'+p.e+' · Quito</div>'+
+    '</div>';
+  }).join('');
+}
+function scrollPart(dir){ var t=document.getElementById('proximos'); t.scrollBy({left:dir*340,behavior:'smooth'}); }
+
+/* Calendario completo */
+function renderCal(){
+  var porDia = {};
+  PARTIDOS.slice().sort(function(x,y){ return x.d-y.d || (x.h||99)-(y.h||99) || x.n-y.n; }).forEach(function(p){ (porDia[p.d]=porDia[p.d]||[]).push(p); });
+  var html = '';
+  Object.keys(porDia).forEach(function(d){
+    var arr = porDia[d];
+    var fase = arr[0].g.length===1 ? 'Fase de grupos' : arr[0].g;
+    html += '<div class="cal-dia"><div class="cal-dia-h">'+fechaTxt(parseInt(d,10)).toUpperCase()+'<span>'+fase+'</span></div>';
+    arr.forEach(function(p){
+      var marcador = p.res ? '<b class="sc">'+p.res[0]+' - '+p.res[1]+'</b>' : '<span class="vs">vs</span>';
+      html += '<div class="cal-row">'+
+        '<div class="cal-h">'+horaAR(p)+'<small>'+(p.h==null?'sin horario':p.h+':00 Ecuador')+'</small></div>'+
+        '<div class="cal-vs">'+crest(p,'a',false)+nombre(p,'a')+' '+marcador+' '+crest(p,'b',false)+nombre(p,'b')+'</div>'+
+        '<div class="cal-est"><span class="cal-grupo">'+(p.g.length===1?'Grupo '+p.g:p.g)+'</span>'+p.e.replace('Estadio ','')+'</div>'+
+      '</div>';
+    });
+    html += '</div>';
+  });
+  html += '<p class="cal-nota">Los partidos de cuartos de final y las semifinales se definen según las posiciones de los grupos; los horarios de la fase final aún no fueron confirmados por la CONMEBOL.</p>';
+  document.getElementById('calCompleto').innerHTML = html;
+}
+function toggleCal(){
+  var c=document.getElementById('calCompleto'), b=document.getElementById('btnCal');
+  var abierto = c.classList.toggle('open');
+  b.innerHTML = abierto ? 'Ocultar calendario &#9650;' : 'Calendario completo &#9660;';
+}
+
+/* Grupos */
+function renderGrupos(){
+  var h='';
+  Object.keys(GRUPOS).forEach(function(g){
+    h += '<div class="gcard g'+g+'"><div class="gcard-h">GRUPO '+g+'</div><div class="gcard-body">';
+    GRUPOS[g].forEach(function(c){
+      h += '<div class="grow'+(c==='BEL'?' arg':'')+'">'+esc(c,false)+EQ[c].n+'<small>'+EQ[c].p+'</small></div>';
+    });
+    h += '</div></div>';
+  });
+  document.getElementById('grupos').innerHTML = h;
+}
+
+/* Noticias de la sección */
+var RELACIONADAS = ['sorteo-grupos-copa-libertadores-femenina-2026.html','libertadores-femenina-2026-sede-quito.html','belgrano-debuta-libertadores-femenina-independiente-del-valle.html','belgrano-presento-lista-copa-libertadores-femenina-ecuador.html','belgrano-rivales-copa-libertadores-femenina-2026.html','belgrano-clasificado-copa-libertadores-femenina.html'];
+function renderNoticias(){
+  if(typeof noticias==='undefined') return;
+  var lista = noticias.filter(function(n){ return n.categoria==='libertadores' || RELACIONADAS.indexOf(n.pagina)>-1; });
+  var feat = lista[0], resto = lista.slice(1);
+  var f = document.getElementById('featuredNota');
+  if(feat){
+    f.innerHTML = '<a class="archivo-featured" href="'+feat.pagina+'">'+
+      '<img src="'+feat.imagen+'" alt="'+feat.titulo+'"/><div class="archivo-featured-overlay"></div>'+
+      '<div class="archivo-featured-body"><span class="archivo-featured-badge">Libertadores</span>'+
+      '<div class="archivo-featured-titulo">'+feat.titulo+'</div><p class="archivo-featured-resumen">'+(feat.resumen||'')+'</p>'+
+      '<span class="archivo-featured-fecha">'+feat.fecha+'</span></div></a>';
+  }
+  document.getElementById('gridNotas').innerHTML = resto.map(function(n){
+    return '<a class="archivo-grid-card" href="'+n.pagina+'"><img src="'+n.imagen+'" alt="'+n.titulo+'"/>'+
+      '<div class="archivo-grid-body"><span class="archivo-grid-tag">Libertadores</span>'+
+      '<h3 class="archivo-grid-titulo">'+n.titulo+'</h3><span class="archivo-grid-fecha">'+n.fecha+'</span></div></a>';
+  }).join('');
+}
+renderProximos(); renderCal(); renderGrupos();
+</script>
+<script src="noticias.js"></script>
+<script>renderNoticias();</script>
+<script src="buscador.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

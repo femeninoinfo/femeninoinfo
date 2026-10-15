@@ -799,7 +799,7 @@
   @media(max-width:600px){.streaming-videos{grid-template-columns:1fr}.redes-row{gap:10px}.red-item{padding:12px 16px}}
 </style>
 <script>
-var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027' };
+var BADGE_LABELS = { apertura:'Argentino', seleccion:'Selección', internacional:'Internacional', mundial2027:'Mundial 2027', libertadores:'Libertadores' };
 var currentTorneo = 'clausura';
 var currentSubTab = 'tabla';
 function showTorneo(torneo, btn) {
@@ -823,11 +823,11 @@ function renderTablaPanel() {
   if(target) target.style.display = 'block';
 }
 function makeGridCard(n, idx) {
-  var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00' };
+  var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00', libertadores:'#a8741a' };
   var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
   var badgeBg = badgeColors[n.categoria] || '#c800ff';
   var badgeTextColor = n.categoria === 'mundial2027' ? '#5a3d00' : '#fff';
-  var borderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b' };
+  var borderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b', libertadores:'#a8741a' };
   var borderColor = borderColors[n.categoria] || '#c800ff';
   var esDestacada = idx === 0;
   var div = document.createElement('div');
@@ -847,7 +847,7 @@ function makeGridCard(n, idx) {
   return div;
 }
 function makeCarruselCard(n) {
-  var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00' };
+  var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00', libertadores:'#a8741a' };
   var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
   var badgeBg = badgeColors[n.categoria] || '#c800ff';
   var badgeTextColor = n.categoria === 'mundial2027' ? '#5a3d00' : '#fff';
@@ -922,14 +922,14 @@ function cargarUltimaNoticia() {
   var chicas = document.getElementById('noticiasChicas');
   if(chicas) {
     chicas.innerHTML = '';
-    var cats = {seleccion:'Selección', apertura:'Argentino', internacional:'Internacional'};
+    var cats = {seleccion:'Selección', apertura:'Argentino', internacional:'Internacional', libertadores:'Libertadores'};
     for(var i=1; i<=3 && i<noticias.length; i++) {
       var m = noticias[i];
       var cat = cats[m.categoria] || m.categoria;
       var card = document.createElement('div');
       card.className = 'nota-chica';
       card.onclick = (function(p){ return function(){ window.open(p,'_blank'); }; })(m.pagina);
-      var chicaBorderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644' };
+      var chicaBorderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', libertadores:'#a8741a' };
       var chicaBorder = chicaBorderColors[m.categoria] || '#c800ff';
       card.style.borderTop = '3px solid '+chicaBorder;
       card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/>'+
@@ -958,7 +958,7 @@ function renderCarruselUltimas(lista) {
   lista.forEach(function(n) { el.appendChild(makeCarruselCard(n)); });
 }
 var HOME_CAT_BG = { apertura:'rgba(61,0,102,0.1)', seleccion:'rgba(0,92,191,0.1)', internacional:'rgba(0,102,68,0.1)', mundial2027:'rgba(0,156,59,0.1)' };
-var HOME_CAT_COLOR = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b' };
+var HOME_CAT_COLOR = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b', libertadores:'#a8741a' };
 function makeHomeCatCard(n) {
   var label = BADGE_LABELS[n.categoria] || n.categoria;
   var color = HOME_CAT_COLOR[n.categoria] || '#c800ff';
@@ -988,7 +988,7 @@ function renderHomeFeatured(containerId, n) {
   if(!el) return;
   el.innerHTML = '';
   if(!n) return;
-  var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00' };
+  var badgeColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#ffdf00', libertadores:'#a8741a' };
   var badgeLabel = BADGE_LABELS[n.categoria] || n.categoria;
   var badgeBg = badgeColors[n.categoria] || '#c800ff';
   var badgeTextColor = n.categoria === 'mundial2027' ? '#5a3d00' : '#fff';
@@ -1027,7 +1027,7 @@ function renderHomeEditorial(containerId, items) {
   var el = document.getElementById(containerId);
   if(!el) return;
   el.innerHTML = '';
-  var dotColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b' };
+  var dotColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', mundial2027:'#009c3b', libertadores:'#a8741a' };
   items.forEach(function(n) {
     var dotColor = dotColors[n.categoria] || '#c800ff';
     var label = BADGE_LABELS[n.categoria] || n.categoria;

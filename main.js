@@ -3,8 +3,25 @@
 const CATEGORIAS = {
   seleccion:     { label: 'Selección Argentina',  clase: 'cat-sel' },
   apertura:      { label: 'Apertura Femenino',    clase: 'cat-arg' },
-  internacional: { label: 'Fútbol Internacional', clase: 'cat-int' }
+  internacional: { label: 'Fútbol Internacional', clase: 'cat-int' },
+  libertadores:  { label: 'Libertadores Femenina', clase: 'cat-int' }
 };
+
+// ── Pestaña "Libertadores" al inicio del menú (todas las páginas) ───────────────
+(function() {
+  var HREF = 'libertadores-femenina.html';
+  function agregar(selector, esMobile) {
+    var nav = document.querySelector(selector);
+    if (!nav || nav.querySelector('a[href="' + HREF + '"]')) return;
+    var a = document.createElement('a');
+    a.href = HREF;
+    a.textContent = 'Libertadores';
+    if (esMobile) a.setAttribute('onclick', 'toggleMenu()');
+    nav.insertBefore(a, nav.firstChild);
+  }
+  agregar('nav.nav', false);
+  agregar('#navMobile', true);
+})();
 
 function formatFecha(f) { return f || ''; }
 

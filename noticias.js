@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 212,
+    titulo: "Mañana arranca la Libertadores Femenina: Belgrano debuta ante Independiente del Valle",
+    resumen: "Este jueves 15 de octubre empieza el torneo en Quito, con cuatro partidos en la primera jornada. Las Piratas debutan a las 17, hora argentina, en el Banco Guayaquil.",
+    imagen: "https://viapais.com.ar/images/2026/10/13/EncrgJTYgF_1200x675.jpg",
+    categoria: "libertadores",
+    fecha: "14 oct 2026",
+    pagina: "manana-arranca-libertadores-femenina-belgrano-debuta.html"
+  },
+  {
+    id: 211,
+    titulo: "Los 16 equipos de la Libertadores Femenina 2026 y las más campeonas de la historia",
+    resumen: "Corinthians defiende el título y lidera con seis coronas en 17 ediciones. Repasamos quiénes juegan en Quito y quiénes ya levantaron la copa.",
+    imagen: "https://imagenes.teleamazonas.com/files/og_thumbnail/uploads/2026/09/14/6aa84c11d07dd.jpeg",
+    categoria: "libertadores",
+    fecha: "14 oct 2026",
+    pagina: "libertadores-femenina-2026-equipos-participantes-mas-campeonas.html"
+  },
+  {
+    id: 210,
+    titulo: "Los dos estadios de la Libertadores Femenina en Quito: dónde se juega y cuánto cuestan las entradas",
+    resumen: "El Rodrigo Paz Delgado (41.575 espectadores) y el Banco Guayaquil (unos 12.000) reciben los 32 partidos. Qué se juega en cada uno y dónde debuta Belgrano.",
+    imagen: "https://imagenes.primicias.ec/files/og_thumbnail/uploads/2024/05/25/6652ab7096251.jpeg",
+    categoria: "libertadores",
+    fecha: "14 oct 2026",
+    pagina: "libertadores-femenina-2026-estadios-quito-donde-se-juega.html"
+  },
+  {
     id: 209,
     titulo: "Argentina y Brasil se vuelven a ver las caras hoy en el Arena Pernambuco",
     resumen: "La Selección femenina busca la revancha tras el 3-1 de Porto Alegre. El segundo amistoso arranca a las 20.30 en Recife y se transmite por LPF Play.",
