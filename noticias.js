@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 214,
+    titulo: "Belgrano debutó en la Libertadores Femenina con un 1-1 ante Independiente del Valle",
+    resumen: "Alaides Paz hizo el primer gol de la historia del club en el torneo y Karen Páez igualó de penal. El domingo, las Piratas juegan ante Palmeiras.",
+    imagen: "https://images-tools.cadena3.com/tools/r/f0c8c018-9f3b-4c79-8b03-4f0e9dcf6824.jpg?width=1200&height=798",
+    categoria: "libertadores",
+    fecha: "15 oct 2026",
+    pagina: "belgrano-empato-1-1-independiente-del-valle-debut-libertadores-femenina.html"
+  },
+  {
+    id: 213,
+    titulo: "Heroico empate 2-2 de la Selección femenina ante Brasil: perdía 2-0 y aguantó con diez",
+    resumen: "Falfán y Bonsegundo, de penal, igualaron en Recife. Sofía Domínguez fue expulsada y Argentina resistió más de media hora con una jugadora menos.",
+    imagen: "https://www.infobae.com/resizer/v2/OKV3TAYKWJD67C5AV227FN7PEU.jpg?auth=e181c3a29a28a7eaac10b6c0a7ce7d44582e486df969c10f362192de08365f32&smart=true&width=1200&height=630&quality=85",
+    categoria: "seleccion",
+    fecha: "15 oct 2026",
+    pagina: "argentina-empato-2-2-brasil-recife-amistoso-femenino.html"
+  },
+  {
     id: 212,
     titulo: "Mañana arranca la Libertadores Femenina: Belgrano debuta ante Independiente del Valle",
     resumen: "Este jueves 15 de octubre empieza el torneo en Quito, con cuatro partidos en la primera jornada. Las Piratas debutan a las 17, hora argentina, en el Banco Guayaquil.",
