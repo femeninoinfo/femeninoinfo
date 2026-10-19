@@ -1,9 +1,18 @@
 const noticias = [
   {
+    id: 219,
+    titulo: "Se suspendió Deportivo Cali vs. Nacional por tormenta eléctrica en la Libertadores Femenina",
+    resumen: "El partido del Grupo D se frenó en el minuto 30, con 0-0, por la amenaza de tormenta eléctrica en Quito. Conmebol aún no informó cuándo se retoma.",
+    imagen: "https://www.infobae.com/resizer/v2/THBFNYF2GBBRLD73SVADH532GI.jpg?auth=41af2ded7a10d089d67c67c7b2c1841397eff0ff02df022b1d313b6295a277e5&smart=true&width=1200&height=675&quality=85",
+    categoria: "libertadores",
+    fecha: "19 oct 2026",
+    pagina: "suspendido-deportivo-cali-nacional-tormenta-libertadores-femenina.html"
+  },
+  {
     id: 218,
     titulo: "Belgrano vs. Universitario: hora, TV y qué necesita para clasificar a cuartos",
     resumen: "El miércoles 21 a las 21, las Piratas cierran la fase de grupos de la Libertadores Femenina y salen a buscar la clasificación. Se ve por el YouTube de TyC Sports Play.",
-    imagen: "https://www.infobae.com/resizer/v2/S46DIJGOQRFEVGIFD4IOYMM4BE.jfif?auth=31a3750b17c2022bfbfbb062be17e1f7484dd330398156b4f95c1093caf647ee&smart=true&width=1200&height=675&quality=85",
+    imagen: "https://www.infobae.com/resizer/v2/Z6RSXBDMYNAMJBGXARK34J6BHM.jfif?auth=14dc99460256b0b49401ae3e53601237ce6155611641bd425f3d1cec4a65dbe6&smart=true&width=1200&height=675&quality=85",
     categoria: "libertadores",
     fecha: "19 oct 2026",
     pagina: "belgrano-universitario-libertadores-femenina-hora-donde-ver.html"
