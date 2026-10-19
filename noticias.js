@@ -1,7 +1,7 @@
 const noticias = [
   {
     id: 224,
-    titulo: "Dragonas IDV le ganó 4-2 a Universitario y consiguió su primera victoria en la Libertadores Femenina",
+    titulo: "Las Dragonas rugieron en Chillo Jijón: 4-2 a Universitario y primera alegría en la Libertadores",
     resumen: "La anfitriona se puso 3-1 en 41 minutos, Pierina Núñez descontó dos veces para el equipo peruano y Universitario terminó el primer tiempo con una jugadora menos.",
     imagen: "https://imagenes.primicias.ec/files/og_thumbnail/files/fp/uploads/2026/10/18/6ad562bdf33a8.r_d.752-942-7999.jpeg",
     categoria: "libertadores",
@@ -10,7 +10,7 @@ const noticias = [
   },
   {
     id: 223,
-    titulo: "Cruzeiro le ganó 2-1 a LDU en el debut de ambos en la Libertadores Femenina",
+    titulo: "Debut soñado para Cruzeiro: ganó 2-1 en su primera Libertadores y dejó a LDU sin puntos",
     resumen: "Gisseli abrió el marcador, Justine Cuadra igualó para Guerreras Albas y Byanca Brasil definió en un contraataque a los 64 minutos.",
     imagen: "https://imagenes.primicias.ec/files/og_thumbnail/files/fp/uploads/2026/10/16/6ad2d65e93f32.r_d.2138-1130-4709.jpeg",
     categoria: "libertadores",
@@ -19,7 +19,7 @@ const noticias = [
   },
   {
     id: 222,
-    titulo: "Santa Fe le ganó 3-2 a Caracas, con gol agónico, en el debut de la Libertadores Femenina",
+    titulo: "Locura en Quito: Santa Fe remontó dos veces y le ganó 3-2 a Caracas en el último suspiro",
     resumen: "Las Leonas remontaron dos veces y lo ganaron en el 90+2 con un cabezazo de Andrea Pérez, en un partido postergado por los visados de Caracas.",
     imagen: "https://www.infobae.com/resizer/v2/RIO3XRRHWFEQRJDNEDIMW2FJ5Q.jpg?auth=392305e2444aa1d2da2b16499714edbfab2268acb83285a7519abe7fbf5a05ca&smart=true&width=1200&height=675&quality=85",
     categoria: "libertadores",
@@ -28,7 +28,7 @@ const noticias = [
   },
   {
     id: 221,
-    titulo: "Palmeiras le ganó 1-0 a Universitario en el debut de la Libertadores Femenina",
+    titulo: "Palmeiras no perdonó: Brena Carolina la rompió a los 14' y las brasileñas lideran el Grupo B",
     resumen: "Brena Carolina marcó a los 14 minutos y las brasileñas controlaron el partido, aunque desperdiciaron un penal en el segundo tiempo.",
     imagen: "https://www.palmeiras.com.br/wp-content/uploads/2026/10/IMG_1036-2.JPG-2000x1200.jpeg",
     categoria: "libertadores",
@@ -37,7 +37,7 @@ const noticias = [
   },
   {
     id: 220,
-    titulo: "Corinthians le ganó 2-0 a Colo-Colo en el debut de la Libertadores Femenina",
+    titulo: "Corinthians, el máximo ganador de la Libertadores, arrancó con el pie derecho: 2-0 a Colo-Colo",
     resumen: "El campeón vigente arrancó con una victoria en Quito: Vic Albuquerque abrió el marcador a los 4 minutos y Jaqueline, de penal, lo cerró en el segundo tiempo.",
     imagen: "https://lncimg.lance.com.br/cdn-cgi/image/width=1200,quality=75,fit=pad,format=webp/uploads/2026/10/Jogadoras-do-Corinthians-comemoram-o-gol-sobre-o-Colo-Colo-pela-Libertadores-1920x1256.jpg",
     categoria: "libertadores",
