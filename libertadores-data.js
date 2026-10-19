@@ -47,18 +47,18 @@ var GRUPOS = {A:['COR','CCO','CAR','SFE'],B:['IDV','BEL','UNI','PAL'],C:['CRU','
 var RPD='Estadio Rodrigo Paz Delgado', BG='Estadio Banco Guayaquil';
 // [n, grupo/fase, dia (octubre), hora Ecuador, local, visitante, estadio, resultado opcional]
 var PARTIDOS = [
- {n:1,g:'A',d:15,h:15,a:'COR',b:'CCO',e:RPD,res:[2,0]},
- {n:2,g:'A',d:16,h:22,a:'CAR',b:'SFE',e:RPD,res:[2,3]}, // reprogramado (estaba el 15 a las 19)
- {n:3,g:'B',d:15,h:15,a:'IDV',b:'BEL',e:BG,res:[1,1]},
- {n:4,g:'B',d:15,h:19,a:'UNI',b:'PAL',e:BG,res:[0,1]},
+ {n:1,g:'A',d:15,h:15,a:'COR',b:'CCO',e:RPD,nota:'corinthians-vencio-colo-colo-debut-libertadores-femenina.html',res:[2,0]},
+ {n:2,g:'A',d:16,h:22,a:'CAR',b:'SFE',e:RPD,nota:'santa-fe-remonto-caracas-debut-libertadores-femenina.html',res:[2,3]}, // reprogramado (estaba el 15 a las 19)
+ {n:3,g:'B',d:15,h:15,a:'IDV',b:'BEL',e:BG,nota:'belgrano-empato-1-1-independiente-del-valle-debut-libertadores-femenina.html',res:[1,1]},
+ {n:4,g:'B',d:15,h:19,a:'UNI',b:'PAL',e:BG,nota:'palmeiras-vencio-universitario-debut-libertadores-femenina.html',res:[0,1]},
  {n:6,g:'C',d:16,h:15,a:'BOL',b:'OLI',e:RPD,res:[2,2]},
  {n:7,g:'D',d:16,h:15,a:'DCA',b:'LIB',e:BG,res:[1,1]},
- {n:5,g:'C',d:16,h:19,a:'CRU',b:'LDU',e:RPD,res:[2,1]},
+ {n:5,g:'C',d:16,h:19,a:'CRU',b:'LDU',e:RPD,nota:'cruzeiro-vencio-ldu-debut-libertadores-femenina.html',res:[2,1]},
  {n:8,g:'D',d:16,h:19,a:'NAC',b:'UCH',e:BG,res:[0,0]},
  {n:9,g:'A',d:18,h:15,a:'CCO',b:'SFE',e:RPD,res:[1,2]},
- {n:11,g:'B',d:18,h:15,a:'BEL',b:'PAL',e:BG,res:[1,3]},
+ {n:11,g:'B',d:18,h:15,a:'BEL',b:'PAL',e:BG,nota:'belgrano-cayo-3-1-palmeiras-libertadores-femenina.html',res:[1,3]},
  {n:10,g:'A',d:18,h:19,a:'COR',b:'CAR',e:RPD,res:[7,0]},
- {n:12,g:'B',d:18,h:19,a:'IDV',b:'UNI',e:BG,res:[4,2]},
+ {n:12,g:'B',d:18,h:19,a:'IDV',b:'UNI',e:BG,nota:'dragonas-idv-vencio-universitario-libertadores-femenina.html',res:[4,2]},
  {n:14,g:'C',d:19,h:15,a:'CRU',b:'BOL',e:RPD},
  {n:15,g:'D',d:19,h:15,a:'DCA',b:'NAC',e:BG},
  {n:13,g:'C',d:19,h:19,a:'LDU',b:'OLI',e:RPD},

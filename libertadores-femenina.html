@@ -81,6 +81,11 @@
     .pcenter .pe{font-size:10px;color:#888}
     .pscore{font-family:'Bebas Neue',sans-serif;font-size:38px;color:#0b1f3f;letter-spacing:2px;line-height:1}
     .pest{margin-top:12px;font-size:11px;color:#6b5a1f;border-top:1px dashed #d9c27a;padding-top:9px}
+    .pcard-estado.fin{background:#0b1f3f;color:#e8c552}
+    .pjug .pscore{font-size:40px}
+    .pjug .pcenter .pf{font-size:11px;color:#6b5a1f;margin-top:4px;font-weight:600}
+    .pjug-link{display:block;margin-top:10px;background:#0b1f3f;color:#e8c552;text-decoration:none;font-weight:700;font-size:12px;padding:8px 10px;border-radius:8px}
+    .pjug-link:hover{background:#17356b}
     .lib-btn-wrap{text-align:center;margin:8px 0 6px}
     .lib-btn{display:inline-flex;align-items:center;gap:10px;background:#c9a227;color:#0b1f3f;font-family:'DM Sans',sans-serif;font-weight:700;font-size:18px;border:none;border-radius:40px;padding:13px 34px;cursor:pointer;box-shadow:0 4px 14px rgba(168,116,26,0.35);transition:transform .15s}
     .lib-btn:hover{transform:translateY(-2px)}
@@ -215,6 +220,17 @@
 </section>
 
 <section class="lib-sec">
+  <div class="lib-sec-head">
+    <div class="lib-sec-titulo">Partidos jugados</div>
+    <div class="lib-arrows">
+      <button class="lib-arrow" onclick="scrollJug(-1)" aria-label="Anteriores">&#8249;</button>
+      <button class="lib-arrow" onclick="scrollJug(1)" aria-label="Siguientes">&#8250;</button>
+    </div>
+  </div>
+  <div class="lib-track" id="jugados"></div>
+</section>
+
+<section class="lib-sec">
   <div class="lib-sec-head"><div class="lib-sec-titulo">Los grupos</div></div>
   <div class="grupos-grid" id="grupos"></div>
 </section>
@@ -274,6 +290,28 @@ function renderProximos(){
   }).join('');
 }
 function scrollPart(dir){ var t=document.getElementById('proximos'); t.scrollBy({left:dir*340,behavior:'smooth'}); }
+
+/* Tarjetas "partidos jugados" (los más recientes primero). Si el partido tiene "nota", la tarjeta lleva a la crónica. */
+function renderJugados(){
+  var lista = PARTIDOS.filter(function(p){ return p.res; })
+    .sort(function(x,y){ return kick(y)-kick(x) || y.n-x.n; });
+  var cont = document.getElementById('jugados');
+  if(!lista.length){ cont.innerHTML='<p style="padding:20px;color:#777">Todavía no hay partidos jugados.</p>'; return; }
+  cont.innerHTML = lista.map(function(p){
+    var a=p.res[0], b=p.res[1];
+    var link = p.nota ? '<a class="pjug-link" href="'+p.nota+'">Leer la crónica &rarr;</a>' : '';
+    return '<div class="pcard pjug">'+
+      '<div class="pcard-top"><span class="pcard-estado fin">Finalizado</span><span class="pcard-grupo">GRUPO '+p.g+'</span></div>'+
+      '<div class="pcard-main">'+
+        '<div class="pteam">'+crest(p,'a',true)+'<span class="pteam-n">'+nombre(p,'a')+'</span></div>'+
+        '<div class="pcenter"><div class="pscore">'+a+' - '+b+'</div><div class="pf">'+fechaTxt(p.d)+'</div></div>'+
+        '<div class="pteam">'+crest(p,'b',true)+'<span class="pteam-n">'+nombre(p,'b')+'</span></div>'+
+      '</div>'+
+      '<div class="pest">'+p.e+' · Quito</div>'+link+
+    '</div>';
+  }).join('');
+}
+function scrollJug(dir){ var t=document.getElementById('jugados'); t.scrollBy({left:dir*340,behavior:'smooth'}); }
 
 /* Calendario completo */
 function renderCal(){
@@ -340,7 +378,7 @@ function renderNoticias(){
       '<h3 class="archivo-grid-titulo">'+n.titulo+'</h3><span class="archivo-grid-fecha">'+n.fecha+'</span></div></a>';
   }).join('');
 }
-renderProximos(); renderCal(); renderGrupos();
+renderProximos(); renderJugados(); renderCal(); renderGrupos();
 </script>
 <script src="noticias.js"></script>
 <script>renderNoticias();</script>
