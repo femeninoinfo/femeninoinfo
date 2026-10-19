@@ -80,6 +80,22 @@ var PARTIDOS = [
  {n:31,g:'Tercer puesto',d:31,h:null,ta:'Perdedor 29',tb:'Perdedor 30',e:RPD},
  {n:32,g:'Final',d:31,h:null,ta:'Ganador 29',tb:'Ganador 30',e:RPD}
 ];
+/* Clasificación manual (se actualiza a mano cuando matemáticamente quedan clasificados o eliminados) */
+var CLASIFICADOS = ['COR','SFE','PAL'];
+var ELIMINADOS = ['CAR','CCO','UNI'];
+function posiciones(g){
+  var T = {};
+  GRUPOS[g].forEach(function(c){ T[c]={c:c,pj:0,g:0,e:0,p:0,gf:0,gc:0,pts:0}; });
+  PARTIDOS.forEach(function(m){
+    if(m.g!==g || !m.res) return;
+    var a=T[m.a], b=T[m.b], x=m.res[0], y=m.res[1];
+    a.pj++; b.pj++; a.gf+=x; a.gc+=y; b.gf+=y; b.gc+=x;
+    if(x>y){ a.g++; b.p++; a.pts+=3; } else if(x<y){ b.g++; a.p++; b.pts+=3; } else { a.e++; b.e++; a.pts++; b.pts++; }
+  });
+  return Object.keys(T).map(function(k){ return T[k]; }).sort(function(u,v){
+    return v.pts-u.pts || (v.gf-v.gc)-(u.gf-u.gc) || v.gf-u.gf || EQ[u.c].n.localeCompare(EQ[v.c].n);
+  });
+}
 var DIAS = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
 function kick(p){ return Date.UTC(2026,9,p.d,(p.h||15)+5,0); } // hora Ecuador -> UTC
 function horaAR(p){ return p.h==null ? 'A definir' : ((p.h+2)%24)+':00'; }

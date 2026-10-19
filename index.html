@@ -661,8 +661,56 @@
         <p class="tabla-fecha">Tabla Anual — acumulado Apertura + Clausura, 5 oct 2026</p>
       </div>
     </div>
+    <!-- POSICIONES LIBERTADORES -->
+    <div class="lib-panel" id="libPanel">
+      <div class="lib-panel-head"><span>🏆 Libertadores Femenina</span><a href="libertadores-femenina.html">Ver más →</a></div>
+      <div class="lib-panel-body" id="libPanelBody"></div>
+    </div>
   </div>
 </section>
+<style>
+.lib-panel{height:560px;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(201,162,39,.5);border-top:4px solid #c9a227;border-radius:12px;overflow:hidden}
+.lib-panel-head{background:#0b1f3f;color:#e8c552;padding:13px 14px;display:flex;align-items:center;justify-content:space-between;font-family:'DM Sans',sans-serif;font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.lib-panel-head a{color:#e8c552;text-decoration:none;font-size:11px;font-weight:700;text-transform:none;letter-spacing:0}
+.lib-panel-body{flex:1;overflow-y:auto;padding:4px 12px 12px}
+.lib-g-t{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1.5px;color:#a8741a;margin:10px 0 2px}
+.lib-tb{width:100%;border-collapse:collapse;font-size:12px;color:#0b1f3f}
+.lib-tb th{font-size:9px;letter-spacing:.6px;text-transform:uppercase;color:#999;font-weight:700;text-align:center;padding:3px 1px}
+.lib-tb th:nth-child(2){text-align:left}
+.lib-tb td{padding:5px 1px;border-bottom:1px solid #f1f1f1;text-align:center}
+.lib-tb tr:last-child td{border-bottom:none}
+.lib-tb .lp{width:16px;color:#999;font-weight:700}
+.lib-tb .ln{text-align:left;display:flex;align-items:center;gap:6px;font-weight:600;white-space:nowrap;overflow:hidden}
+.lib-tb .ln span.lm{width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;flex-shrink:0;overflow:hidden}
+.lib-tb .ln span.lm img{width:100%;height:100%;object-fit:contain;background:#fff;padding:1px;box-sizing:border-box}
+.lib-tb .ln span.lt{overflow:hidden;text-overflow:ellipsis}
+.lib-tb tr.top2 .lp{color:#a8741a}
+.lib-tb tr.clasif{background:rgba(0,156,59,.08)}
+.lib-tb tr.clasif .lp{color:#0a7a2f}
+.lib-tb tr.elim{opacity:.5}
+.lib-tb tr.arg{background:linear-gradient(90deg,rgba(116,172,223,.25),transparent)}
+.lib-nota{font-size:10px;color:#999;margin-top:10px;line-height:1.4}
+.portal-inner{grid-template-columns:1fr 190px 300px 280px!important}
+@media(max-width:1180px){.portal-inner{grid-template-columns:1fr 300px 280px!important}.nota-grilla{display:none!important}}
+@media(max-width:900px){.portal-inner{grid-template-columns:1fr!important}.lib-panel{height:auto}.lib-panel-body{max-height:420px}}
+</style>
+<script>
+(function(){
+  var h='';
+  Object.keys(GRUPOS).forEach(function(g){
+    h+='<div class="lib-g-t">GRUPO '+g+'</div><table class="lib-tb"><thead><tr><th></th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead><tbody>';
+    posiciones(g).forEach(function(r,i){
+      var t=EQ[r.c], dg=r.gf-r.gc;
+      var cls=(r.c==='BEL'?' arg':'')+(CLASIFICADOS.indexOf(r.c)>-1?' clasif':'')+(ELIMINADOS.indexOf(r.c)>-1?' elim':'')+(i<2?' top2':'');
+      var esc=t.img?'<span class="lm"><img src="'+t.img+'" alt="" loading="lazy" onerror="var s=this.parentNode;s.style.background=\''+t.bg+'\';s.style.color=\''+t.tx+'\';s.textContent=\''+r.c+'\'"/></span>':'<span class="lm" style="background:'+t.bg+';color:'+t.tx+'">'+r.c+'</span>';
+      h+='<tr class="'+cls+'"><td class="lp">'+(i+1)+'</td><td class="ln">'+esc+'<span class="lt">'+t.n+'</span></td><td>'+r.pj+'</td><td>'+(dg>0?'+':'')+dg+'</td><td><b>'+r.pts+'</b></td></tr>';
+    });
+    h+='</tbody></table>';
+  });
+  h+='<p class="lib-nota">Avanzan los 2 primeros de cada grupo a cuartos. Verde: clasificado. Gris: eliminado.</p>';
+  document.getElementById('libPanelBody').innerHTML=h;
+})();
+</script>
 <!-- ÚLTIMAS NOTICIAS -->
 <section id="noticias" style="background:#1a0035;padding:8px 24px 48px;border-bottom:1px solid #3d0066;">
   <div style="max-width:1280px;margin:0 auto;">
