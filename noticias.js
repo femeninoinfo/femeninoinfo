@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 218,
+    titulo: "Belgrano vs. Universitario: hora, TV y qué necesita para clasificar a cuartos",
+    resumen: "El miércoles 21 a las 21, las Piratas cierran la fase de grupos de la Libertadores Femenina y salen a buscar la clasificación. Se ve por el YouTube de TyC Sports Play.",
+    imagen: "https://www.infobae.com/resizer/v2/S46DIJGOQRFEVGIFD4IOYMM4BE.jfif?auth=31a3750b17c2022bfbfbb062be17e1f7484dd330398156b4f95c1093caf647ee&smart=true&width=1200&height=675&quality=85",
+    categoria: "libertadores",
+    fecha: "19 oct 2026",
+    pagina: "belgrano-universitario-libertadores-femenina-hora-donde-ver.html"
+  },
+  {
+    id: 217,
+    titulo: "La Sub 17 enfrenta a Nueva Zelanda: hora y cómo verlo por TV Pública",
+    resumen: "Este martes 20 a las 12, la Selección busca sus primeros puntos en el Mundial Sub 17 de Marruecos. Se transmite por TV Pública y DSports.",
+    imagen: "https://www.infobae.com/resizer/v2/LH7J7ZY5TFEAXBAEARBCVBBI3M.jpg?auth=df0bf782596d87489a19e1b7f348d0297b0f00db5b026309c726d209fe229b0c&smart=true&width=1200&height=675&quality=85",
+    categoria: "seleccion",
+    fecha: "19 oct 2026",
+    pagina: "sub-17-nueva-zelanda-mundial-femenino-hora-tv-publica.html"
+  },
+  {
+    id: 216,
+    titulo: "Belgrano cayó 3-1 ante Palmeiras y se juega su pase a cuartos en la última fecha",
+    resumen: "Alaides Paz puso en ventaja a las Piratas, pero Palmeiras lo dio vuelta con dos goles de Zaneratto y uno de Brena. Belgrano suma un punto y cierra ante Universitario.",
+    imagen: "https://www.infobae.com/resizer/v2/RDJGNWUT3FFWDFFCJ73PB4HY3A.jfif?auth=38d697d35d059658b51f559d2ef51292e7261d38bfd0f19c3d7e8603c34a5224&smart=true&width=1200&height=675&quality=85",
+    categoria: "libertadores",
+    fecha: "19 oct 2026",
+    pagina: "belgrano-cayo-3-1-palmeiras-libertadores-femenina.html"
+  },
+  {
+    id: 215,
+    titulo: "La Sub 17 cayó 2-1 ante Alemania en su debut histórico en el Mundial femenino",
+    resumen: "Mercedes Diz hizo el primer gol de Argentina en un Mundial Sub 17 femenino, pero Alemania dio vuelta el partido en Rabat. El martes, ante Nueva Zelanda.",
+    imagen: "https://www.infobae.com/resizer/v2/7WKOQ4IBBRCSZKART7NRZC6OHI.jpg?auth=d37ae6573f919777036c59cfa42ab7c9b0d56eeb1585447df7bd4f5b0285806f&smart=true&width=1200&height=675&quality=85",
+    categoria: "seleccion",
+    fecha: "19 oct 2026",
+    pagina: "sub-17-cayo-2-1-alemania-mundial-femenino-marruecos.html"
+  },
+  {
     id: 214,
     titulo: "Belgrano debutó en la Libertadores Femenina con un 1-1 ante Independiente del Valle",
     resumen: "Alaides Paz hizo el primer gol de la historia del club en el torneo y Karen Páez igualó de penal. El domingo, las Piratas juegan ante Palmeiras.",

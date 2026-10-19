@@ -617,6 +617,22 @@
     <div class="grid-carrusel" id="carruselUltimas"></div>
   </div>
 </section>
+<!-- LIBERTADORES FEMENINA -->
+<section class="sec-clara sec-lib" id="libertadores">
+  <div class="sec-clara-inner">
+    <div class="section-header" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <div>
+        <span class="section-pill pill-lib">Copa Libertadores Femenina · Quito 2026</span>
+        <h2 class="section-title sec-title-lib">Libertadores Femenina</h2>
+        <span class="section-line line-lib"></span>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <a href="libertadores-femenina.html" class="ver-mas-btn ver-mas-lib">Calendario y grupos →</a>
+      </div>
+    </div>
+    <div class="home-cat-grid" id="gridLibertadoresSec"></div>
+  </div>
+</section>
 <!-- FÚTBOL ARGENTINO -->
 <section class="sec-clara sec-arg" id="apertura">
   <div class="sec-clara-inner">
@@ -756,6 +772,11 @@
   .ver-mas-sel{color:#005cbf}.ver-mas-sel:hover{background:#005cbf;color:#fff}
   .ver-mas-int{color:#006644}.ver-mas-int:hover{background:#006644;color:#fff}
   .ver-mas-mundial{color:#002776}.ver-mas-mundial:hover{background:#002776;color:#fff}
+  .sec-lib{border-top-color:#c9a227;background:linear-gradient(180deg,#fbf6e6 0%,#f6f6f8 70%)}
+  .sec-title-lib{color:#0b1f3f!important}
+  .line-lib{background:#c9a227!important}
+  .pill-lib{background:#0b1f3f!important;color:#e8c552!important}
+  .ver-mas-lib{color:#0b1f3f}.ver-mas-lib:hover{background:#0b1f3f;color:#e8c552}
   .sec-mundial{border-top-color:#009c3b}
   .sec-title-mundial{color:#009c3b!important}
   .line-mundial{background:#002776!important}
@@ -941,6 +962,7 @@ function cargarUltimaNoticia() {
   }
   renderCarruselUltimas(noticias.slice(0,10));
   var CAT_SECTIONS = [
+    {cat:'libertadores', feat:'featLibertadores', grid:'gridLibertadoresSec', list:'listLibertadores'},
     {cat:'apertura', feat:'featApertura', grid:'gridAperturaSec', list:'listApertura'},
     {cat:'seleccion', feat:'featSeleccion', grid:'gridSeleccionSec', list:'listSeleccion'},
     {cat:'internacional', feat:'featInternacional', grid:'gridInternacionalSec', list:'listInternacional'},

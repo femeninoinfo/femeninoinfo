@@ -96,7 +96,7 @@
     .cal-h small{display:block;font-weight:400;color:#999;font-size:10px}
     .cal-vs{display:flex;align-items:center;gap:8px;color:#0b1f3f;font-weight:600}
     .cal-vs .mini{width:26px;height:26px;border-radius:50%;font-size:10px;display:inline-flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;letter-spacing:.5px;flex-shrink:0;overflow:hidden}
-    .cal-vs .mini img{width:100%;height:100%;object-fit:contain;background:#fff}
+    .cal-vs .mini img{width:100%;height:100%;object-fit:contain;background:#fff;padding:2px;box-sizing:border-box}
     .cal-vs .vs{color:#aaa;font-weight:400;font-size:11px}
     .cal-vs b.sc{background:#0b1f3f;color:#fff;border-radius:4px;padding:1px 8px;font-size:13px}
     .cal-est{font-size:11px;color:#777;text-align:right}
@@ -111,8 +111,23 @@
     .grow{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f1f1f1;font-size:13px;font-weight:600;color:#0b1f3f}
     .grow:last-child{border-bottom:none}
     .grow .mini{width:28px;height:28px;border-radius:50%;font-size:10px;display:inline-flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;letter-spacing:.5px;flex-shrink:0;overflow:hidden}
-    .grow .mini img{width:100%;height:100%;object-fit:contain;background:#fff}
+    .grow .mini img{width:100%;height:100%;object-fit:contain;background:#fff;padding:2px;box-sizing:border-box}
     .grow small{color:#999;font-weight:400;margin-left:auto;font-size:11px}
+    .gtabla{width:100%;border-collapse:collapse;font-size:12.5px;color:#0b1f3f}
+    .gtabla th{font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#999;font-weight:700;text-align:center;padding:4px 2px}
+    .gtabla th:nth-child(2){text-align:left}
+    .gtabla td{padding:7px 2px;border-bottom:1px solid #f1f1f1;text-align:center}
+    .gtabla tr:last-child td{border-bottom:none}
+    .gtabla .gpos{width:18px;color:#999;font-weight:700}
+    .gtabla .gnom{text-align:left;display:flex;align-items:center;gap:7px;font-weight:600}
+    .gtabla .gnom .mini{width:24px;height:24px;border-radius:50%;font-size:9px;display:inline-flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;flex-shrink:0;overflow:hidden}
+    .gtabla .gnom .mini img{width:100%;height:100%;object-fit:contain;background:#fff;padding:2px;box-sizing:border-box}
+    .gtabla tr.top2 .gpos{color:#a8741a}
+    .gtabla tr.clasif{background:rgba(0,156,59,0.08)}
+    .gtabla tr.clasif .gpos{color:#0a7a2f}
+    .gtabla tr.elim{opacity:.5}
+    .gtabla tr.arg{background:linear-gradient(90deg,rgba(116,172,223,0.22),transparent)}
+    .gnota{grid-column:1/-1;margin-top:2px}
     .grow.arg{background:linear-gradient(90deg,rgba(116,172,223,0.18),transparent);margin:0 -14px;padding-left:14px;padding-right:14px}
     /* noticias */
     .lib-noticias{max-width:1280px;margin:0 auto;padding:34px 24px 56px}
@@ -245,22 +260,42 @@ var EQ = {
   NAC:{n:'Nacional',p:'Uruguay',bg:'#1e3a8a',tx:'#ffffff'},
   UCH:{n:'Universidad de Chile',p:'Chile',bg:'#1d3d91',tx:'#ffffff'}
 };
+/* Escudos (Wikimedia). Si alguno no carga, se muestra el monograma de color. */
+var WK='https://upload.wikimedia.org/wikipedia/';
+var LOGOS = {
+ COR:'en/thumb/5/5a/Sport_Club_Corinthians_Paulista_crest.svg/250px-Sport_Club_Corinthians_Paulista_crest.svg.png',
+ CCO:'en/thumb/b/be/Colo-Colo.svg/250px-Colo-Colo.svg.png',
+ CAR:'en/thumb/f/f4/Caracas_FC.png/250px-Caracas_FC.png',
+ SFE:'commons/thumb/4/43/Independiente_Santa_Fe_logo.svg/250px-Independiente_Santa_Fe_logo.svg.png',
+ IDV:'commons/thumb/b/b1/Escudoindependientedelvalle2023.png/250px-Escudoindependientedelvalle2023.png',
+ UNI:'commons/thumb/7/77/Logo_oficial_de_Universitario.svg/250px-Logo_oficial_de_Universitario.svg.png',
+ PAL:'commons/thumb/6/68/Sociedade_Esportiva_Palmeiras_logo_%281_red_star%29.svg/250px-Sociedade_Esportiva_Palmeiras_logo_%281_red_star%29.svg.png',
+ CRU:'commons/thumb/9/90/Cruzeiro_Esporte_Clube_%28logo%29.svg/250px-Cruzeiro_Esporte_Clube_%28logo%29.svg.png',
+ LDU:'commons/thumb/8/8a/Liga_Deportiva_Universitaria_%28Ecuador%29_logo_%285_stars%29.svg/250px-Liga_Deportiva_Universitaria_%28Ecuador%29_logo_%285_stars%29.svg.png',
+ BOL:'en/thumb/1/13/Club_Bol%C3%ADvar_logo.svg/250px-Club_Bol%C3%ADvar_logo.svg.png',
+ OLI:'en/thumb/4/45/Club_Olimpia_logo.svg/250px-Club_Olimpia_logo.svg.png',
+ DCA:'commons/thumb/8/8b/Deportivo_Cali.svg/250px-Deportivo_Cali.svg.png',
+ LIB:'en/thumb/e/ee/Club_Libertad_logo.png/250px-Club_Libertad_logo.png',
+ NAC:'commons/thumb/1/1e/Club_Nacional_de_Football_logo.svg/250px-Club_Nacional_de_Football_logo.svg.png',
+ UCH:'commons/thumb/2/2d/Emblema_del_Club_Universidad_de_Chile.png/250px-Emblema_del_Club_Universidad_de_Chile.png'
+};
+Object.keys(LOGOS).forEach(function(k){ EQ[k].img = WK+LOGOS[k]; });
 var GRUPOS = {A:['COR','CCO','CAR','SFE'],B:['IDV','BEL','UNI','PAL'],C:['CRU','LDU','BOL','OLI'],D:['DCA','LIB','NAC','UCH']};
 var RPD='Estadio Rodrigo Paz Delgado', BG='Estadio Banco Guayaquil';
 // [n, grupo/fase, dia (octubre), hora Ecuador, local, visitante, estadio, resultado opcional]
 var PARTIDOS = [
- {n:1,g:'A',d:15,h:15,a:'COR',b:'CCO',e:RPD},
- {n:2,g:'A',d:15,h:19,a:'CAR',b:'SFE',e:RPD},
+ {n:1,g:'A',d:15,h:15,a:'COR',b:'CCO',e:RPD,res:[2,0]},
+ {n:2,g:'A',d:16,h:22,a:'CAR',b:'SFE',e:RPD,res:[2,3]}, // reprogramado (estaba el 15 a las 19)
  {n:3,g:'B',d:15,h:15,a:'IDV',b:'BEL',e:BG,res:[1,1]},
- {n:4,g:'B',d:15,h:19,a:'UNI',b:'PAL',e:BG},
- {n:6,g:'C',d:16,h:15,a:'BOL',b:'OLI',e:RPD},
- {n:7,g:'D',d:16,h:15,a:'DCA',b:'LIB',e:BG},
- {n:5,g:'C',d:16,h:19,a:'CRU',b:'LDU',e:RPD},
- {n:8,g:'D',d:16,h:19,a:'NAC',b:'UCH',e:BG},
- {n:9,g:'A',d:18,h:15,a:'CCO',b:'SFE',e:RPD},
- {n:11,g:'B',d:18,h:15,a:'BEL',b:'PAL',e:BG},
- {n:10,g:'A',d:18,h:19,a:'COR',b:'CAR',e:RPD},
- {n:12,g:'B',d:18,h:19,a:'IDV',b:'UNI',e:BG},
+ {n:4,g:'B',d:15,h:19,a:'UNI',b:'PAL',e:BG,res:[0,1]},
+ {n:6,g:'C',d:16,h:15,a:'BOL',b:'OLI',e:RPD,res:[2,2]},
+ {n:7,g:'D',d:16,h:15,a:'DCA',b:'LIB',e:BG,res:[1,1]},
+ {n:5,g:'C',d:16,h:19,a:'CRU',b:'LDU',e:RPD,res:[2,1]},
+ {n:8,g:'D',d:16,h:19,a:'NAC',b:'UCH',e:BG,res:[0,0]},
+ {n:9,g:'A',d:18,h:15,a:'CCO',b:'SFE',e:RPD,res:[1,2]},
+ {n:11,g:'B',d:18,h:15,a:'BEL',b:'PAL',e:BG,res:[1,3]},
+ {n:10,g:'A',d:18,h:19,a:'COR',b:'CAR',e:RPD,res:[7,0]},
+ {n:12,g:'B',d:18,h:19,a:'IDV',b:'UNI',e:BG,res:[4,2]},
  {n:14,g:'C',d:19,h:15,a:'CRU',b:'BOL',e:RPD},
  {n:15,g:'D',d:19,h:15,a:'DCA',b:'NAC',e:BG},
  {n:13,g:'C',d:19,h:19,a:'LDU',b:'OLI',e:RPD},
@@ -284,12 +319,12 @@ var PARTIDOS = [
 ];
 var DIAS = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
 function kick(p){ return Date.UTC(2026,9,p.d,(p.h||15)+5,0); } // hora Ecuador -> UTC
-function horaAR(p){ return p.h==null ? 'A definir' : (p.h+2)+':00'; }
+function horaAR(p){ return p.h==null ? 'A definir' : ((p.h+2)%24)+':00'; }
 function fechaTxt(d){ var dt=new Date(Date.UTC(2026,9,d)); return DIAS[dt.getUTCDay()]+' '+d+' de octubre'; }
 function esc(c, grande){
   var t=EQ[c];
-  var inner = t.img ? '<img src="'+t.img+'" alt="'+t.n+'"/>' : c;
-  return '<span class="'+(grande?'esc':'mini')+'" style="background:'+t.bg+';color:'+t.tx+'">'+inner+'</span>';
+  var inner = t.img ? '<img src="'+t.img+'" alt="'+t.n+'" loading="lazy" onerror="var s=this.parentNode;s.style.background=\''+t.bg+'\';s.style.color=\''+t.tx+'\';s.textContent=\''+c+'\'"/>' : c;
+  return '<span class="'+(grande?'esc':'mini')+'" style="background:'+(t.img?'#fff':t.bg)+';color:'+t.tx+'">'+inner+'</span>';
 }
 function nombre(p,lado){ return lado==='a' ? (p.a?EQ[p.a].n:p.ta) : (p.b?EQ[p.b].n:p.tb); }
 function crest(p,lado,grande){
@@ -351,15 +386,34 @@ function toggleCal(){
 }
 
 /* Grupos */
+/* Clasificación manual (se actualiza a mano cuando matemáticamente quedan clasificados o eliminados) */
+var CLASIFICADOS = ['COR','SFE','PAL'];
+var ELIMINADOS = ['CAR','CCO','UNI'];
+function posiciones(g){
+  var T = {};
+  GRUPOS[g].forEach(function(c){ T[c]={c:c,pj:0,g:0,e:0,p:0,gf:0,gc:0,pts:0}; });
+  PARTIDOS.forEach(function(m){
+    if(m.g!==g || !m.res) return;
+    var a=T[m.a], b=T[m.b], x=m.res[0], y=m.res[1];
+    a.pj++; b.pj++; a.gf+=x; a.gc+=y; b.gf+=y; b.gc+=x;
+    if(x>y){ a.g++; b.p++; a.pts+=3; } else if(x<y){ b.g++; a.p++; b.pts+=3; } else { a.e++; b.e++; a.pts++; b.pts++; }
+  });
+  return Object.keys(T).map(function(k){ return T[k]; }).sort(function(u,v){
+    return v.pts-u.pts || (v.gf-v.gc)-(u.gf-u.gc) || v.gf-u.gf || EQ[u.c].n.localeCompare(EQ[v.c].n);
+  });
+}
 function renderGrupos(){
   var h='';
   Object.keys(GRUPOS).forEach(function(g){
     h += '<div class="gcard g'+g+'"><div class="gcard-h">GRUPO '+g+'</div><div class="gcard-body">';
-    GRUPOS[g].forEach(function(c){
-      h += '<div class="grow'+(c==='BEL'?' arg':'')+'">'+esc(c,false)+EQ[c].n+'<small>'+EQ[c].p+'</small></div>';
+    h += '<table class="gtabla"><thead><tr><th></th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead><tbody>';
+    posiciones(g).forEach(function(r, i){
+      var dg = r.gf-r.gc, cls = (r.c==='BEL'?' arg':'') + (CLASIFICADOS.indexOf(r.c)>-1?' clasif':'') + (ELIMINADOS.indexOf(r.c)>-1?' elim':'') + (i<2?' top2':'');
+      h += '<tr class="'+cls+'"><td class="gpos">'+(i+1)+'</td><td class="gnom">'+esc(r.c,false)+'<span>'+EQ[r.c].n+'</span></td><td>'+r.pj+'</td><td>'+(dg>0?'+':'')+dg+'</td><td><b>'+r.pts+'</b></td></tr>';
     });
-    h += '</div></div>';
+    h += '</tbody></table></div></div>';
   });
+  h += '<p class="cal-nota gnota">Los dos primeros de cada grupo avanzan a cuartos de final. Verde: clasificado a cuartos. Gris: eliminado. Desempate: resultado entre los equipos igualados y luego diferencia de gol.</p>';
   document.getElementById('grupos').innerHTML = h;
 }
 
