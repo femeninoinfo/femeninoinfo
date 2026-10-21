@@ -55,14 +55,14 @@ var PARTIDOS = [
  {n:7,g:'D',d:16,h:15,a:'DCA',b:'LIB',e:BG,res:[1,1]},
  {n:5,g:'C',d:16,h:19,a:'CRU',b:'LDU',e:RPD,nota:'cruzeiro-vencio-ldu-debut-libertadores-femenina.html',res:[2,1]},
  {n:8,g:'D',d:16,h:19,a:'NAC',b:'UCH',e:BG,res:[0,0]},
- {n:9,g:'A',d:18,h:15,a:'CCO',b:'SFE',e:RPD,res:[1,2]},
+ {n:9,g:'A',d:18,h:15,a:'CCO',b:'SFE',e:RPD,nota:'colo-colo-banini-eliminado-libertadores-femenina.html',res:[1,2]},
  {n:11,g:'B',d:18,h:15,a:'BEL',b:'PAL',e:BG,nota:'belgrano-cayo-3-1-palmeiras-libertadores-femenina.html',res:[1,3]},
  {n:10,g:'A',d:18,h:19,a:'COR',b:'CAR',e:RPD,res:[7,0]},
  {n:12,g:'B',d:18,h:19,a:'IDV',b:'UNI',e:BG,nota:'dragonas-idv-vencio-universitario-libertadores-femenina.html',res:[4,2]},
- {n:14,g:'C',d:19,h:15,a:'CRU',b:'BOL',e:RPD},
- {n:15,g:'D',d:19,h:15,a:'DCA',b:'NAC',e:BG},
- {n:13,g:'C',d:19,h:19,a:'LDU',b:'OLI',e:RPD},
- {n:16,g:'D',d:19,h:19,a:'LIB',b:'UCH',e:BG},
+ {n:14,g:'C',d:19,h:15,a:'CRU',b:'BOL',e:RPD,res:[3,0]},
+ {n:15,g:'D',d:19,h:15,a:'DCA',b:'NAC',e:BG,res:[2,0]}, // se interrumpió más de una hora por tormenta eléctrica y se reanudó
+ {n:13,g:'C',d:19,h:19,a:'LDU',b:'OLI',e:RPD,res:[0,1]},
+ {n:16,g:'D',d:19,h:19,a:'LIB',b:'UCH',e:BG,res:[2,1]},
  {n:17,g:'A',d:21,h:15,a:'SFE',b:'COR',e:BG},
  {n:18,g:'A',d:21,h:15,a:'CCO',b:'CAR',e:RPD},
  {n:19,g:'B',d:21,h:19,a:'PAL',b:'IDV',e:BG},
@@ -81,8 +81,8 @@ var PARTIDOS = [
  {n:32,g:'Final',d:31,h:null,ta:'Ganador 29',tb:'Ganador 30',e:RPD}
 ];
 /* Clasificación manual (se actualiza a mano cuando matemáticamente quedan clasificados o eliminados) */
-var CLASIFICADOS = ['COR','SFE','PAL'];
-var ELIMINADOS = ['CAR','CCO','UNI'];
+var CLASIFICADOS = ['COR','SFE','PAL','CRU'];
+var ELIMINADOS = ['CAR','CCO','UNI','LDU'];
 function posiciones(g){
   var T = {};
   GRUPOS[g].forEach(function(c){ T[c]={c:c,pj:0,g:0,e:0,p:0,gf:0,gc:0,pts:0}; });

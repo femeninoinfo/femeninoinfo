@@ -302,19 +302,7 @@
 <!-- HERO PORTAL -->
 <section class="portal-hero">
   <div class="portal-inner">
-    <div class="nota-grande" id="ultimaHero" onclick="abrirUltima()" style="cursor:pointer;">
-      <img id="ultimaImg" src="" alt="" class="nota-grande-img"/>
-      <div class="nota-grande-overlay"></div>
-      <button class="hero-nav hero-nav-prev" onclick="prevHeroSlide(event)" aria-label="Noticia anterior">&#10094;</button>
-      <button class="hero-nav hero-nav-next" onclick="nextHeroSlide(event)" aria-label="Noticia siguiente">&#10095;</button>
-      <div class="nota-grande-content">
-        <div class="nota-grande-badge"><span class="nota-grande-dot"></span> Reciente</div>
-        <p class="nota-grande-titulo" id="ultimaTitulo">Cargando...</p>
-        <p class="nota-grande-resumen" id="ultimaResumen"></p>
-        <div class="hero-dots" id="heroDots"></div>
-      </div>
-    </div>
-    <div class="nota-grilla" id="noticiasChicas"></div>
+    <div class="top3" id="top3"></div>
     <div class="tabla-panel">
       <div class="torneo-header">
         <button class="torneo-btn active" onclick="showTorneo('clausura',this)">Clausura</button>
@@ -692,12 +680,25 @@
   </div>
 </section>
 <style>
-.lib-panel{order:3;height:560px;display:flex;flex-direction:column;background:linear-gradient(180deg,#0b1f3f 0%,#071530 100%);border:2px solid #c9a227;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px rgba(232,197,82,.25),0 8px 28px rgba(201,162,39,.28)}
+.top3{grid-column:1/-1;order:1;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.top3-card{position:relative;height:300px;border-radius:12px;overflow:hidden;cursor:pointer;background:#1a0035}
+.top3-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.top3-card:hover img{transform:scale(1.04)}
+.top3-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.93) 0%,rgba(0,0,0,.4) 55%,rgba(0,0,0,.05) 100%)}
+.top3-body{position:absolute;left:0;right:0;bottom:0;padding:16px;z-index:2}
+.top3-cat{display:inline-block;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 8px;border-radius:3px;color:#fff;margin-bottom:8px}
+.top3-t{font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:700;color:#fff;line-height:1.3;margin:0 0 4px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.top3-f{font-size:11px;color:rgba(255,255,255,.65)}
+.lib-panel{order:3;height:auto;display:flex;flex-direction:column;background:linear-gradient(180deg,#0b1f3f 0%,#071530 100%);border:2px solid #c9a227;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px rgba(232,197,82,.25),0 8px 28px rgba(201,162,39,.28)}
 .tabla-panel{order:4}
 .lib-panel-head{display:block;text-decoration:none;text-align:center;padding:16px 12px 12px;background:linear-gradient(180deg,#f3d77a 0%,#c9a227 55%,#a8741a 100%);color:#0b1f3f}
 .lib-panel-head .lph-t{display:block;font-family:'Bebas Neue',sans-serif;font-size:34px;line-height:.95;letter-spacing:2px;color:#0b1f3f;text-shadow:0 1px 0 rgba(255,255,255,.35)}
 .lib-panel-head .lph-s{display:block;margin-top:6px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#3b2a05}
-.lib-panel-body{flex:1;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:10px}
+.lib-panel-body{flex:1;overflow:visible;padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:start}
+.lib-nota{grid-column:1/-1}
+.tabla-panel{height:auto!important}
+.tabla-panel .tab-content{overflow:visible!important;max-height:none!important}
+#tab-tabla-clausura tbody tr:nth-child(n+11){display:none}
 .lib-gc{flex:0 0 auto;background:#fff;border-radius:10px;overflow:hidden;border-left:5px solid #c9a227}
 .lib-g-t{display:flex;align-items:center;gap:8px;background:linear-gradient(90deg,#0b1f3f,#17356b);padding:5px 10px;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:800;letter-spacing:.14em;color:#e8c552}
 .lib-g-t b{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#e8c552;color:#0b1f3f;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:0;line-height:1}
@@ -718,9 +719,9 @@
 .lib-tb tr.arg{background:linear-gradient(90deg,rgba(116,172,223,.25),transparent)}
 .lib-nota{display:flex;gap:12px;justify-content:center;font-size:10px;color:#e8c552;font-weight:700;letter-spacing:.04em}
 .lib-nota i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:-1px}
-.portal-inner{grid-template-columns:1fr 180px 290px 300px!important}
-@media(max-width:1180px){.portal-inner{grid-template-columns:1fr 290px 300px!important}.nota-grilla{display:none!important}}
-@media(max-width:900px){.portal-inner{grid-template-columns:1fr!important}.lib-panel{height:auto}.lib-panel-body{max-height:420px}}
+.portal-inner{grid-template-columns:1fr 1fr!important;align-items:start}
+@media(max-width:900px){.portal-inner{grid-template-columns:1fr!important}.top3{grid-template-columns:1fr}.top3-card{height:220px}.lib-panel-body{grid-template-columns:1fr}}
+@media(min-width:901px) and (max-width:1100px){.lib-panel-body{grid-template-columns:1fr}}
 </style>
 <script>
 (function(){
@@ -1032,6 +1033,7 @@ var heroSlides = [];
 var heroIndex = 0;
 var heroTimer = null;
 function renderHeroSlide(i) {
+  return;
   var n = heroSlides[i];
   if(!n) return;
   var img = document.getElementById('ultimaImg');
@@ -1080,29 +1082,22 @@ function prevHeroSlide(e) {
 }
 function cargarUltimaNoticia() {
   if(!noticias || noticias.length === 0) return;
-  heroSlides = noticias.slice(0,5);
+  heroSlides = noticias.slice(0,3);
   heroIndex = 0;
-  renderHeroSlide(0);
-  resetHeroTimer();
-  var chicas = document.getElementById('noticiasChicas');
-  if(chicas) {
-    chicas.innerHTML = '';
-    var cats = {seleccion:'Selección', apertura:'Argentino', internacional:'Internacional', libertadores:'Libertadores'};
-    for(var i=1; i<=3 && i<noticias.length; i++) {
-      var m = noticias[i];
-      var cat = cats[m.categoria] || m.categoria;
+  var t3 = document.getElementById('top3');
+  if(t3) {
+    t3.innerHTML = '';
+    var cats = {seleccion:'Selección', apertura:'Argentino', internacional:'Internacional', libertadores:'Libertadores', mundial2027:'Mundial 2027'};
+    var cols = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', libertadores:'#a8741a', mundial2027:'#c800ff' };
+    heroSlides.forEach(function(m){
       var card = document.createElement('div');
-      card.className = 'nota-chica';
-      card.onclick = (function(p){ return function(){ window.open(p,'_blank'); }; })(m.pagina);
-      var chicaBorderColors = { apertura:'#3d0066', seleccion:'#005cbf', internacional:'#006644', libertadores:'#a8741a' };
-      var chicaBorder = chicaBorderColors[m.categoria] || '#c800ff';
-      card.style.borderTop = '3px solid '+chicaBorder;
-      card.innerHTML = '<img src="'+m.imagen+'" class="nota-chica-img" alt=""/>'+
-        '<div class="nota-chica-overlay"></div>'+
-        '<span style="position:absolute;top:8px;left:8px;font-family:DM Sans,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;z-index:2;color:#fff;background:'+chicaBorder+';opacity:0.92;">'+cat+'</span>'+
-        '<div class="nota-chica-body"><p class="nota-chica-titulo">'+m.titulo+'</p><span class="nota-chica-fecha">'+m.fecha+'</span></div>';
-      chicas.appendChild(card);
-    }
+      card.className = 'top3-card';
+      card.onclick = function(){ window.open(m.pagina,'_blank'); };
+      card.innerHTML = '<img src="'+m.imagen+'" alt=""/><div class="top3-ov"></div>'+
+        '<div class="top3-body"><span class="top3-cat" style="background:'+(cols[m.categoria]||'#c800ff')+'">'+(cats[m.categoria]||m.categoria)+'</span>'+
+        '<p class="top3-t">'+m.titulo+'</p><span class="top3-f">'+m.fecha+'</span></div>';
+      t3.appendChild(card);
+    });
   }
   renderCarruselUltimas(noticias.slice(0,10));
   var CAT_SECTIONS = [
@@ -1217,7 +1212,7 @@ function abrirUltima() {
 }
 (function(){
   var heroEl = document.getElementById('ultimaHero');
-  if(!heroEl) return;
+  if(!heroEl) return; /* hero reemplazado por .top3 */
   var touchStartX = 0, touchStartY = 0, touchMoved = false;
   heroEl.addEventListener('touchstart', function(e){
     touchStartX = e.changedTouches[0].clientX;

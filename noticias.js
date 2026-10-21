@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 228,
+    titulo: "Belgrano se juega la clasificación hoy ante Universitario: hora y dónde verlo",
+    resumen: "La Pirata cordobesa necesita ganar esta noche (21 hs) y esperar que Independiente del Valle no sume ante Palmeiras. Se ve por Telefe Córdoba y Pluto TV.",
+    imagen: "https://www.infobae.com/resizer/v2/RDJGNWUT3FFWDFFCJ73PB4HY3A.jfif?auth=38d697d35d059658b51f559d2ef51292e7261d38bfd0f19c3d7e8603c34a5224&smart=true&width=1200&height=675&quality=85",
+    categoria: "libertadores",
+    fecha: "21 oct 2026",
+    pagina: "belgrano-se-juega-todo-universitario-libertadores-femenina-hoy.html"
+  },
+  {
+    id: 227,
+    titulo: "Golpe para Banini: Colo-Colo quedó afuera de la Libertadores tras perder 2-1 en el último suspiro",
+    resumen: "Mariana Zamorano marcó dos veces para Santa Fe, la segunda en el 90+2', y el equipo de Estefanía Banini quedó eliminado en la fase de grupos.",
+    imagen: "https://media.dalealbo.cl/wp-content/uploads/sites/14/2026/10/19072128/HUtij4yXMAEGEkl-1-e1792405322126-1200x740.webp",
+    categoria: "libertadores",
+    fecha: "21 oct 2026",
+    pagina: "colo-colo-banini-eliminado-libertadores-femenina.html"
+  },
+  {
+    id: 226,
+    titulo: "Ya hay cuatro en cuartos: Corinthians, Palmeiras, Santa Fe y Cruzeiro avanzan en la Libertadores Femenina",
+    resumen: "Tres brasileñas y una colombiana aseguraron su lugar entre las ocho mejores. Los cuartos de final se juegan el 24 y 25 de octubre.",
+    imagen: "https://lncimg.lance.com.br/cdn-cgi/image/width=1200,quality=75,fit=pad,format=webp/uploads/2026/10/Jogadoras-do-Corinthians-comemoram-o-gol-sobre-o-Colo-Colo-pela-Libertadores-1920x1256.jpg",
+    categoria: "libertadores",
+    fecha: "21 oct 2026",
+    pagina: "corinthians-palmeiras-santa-fe-cruzeiro-cuartos-libertadores-femenina.html"
+  },
+  {
+    id: 225,
+    titulo: "Histórico: Argentina ganó por primera vez en un Mundial Sub-17 con doblete de Mercedes Diz",
+    resumen: "La Selección Sub-17 venció 2-0 a Nueva Zelanda en Marruecos, sumó sus primeros tres puntos y se juega la clasificación el viernes ante las anfitrionas.",
+    imagen: "https://assets1.afa.com.ar/2026/D/SEP26/IMG_1162.JPG.jpeg",
+    categoria: "seleccion",
+    fecha: "21 oct 2026",
+    pagina: "argentina-vencio-nueva-zelanda-mundial-sub-17-femenino.html"
+  },
+  {
     id: 224,
     titulo: "Las Dragonas rugieron en Chillo Jijón: 4-2 a Universitario y primera alegría en la Libertadores",
     resumen: "La anfitriona se puso 3-1 en 41 minutos, Pierina Núñez descontó dos veces para el equipo peruano y Universitario terminó el primer tiempo con una jugadora menos.",
