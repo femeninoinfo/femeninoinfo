@@ -760,7 +760,19 @@
         <a href="libertadores-femenina.html" class="ver-mas-btn ver-mas-lib">Calendario y grupos →</a>
       </div>
     </div>
+    <style>
+    .lib-row{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;align-items:stretch;margin-top:8px}
+    .lib-row .vid-wrap{margin:0;max-width:none;display:flex}
+    .lib-row .vid-box{height:100%;aspect-ratio:auto;min-height:260px}
+    #gridLibertadoresSec{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:14px;overflow:visible;padding:0}
+    #gridLibertadoresSec .home-cat-card{flex:none;height:auto;min-height:150px}
+    #gridLibertadoresSec .home-cat-card:nth-child(n+5){display:none}
+    @media(max-width:900px){.lib-row{grid-template-columns:1fr}.lib-row .vid-box{aspect-ratio:16/9;height:auto}#gridLibertadoresSec .home-cat-card{min-height:170px}}
+    </style>
+    <div class="lib-row">
+    <div class="vid-wrap"><div class="vid-box"><iframe src="https://www.youtube.com/embed/ql28zcmmKUQ?start=37" title="Video Libertadores Femenina" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div>
     <div class="home-cat-grid" id="gridLibertadoresSec"></div>
+    </div>
     <style>
     .vid-wrap{margin:28px auto 0;max-width:860px}
     .vid-wrap.vid-par{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1280px}
@@ -768,7 +780,6 @@
     .vid-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
     @media(max-width:700px){.vid-wrap.vid-par{grid-template-columns:1fr}}
     </style>
-    <div class="vid-wrap"><div class="vid-box"><iframe src="https://www.youtube.com/embed/ql28zcmmKUQ?start=37" title="Video Libertadores Femenina" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div>
   </div>
 </section>
 <!-- FÚTBOL ARGENTINO -->
