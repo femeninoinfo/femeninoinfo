@@ -47,6 +47,57 @@ function abrirNoticia(id) {
   window.open(n.pagina, '_blank');
 }
 
+// ── Barra fija: botón "Trabajá con nosotros" + bloques finales (CV y proyectos) ──
+(function () {
+  var MAIL = 'femeninoinfo.marketing@gmail.com';
+  function init() {
+    if (document.getElementById('trabaja')) return;
+    var bn = document.querySelector('.brand-name');
+    if (bn && bn.textContent.trim().toLowerCase() === 'femeninoinfo') bn.innerHTML = 'femenino<b>info</b>';
+    var nav = document.querySelector('.header .nav');
+    if (nav && !nav.querySelector('.nav-trabaja')) {
+      var b = document.createElement('a');
+      b.className = 'nav-trabaja';
+      b.href = '#trabaja';
+      b.textContent = 'Trabajá con nosotros';
+      nav.appendChild(b);
+    }
+    var mob = document.getElementById('navMobile');
+    if (mob && !mob.querySelector('.nav-trabaja')) {
+      var m = document.createElement('a');
+      m.className = 'nav-trabaja';
+      m.href = '#trabaja';
+      m.textContent = 'Trabajá con nosotros';
+      m.onclick = function () { mob.classList.remove('open'); };
+      mob.appendChild(m);
+    }
+    var bloque = document.createElement('section');
+    bloque.className = 'fin-bloques';
+    bloque.id = 'trabaja';
+    bloque.innerHTML =
+      '<div class="fin-inner">' +
+        '<div class="fin-card">' +
+          '<span class="fin-tag">Sumate al equipo</span>' +
+          '<h3>¿Querés trabajar en femeninoinfo?</h3>' +
+          '<p>Mandanos tu CV y contanos qué te gustaría hacer.</p>' +
+          '<a class="fin-btn" href="mailto:' + MAIL + '?subject=CV%20-%20Quiero%20trabajar%20en%20femeninoinfo">Enviar mi CV</a>' +
+          '<span class="fin-mail">' + MAIL + '</span>' +
+        '</div>' +
+        '<div class="fin-card">' +
+          '<span class="fin-tag">Proyectos en conjunto</span>' +
+          '<h3>¿Tenés un proyecto para hacer con nosotras?</h3>' +
+          '<p>Marcas, clubes, medios, ligas o creadoras: escribinos y lo charlamos.</p>' +
+          '<a class="fin-btn" href="mailto:' + MAIL + '?subject=Proyecto%20en%20conjunto">Escribinos</a>' +
+          '<span class="fin-mail">' + MAIL + '</span>' +
+        '</div>' +
+      '</div>';
+    var redes = document.querySelector('.redes-section-nueva') || document.querySelector('.redes-section');
+    if (redes && redes.parentNode) redes.parentNode.insertBefore(bloque, redes.nextSibling);
+    else document.body.appendChild(bloque);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+
 // ── Menú mobile ───────────────────────────────────────────────────────────────
 function toggleMenu() {
   const nav = document.getElementById('navMobile');
