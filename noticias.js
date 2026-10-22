@@ -10,9 +10,9 @@ const noticias = [
   },
   {
     id: 233,
-    titulo: "Las Matadoras buscan la revancha: Talleres juega el sábado con Alianza Lima en Matute",
+    titulo: "Amistoso internacional: Talleres vuelve a jugar con Alianza Lima el sábado en Matute",
     resumen: "Tras perder 1-0 en el estreno de su primera gira internacional, el equipo cordobés vuelve a enfrentar a Alianza Lima el sábado 24 a las 17, con público.",
-    imagen: "https://www.clubtalleres.com.ar/wp-content/uploads/2026/10/Matadoras-en-peru.jpg",
+    imagen: "https://canalshowsport.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-21-at-3.12.16-PM-2048x1638-1.jpeg",
     categoria: "apertura",
     fecha: "22 oct 2026",
     pagina: "talleres-alianza-lima-amistoso-internacional-sabado-matadoras.html"
