@@ -80,14 +80,14 @@ function abrirNoticia(id) {
           '<span class="fin-tag">Sumate al equipo</span>' +
           '<h3>¿Querés trabajar en femeninoinfo?</h3>' +
           '<p>Mandanos tu CV y contanos qué te gustaría hacer.</p>' +
-          '<a class="fin-btn" href="mailto:' + MAIL + '?subject=CV%20-%20Quiero%20trabajar%20en%20femeninoinfo">Enviar mi CV</a>' +
+          '<a class="fin-btn" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=' + MAIL + '&su=CV%20-%20Quiero%20trabajar%20en%20femeninoinfo">Enviar mi CV</a>' +
           '<span class="fin-mail">' + MAIL + '</span>' +
         '</div>' +
         '<div class="fin-card">' +
           '<span class="fin-tag">Proyectos en conjunto</span>' +
           '<h3>¿Tenés un proyecto para hacer con nosotras?</h3>' +
           '<p>Marcas, clubes, medios, ligas o creadoras: escribinos y lo charlamos.</p>' +
-          '<a class="fin-btn" href="mailto:' + MAIL + '?subject=Proyecto%20en%20conjunto">Escribinos</a>' +
+          '<a class="fin-btn" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=' + MAIL + '&su=Proyecto%20en%20conjunto">Escribinos</a>' +
           '<span class="fin-mail">' + MAIL + '</span>' +
         '</div>' +
       '</div>';
