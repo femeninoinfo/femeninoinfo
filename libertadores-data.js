@@ -63,16 +63,16 @@ var PARTIDOS = [
  {n:15,g:'D',d:19,h:15,a:'DCA',b:'NAC',e:BG,res:[2,0]}, // se interrumpió más de una hora por tormenta eléctrica y se reanudó
  {n:13,g:'C',d:19,h:19,a:'LDU',b:'OLI',e:RPD,res:[0,1]},
  {n:16,g:'D',d:19,h:19,a:'LIB',b:'UCH',e:BG,res:[2,1]},
- {n:17,g:'A',d:21,h:15,a:'SFE',b:'COR',e:BG},
- {n:18,g:'A',d:21,h:15,a:'CCO',b:'CAR',e:RPD},
- {n:19,g:'B',d:21,h:19,a:'PAL',b:'IDV',e:BG},
- {n:20,g:'B',d:21,h:19,a:'BEL',b:'UNI',e:RPD},
+ {n:17,g:'A',d:21,h:15,a:'SFE',b:'COR',e:BG,nota:'corinthians-goleo-5-1-santa-fe-libertadores-femenina.html',res:[1,5]},
+ {n:18,g:'A',d:21,h:15,a:'CCO',b:'CAR',e:RPD,nota:'colo-colo-gano-3-0-caracas-banini-nos-vamos-tristes.html',res:[3,0]},
+ {n:19,g:'B',d:21,h:19,a:'PAL',b:'IDV',e:BG,nota:'palmeiras-dragonas-idv-empataron-1-1-cuartos-libertadores-femenina.html',res:[1,1]},
+ {n:20,g:'B',d:21,h:19,a:'BEL',b:'UNI',e:RPD,nota:'belgrano-gano-4-2-universitario-quedo-afuera-libertadores-femenina.html',res:[4,2]},
  {n:23,g:'D',d:22,h:15,a:'UCH',b:'DCA',e:BG},
  {n:24,g:'D',d:22,h:15,a:'LIB',b:'NAC',e:RPD},
  {n:21,g:'C',d:22,h:19,a:'OLI',b:'CRU',e:BG},
  {n:22,g:'C',d:22,h:19,a:'LDU',b:'BOL',e:RPD},
- {n:25,g:'Cuartos de final',d:24,h:null,ta:'1.º Grupo A',tb:'2.º Grupo B',e:BG},
- {n:26,g:'Cuartos de final',d:24,h:null,ta:'1.º Grupo B',tb:'2.º Grupo A',e:BG},
+ {n:25,g:'Cuartos de final',d:24,h:null,a:'COR',b:'IDV',e:BG},
+ {n:26,g:'Cuartos de final',d:24,h:null,a:'PAL',b:'SFE',e:BG},
  {n:27,g:'Cuartos de final',d:25,h:null,ta:'1.º Grupo C',tb:'2.º Grupo D',e:BG},
  {n:28,g:'Cuartos de final',d:25,h:null,ta:'1.º Grupo D',tb:'2.º Grupo C',e:BG},
  {n:30,g:'Semifinal',d:28,h:null,ta:'Ganador 25',tb:'Ganador 26',e:RPD},
@@ -81,8 +81,8 @@ var PARTIDOS = [
  {n:32,g:'Final',d:31,h:null,ta:'Ganador 29',tb:'Ganador 30',e:RPD}
 ];
 /* Clasificación manual (se actualiza a mano cuando matemáticamente quedan clasificados o eliminados) */
-var CLASIFICADOS = ['COR','SFE','PAL','CRU'];
-var ELIMINADOS = ['CAR','CCO','UNI','LDU'];
+var CLASIFICADOS = ['COR','SFE','PAL','IDV','CRU'];
+var ELIMINADOS = ['CAR','CCO','UNI','BEL','LDU'];
 function posiciones(g){
   var T = {};
   GRUPOS[g].forEach(function(c){ T[c]={c:c,pj:0,g:0,e:0,p:0,gf:0,gc:0,pts:0}; });

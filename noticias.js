@@ -1,5 +1,59 @@
 const noticias = [
   {
+    id: 234,
+    titulo: "Triplete de Ceballos, pero no alcanzó: Belgrano le ganó 4-2 a Universitario y quedó afuera de la Libertadores",
+    resumen: "Las Piratas dieron vuelta el partido, pero el 1-1 entre Palmeiras e Independiente del Valle les cerró la puerta de los cuartos en su primera Libertadores.",
+    imagen: "https://hoydia.com.ar/wp-content/uploads/2026/10/Las-Piratas-ganaron-pero-quedaron-afuera-de-la-Libertadores-1024x683-optimized.jpg",
+    categoria: "libertadores",
+    fecha: "22 oct 2026",
+    pagina: "belgrano-gano-4-2-universitario-quedo-afuera-libertadores-femenina.html"
+  },
+  {
+    id: 233,
+    titulo: "Las Matadoras buscan la revancha: Talleres juega el sábado con Alianza Lima en Matute",
+    resumen: "Tras perder 1-0 en el estreno de su primera gira internacional, el equipo cordobés vuelve a enfrentar a Alianza Lima el sábado 24 a las 17, con público.",
+    imagen: "https://www.clubtalleres.com.ar/wp-content/uploads/2026/10/Matadoras-en-peru.jpg",
+    categoria: "apertura",
+    fecha: "22 oct 2026",
+    pagina: "talleres-alianza-lima-amistoso-internacional-sabado-matadoras.html"
+  },
+  {
+    id: 232,
+    titulo: "Quedaron definidos los primeros cruces de cuartos: Corinthians–Dragonas IDV y Palmeiras–Santa Fe",
+    resumen: "Con los Grupos A y B cerrados, el sábado 24 se juegan los dos primeros cuartos de final. Los otros dos se definen con la última fecha de los Grupos C y D.",
+    imagen: "https://imagenes2.eltiempo.com/files/image_1200_535/files/fp/uploads/2026/10/21/6ad92df170dc9.r_d.1455-582-4000.jpeg",
+    categoria: "libertadores",
+    fecha: "22 oct 2026",
+    pagina: "cuartos-libertadores-femenina-corinthians-dragonas-palmeiras-santa-fe.html"
+  },
+  {
+    id: 231,
+    titulo: "Empate que sirvió a las dos: Palmeiras y Dragonas IDV igualaron 1-1 y pasaron a cuartos",
+    resumen: "Bia Zaneratto abrió de penal y Evelyn Burgos empató a los 83'. Palmeiras jugará con Santa Fe y Dragonas IDV con Corinthians.",
+    imagen: "https://www.palmeiras.com.br/wp-content/uploads/2026/10/IMG_1036-2.JPG-2000x1200.jpeg",
+    categoria: "libertadores",
+    fecha: "22 oct 2026",
+    pagina: "palmeiras-dragonas-idv-empataron-1-1-cuartos-libertadores-femenina.html"
+  },
+  {
+    id: 230,
+    titulo: "Corinthians no tuvo piedad: goleó 5-1 a Santa Fe y cerró el Grupo A como líder",
+    resumen: "Kelly Ibargüen adelantó a las colombianas a los 4 minutos, pero el tricampeón vigente respondió con goles de Duda Sampaio, Albuquerque, Aquino (2) y Robledo.",
+    imagen: "https://imagenes2.eltiempo.com/files/image_1200_535/files/fp/uploads/2026/10/21/6ad92df170dc9.r_d.1455-582-4000.jpeg",
+    categoria: "libertadores",
+    fecha: "22 oct 2026",
+    pagina: "corinthians-goleo-5-1-santa-fe-libertadores-femenina.html"
+  },
+  {
+    id: 229,
+    titulo: "Banini cerró con gol la despedida de Colo-Colo: 3-0 a Caracas y \"nos vamos tristes\"",
+    resumen: "Eliminada desde la fecha 2, Colo-Colo ganó su único partido del torneo con goles de Yanara Aedo, Mary Valencia y Estefanía Banini en el 90+2'.",
+    imagen: "https://www.contragolpe.cl/wp-content/uploads/2026/10/HVL5IFGWEAA_buo-e1792621840754.jpeg",
+    categoria: "libertadores",
+    fecha: "22 oct 2026",
+    pagina: "colo-colo-gano-3-0-caracas-banini-nos-vamos-tristes.html"
+  },
+  {
     id: 228,
     titulo: "Belgrano se juega la clasificación hoy ante Universitario: hora y dónde verlo",
     resumen: "La Pirata cordobesa necesita ganar esta noche (21 hs) y esperar que Independiente del Valle no sume ante Palmeiras. Se ve por Telefe Córdoba y Pluto TV.",
