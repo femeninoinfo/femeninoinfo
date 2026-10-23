@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 236,
+    titulo: "Infantino confirmó que el primer Mundial de Clubes femenino será en Estados Unidos",
+    resumen: "Se jugará del 5 al 30 de enero de 2028, con 19 participantes y cuadro final de 16. Ya hay siete clubes clasificados, entre ellos Corinthians.",
+    imagen: "https://www.infobae.com/resizer/v2/B33X4P2S7RBB3LAORM4C4GPPME.png?auth=af21c1b7cd84fe4e9d62595e45052c2dd4e0c471eca4ba25cb22c5e5365e5dbd&smart=true&width=1200&height=700&quality=85",
+    categoria: "internacional",
+    fecha: "23 oct 2026",
+    pagina: "infantino-confirmo-mundial-de-clubes-femenino-estados-unidos-2028.html"
+  },
+  {
+    id: 235,
+    titulo: "Es oficial: la Selección femenina juega con Alemania el 29 de noviembre en La Plata",
+    resumen: "El amistoso reinaugurará el Estadio Único Diego Armando Maradona, en la fecha FIFA de fin de año. Aún no se informó el horario.",
+    imagen: "https://www.puntocapitalnoticias.com/wp-content/uploads/2026/09/estadio-unicojpg-4.jpg",
+    categoria: "seleccion",
+    fecha: "23 oct 2026",
+    pagina: "argentina-alemania-29-noviembre-estadio-unico-seleccion-femenina.html"
+  },
+  {
     id: 234,
     titulo: "Triplete de Ceballos, pero no alcanzó: Belgrano le ganó 4-2 a Universitario y quedó afuera de la Libertadores",
     resumen: "Las Piratas dieron vuelta el partido, pero el 1-1 entre Palmeiras e Independiente del Valle les cerró la puerta de los cuartos en su primera Libertadores.",
