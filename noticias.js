@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 238,
+    titulo: "Cruzeiro goleó 3-0 a Olimpia, cerró el Grupo C con puntaje perfecto y va con Libertad",
+    resumen: "Gisseli, Marília y Rafa Levis marcaron para la debutante, que terminó primera. Olimpia, pese a perder, también clasificó a cuartos.",
+    imagen: "https://cdn.esbrasil.com.br/wp-content/uploads/2026/10/jogadoras-do-cruzeiro-comemoram-gol-contra-o-olimpia-235801.webp",
+    categoria: "libertadores",
+    fecha: "23 oct 2026",
+    pagina: "cruzeiro-goleo-3-0-olimpia-lider-grupo-c-libertadores-femenina.html"
+  },
+  {
+    id: 237,
+    titulo: "Deportivo Cali ganó 3-2 a la U de Chile, lideró el Grupo D y eliminó a las chilenas",
+    resumen: "María Morales marcó dos veces y Cali avanzó como primero del grupo. En cuartos jugará con Olimpia el domingo 25.",
+    imagen: "https://www.contragolpe.cl/wp-content/uploads/2026/10/55605102417_363fec8826_k-e1792704873549.jpg",
+    categoria: "libertadores",
+    fecha: "23 oct 2026",
+    pagina: "deportivo-cali-vencio-3-2-universidad-de-chile-libertadores-femenina.html"
+  },
+  {
     id: 236,
     titulo: "Infantino confirmó que el primer Mundial de Clubes femenino será en Estados Unidos",
     resumen: "Se jugará del 5 al 30 de enero de 2028, con 19 participantes y cuadro final de 16. Ya hay siete clubes clasificados, entre ellos Corinthians.",
@@ -12,7 +30,7 @@ const noticias = [
     id: 235,
     titulo: "Es oficial: la Selección femenina juega con Alemania el 29 de noviembre en La Plata",
     resumen: "El amistoso reinaugurará el Estadio Único Diego Armando Maradona, en la fecha FIFA de fin de año. Aún no se informó el horario.",
-    imagen: "https://www.puntocapitalnoticias.com/wp-content/uploads/2026/09/estadio-unicojpg-4.jpg",
+    imagen: "https://www.infobae.com/resizer/v2/OKV3TAYKWJD67C5AV227FN7PEU.jpg?auth=e181c3a29a28a7eaac10b6c0a7ce7d44582e486df969c10f362192de08365f32&smart=true&width=1200&height=630&quality=85",
     categoria: "seleccion",
     fecha: "23 oct 2026",
     pagina: "argentina-alemania-29-noviembre-estadio-unico-seleccion-femenina.html"
