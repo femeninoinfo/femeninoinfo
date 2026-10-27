@@ -67,22 +67,23 @@ var PARTIDOS = [
  {n:18,g:'A',d:21,h:15,a:'CCO',b:'CAR',e:RPD,nota:'colo-colo-gano-3-0-caracas-banini-nos-vamos-tristes.html',res:[3,0]},
  {n:19,g:'B',d:21,h:19,a:'PAL',b:'IDV',e:BG,nota:'palmeiras-dragonas-idv-empataron-1-1-cuartos-libertadores-femenina.html',res:[1,1]},
  {n:20,g:'B',d:21,h:19,a:'BEL',b:'UNI',e:RPD,nota:'belgrano-gano-4-2-universitario-quedo-afuera-libertadores-femenina.html',res:[4,2]},
- {n:23,g:'D',d:22,h:15,a:'UCH',b:'DCA',e:BG},
- {n:24,g:'D',d:22,h:15,a:'LIB',b:'NAC',e:RPD},
- {n:21,g:'C',d:22,h:19,a:'OLI',b:'CRU',e:BG},
- {n:22,g:'C',d:22,h:19,a:'LDU',b:'BOL',e:RPD},
- {n:25,g:'Cuartos de final',d:24,h:null,a:'COR',b:'IDV',e:BG},
- {n:26,g:'Cuartos de final',d:24,h:null,a:'PAL',b:'SFE',e:BG},
- {n:27,g:'Cuartos de final',d:25,h:null,ta:'1.º Grupo C',tb:'2.º Grupo D',e:BG},
- {n:28,g:'Cuartos de final',d:25,h:null,ta:'1.º Grupo D',tb:'2.º Grupo C',e:BG},
- {n:30,g:'Semifinal',d:28,h:null,ta:'Ganador 25',tb:'Ganador 26',e:RPD},
- {n:29,g:'Semifinal',d:28,h:null,ta:'Ganador 27',tb:'Ganador 28',e:RPD},
+ {n:23,g:'D',d:22,h:15,a:'UCH',b:'DCA',e:BG,nota:'deportivo-cali-vencio-3-2-universidad-de-chile-libertadores-femenina.html',res:[2,3]},
+ {n:24,g:'D',d:22,h:15,a:'LIB',b:'NAC',e:RPD,res:[2,2]}, // se demoró por tormenta eléctrica
+ {n:21,g:'C',d:22,h:19,a:'OLI',b:'CRU',e:BG,nota:'cruzeiro-goleo-3-0-olimpia-lider-grupo-c-libertadores-femenina.html',res:[0,3]},
+ {n:22,g:'C',d:22,h:19,a:'LDU',b:'BOL',e:RPD,res:[6,0]},
+ {n:25,g:'Cuartos de final',d:24,h:null,a:'COR',b:'IDV',e:BG,nota:'corinthians-goleo-5-0-dragonas-idv-cuartos-libertadores-femenina.html',res:[5,0]},
+ {n:26,g:'Cuartos de final',d:24,h:null,a:'PAL',b:'SFE',e:BG,nota:'santa-fe-elimino-palmeiras-penales-cuartos-libertadores-femenina.html',res:[2,2],pen:[2,3]},
+ {n:27,g:'Cuartos de final',d:25,h:null,a:'CRU',b:'LIB',e:BG,nota:'olimpia-cruzeiro-semifinales-libertadores-femenina-corinthians-santa-fe.html',res:[3,0]},
+ {n:28,g:'Cuartos de final',d:25,h:null,a:'DCA',b:'OLI',e:BG,nota:'olimpia-cruzeiro-semifinales-libertadores-femenina-corinthians-santa-fe.html',res:[0,1]},
+ {n:30,g:'Semifinal',d:28,h:null,a:'COR',b:'SFE',e:RPD},
+ {n:29,g:'Semifinal',d:28,h:null,a:'CRU',b:'OLI',e:RPD},
  {n:31,g:'Tercer puesto',d:31,h:null,ta:'Perdedor 29',tb:'Perdedor 30',e:RPD},
  {n:32,g:'Final',d:31,h:null,ta:'Ganador 29',tb:'Ganador 30',e:RPD}
 ];
 /* Clasificación manual (se actualiza a mano cuando matemáticamente quedan clasificados o eliminados) */
-var CLASIFICADOS = ['COR','SFE','PAL','IDV','CRU'];
-var ELIMINADOS = ['CAR','CCO','UNI','BEL','LDU'];
+var CLASIFICADOS = ['COR','SFE','PAL','IDV','CRU','DCA','LIB','OLI'];
+var ELIMINADOS = ['CAR','CCO','UNI','BEL','LDU','BOL','UCH','NAC'];
+/* Semifinalistas (miércoles 28/10): Corinthians–Santa Fe y Cruzeiro–Olimpia. Eliminados en cuartos: IDV, PAL, LIB, DCA */
 function posiciones(g){
   var T = {};
   GRUPOS[g].forEach(function(c){ T[c]={c:c,pj:0,g:0,e:0,p:0,gf:0,gc:0,pts:0}; });

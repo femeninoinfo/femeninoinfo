@@ -1,5 +1,68 @@
 const noticias = [
   {
+    id: 245,
+    titulo: "Balón de Oro femenino 2026: las 30 nominadas, el top 10 y todos los premios de la gala",
+    resumen: "Alexia Putellas ganó, por delante de Ewa Pajor y Khadija Shaw. Repaso de la lista completa, el ranking final y los premios a portera, entrenador, joven y club.",
+    imagen: "https://www.infobae.com/resizer/v2/IRFMLV6BEJEUPCJCRID3NDZZHQ.jpg?auth=da299399b495ae91c5cd9f04b55fb1b62ab0bc1cec061d3bf605c2dc007954fc&smart=true&width=1200&height=675&quality=85",
+    categoria: "internacional",
+    fecha: "26 oct 2026",
+    pagina: "balon-de-oro-femenino-2026-nominadas-top-10-premios.html"
+  },
+  {
+    id: 244,
+    titulo: "Alexia Putellas ganó su tercer Balón de Oro, cuatro años después del último",
+    resumen: "La jugadora del London City Lionesses igualó a Aitana Bonmatí con tres premios. Ewa Pajor fue segunda y Khadija Shaw, tercera.",
+    imagen: "https://www.infobae.com/resizer/v2/QBV4MPGDMNCJ7J6CG53OKTJW5I.JPG?auth=154704dd242fb94b7b3b44966c27696787244659927e7a86a7cee1df3f5d3037&smart=true&width=1200&height=630&quality=85",
+    categoria: "internacional",
+    fecha: "26 oct 2026",
+    pagina: "alexia-putellas-gano-tercer-balon-de-oro-2026.html"
+  },
+  {
+    id: 243,
+    titulo: "Lula fue reelecto y Brasil va por el mejor Mundial femenino de la historia",
+    resumen: "El presidente ganó el balotaje con el 51,79%. El Mundial 2027, del 24 de junio al 25 de julio, será el primero en Sudamérica y ya tiene ley propia.",
+    imagen: "https://media.losandes.com.ar/p/dbb409079b898cab405ec9671d416490/adjuntos/368/imagenes/100/760/0100760324/1200x675/smart/mundial-femenino-brasil-2027.jpg",
+    categoria: "mundial2027",
+    fecha: "26 oct 2026",
+    pagina: "lula-reelecto-mundial-femenino-2027-brasil-mejor-mundial.html"
+  },
+  {
+    id: 242,
+    titulo: "Olimpia y Cruzeiro completan las semifinales de la Libertadores Femenina: así se juegan el miércoles",
+    resumen: "Olimpia eliminó a Deportivo Cali con un gol en el último minuto y Cruzeiro goleó 3-0 a Libertad. Semis: Corinthians-Santa Fe y Olimpia-Cruzeiro.",
+    imagen: "https://cdn.esbrasil.com.br/wp-content/uploads/2026/10/jogadoras-do-cruzeiro-comemoram-gol-contra-o-olimpia-235801.webp",
+    categoria: "libertadores",
+    fecha: "26 oct 2026",
+    pagina: "olimpia-cruzeiro-semifinales-libertadores-femenina-corinthians-santa-fe.html"
+  },
+  {
+    id: 241,
+    titulo: "Corinthians goleó 5-0 a Dragonas IDV en el segundo tiempo y se cita con Santa Fe en semifinales",
+    resumen: "El campeón vigente dejó afuera a la única ecuatoriana que seguía en carrera, con todos los goles después del descanso.",
+    imagen: "https://imagenes2.eltiempo.com/files/image_1200_535/files/fp/uploads/2026/10/21/6ad92df170dc9.r_d.1455-582-4000.jpeg",
+    categoria: "libertadores",
+    fecha: "24 oct 2026",
+    pagina: "corinthians-goleo-5-0-dragonas-idv-cuartos-libertadores-femenina.html"
+  },
+  {
+    id: 240,
+    titulo: "Santa Fe eliminó por penales a Palmeiras tras remontar un 0-2 y es semifinalista de la Libertadores Femenina",
+    resumen: "Las colombianas empataron 2-2 en el último minuto, ganaron 3-2 desde los doce pasos y ahora van por Corinthians.",
+    imagen: "https://www.semana.com/resizer/v2/356GOJE6VRB4RNEHMPYUNNF2AE.jpg?smart=true&auth=856f2b10944ee5e507500f50e9a7d5f71c9da8ba1b79599c02eed5e40decceb7&width=1280&height=720",
+    categoria: "libertadores",
+    fecha: "24 oct 2026",
+    pagina: "santa-fe-elimino-palmeiras-penales-cuartos-libertadores-femenina.html"
+  },
+  {
+    id: 239,
+    titulo: "Argentina goleó 5-1 a Marruecos con triplete de Mercedes Diz y pasó a octavos del Mundial Sub-17",
+    resumen: "La Sub-17 cerró el Grupo A en segundo lugar y logró por primera vez el pase a la fase final de un Mundial de la categoría.",
+    imagen: "https://assets1.afa.com.ar/2025/LEA-2026/OCTUBRE/IMG_1244.JPG.jpeg",
+    categoria: "seleccion",
+    fecha: "23 oct 2026",
+    pagina: "argentina-goleo-5-1-marruecos-hat-trick-mercedes-diz-octavos-mundial-sub-17.html"
+  },
+  {
     id: 238,
     titulo: "Cruzeiro goleó 3-0 a Olimpia, cerró el Grupo C con puntaje perfecto y va con Libertad",
     resumen: "Gisseli, Marília y Rafa Levis marcaron para la debutante, que terminó primera. Olimpia, pese a perder, también clasificó a cuartos.",
