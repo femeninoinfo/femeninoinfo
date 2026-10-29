@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 248,
+    titulo: "Argentina cayó por penales ante Ghana y quedó afuera del Mundial Sub-17 femenino",
+    resumen: "La Sub-17 empató 1-1 con un cabezazo de Mercedes Diz a los 86 minutos y perdió 5-4 en la tanda. Se despidió en octavos, en su primer Mundial.",
+    imagen: "https://i.ytimg.com/vi/8VxLaJR2E7Y/maxresdefault.jpg",
+    categoria: "seleccion",
+    fecha: "28 oct 2026",
+    pagina: "argentina-cayo-penales-ghana-eliminada-mundial-sub-17-femenino.html"
+  },
+  {
+    id: 247,
+    titulo: "Argentina juega hoy ante Ghana por los octavos del Mundial Sub-17 femenino",
+    resumen: "La Albiceleste de Christian Meloni busca en Rabat un lugar en los cuartos de final de su primer Mundial. Mercedes Diz llega con seis goles.",
+    imagen: "https://assets1.afa.com.ar/2025/LEA-2026/OCTUBRE/IMG_1244.JPG.jpeg",
+    categoria: "seleccion",
+    fecha: "28 oct 2026",
+    pagina: "argentina-ghana-octavos-mundial-sub-17-femenino-hoy.html"
+  },
+  {
+    id: 246,
+    titulo: "Platense es el primer campeón del Sub-12 femenino de AFA: goleó 4-1 a Vélez",
+    resumen: "Las Calamares llegaron a 23 puntos en la última fecha en el Predio Lionel Messi. Independiente fue segundo y Banfield, tercero.",
+    imagen: "https://www.infobae.com/resizer/v2/TZYCPXYXCZFOPIBRIXW32RUG3A.jpg?auth=fdc28b4bb723664614b0ba2979210a1516b44d3159d35a3baf05d1ed29e4a056&smart=true&width=1200&height=800&quality=85",
+    categoria: "apertura",
+    fecha: "28 oct 2026",
+    pagina: "platense-campeon-primer-torneo-sub-12-femenino-afa.html"
+  },
+  {
     id: 245,
     titulo: "Balón de Oro femenino 2026: las 30 nominadas, el top 10 y todos los premios de la gala",
     resumen: "Alexia Putellas ganó, por delante de Ewa Pajor y Khadija Shaw. Repaso de la lista completa, el ranking final y los premios a portera, entrenador, joven y club.",
@@ -129,7 +156,7 @@ const noticias = [
     id: 231,
     titulo: "Empate que sirvió a las dos: Palmeiras y Dragonas IDV igualaron 1-1 y pasaron a cuartos",
     resumen: "Bia Zaneratto abrió de penal y Evelyn Burgos empató a los 83'. Palmeiras jugará con Santa Fe y Dragonas IDV con Corinthians.",
-    imagen: "https://www.palmeiras.com.br/wp-content/uploads/2026/10/IMG_1036-2.JPG-2000x1200.jpeg",
+    imagen: "https://i.ytimg.com/vi/9lyRUEtQI3s/maxresdefault.jpg",
     categoria: "libertadores",
     fecha: "22 oct 2026",
     pagina: "palmeiras-dragonas-idv-empataron-1-1-cuartos-libertadores-femenina.html"
@@ -219,7 +246,7 @@ const noticias = [
     id: 221,
     titulo: "Palmeiras no perdonó: Brena Carolina la rompió a los 14' y las brasileñas lideran el Grupo B",
     resumen: "Brena Carolina marcó a los 14 minutos y las brasileñas controlaron el partido, aunque desperdiciaron un penal en el segundo tiempo.",
-    imagen: "https://www.palmeiras.com.br/wp-content/uploads/2026/10/IMG_1036-2.JPG-2000x1200.jpeg",
+    imagen: "https://i.ytimg.com/vi/9lyRUEtQI3s/maxresdefault.jpg",
     categoria: "libertadores",
     fecha: "19 oct 2026",
     pagina: "palmeiras-vencio-universitario-debut-libertadores-femenina.html"
