@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 249,
+    titulo: "Corinthians y Cruzeiro jugarán la final de la Libertadores Femenina el sábado 31 de octubre",
+    resumen: "Las Brabas remontaron 2-1 a Santa Fe y las Cabulosas, en su debut, vencieron 1-0 a Olimpia. La final es en el Rodrigo Paz Delgado, de Quito.",
+    imagen: "https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=60,fit=pad,format=webp/uploads/2026/10/corinthians-avanca-final-libertadores-feminina-1920x1280.jpg",
+    categoria: "libertadores",
+    fecha: "29 oct 2026",
+    pagina: "corinthians-cruzeiro-final-libertadores-femenina-31-octubre.html"
+  },
+  {
     id: 248,
     titulo: "Argentina cayó por penales ante Ghana y quedó afuera del Mundial Sub-17 femenino",
     resumen: "La Sub-17 empató 1-1 con un cabezazo de Mercedes Diz a los 86 minutos y perdió 5-4 en la tanda. Se despidió en octavos, en su primer Mundial.",
