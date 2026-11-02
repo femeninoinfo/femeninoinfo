@@ -679,8 +679,56 @@
       <a class="lib-panel-head" href="libertadores-femenina.html"><span class="lph-t">LIBERTADORES<br>FEMENINA</span><span class="lph-s">Quito 2026 · Posiciones →</span></a>
       <div class="lib-panel-body" id="libPanelBody"></div>
     </div>
+    <!-- LATERAL: campeona de América + más noticias -->
+    <aside class="side-extra" id="sideExtra">
+      <a class="se-campeon" href="cruzeiro-campeon-libertadores-femenina-remontada-corinthians-penales.html">
+        <img src="https://lasfutbolistas.com/wp-content/uploads/2026/11/HWAi_DpWsAAR1hQ.jpg" alt="Cruzeiro campeón de la Libertadores Femenina"/>
+        <span class="se-ov"></span>
+        <span class="se-body">
+          <span class="se-tag">Campeona de América 2026</span>
+          <span class="se-score">Corinthians 4 (4) – (5) 4 Cruzeiro</span>
+          <span class="se-t">Cruzeiro remontó un 0-3 y ganó su primera Libertadores Femenina</span>
+        </span>
+      </a>
+      <div class="se-lista">
+        <p class="se-head">Más noticias</p>
+        <div id="seList"></div>
+      </div>
+    </aside>
   </div>
 </section>
+<style>
+.side-extra{display:flex;flex-direction:column;gap:12px;order:5;min-width:0}
+.se-campeon{position:relative;display:block;height:250px;border-radius:12px;overflow:hidden;text-decoration:none;background:#0b1f3f;border:2px solid #c9a227}
+.se-campeon img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.se-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,40,.95) 0%,rgba(5,15,40,.35) 60%,rgba(5,15,40,0) 100%)}
+.se-body{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;display:block}
+.se-tag{display:inline-block;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:#e8c552;color:#0b1f3f;padding:2px 8px;border-radius:3px;margin-bottom:6px}
+.se-score{display:block;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:#e8c552;margin-bottom:2px}
+.se-t{display:block;font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:700;color:#fff;line-height:1.25}
+.se-lista{background:#fff;border-radius:12px;padding:12px 14px;border:1px solid rgba(255,255,255,.08)}
+.se-head{margin:0 0 6px;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1.5px;color:#3d0066}
+.se-item{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid #eee;text-decoration:none;cursor:pointer}
+.se-item:first-child{border-top:none}
+.se-item img{width:72px;height:54px;object-fit:cover;border-radius:6px;flex-shrink:0}
+.se-item span{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1a001f;line-height:1.3;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media(min-width:769px){
+  .portal-inner{grid-template-columns:400px 1fr !important}
+  .tabla-panel{grid-column:1}
+  .side-extra{grid-column:2}
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var el=document.getElementById('seList');
+  if(!el||typeof noticias==='undefined')return;
+  noticias.filter(function(n){return n.pagina!=='cruzeiro-campeon-libertadores-femenina-remontada-corinthians-penales.html'}).slice(3,8).forEach(function(n){
+    var a=document.createElement('a');a.className='se-item';a.href=n.pagina;
+    a.innerHTML='<img src="'+n.imagen+'" alt=""/><span>'+n.titulo+'</span>';
+    el.appendChild(a);
+  });
+});
+</script>
 <style>
 .top3{grid-column:1/-1;order:1;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .top3-card{position:relative;height:300px;border-radius:12px;overflow:hidden;cursor:pointer;background:#1a0035}

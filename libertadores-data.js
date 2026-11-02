@@ -75,15 +75,15 @@ var PARTIDOS = [
  {n:26,g:'Cuartos de final',d:24,h:null,a:'PAL',b:'SFE',e:BG,nota:'santa-fe-elimino-palmeiras-penales-cuartos-libertadores-femenina.html',res:[2,2],pen:[2,3]},
  {n:27,g:'Cuartos de final',d:25,h:null,a:'CRU',b:'LIB',e:BG,nota:'olimpia-cruzeiro-semifinales-libertadores-femenina-corinthians-santa-fe.html',res:[3,0]},
  {n:28,g:'Cuartos de final',d:25,h:null,a:'DCA',b:'OLI',e:BG,nota:'olimpia-cruzeiro-semifinales-libertadores-femenina-corinthians-santa-fe.html',res:[0,1]},
- {n:30,g:'Semifinal',d:28,h:null,a:'COR',b:'SFE',e:RPD},
- {n:29,g:'Semifinal',d:28,h:null,a:'CRU',b:'OLI',e:RPD},
- {n:31,g:'Tercer puesto',d:31,h:null,ta:'Perdedor 29',tb:'Perdedor 30',e:RPD},
- {n:32,g:'Final',d:31,h:null,ta:'Ganador 29',tb:'Ganador 30',e:RPD}
+ {n:30,g:'Semifinal',d:28,h:17,a:'COR',b:'SFE',e:RPD,nota:'corinthians-cruzeiro-final-libertadores-femenina-31-octubre.html',res:[2,1]},
+ {n:29,g:'Semifinal',d:28,h:null,a:'CRU',b:'OLI',e:RPD,nota:'corinthians-cruzeiro-final-libertadores-femenina-31-octubre.html',res:[1,0]},
+ {n:31,g:'Tercer puesto',d:31,h:null,a:'SFE',b:'OLI',e:RPD},
+ {n:32,g:'Final',d:31,h:null,a:'COR',b:'CRU',e:RPD,nota:'cruzeiro-campeon-libertadores-femenina-remontada-corinthians-penales.html',res:[4,4],pen:[4,5]}
 ];
 /* Clasificación manual (se actualiza a mano cuando matemáticamente quedan clasificados o eliminados) */
 var CLASIFICADOS = ['COR','SFE','PAL','IDV','CRU','DCA','LIB','OLI'];
 var ELIMINADOS = ['CAR','CCO','UNI','BEL','LDU','BOL','UCH','NAC'];
-/* Semifinalistas (miércoles 28/10): Corinthians–Santa Fe y Cruzeiro–Olimpia. Eliminados en cuartos: IDV, PAL, LIB, DCA */
+/* Semifinales jugadas el 28/10: Corinthians 2-1 Santa Fe y Cruzeiro 1-0 Olimpia. Final (31/10): Corinthians–Cruzeiro. Tercer puesto: Santa Fe–Olimpia. Eliminados en cuartos: IDV, PAL, LIB, DCA */
 function posiciones(g){
   var T = {};
   GRUPOS[g].forEach(function(c){ T[c]={c:c,pj:0,g:0,e:0,p:0,gf:0,gc:0,pts:0}; });

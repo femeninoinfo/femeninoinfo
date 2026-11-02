@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 253,
+    titulo: "Cruzeiro remontó un 0-3 ante Corinthians y es campeón de la Libertadores Femenina",
+    resumen: "Las Cabulosas empataron 4-4 en el último minuto y ganaron 5-4 por penales en Quito. Primer título continental del club, en su debut en el torneo.",
+    imagen: "https://lasfutbolistas.com/wp-content/uploads/2026/11/HWAi_DpWsAAR1hQ.jpg",
+    categoria: "libertadores",
+    fecha: "2 nov 2026",
+    pagina: "cruzeiro-campeon-libertadores-femenina-remontada-corinthians-penales.html"
+  },
+  {
+    id: 252,
+    titulo: "Locura en Belo Horizonte: así recibieron los hinchas de Cruzeiro a las campeonas de América",
+    resumen: "Bombos y bengalas en Confins, desfile en auto abierto y un gimnasio lleno en Barro Preto: la bienvenida a las Cabulosas con la copa.",
+    imagen: "https://static.centraldatoca.com/2026/11/cabulosasconfins.jpg",
+    categoria: "libertadores",
+    fecha: "2 nov 2026",
+    pagina: "cruzeiro-recibimiento-hinchas-confins-barro-preto-libertadores-femenina.html"
+  },
+  {
+    id: 251,
+    titulo: "Cruzeiro, campeón de la Libertadores, enfrentará al Barcelona en la Copa de Campeonas de la FIFA",
+    resumen: "Será el 27 de enero de 2027 en el Nu Stadium de Miami, en las semifinales del torneo que reúne a las campeonas de cada confederación.",
+    imagen: "https://lasfutbolistas.com/wp-content/uploads/2026/11/1000811526.jpg",
+    categoria: "internacional",
+    fecha: "2 nov 2026",
+    pagina: "cruzeiro-barcelona-semifinal-copa-campeonas-fifa-miami.html"
+  },
+  {
+    id: 250,
+    titulo: "Gotham ganó su primer NWSL Shield y Ashley Sánchez igualó el récord de goles",
+    resumen: "Gotham cerró la temporada regular con 61 puntos, Seattle sacó el último boleto a playoffs y Sánchez ganó la Bota de Oro con 20 goles.",
+    imagen: "https://i.ytimg.com/vi/XmBNkY_ho4Q/maxresdefault.jpg",
+    categoria: "internacional",
+    fecha: "2 nov 2026",
+    pagina: "gotham-primer-nwsl-shield-playoffs-cruces-ashley-sanchez-bota-de-oro.html"
+  },
+  {
     id: 249,
     titulo: "Corinthians y Cruzeiro jugarán la final de la Libertadores Femenina el sábado 31 de octubre",
     resumen: "Las Brabas remontaron 2-1 a Santa Fe y las Cabulosas, en su debut, vencieron 1-0 a Olimpia. La final es en el Rodrigo Paz Delgado, de Quito.",
