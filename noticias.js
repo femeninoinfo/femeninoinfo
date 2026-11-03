@@ -1,5 +1,32 @@
 const noticias = [
   {
+    id: 256,
+    titulo: "Alexia Putellas estrenó sus propios botines Nike en la Barclays WSL",
+    resumen: "Un modelo exclusivo dorado y blanco, diseñado por la tres veces Balón de Oro, con su logo personal y un mensaje grabado adentro.",
+    imagen: "https://i.ytimg.com/vi/X5kzUB2RTGU/maxresdefault.jpg",
+    categoria: "internacional",
+    fecha: "3 nov 2026",
+    pagina: "alexia-putellas-botines-nike-exclusivos-barclays-wsl.html"
+  },
+  {
+    id: 255,
+    titulo: "Vuelve el fútbol femenino argentino: así se juega la Fecha 12",
+    resumen: "Tras el parate por la fecha FIFA y la Libertadores, la Primera A retoma el Segundo Torneo 2026 entre el jueves 5 y el sábado 7 de noviembre.",
+    imagen: "https://pxbcdn.eldiariodelarepublica.com/republica/102026/1791065146887.jpg",
+    categoria: "apertura",
+    fecha: "3 nov 2026",
+    pagina: "vuelve-el-futbol-femenino-argentino-fecha-12-segundo-torneo-2026.html"
+  },
+  {
+    id: 254,
+    titulo: "Libertadores Femenina 2026: cuánto ganó cada campeona y quiénes fueron las goleadoras",
+    resumen: "Cruzeiro cobró US$ 2,05 millones, Corinthians US$ 600 mil y Santa Fe US$ 250 mil. Vic Albuquerque, Zamorano y Byanca cerraron con 6 goles.",
+    imagen: "https://static.centraldatoca.com/2026/11/Elenco-do-Cruzeiro-comemora-o-titulo-da-Libertadores.jpg",
+    categoria: "libertadores",
+    fecha: "3 nov 2026",
+    pagina: "premios-libertadores-femenina-2026-cruzeiro-santa-fe-olimpia-goleadoras.html"
+  },
+  {
     id: 253,
     titulo: "Cruzeiro remontó un 0-3 ante Corinthians y es campeón de la Libertadores Femenina",
     resumen: "Las Cabulosas empataron 4-4 en el último minuto y ganaron 5-4 por penales en Quito. Primer título continental del club, en su debut en el torneo.",

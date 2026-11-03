@@ -249,6 +249,63 @@
 </style>
 <!-- Franja de resultados en movimiento y cuadro de posiciones de Libertadores ocultos del inicio. Para volver a mostrarlos, borrar esta línea <style>. La sección "Libertadores Femenina" más abajo se mantiene. -->
 <style>#libStrip,#libPanel{display:none !important}</style>
+<style>
+.pj-strip{background:linear-gradient(180deg,#2a0044 0%,#12001f 100%);border-top:3px solid #c800ff;border-bottom:3px solid #c800ff;padding:10px 0 12px;overflow:hidden}
+.pj-head{max-width:1280px;margin:0 auto 8px;padding:0 24px;display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.pj-head .pj-tag{background:#c800ff;color:#fff;padding:3px 10px;border-radius:4px;font-size:12px}
+.pj-head a{margin-left:auto;color:#e8c552;text-decoration:none;font-size:12px;letter-spacing:.04em}
+.pj-scroll{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;cursor:grab;touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
+.pj-scroll::-webkit-scrollbar{display:none}
+.pj-scroll.drag{cursor:grabbing;user-select:none}
+.pj-track{display:flex;align-items:stretch;gap:12px;width:max-content;padding:0 6px}
+.pj-card{flex:0 0 auto;width:230px;background:#fff;border-radius:10px;padding:8px 10px 10px;text-align:center;border-bottom:3px solid #c800ff;color:#1a0030}
+.pj-card .pj-top{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#9a00c7;margin-bottom:6px}
+.pj-card .pj-row{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.pj-card .pj-eq{flex:1;font-size:12px;font-weight:800;line-height:1.15;min-width:0}
+.pj-card .pj-vs{font-size:11px;font-weight:900;color:#c800ff}
+.pj-card .pj-sede{margin-top:6px;font-size:10px;color:#666;line-height:1.2}
+@media(max-width:600px){.pj-card{width:200px}}
+</style>
+<section class="pj-strip" id="pjStrip" aria-label="Partidos por jugar de la Fecha 12">
+  <div class="pj-head"><span class="pj-tag">Por jugar</span>Fecha 12 · Segundo Torneo 2026<a href="vuelve-el-futbol-femenino-argentino-fecha-12-segundo-torneo-2026.html">Ver todo →</a></div>
+  <div class="pj-scroll" id="pjScroll"><div class="pj-track" id="pjTrack"></div></div>
+</section>
+<script>
+(function(){
+  var P=[
+    ['Jue 5/11 · 10:00','SAT','Banfield','Estadio 12 de Agosto'],
+    ['Jue 5/11 · 15:30','Unión','Talleres','La Tatenguita'],
+    ['Vie 6/11 · 11:00','Huracán','Racing','La Quemita'],
+    ['Vie 6/11 · 14:00','Independiente','San Lorenzo','Predio Santo Domingo'],
+    ['Vie 6/11 · 15:00','San Luis FC','Ferro','Estadio Juan G. Funes'],
+    ['Vie 6/11 · 15:00','River','Gimnasia','River Camp'],
+    ['Vie 6/11 · 15:00','Belgrano','Newell\'s','Predio Villa Esquiú'],
+    ['Sáb 7/11 · 15:00','Lanús','Boca','Predio Valentín Alsina']
+  ];
+  var html='';
+  P.forEach(function(p){
+    html+='<div class="pj-card"><div class="pj-top">'+p[0]+'</div><div class="pj-row"><div class="pj-eq">'+p[1]+'</div><div class="pj-vs">VS</div><div class="pj-eq">'+p[2]+'</div></div><div class="pj-sede">'+p[3]+'</div></div>';
+  });
+  var tr=document.getElementById('pjTrack'), sc=document.getElementById('pjScroll');
+  tr.innerHTML=html+html;
+  var pos=0,pausado=false,reanudar=null,down=false,startX=0,startL=0;
+  function pausar(ms){pausado=true;clearTimeout(reanudar);reanudar=setTimeout(function(){pos=sc.scrollLeft;pausado=false;},ms);}
+  function loop(){
+    var mitad=tr.scrollWidth/2;
+    if(!pausado&&!down){pos+=0.6;if(pos>=mitad)pos-=mitad;sc.scrollLeft=pos;}
+    else if(mitad){if(sc.scrollLeft>=mitad)sc.scrollLeft-=mitad;else if(sc.scrollLeft<=0&&down)sc.scrollLeft+=mitad;}
+    requestAnimationFrame(loop);
+  }
+  sc.addEventListener('pointerdown',function(e){if(e.pointerType==='touch'){pausar(3000);return;}down=true;startX=e.clientX;startL=sc.scrollLeft;sc.classList.add('drag');clearTimeout(reanudar);});
+  window.addEventListener('pointermove',function(e){if(down&&e.pointerType!=='touch'){sc.scrollLeft=startL-(e.clientX-startX);}});
+  window.addEventListener('pointerup',function(){if(down){down=false;sc.classList.remove('drag');pausar(2500);}});
+  sc.addEventListener('touchstart',function(){pausar(3000);},{passive:true});
+  sc.addEventListener('touchmove',function(){pausar(3000);},{passive:true});
+  sc.addEventListener('wheel',function(){pausar(2500);},{passive:true});
+  sc.addEventListener('scroll',function(){if(pausado&&!down)pos=sc.scrollLeft;},{passive:true});
+  requestAnimationFrame(loop);
+})();
+</script>
 <section class="lib-strip" id="libStrip" aria-label="Resultados de la Copa Libertadores Femenina">
   <div class="lib-strip-head">Copa Libertadores Femenina · Quito 2026<a href="libertadores-femenina.html">Ver todo →</a></div>
   <div class="lib-strip-scroll" id="libStripScroll"><div class="lib-strip-track" id="libStripTrack"></div></div>

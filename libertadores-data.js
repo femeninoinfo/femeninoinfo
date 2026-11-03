@@ -77,13 +77,13 @@ var PARTIDOS = [
  {n:28,g:'Cuartos de final',d:25,h:null,a:'DCA',b:'OLI',e:BG,nota:'olimpia-cruzeiro-semifinales-libertadores-femenina-corinthians-santa-fe.html',res:[0,1]},
  {n:30,g:'Semifinal',d:28,h:17,a:'COR',b:'SFE',e:RPD,nota:'corinthians-cruzeiro-final-libertadores-femenina-31-octubre.html',res:[2,1]},
  {n:29,g:'Semifinal',d:28,h:null,a:'CRU',b:'OLI',e:RPD,nota:'corinthians-cruzeiro-final-libertadores-femenina-31-octubre.html',res:[1,0]},
- {n:31,g:'Tercer puesto',d:31,h:null,a:'SFE',b:'OLI',e:RPD},
+ {n:31,g:'Tercer puesto',d:31,h:null,a:'SFE',b:'OLI',e:RPD,nota:'premios-libertadores-femenina-2026-cruzeiro-santa-fe-olimpia-goleadoras.html',res:[4,3]},
  {n:32,g:'Final',d:31,h:null,a:'COR',b:'CRU',e:RPD,nota:'cruzeiro-campeon-libertadores-femenina-remontada-corinthians-penales.html',res:[4,4],pen:[4,5]}
 ];
 /* Clasificación manual (se actualiza a mano cuando matemáticamente quedan clasificados o eliminados) */
 var CLASIFICADOS = ['COR','SFE','PAL','IDV','CRU','DCA','LIB','OLI'];
 var ELIMINADOS = ['CAR','CCO','UNI','BEL','LDU','BOL','UCH','NAC'];
-/* Semifinales jugadas el 28/10: Corinthians 2-1 Santa Fe y Cruzeiro 1-0 Olimpia. Final (31/10): Corinthians–Cruzeiro. Tercer puesto: Santa Fe–Olimpia. Eliminados en cuartos: IDV, PAL, LIB, DCA */
+/* TORNEO TERMINADO. Campeón: Cruzeiro (4-4 con Corinthians, 5-4 en penales). Subcampeón: Corinthians. Tercero: Santa Fe (4-3 a Olimpia). Cuarto: Olimpia. Eliminados en cuartos: IDV, PAL, LIB, DCA */
 function posiciones(g){
   var T = {};
   GRUPOS[g].forEach(function(c){ T[c]={c:c,pj:0,g:0,e:0,p:0,gf:0,gc:0,pts:0}; });
