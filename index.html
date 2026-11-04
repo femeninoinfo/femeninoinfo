@@ -261,7 +261,8 @@
 .pj-card{flex:0 0 auto;width:230px;background:#fff;border-radius:10px;padding:8px 10px 10px;text-align:center;border-bottom:3px solid #c800ff;color:#1a0030}
 .pj-card .pj-top{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#9a00c7;margin-bottom:6px}
 .pj-card .pj-row{display:flex;align-items:center;justify-content:space-between;gap:6px}
-.pj-card .pj-eq{flex:1;font-size:12px;font-weight:800;line-height:1.15;min-width:0}
+.pj-card .pj-eq{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;font-weight:800;line-height:1.1;min-width:0}
+.pj-card .pj-esc{width:26px;height:26px;object-fit:contain}
 .pj-card .pj-vs{font-size:11px;font-weight:900;color:#c800ff}
 .pj-card .pj-sede{margin-top:6px;font-size:10px;color:#666;line-height:1.2}
 @media(max-width:600px){.pj-card{width:200px}}
@@ -282,9 +283,21 @@
     ['Vie 6/11 · 15:00','Belgrano','Newell\'s','Predio Villa Esquiú'],
     ['Sáb 7/11 · 15:00','Lanús','Boca','Predio Valentín Alsina']
   ];
+  var W='https://elfemenino.com.ar/wp-content/uploads/';
+  var ESC={
+    'SAT':W+'2017/08/CLUB-SAT-PNG-128x128.png','Banfield':W+'2018/08/Banfield_2022-128x128.png',
+    'Unión':W+'2023/02/Union_de_Santa_Fe-111x128.png','Talleres':W+'2022/04/talleres-128x128.png',
+    'Huracán':W+'2017/08/Club_huracan_logo-79x128.png','Racing':W+'2017/08/racing-club.png',
+    'Independiente':W+'2017/08/Independiente-123x128.png','San Lorenzo':W+'2017/08/Escudo-San-Lorenzo-113x128.png',
+    'San Luis FC':W+'2022/04/SLFC-104x128.png','Ferro':W+'2018/09/ferro-105x128.png',
+    'River':W+'2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png','Gimnasia':W+'2018/09/CGELP-83x128.png',
+    'Belgrano':W+'2021/08/Belgrano-128x128.png',"Newell's":W+'2021/08/Newells-104x128.png',
+    'Lanús':W+'2017/08/lanus-128x128.png','Boca':W+'2016/05/Boc.png'
+  };
+  function eq(n){return '<div class="pj-eq"><img class="pj-esc" src="'+ESC[n]+'" alt="'+n+'" loading="lazy" onerror="this.style.visibility=\'hidden\'"/><span>'+n+'</span></div>';}
   var html='';
   P.forEach(function(p){
-    html+='<div class="pj-card"><div class="pj-top">'+p[0]+'</div><div class="pj-row"><div class="pj-eq">'+p[1]+'</div><div class="pj-vs">VS</div><div class="pj-eq">'+p[2]+'</div></div><div class="pj-sede">'+p[3]+'</div></div>';
+    html+='<div class="pj-card"><div class="pj-top">'+p[0]+'</div><div class="pj-row">'+eq(p[1])+'<div class="pj-vs">VS</div>'+eq(p[2])+'</div><div class="pj-sede">'+p[3]+'</div></div>';
   });
   var tr=document.getElementById('pjTrack'), sc=document.getElementById('pjScroll');
   tr.innerHTML=html+html;
