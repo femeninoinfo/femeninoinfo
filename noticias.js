@@ -1,5 +1,41 @@
 const noticias = [
   {
+    id: 260,
+    titulo: "Fecha 13 del Clausura: Banfield-River y Talleres-San Luis, los partidos grandes",
+    resumen: "Ocho partidos entre el miércoles 11 y el viernes 13 de noviembre, todos por LPF Play. Boca, líder con 26 puntos, recibe a SAT en Casa Amarilla.",
+    imagen: "https://pxbcdn.eldiariodelarepublica.com/republica/092026/1790593449677.jpg",
+    categoria: "apertura",
+    fecha: "10 nov 2026",
+    pagina: "fecha-13-clausura-programacion-banfield-river-talleres-san-luis-boca-sat.html"
+  },
+  {
+    id: 259,
+    titulo: "Boca empató 1-1 con Lanús y sigue puntero del Clausura",
+    resumen: "Las Gladiadoras igualaron en Valentín Alsina, llegaron a 26 puntos y mantienen la cima, pero Talleres, Banfield y San Luis FC quedaron a dos.",
+    imagen: "https://pxbcdn.eldiariodelarepublica.com/republica/102026/1791065146887.jpg",
+    categoria: "apertura",
+    fecha: "10 nov 2026",
+    pagina: "boca-empato-con-lanus-1-1-sigue-puntero-clausura-fecha-12.html"
+  },
+  {
+    id: 258,
+    titulo: "River le ganó a Gimnasia y se prende en la pelea del Clausura",
+    resumen: "Las Millonarias vencieron 2-1 en el River Camp, llegaron a 17 puntos y están a nueve de Boca con tres partidos menos.",
+    imagen: "superclasico.jpg",
+    categoria: "apertura",
+    fecha: "10 nov 2026",
+    pagina: "river-vencio-a-gimnasia-y-se-prende-en-la-pelea-clausura-fecha-12.html"
+  },
+  {
+    id: 257,
+    titulo: "San Lorenzo goleó 5-1 a Independiente con triplete de Zacmon",
+    resumen: "Las Santitas llegaron a 22 puntos con un partido menos y son las líderes de la Tabla Anual, con 57.",
+    imagen: "https://vamosciclon.com/wp-content/uploads/2026/10/las-santitas-san-lorenzo-gano-clasico-huracan-1536x864.webp",
+    categoria: "apertura",
+    fecha: "10 nov 2026",
+    pagina: "san-lorenzo-goleo-5-1-a-independiente-triplete-zacmon-clausura-fecha-12.html"
+  },
+  {
     id: 256,
     titulo: "Alexia Putellas estrenó sus propios botines Nike en la Barclays WSL",
     resumen: "Un modelo exclusivo dorado y blanco, diseñado por la tres veces Balón de Oro, con su logo personal y un mensaje grabado adentro.",
