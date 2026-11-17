@@ -1,5 +1,95 @@
 const noticias = [
   {
+    id: 270,
+    titulo: "Newell's y Unión de Santa Fe descendieron a la Primera B",
+    resumen: "Las Leprosas confirmaron la caída el 6 de noviembre y las Tatengues, tras el 4-1 de Racing. Los dos jugarán en la Segunda División en 2027.",
+    imagen: "boca-le-gano-a-newells-casa-amarilla.jpg",
+    categoria: "apertura",
+    fecha: "17 nov 2026",
+    pagina: "newells-y-union-descendieron-a-la-primera-b-2027.html"
+  },
+  {
+    id: 269,
+    titulo: "Vélez y All Boys ascendieron a Primera y se suman a Platense y Central",
+    resumen: "Las Fortineras y las Albas ganaron sus semifinales del Reducido y ya tienen lugar en 2027. Se enfrentarán en la final de la B.",
+    imagen: "https://elfemenino.com.ar/wp-content/uploads/2026/11/HXMnUipXgAA0xpD-e1794786594158-1080x675.jpg",
+    categoria: "apertura",
+    fecha: "17 nov 2026",
+    pagina: "velez-y-all-boys-ascendieron-a-primera-se-suman-a-platense-y-central.html"
+  },
+  {
+    id: 268,
+    titulo: "Todo sobre el descenso de Unión: un año en Primera con tres victorias",
+    resumen: "Las Tatengues cayeron 4-1 con Racing y jugarán en la Primera B en 2027. Los números de su primer año en la máxima categoría.",
+    imagen: "https://i.ytimg.com/vi/cWPkDa26DrI/maxresdefault.jpg",
+    categoria: "apertura",
+    fecha: "17 nov 2026",
+    pagina: "todo-sobre-el-descenso-de-union-de-santa-fe-primera-b-2027.html"
+  },
+  {
+    id: 267,
+    titulo: "Todo sobre el descenso de Newell's: del título a la Primera B en un año",
+    resumen: "Campeona del Apertura y de la Copa Federal en 2025, la Lepra perdió la categoría con dos victorias en 26 partidos.",
+    imagen: "https://i.ytimg.com/vi/YwCo9d6fe-s/maxresdefault.jpg",
+    categoria: "apertura",
+    fecha: "17 nov 2026",
+    pagina: "todo-sobre-el-descenso-de-newells-del-campeonato-a-la-primera-b.html"
+  },
+  {
+    id: 266,
+    titulo: "All Boys ascendió a Primera por primera vez en su historia",
+    resumen: "Las Albas igualaron 1-1 con Camioneros, ganaron la semifinal del Reducido 3-2 en el global y jugarán en Primera en 2027.",
+    imagen: "https://i.ytimg.com/vi/J_jQne1KGhY/maxresdefault.jpg",
+    categoria: "apertura",
+    fecha: "17 nov 2026",
+    pagina: "all-boys-ascendio-a-primera-por-primera-vez-empato-con-camioneros.html"
+  },
+  {
+    id: 265,
+    titulo: "Vélez volvió a Primera: empató con El Porvenir y va por el título de la B",
+    resumen: "Las Fortineras ganaron la serie 4-2 y regresaron a la máxima categoría un año después de su descenso. Ahora van por la final.",
+    imagen: "https://elfemenino.com.ar/wp-content/uploads/2026/11/Velez-scaled-e1794758885745-1080x675.jpg",
+    categoria: "apertura",
+    fecha: "17 nov 2026",
+    pagina: "velez-volvio-a-primera-empato-con-el-porvenir-y-va-por-el-titulo-de-la-b.html"
+  },
+  {
+    id: 264,
+    titulo: "La Reserva de Talleres se coronó campeona: el primer título del interior",
+    resumen: "Las Matadoras ganaron el Torneo de Juveniles de AFA 2026 y recibieron la copa tras vencer 2-1 a Racing.",
+    imagen: "https://www.clubtalleres.com.ar/wp-content/uploads/2026/10/Reserva-fem-1024x576.jpg",
+    categoria: "apertura",
+    fecha: "17 nov 2026",
+    pagina: "talleres-reserva-campeona-primer-titulo-afa-juveniles-femenino-2026.html"
+  },
+  {
+    id: 263,
+    titulo: "Racing goleó 5-1 a Independiente y se quedó con el clásico en el Cilindro",
+    resumen: "Doblete de Marleidy Cossio y goles de Ramírez, Bueno y Moreno en el clásico de Avellaneda, por la Fecha 13 del Clausura.",
+    imagen: "https://www.racingclub.com.ar/fotos/racing-vs-independiente-fecha-13-del-torneo-clausura/_cal0665.webp",
+    categoria: "apertura",
+    fecha: "17 nov 2026",
+    pagina: "racing-goleo-5-1-a-independiente-clasico-de-avellaneda-en-el-cilindro.html"
+  },
+  {
+    id: 262,
+    titulo: "La Selección Argentina cerrará el año con Alemania y Uruguay",
+    resumen: "Argentina jugará con Alemania el 29 de noviembre en La Plata y con Uruguay el 4 de diciembre, en una sede a confirmar.",
+    imagen: "https://www.infobae.com/resizer/v2/OI4FHU6CSRGDTBHDFTO2EO4GBM.jpg?auth=d07c8dd3bb58557f8ddc06a508ce1016412fe6f108b1572f8f88a80ca5b13105&smart=true&width=800&height=533&quality=85",
+    categoria: "seleccion",
+    fecha: "17 nov 2026",
+    pagina: "seleccion-argentina-femenina-uruguay-4-de-diciembre-alemania-la-plata.html"
+  },
+  {
+    id: 261,
+    titulo: "Mundial 2027: las entradas salen a la venta el 1 de diciembre",
+    resumen: "La FIFA abre la venta a las 10 de Brasil, con entradas desde 30 reales por partido y tres tipos de abono, incluido el de seguir a Brasil.",
+    imagen: "https://digitalhub.fifa.com/transform/00d34081-bcaa-4c93-af55-6cf3dab394f1/FIFA-Women-s-World-Cup-Brazil-2027-ticket-sales",
+    categoria: "mundial2027",
+    fecha: "17 nov 2026",
+    pagina: "mundial-2027-entradas-a-la-venta-1-de-diciembre-como-seguir-a-brasil.html"
+  },
+  {
     id: 260,
     titulo: "Fecha 13 del Clausura: Banfield-River y Talleres-San Luis, los partidos grandes",
     resumen: "Ocho partidos entre el miércoles 11 y el viernes 13 de noviembre, todos por LPF Play. Boca, líder con 26 puntos, recibe a SAT en Casa Amarilla.",
