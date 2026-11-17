@@ -129,7 +129,7 @@ const noticias = [
     id: 256,
     titulo: "Alexia Putellas estrenó sus propios botines Nike en la Barclays WSL",
     resumen: "Un modelo exclusivo dorado y blanco, diseñado por la tres veces Balón de Oro, con su logo personal y un mensaje grabado adentro.",
-    imagen: "https://i.ytimg.com/vi/X5kzUB2RTGU/maxresdefault.jpg",
+    imagen: "https://www.infobae.com/resizer/v2/QBV4MPGDMNCJ7J6CG53OKTJW5I.JPG?auth=154704dd242fb94b7b3b44966c27696787244659927e7a86a7cee1df3f5d3037&smart=true&width=1200&height=630&quality=85",
     categoria: "internacional",
     fecha: "3 nov 2026",
     pagina: "alexia-putellas-botines-nike-exclusivos-barclays-wsl.html"
@@ -183,7 +183,7 @@ const noticias = [
     id: 250,
     titulo: "Gotham ganó su primer NWSL Shield y Ashley Sánchez igualó el récord de goles",
     resumen: "Gotham cerró la temporada regular con 61 puntos, Seattle sacó el último boleto a playoffs y Sánchez ganó la Bota de Oro con 20 goles.",
-    imagen: "https://i.ytimg.com/vi/XmBNkY_ho4Q/maxresdefault.jpg",
+    imagen: "https://www.theixsports.com/wp-content/uploads/2026/11/2026-11-02T003556Z_2127649843_MT1USATODAY30252159_RTRMADP_3_NWSL-UTAH-ROYALS-FC-AT-NJ-NY-GOTHAM-FC-780x520.jpg",
     categoria: "internacional",
     fecha: "2 nov 2026",
     pagina: "gotham-primer-nwsl-shield-playoffs-cruces-ashley-sanchez-bota-de-oro.html"
@@ -201,7 +201,7 @@ const noticias = [
     id: 248,
     titulo: "Argentina cayó por penales ante Ghana y quedó afuera del Mundial Sub-17 femenino",
     resumen: "La Sub-17 empató 1-1 con un cabezazo de Mercedes Diz a los 86 minutos y perdió 5-4 en la tanda. Se despidió en octavos, en su primer Mundial.",
-    imagen: "https://i.ytimg.com/vi/8VxLaJR2E7Y/maxresdefault.jpg",
+    imagen: "https://assets1.afa.com.ar/2025/LEA-2026/OCTUBRE/IMG_1244.JPG.jpeg",
     categoria: "seleccion",
     fecha: "28 oct 2026",
     pagina: "argentina-cayo-penales-ghana-eliminada-mundial-sub-17-femenino.html"
@@ -354,7 +354,7 @@ const noticias = [
     id: 231,
     titulo: "Empate que sirvió a las dos: Palmeiras y Dragonas IDV igualaron 1-1 y pasaron a cuartos",
     resumen: "Bia Zaneratto abrió de penal y Evelyn Burgos empató a los 83'. Palmeiras jugará con Santa Fe y Dragonas IDV con Corinthians.",
-    imagen: "https://i.ytimg.com/vi/9lyRUEtQI3s/maxresdefault.jpg",
+    imagen: "https://imagenes.teleamazonas.com/files/og_thumbnail/uploads/2026/09/14/6aa84c11d07dd.jpeg",
     categoria: "libertadores",
     fecha: "22 oct 2026",
     pagina: "palmeiras-dragonas-idv-empataron-1-1-cuartos-libertadores-femenina.html"
@@ -444,7 +444,7 @@ const noticias = [
     id: 221,
     titulo: "Palmeiras no perdonó: Brena Carolina la rompió a los 14' y las brasileñas lideran el Grupo B",
     resumen: "Brena Carolina marcó a los 14 minutos y las brasileñas controlaron el partido, aunque desperdiciaron un penal en el segundo tiempo.",
-    imagen: "https://i.ytimg.com/vi/9lyRUEtQI3s/maxresdefault.jpg",
+    imagen: "https://imagenes.teleamazonas.com/files/og_thumbnail/uploads/2026/09/14/6aa84c11d07dd.jpeg",
     categoria: "libertadores",
     fecha: "19 oct 2026",
     pagina: "palmeiras-vencio-universitario-debut-libertadores-femenina.html"
