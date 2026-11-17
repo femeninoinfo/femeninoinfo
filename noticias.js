@@ -3,7 +3,7 @@ const noticias = [
     id: 270,
     titulo: "Newell's y Unión de Santa Fe descendieron a la Primera B",
     resumen: "Las Leprosas confirmaron la caída el 6 de noviembre y las Tatengues, tras el 4-1 de Racing. Los dos jugarán en la Segunda División en 2027.",
-    imagen: "boca-le-gano-a-newells-casa-amarilla.jpg",
+    imagen: "https://media.lacapital.com.ar/p/21a08e770f97b7c4a2ee9d404cbf0233/adjuntos/203/imagenes/102/227/0102227874/1200x675/smart/image-51jpg.jpg",
     categoria: "apertura",
     fecha: "17 nov 2026",
     pagina: "newells-y-union-descendieron-a-la-primera-b-2027.html"
@@ -12,7 +12,7 @@ const noticias = [
     id: 269,
     titulo: "Vélez y All Boys ascendieron a Primera y se suman a Platense y Central",
     resumen: "Las Fortineras y las Albas ganaron sus semifinales del Reducido y ya tienen lugar en 2027. Se enfrentarán en la final de la B.",
-    imagen: "https://elfemenino.com.ar/wp-content/uploads/2026/11/HXMnUipXgAA0xpD-e1794786594158-1080x675.jpg",
+    imagen: "https://velez.com.ar/img/noticias/26/gr/img_6562.jpeg",
     categoria: "apertura",
     fecha: "17 nov 2026",
     pagina: "velez-y-all-boys-ascendieron-a-primera-se-suman-a-platense-y-central.html"
@@ -21,7 +21,7 @@ const noticias = [
     id: 268,
     titulo: "Todo sobre el descenso de Unión: un año en Primera con tres victorias",
     resumen: "Las Tatengues cayeron 4-1 con Racing y jugarán en la Primera B en 2027. Los números de su primer año en la máxima categoría.",
-    imagen: "https://i.ytimg.com/vi/cWPkDa26DrI/maxresdefault.jpg",
+    imagen: "https://www.racingclub.com.ar/fotos/racing-vs-union-fecha-14-del-torneo-clausura/_cal3888.webp",
     categoria: "apertura",
     fecha: "17 nov 2026",
     pagina: "todo-sobre-el-descenso-de-union-de-santa-fe-primera-b-2027.html"
@@ -30,7 +30,7 @@ const noticias = [
     id: 267,
     titulo: "Todo sobre el descenso de Newell's: del título a la Primera B en un año",
     resumen: "Campeona del Apertura y de la Copa Federal en 2025, la Lepra perdió la categoría con dos victorias en 26 partidos.",
-    imagen: "https://i.ytimg.com/vi/YwCo9d6fe-s/maxresdefault.jpg",
+    imagen: "https://media.lacapital.com.ar/p/70fb93faa37bee7b4dd27c86691a0ece/adjuntos/203/imagenes/102/233/0102233568/1200x675/smart/imagepng.png",
     categoria: "apertura",
     fecha: "17 nov 2026",
     pagina: "todo-sobre-el-descenso-de-newells-del-campeonato-a-la-primera-b.html"
@@ -39,7 +39,7 @@ const noticias = [
     id: 266,
     titulo: "All Boys ascendió a Primera por primera vez en su historia",
     resumen: "Las Albas igualaron 1-1 con Camioneros, ganaron la semifinal del Reducido 3-2 en el global y jugarán en Primera en 2027.",
-    imagen: "https://i.ytimg.com/vi/J_jQne1KGhY/maxresdefault.jpg",
+    imagen: "https://caallboys.com.ar/wp-content/uploads/2026/11/Picsart_26-11-16_18-57-17-836.jpg-1200x600.jpeg",
     categoria: "apertura",
     fecha: "17 nov 2026",
     pagina: "all-boys-ascendio-a-primera-por-primera-vez-empato-con-camioneros.html"
@@ -48,7 +48,7 @@ const noticias = [
     id: 265,
     titulo: "Vélez volvió a Primera: empató con El Porvenir y va por el título de la B",
     resumen: "Las Fortineras ganaron la serie 4-2 y regresaron a la máxima categoría un año después de su descenso. Ahora van por la final.",
-    imagen: "https://elfemenino.com.ar/wp-content/uploads/2026/11/Velez-scaled-e1794758885745-1080x675.jpg",
+    imagen: "https://velez.com.ar/img/noticias/26/gr/img_7172.jpeg",
     categoria: "apertura",
     fecha: "17 nov 2026",
     pagina: "velez-volvio-a-primera-empato-con-el-porvenir-y-va-por-el-titulo-de-la-b.html"
