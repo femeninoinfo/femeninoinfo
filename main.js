@@ -112,6 +112,78 @@ document.addEventListener('click', function(e) {
   }
 });
 
+// ── Resultados de la fecha (única fuente: ticker de todas las páginas + sección "Fecha 14") ──
+// Para actualizar: cambiar FECHA_ACTUAL (acá) y se actualiza en todo el sitio.
+var FECHA_ACTUAL = {
+  titulo: 'CLAUSURA · FECHA 14',
+  corto: 'F14',
+  partidos: [
+    ['San Luis FC', 1, 2, 'San Lorenzo'],
+    ['Boca', 2, 0, 'Ferro'],
+    ['SAT', 3, 2, 'River'],
+    ['Unión', 1, 4, 'Racing'],
+    ['Huracán', 1, 1, 'Gimnasia'],
+    ['Lanús', 1, 0, 'Talleres'],
+    ['Belgrano', 0, 0, 'Banfield'],
+    ['Independiente', null, null, "Newell's", 'Mar 17/11 · 14:00']
+  ]
+};
+var ESCUDOS = (function(){
+  var W = 'https://elfemenino.com.ar/wp-content/uploads/';
+  return {
+    'SAT': W+'2017/08/CLUB-SAT-PNG-128x128.png', 'Banfield': W+'2018/08/Banfield_2022-128x128.png',
+    'Unión': W+'2023/02/Union_de_Santa_Fe-111x128.png', 'Talleres': W+'2022/04/talleres-128x128.png',
+    'Huracán': W+'2017/08/Club_huracan_logo-79x128.png', 'Racing': W+'2017/08/racing-club.png',
+    'Independiente': W+'2017/08/Independiente-123x128.png', 'San Lorenzo': W+'2017/08/Escudo-San-Lorenzo-113x128.png',
+    'San Luis FC': W+'2022/04/SLFC-104x128.png', 'Ferro': W+'2018/09/ferro-105x128.png',
+    'River': W+'2017/08/Escudo_del_C_A_River_Plate.svg_-103x128.png', 'Gimnasia': W+'2018/09/CGELP-83x128.png',
+    'Belgrano': W+'2021/08/Belgrano-128x128.png', "Newell's": W+'2021/08/Newells-104x128.png',
+    'Lanús': W+'2017/08/lanus-128x128.png', 'Boca': W+'2016/05/Boc.png'
+  };
+})();
+(function(){
+  var st = document.createElement('style');
+  st.textContent =
+    '.tick-card{text-decoration:none;color:inherit}' +
+    '.ticker-track:hover{animation-play-state:paused}' +
+    '.tk-eq{display:flex;flex-direction:column;align-items:center;gap:2px;width:70px}' +
+    '.tk-eq .tick-escudo{width:34px;height:34px}' +
+    '.tk-eq b{font:700 10px "DM Sans",sans-serif;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:70px}' +
+    '.tk-mid{display:flex;flex-direction:column;align-items:center;gap:1px}' +
+    '.tk-mid em{font:700 9px "DM Sans",sans-serif;font-style:normal;letter-spacing:.8px;text-transform:uppercase;color:rgba(255,255,255,.55);white-space:nowrap}' +
+    '.tick-card{gap:10px!important;padding:6px 18px!important}' +
+    '@media(max-width:700px){.tk-eq{width:56px}.tk-eq .tick-escudo{width:26px;height:26px}.tk-eq b{font-size:9px;max-width:56px}.tick-card{padding:4px 10px!important}}';
+  document.head.appendChild(st);
+  var tr = document.getElementById('tickerTrack') || document.querySelector('.ticker-track');
+  var lbl = document.querySelector('.ticker-label-full') || document.querySelector('.ticker-label span');
+  if (lbl) lbl.textContent = FECHA_ACTUAL.titulo;
+  var sh = document.querySelector('.ticker-label-short');
+  if (sh) sh.textContent = FECHA_ACTUAL.corto;
+  if (!tr) return;
+  function eq(n){ return '<span class="tk-eq"><img class="tick-escudo" src="'+ESCUDOS[n]+'" alt="'+n+'" onerror="this.style.visibility=\'hidden\'"><b>'+n+'</b></span>'; }
+  var html = '';
+  FECHA_ACTUAL.partidos.forEach(function(p){
+    var pend = p[1] === null;
+    var score = pend ? '<span class="tick-score">vs</span>' : '<span class="tick-score">'+p[1]+'<span class="tick-sep">-</span>'+p[2]+'</span>';
+    html += '<a class="tick-card" href="futbol-argentino.html#fecha-14">'+eq(p[0])+'<span class="tk-mid">'+score+'<em>'+(pend ? p[4] : 'Final')+'</em></span>'+eq(p[3])+'</a>';
+  });
+  tr.innerHTML = html + html;
+  // Sección completa en Fútbol Argentino (botón "Ver todo")
+  var f = document.getElementById('fechaGrid');
+  if (f) {
+    var t = document.getElementById('fechaTitulo');
+    if (t) t.textContent = FECHA_ACTUAL.titulo.replace('CLAUSURA · ', 'Clausura · ');
+    var g = '';
+    FECHA_ACTUAL.partidos.forEach(function(p){
+      var pend = p[1] === null;
+      g += '<div class="fx-card"><div class="fx-eq"><img src="'+ESCUDOS[p[0]]+'" alt="'+p[0]+'"><span>'+p[0]+'</span></div>' +
+           '<div class="fx-mid">'+(pend ? 'vs' : p[1]+' - '+p[2])+'<em>'+(pend ? p[4]+' · LPF Play' : 'Final')+'</em></div>' +
+           '<div class="fx-eq"><img src="'+ESCUDOS[p[3]]+'" alt="'+p[3]+'"><span>'+p[3]+'</span></div></div>';
+    });
+    f.innerHTML = g;
+  }
+})();
+
 // ── Animación scroll ──────────────────────────────────────────────────────────
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

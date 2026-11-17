@@ -268,7 +268,7 @@
 @media(max-width:600px){.pj-card{width:200px}}
 </style>
 <section class="pj-strip" id="pjStrip" aria-label="Partido pendiente de la Fecha 14">
-  <div class="pj-head"><span class="pj-tag">Por jugar</span>Fecha 14 · Partido pendiente · Segundo Torneo 2026<a href="futbol-argentino.html">Ver todo →</a></div>
+  <div class="pj-head"><span class="pj-tag">Por jugar</span>Fecha 14 · Partido pendiente · Segundo Torneo 2026<a href="futbol-argentino.html#fecha-14">Ver todo →</a></div>
   <div class="pj-scroll" id="pjScroll"><div class="pj-track" id="pjTrack"></div></div>
 </section>
 <script>
@@ -293,7 +293,8 @@
     html+='<div class="pj-card"><div class="pj-top">'+p[0]+'</div><div class="pj-row">'+eq(p[1])+'<div class="pj-vs">VS</div>'+eq(p[2])+'</div><div class="pj-sede">'+p[3]+'</div></div>';
   });
   var tr=document.getElementById('pjTrack'), sc=document.getElementById('pjScroll');
-  tr.innerHTML=html+html;
+  var multi=P.length>1;
+  tr.innerHTML=multi?html+html:html;
   var pos=0,pausado=false,reanudar=null,down=false,startX=0,startL=0;
   function pausar(ms){pausado=true;clearTimeout(reanudar);reanudar=setTimeout(function(){pos=sc.scrollLeft;pausado=false;},ms);}
   function loop(){
@@ -309,7 +310,7 @@
   sc.addEventListener('touchmove',function(){pausar(3000);},{passive:true});
   sc.addEventListener('wheel',function(){pausar(2500);},{passive:true});
   sc.addEventListener('scroll',function(){if(pausado&&!down)pos=sc.scrollLeft;},{passive:true});
-  requestAnimationFrame(loop);
+  if(multi)requestAnimationFrame(loop);
 })();
 </script>
 <section class="lib-strip" id="libStrip" aria-label="Resultados de la Copa Libertadores Femenina">
