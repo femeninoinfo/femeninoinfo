@@ -165,7 +165,7 @@ var ESCUDOS = (function(){
   FECHA_ACTUAL.partidos.forEach(function(p){
     var pend = p[1] === null;
     var score = pend ? '<span class="tick-score">vs</span>' : '<span class="tick-score">'+p[1]+'<span class="tick-sep">-</span>'+p[2]+'</span>';
-    html += '<a class="tick-card" href="futbol-argentino.html#fecha-14">'+eq(p[0])+'<span class="tk-mid">'+score+'<em>'+(pend ? p[4] : 'Final')+'</em></span>'+eq(p[3])+'</a>';
+    html += '<a class="tick-card" href="futbol-argentino.html#fecha-14">'+eq(p[0])+'<span class="tk-mid">'+score+'<em>'+(pend ? 'Por jugar · '+p[4] : 'Final')+'</em></span>'+eq(p[3])+'</a>';
   });
   tr.innerHTML = html + html;
   // Sección completa en Fútbol Argentino (botón "Ver todo")
