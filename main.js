@@ -125,7 +125,7 @@ var FECHA_ACTUAL = {
     ['Huracán', 1, 1, 'Gimnasia'],
     ['Lanús', 1, 0, 'Talleres'],
     ['Belgrano', 0, 0, 'Banfield'],
-    ['Independiente', null, null, "Newell's", 'Mar 17/11 · 14:00']
+    ['Independiente', 1, 2, "Newell's"]
   ]
 };
 var ESCUDOS = (function(){

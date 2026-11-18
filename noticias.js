@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 272,
+    titulo: "Talleres y Boca pueden ser campeones del Clausura: qué tiene que pasar",
+    resumen: "Boca lidera con 32 puntos y le queda un partido; Talleres tiene 27 y dos por jugar. Los escenarios para el título.",
+    imagen: "https://www.clubtalleres.com.ar/wp-content/uploads/2026/09/Festejo-vs-Belgrano-Clausura-2026.jpg",
+    categoria: "apertura",
+    fecha: "18 nov 2026",
+    pagina: "talleres-y-boca-pueden-ser-campeones-del-clausura-que-tiene-que-pasar.html"
+  },
+  {
+    id: 271,
+    titulo: "Vélez y All Boys juegan este sábado en el José Amalfitani la final de la Primera B",
+    resumen: "Las Fortineras y las Albas, ya ascendidas a Primera, definen el sábado a las 17 al campeón del Reducido, en final única. Bono Contribución: $10.000.",
+    imagen: "https://velez.com.ar/img/noticias/26/gr/img_7172.jpeg",
+    categoria: "apertura",
+    fecha: "18 nov 2026",
+    pagina: "velez-all-boys-final-primera-b-reducido-jose-amalfitani.html"
+  },
+  {
     id: 270,
     titulo: "Newell's y Unión de Santa Fe descendieron a la Primera B",
     resumen: "Las Leprosas confirmaron la caída el 6 de noviembre y las Tatengues, tras el 4-1 de Racing. Los dos jugarán en la Segunda División en 2027.",
