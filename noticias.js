@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 273,
+    titulo: "Confirmado: la Selección femenina jugará con Uruguay el 4 de diciembre",
+    resumen: "El equipo de Portanova cerrará 2026 con un clásico rioplatense en Buenos Aires, cinco días después del partido con Alemania.",
+    imagen: "https://www.infobae.com/resizer/v2/OI4FHU6CSRGDTBHDFTO2EO4GBM.jpg?auth=d07c8dd3bb58557f8ddc06a508ce1016412fe6f108b1572f8f88a80ca5b13105&smart=true&width=800&height=533&quality=85",
+    categoria: "seleccion",
+    fecha: "18 nov 2026",
+    pagina: "confirmado-amistoso-seleccion-femenina-uruguay-4-de-diciembre.html"
+  },
+  {
     id: 272,
     titulo: "Talleres y Boca pueden ser campeones del Clausura: qué tiene que pasar",
     resumen: "Boca lidera con 32 puntos y le queda un partido; Talleres tiene 27 y dos por jugar. Los escenarios para el título.",
