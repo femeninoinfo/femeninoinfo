@@ -933,6 +933,30 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="grid-carrusel" id="carruselUltimas"></div>
   </div>
 </section>
+<!-- VLOGS EN CANCHAS -->
+<section id="vlogs" style="background:#12002a;padding:32px 24px 44px;border-bottom:1px solid #3d0066;">
+  <style>
+    .vlogs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1280px;margin:0 auto}
+    .vlog-card{background:#1e0033;border:1px solid rgba(200,0,255,0.15);border-radius:10px;overflow:hidden}
+    .vlog-frame{position:relative;padding-top:56.25%;background:#000}
+    .vlog-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .vlog-tit{margin:0;padding:12px 14px;font-size:14px;font-weight:700;color:#fff;line-height:1.35}
+    @media(max-width:768px){.vlogs-grid{grid-template-columns:1fr}}
+  </style>
+  <div style="max-width:1280px;margin:0 auto;">
+    <span class="ultimas-dark-titulo">Vlogs en canchas · femeninoinfo</span>
+    <div class="vlogs-grid">
+      <div class="vlog-card">
+        <div class="vlog-frame"><iframe src="https://www.youtube.com/embed/u-5W6k77MiA" title="All Boys hace historia y asciende a Primera División" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <p class="vlog-tit">All Boys hace historia y asciende a Primera División</p>
+      </div>
+      <div class="vlog-card">
+        <div class="vlog-frame"><iframe src="https://www.youtube.com/embed/C9_0xawp7EQ" title="Vlog en el clásico cordobés femenino: Belgrano-Talleres en el Gigante de Alberdi" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <p class="vlog-tit">Clásico cordobés femenino: Belgrano-Talleres en el Gigante de Alberdi</p>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- LIBERTADORES FEMENINA -->
 <section class="sec-clara sec-lib" id="libertadores">
   <div class="sec-clara-inner">
