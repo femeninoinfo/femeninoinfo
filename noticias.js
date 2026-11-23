@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 276,
+    titulo: "All Boys es campeón del Reducido de la Primera B tras ganarle a Vélez",
+    resumen: "Las Albas, que nunca habían jugado en Primera, cerraron su año histórico con el título en la final única del Amalfitani.",
+    imagen: "https://caallboys.com.ar/wp-content/uploads/2026/11/Picsart_26-11-16_18-57-17-836.jpg-1200x600.jpeg",
+    categoria: "apertura",
+    fecha: "23 nov 2026",
+    pagina: "all-boys-campeon-del-reducido-primera-b-le-gano-a-velez.html"
+  },
+  {
     id: 275,
     titulo: "Talleres le ganó a River y define el Clausura con Boca en La Boutique",
     resumen: "Las Matadoras ganaron 2-0 el partido postergado y quedaron a dos puntos de Boca. En la última fecha, el que gane será campeón.",
