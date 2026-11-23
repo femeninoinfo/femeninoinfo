@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 275,
+    titulo: "Talleres le ganó a River y define el Clausura con Boca en La Boutique",
+    resumen: "Las Matadoras ganaron 2-0 el partido postergado y quedaron a dos puntos de Boca. En la última fecha, el que gane será campeón.",
+    imagen: "https://www.clubtalleres.com.ar/wp-content/uploads/2026/11/Talleres-River-Clausura-2026-Resultado-1024x684.jpg",
+    categoria: "apertura",
+    fecha: "23 nov 2026",
+    pagina: "talleres-le-gano-a-river-y-define-el-clausura-con-boca-en-la-boutique.html"
+  },
+  {
+    id: 274,
+    titulo: "Sedes confirmadas para los próximos Mundiales femeninos: 2031 y 2035",
+    resumen: "Estados Unidos, México, Costa Rica y Jamaica organizarán 2031; Inglaterra, Irlanda del Norte, Gales y Escocia, 2035.",
+    imagen: "https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/5b5f9b25-2a0d-4f92-a8aa-1b4e1102ec17.jpeg",
+    categoria: "internacional",
+    fecha: "23 nov 2026",
+    pagina: "fifa-confirmo-sedes-mundiales-femeninos-2031-2035.html"
+  },
+  {
     id: 273,
     titulo: "Confirmado: la Selección femenina jugará con Uruguay el 4 de diciembre",
     resumen: "El equipo de Portanova cerrará 2026 con un clásico rioplatense en Buenos Aires, cinco días después del partido con Alemania.",
