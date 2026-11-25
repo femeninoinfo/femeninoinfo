@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 278,
+    titulo: "Argentina vs Alemania: ya están las entradas y el domingo se reinaugura el Estadio Único",
+    resumen: "El amistoso es el domingo 29 de noviembre en La Plata. Entradas solo online por Deportick: General $15.000 y Platea $25.000.",
+    imagen: "https://www.infobae.com/resizer/v2/ZLLRM32QEJHAZEEB4YM2V7I2OA.jpg?auth=6be58f08d5ef991889e916e2454b278851c41086db2ecbabdb3c6b38c2b1ed11&smart=true&width=800&height=533&quality=85",
+    categoria: "seleccion",
+    fecha: "25 nov 2026",
+    pagina: "argentina-alemania-entradas-reinauguracion-estadio-unico-la-plata.html"
+  },
+  {
+    id: 277,
+    titulo: "Homenaje a Indiana Fernández: la cancha 10 de Banfield llevará su nombre",
+    resumen: "Tras siete años como entrenadora del fútbol femenino del Taladro, Indiana se despidió con un homenaje. La reemplaza Josefina Duffo.",
+    imagen: "https://www.inforegion.com.ar/wp-content/uploads/2026/11/indiana.jpg",
+    categoria: "apertura",
+    fecha: "25 nov 2026",
+    pagina: "banfield-homenaje-indiana-fernandez-cancha-10-josefina-duffo.html"
+  },
+  {
     id: 276,
     titulo: "All Boys es campeón del Reducido de la Primera B tras ganarle a Vélez",
     resumen: "Las Albas, que nunca habían jugado en Primera, cerraron su año histórico con el título en la final única del Amalfitani.",
