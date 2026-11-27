@@ -86,21 +86,8 @@ function abrirNoticia(id) {
 
     // ── Carrusel de videos de femeninoinfo al final de cada nota ──
     if (!document.getElementById('vlogs') && redes && redes.parentNode && !document.getElementById('videosNota')) {
-      var VIDEOS = [
-        { id: 'PFMYRX2F51g', t: 'Todo sobre los amistosos de la Selección', g: 'seleccion' },
-        { id: 'u-5W6k77MiA', t: 'All Boys hace historia y asciende a Primera División', g: 'vlogs' },
-        { id: 'C9_0xawp7EQ', t: 'Vlog en el clásico cordobés femenino: Belgrano-Talleres', g: 'vlogs' },
-        { id: 'p6ztGksKbqQ', t: 'Mundial Brasil 2027: fecha de sorteo y entradas a la venta', g: 'mundial' },
-        { id: 'FT0dqP8567s', t: 'Mundial femenino: ¿qué selecciones viajan a Brasil?', g: 'mundial' },
-        { id: 'CEw_iqkNspk', t: 'Mundial 2027: cómo avanzan las eliminatorias europeas', g: 'mundial' },
-        { id: 'HRQW-Iu6M5o', t: 'Cómo hizo Alexia Putellas para ganar el tercer Balón de Oro', g: 'internacional' },
-        { id: '5tDWkSjMCdA', t: 'La historia de Mercedes Diz', g: 'apertura' },
-        { id: 'ql28zcmmKUQ', t: 'Copa Libertadores: dónde se juega y dónde ver', g: 'libertadores' }
-      ];
-      var GRUPOS = [
-        ['seleccion', 'Selección'], ['vlogs', 'Vlogs'], ['mundial', 'Mundial'],
-        ['internacional', 'Internacional'], ['apertura', 'Fútbol Argentino'], ['libertadores', 'Libertadores']
-      ];
+      var VIDEOS = VIDEOS_FI;
+      var GRUPOS = GRUPOS_FI;
       var cat = (typeof CATEGORIA_ACTUAL !== 'undefined' && CATEGORIA_ACTUAL) || '';
       var prioridad = { seleccion: ['seleccion'], apertura: ['vlogs', 'apertura'], mundial2027: ['mundial'], internacional: ['internacional', 'mundial'], libertadores: ['libertadores'] }[cat] || [];
       function rank(v) { var i = prioridad.indexOf(v.g); return i === -1 ? 99 : i; }
@@ -134,6 +121,44 @@ function abrirNoticia(id) {
     }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+
+// ── Videos de femeninoinfo (fuente única: carrusel de notas y página Videos) ──
+var VIDEOS_FI = [
+  { id: 'p6ztGksKbqQ', t: 'Mundial Brasil 2027: fecha de sorteo y entradas a la venta', g: 'mundial' },
+  { id: 'PFMYRX2F51g', t: 'Argentina vs. Alemania: dónde y a qué hora se juega el amistoso', g: 'seleccion' },
+  { id: 'u-5W6k77MiA', t: 'All Boys hace historia y asciende a Primera División', g: 'vlogs' },
+  { id: '5tDWkSjMCdA', t: 'La historia de Mercedes Diz', g: 'apertura' },
+  { id: 'HRQW-Iu6M5o', t: 'Cómo hizo Alexia Putellas para ganar el tercer Balón de Oro', g: 'internacional' },
+  { id: '_njJ9LOxoGE', t: '¡Últimas noticias! Argentina-Alemania ya tiene fecha y Mechi Diz mete un hat-trick en la Sub-17', g: 'noticias' },
+  { id: 'cGZUrJQDADo', t: 'Chiqui Tapia privatizó el femenino', g: 'noticias' },
+  { id: 'XwSv0hmHQr0', t: 'Las noticias del fútbol femenino: todo lo que pasó en la semana', g: 'noticias' },
+  { id: 'FdUp9gp1vqk', t: '¡Últimas noticias! Selección, Libertadores, Sao Paulo, CASLA y Central', g: 'noticias' },
+  { id: 'CEw_iqkNspk', t: 'Mundial 2027: cómo avanzan las eliminatorias europeas', g: 'mundial' },
+  { id: 'FT0dqP8567s', t: 'Mundial femenino: ¿qué selecciones viajan a Brasil?', g: 'mundial' },
+  { id: 'ql28zcmmKUQ', t: 'Copa Libertadores: dónde se juega y dónde ver', g: 'libertadores' },
+  { id: 'C9_0xawp7EQ', t: 'Vlog en el clásico cordobés femenino: Belgrano-Talleres en el Gigante de Alberdi', g: 'vlogs' }
+];
+var GRUPOS_FI = [
+  ['seleccion', 'Selección'], ['vlogs', 'Vlogs'], ['mundial', 'Mundial'], ['noticias', 'Noticias'],
+  ['internacional', 'Internacional'], ['apertura', 'Fútbol Argentino'], ['libertadores', 'Libertadores']
+];
+
+// ── Link "Videos" en el menú de todas las páginas ──
+(function () {
+  function addVideosLink() {
+    var nav = document.querySelector('.header .nav');
+    if (nav && !nav.querySelector('.nav-videos')) {
+      var a = document.createElement('a'); a.className = 'nav-videos'; a.href = 'videos.html'; a.textContent = 'Videos';
+      var t = nav.querySelector('.nav-trabaja'); nav.insertBefore(a, t || null);
+    }
+    var mob = document.getElementById('navMobile');
+    if (mob && !mob.querySelector('.nav-videos')) {
+      var m = document.createElement('a'); m.className = 'nav-videos'; m.href = 'videos.html'; m.textContent = 'Videos';
+      var t2 = mob.querySelector('.nav-trabaja'); mob.insertBefore(m, t2 || null);
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addVideosLink); else addVideosLink();
 })();
 
 // ── Menú mobile ───────────────────────────────────────────────────────────────
