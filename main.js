@@ -74,26 +74,64 @@ function abrirNoticia(id) {
     var bloque = document.createElement('section');
     bloque.className = 'fin-bloques';
     bloque.id = 'trabaja';
+    bloque.className = 'fin-bloques fin-links';
     bloque.innerHTML =
       '<div class="fin-inner">' +
-        '<div class="fin-card">' +
-          '<span class="fin-tag">Sumate al equipo</span>' +
-          '<h3>¿Querés trabajar en femeninoinfo?</h3>' +
-          '<p>Mandanos tu CV y contanos qué te gustaría hacer.</p>' +
-          '<a class="fin-btn" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=' + MAIL + '&su=CV%20-%20Quiero%20trabajar%20en%20femeninoinfo">Enviar mi CV</a>' +
-          '<span class="fin-mail">' + MAIL + '</span>' +
-        '</div>' +
-        '<div class="fin-card">' +
-          '<span class="fin-tag">Proyectos en conjunto</span>' +
-          '<h3>¿Tenés un proyecto para hacer con nosotras?</h3>' +
-          '<p>Marcas, clubes, medios, ligas o creadoras: escribinos y lo charlamos.</p>' +
-          '<a class="fin-btn" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=' + MAIL + '&su=Proyecto%20en%20conjunto">Escribinos</a>' +
-          '<span class="fin-mail">' + MAIL + '</span>' +
-        '</div>' +
+        '<a class="fin-link" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=' + MAIL + '&su=CV%20-%20Quiero%20trabajar%20en%20femeninoinfo"><span>Sumate al equipo</span><i>Mandanos tu CV →</i></a>' +
+        '<a class="fin-link" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=' + MAIL + '&su=Proyecto%20en%20conjunto"><span>¿Tenés un proyecto?</span><i>Escribinos →</i></a>' +
       '</div>';
     var redes = document.querySelector('.redes-section-nueva') || document.querySelector('.redes-section');
     if (redes && redes.parentNode) redes.parentNode.insertBefore(bloque, redes.nextSibling);
     else document.body.appendChild(bloque);
+
+    // ── Carrusel de videos de femeninoinfo al final de cada nota ──
+    if (!document.getElementById('vlogs') && redes && redes.parentNode && !document.getElementById('videosNota')) {
+      var VIDEOS = [
+        { id: 'PFMYRX2F51g', t: 'Todo sobre los amistosos de la Selección', g: 'seleccion' },
+        { id: 'u-5W6k77MiA', t: 'All Boys hace historia y asciende a Primera División', g: 'vlogs' },
+        { id: 'C9_0xawp7EQ', t: 'Vlog en el clásico cordobés femenino: Belgrano-Talleres', g: 'vlogs' },
+        { id: 'p6ztGksKbqQ', t: 'Mundial Brasil 2027: fecha de sorteo y entradas a la venta', g: 'mundial' },
+        { id: 'FT0dqP8567s', t: 'Mundial femenino: ¿qué selecciones viajan a Brasil?', g: 'mundial' },
+        { id: 'CEw_iqkNspk', t: 'Mundial 2027: cómo avanzan las eliminatorias europeas', g: 'mundial' },
+        { id: 'HRQW-Iu6M5o', t: 'Cómo hizo Alexia Putellas para ganar el tercer Balón de Oro', g: 'internacional' },
+        { id: '5tDWkSjMCdA', t: 'La historia de Mercedes Diz', g: 'apertura' },
+        { id: 'ql28zcmmKUQ', t: 'Copa Libertadores: dónde se juega y dónde ver', g: 'libertadores' }
+      ];
+      var GRUPOS = [
+        ['seleccion', 'Selección'], ['vlogs', 'Vlogs'], ['mundial', 'Mundial'],
+        ['internacional', 'Internacional'], ['apertura', 'Fútbol Argentino'], ['libertadores', 'Libertadores']
+      ];
+      var cat = (typeof CATEGORIA_ACTUAL !== 'undefined' && CATEGORIA_ACTUAL) || '';
+      var prioridad = { seleccion: ['seleccion'], apertura: ['vlogs', 'apertura'], mundial2027: ['mundial'], internacional: ['internacional', 'mundial'], libertadores: ['libertadores'] }[cat] || [];
+      function rank(v) { var i = prioridad.indexOf(v.g); return i === -1 ? 99 : i; }
+      var orden = VIDEOS.map(function (v, i) { return { v: v, i: i }; })
+        .sort(function (a, b) { return rank(a.v) - rank(b.v) || a.i - b.i; })
+        .map(function (x) { return x.v; });
+      var cards = orden.map(function (v) {
+        return '<a class="vn-card" data-g="' + v.g + '" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=' + v.id + '">' +
+          '<span class="vn-thumb"><img loading="lazy" src="https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg" alt="' + v.t + '"/><b class="vn-play" aria-hidden="true"></b></span>' +
+          '<span class="vn-tit">' + v.t + '</span></a>';
+      }).join('');
+      var chips = GRUPOS.filter(function (g) { return orden.some(function (v) { return v.g === g[0]; }); })
+        .map(function (g) { return '<button type="button" class="vn-chip" data-g="' + g[0] + '">' + g[1] + '</button>'; }).join('');
+      var sec = document.createElement('section');
+      sec.className = 'videos-nota';
+      sec.id = 'videosNota';
+      sec.innerHTML =
+        '<div class="vn-inner">' +
+          '<p class="vn-titulo">Mirá también en nuestro YouTube</p>' +
+          '<div class="vn-chips">' + chips + '</div>' +
+          '<div class="vn-track">' + cards + '</div>' +
+        '</div>';
+      redes.parentNode.insertBefore(sec, redes);
+      var track = sec.querySelector('.vn-track');
+      sec.querySelectorAll('.vn-chip').forEach(function (c) {
+        c.addEventListener('click', function () {
+          var first = track.querySelector('.vn-card[data-g="' + c.getAttribute('data-g') + '"]');
+          if (first) track.scrollTo({ left: first.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+        });
+      });
+    }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
