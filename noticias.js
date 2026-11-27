@@ -1,5 +1,23 @@
 const noticias = [
   {
+    id: 281,
+    titulo: "Aldana Cometti: “Ya no molestamos, ya somos parte”",
+    resumen: "La capitana habló antes del amistoso con Alemania: hambre, balance positivo del año y el objetivo de pasar de ronda en el Mundial 2027.",
+    imagen: "https://www.infobae.com/resizer/v2/M4UN5U6WOFHHNHH2TI6PUHW6IM.jpg?auth=f4363ffb57841f8c5c1fd1ecde0bd571ef5eeb53facc602f2681b7c539c8e383&smart=true&width=800&height=533&quality=85",
+    categoria: "seleccion",
+    fecha: "27 nov 2026",
+    pagina: "cometti-ya-no-molestamos-ya-somos-parte-seleccion-femenina.html"
+  },
+  {
+    id: 280,
+    titulo: "Portanova, antes de Alemania: “Intentamos competir de igual a igual”",
+    resumen: "El entrenador habló de la identidad que construyó el equipo, de la exigencia de enfrentar a una potencia y de cerrar bien 2026.",
+    imagen: "https://www.infobae.com/resizer/v2/OKHTF7GWWRAXHPO5XH2UFPYQDE.jpg?auth=ea091bb18b2d4dad061f3f1c437085f55bdcc4e23442accc32975ab5b64deec8&smart=true&width=800&height=533&quality=85",
+    categoria: "seleccion",
+    fecha: "27 nov 2026",
+    pagina: "portanova-competimos-de-igual-a-igual-previa-alemania.html"
+  },
+  {
     id: 279,
     titulo: "Ferro vuelve a jugar en su estadio principal después de dos años",
     resumen: "El equipo femenino recibe a SAT este sábado a las 9 en el Arq. Ricardo Etcheverri. Entrada libre y gratuita, y último partido del año.",
