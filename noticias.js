@@ -1,5 +1,14 @@
 const noticias = [
   {
+    id: 279,
+    titulo: "Ferro vuelve a jugar en su estadio principal después de dos años",
+    resumen: "El equipo femenino recibe a SAT este sábado a las 9 en el Arq. Ricardo Etcheverri. Entrada libre y gratuita, y último partido del año.",
+    imagen: "https://www.ferrocarriloeste.org.ar/wp-content/uploads/2025/05/f.equipo-scaled.jpg",
+    categoria: "apertura",
+    fecha: "26 nov 2026",
+    pagina: "ferro-vuelve-a-jugar-en-su-estadio-principal-ante-sat.html"
+  },
+  {
     id: 278,
     titulo: "Argentina vs Alemania: ya están las entradas y el domingo se reinaugura el Estadio Único",
     resumen: "El amistoso es el domingo 29 de noviembre en La Plata. Entradas solo online por Deportick: General $15.000 y Platea $25.000.",
